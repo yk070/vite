@@ -1,0 +1,23 @@
+.scrollContainer {
+  height: 100px;
+  overflow-y: auto;
+}
+
+/* Webkit系 */
+.scrollContainer::-webkit-scrollbar {
+  width: 10px;
+}
+.scrollContainer::-webkit-scrollbar-thumb {
+  background-color: #ff6600;
+  border-radius: 5px;
+}
+.scrollContainer::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+/* Firefox */
+.scrollContainer {
+  scrollbar-width: auto;
+  scrollbar-color: #333333 #111111;
+}

@@ -1,0 +1,18 @@
+// state/TgState.js
+export const TG_STATE = {
+  NONE: "NONE", // 表示しない
+  DISABLED: "DISABLED",
+
+  NORMAL: "NORMAL",
+
+  ASSIGNED: "ASSIGNED",
+  HOVERED: "HOVERED",
+
+  MOD_KEY_SAME: "MOD_KEY_SAME",
+
+  MULTI_HD: "MULTI_HD",
+  MULTI_CD: "MULTI_CD",
+
+  UNUSABLE: "UNUSABLE",
+  VACANT: "VACANT",
+};

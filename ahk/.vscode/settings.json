@@ -1,0 +1,83 @@
+{
+  "favorites.resources": [
+    {
+      "filePath": "z_global\\for_register\\fx_register\\fx_branch\\ay_scancode\\included",
+      "group": "Default"
+    },
+    {
+      "filePath": "z_global\\for_register\\fx_register\\fx_branch\\fx_bar\\included\\included",
+      "group": "Default"
+    },
+    {
+      "filePath": "z_global\\for_register\\fx_register\\fx_branch\\fx_bar\\included\\included_bar",
+      "group": "Default"
+    },
+    {
+      "filePath": "z_global\\for_register\\fx_register\\fx_branch\\ay_scancode\\included_scancode",
+      "group": "Default"
+    },
+    {
+      "filePath": "z_global\\for_register\\fx_register\\fx_branch\\fx_branch.ahk",
+      "group": "Default"
+    },
+    {
+      "filePath": "z_global\\alone\\alone.ahk",
+      "group": "Default"
+    },
+    {
+      "filePath": "z_global\\for_register\\fx_register\\fx_branch\\fx_ctrl\\ay_ctrl\\ay_ctrl_end",
+      "group": "Default"
+    },
+    {
+      "filePath": "z_global\\for_register\\fx_register\\fx_branch\\fx_caps\\ay_caps\\ay_caps_end",
+      "group": "Default"
+    },
+    {
+      "filePath": "z_global\\for_register\\fx_register\\fx_branch\\fx_bar\\ay_bar\\ay_bar_end",
+      "group": "Default"
+    },
+    {
+      "filePath": "z_global\\for_register\\fx_register\\fx_branch\\fx_alt\\ay_alt\\ay_alt_end",
+      "group": "Default"
+    },
+    {
+      "filePath": "z_global\\pc_PRO7.ahk",
+      "group": "Default"
+    },
+    {
+      "filePath": "ctrl_spce\\alone\\alone.ahk",
+      "group": "Default"
+    },
+    {
+      "filePath": "ctrl_spce\\ctrl_spce.ahk",
+      "group": "Default"
+    },
+    {
+      "filePath": "ctrl_spce\\for_register\\fx_register\\fx_branch\\fx_branch.ahk",
+      "group": "Default"
+    },
+    {
+      "filePath": "ctrl_spce\\for_register\\fx_register\\fx_branch\\fx_bar\\ay_bar\\ay_bar_end",
+      "group": "Default"
+    },
+    {
+      "filePath": "ctrl_spce\\for_register\\fx_register\\fx_branch\\local_vscode",
+      "group": "Default"
+    },
+    {
+      "filePath": "ctrl_spce\\for_register\\fx_register\\fx_branch\\local\\vscode\\alt\\ay_fx_vs_alt.ahk",
+      "group": "Default"
+    },
+    {
+      "filePath": "common\\ay_scancode\\ay_scancode.ahk",
+      "group": "Default"
+    },
+    {
+      "filePath": "ctrl_spce\\for_register\\fx_register\\fx_branch\\global\\caps\\ay_fx_gl_caps.ahk",
+      "group": "Default"
+    }
+  ],
+  "favorites.groups": ["Default", "fa"],
+  "favorites.currentGroup": "Default",
+  "favorites.sortOrder": "ASC"
+}

@@ -1,0 +1,51 @@
+
+const Oj_SgIdKy_SgScKy_tg = {
+  
+  "left_ctrl": "LCtrl",
+  "left_shift": "Lshift",
+  "left_alt": "Lalt",
+  "left_win": "LWin",
+  "right_ctrl": "RCtrl",
+  "right_shift": "Rshift",
+  "right_alt": "Ralt",
+  "right_win": "RWin",
+  
+  "space": "Space",
+  "tab": "Tab",
+  "hankaku": "sc070",
+  "backspace": "Backspace",
+  "capslock": "sc03A",
+  
+  "muhenkan": "sc079",
+  "henkan": "sc07B",
+  "kana": "sc070",
+  "application": "AppsKey",
+  
+  "minus": "vkBD",
+  "caret": "vkDE",
+  "yen": "vkDC",
+  "at": "vkC0",
+  "left_branch": "vkDB",
+  "semicolon": "vkBB",
+  "colon": "vkBA",
+  "right_branch": "vkDD",
+  "comma": "vkBC",
+  "period": "vkBE",
+  "slash": "vkBF",
+  "backslash": "vkE2",
+  
+
+  "f1": "F1",
+  "f2": "F2",
+  "f3": "F3",
+  "f4": "F4",
+  "f5": "F5",
+  "f6": "F6",
+  "f7": "F7",
+  "f8": "F8",
+  "f9": "F9",
+  "f10": "F10",
+  "f11": "F11",
+  "f12": "F12",    
+};
+export default Oj_SgIdKy_SgScKy_tg;
