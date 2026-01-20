@@ -1,5 +1,6 @@
 SC39 & Tab:: {
-    send("^{tab}")
+    fxBarUsed
+    send("!{right}")
 }
 SC39 & q:: {
     send("#{4}")

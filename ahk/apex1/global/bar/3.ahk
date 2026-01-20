@@ -1,5 +1,6 @@
 SC39 & SC3A:: {
     fxBarUsed
+    send("!{left}")
 }
 SC39 & a:: {
     fxBarUsed
