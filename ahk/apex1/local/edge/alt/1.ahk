@@ -1,6 +1,9 @@
 Alt & SC29:: {
     edge_bookmark(0)
 }
+Alt & vk19:: {
+    edge_bookmark(0)
+}
 Alt & 1:: {
     edge_bookmark(2)
 }
