@@ -6,6 +6,9 @@ SC21 & SC3A:: {
 }
 SC21 & a:: {
     fxFffUsed
+}
+SC21 & s:: {
+    fxFffUsed
     sleep(100)
     loop 1 {
         send("{F10}")
@@ -13,9 +16,6 @@ SC21 & a:: {
     }
     send("{Enter}")
     sleep(10)
-}
-SC21 & s:: {
-    fxFffUsed
 }
 SC21 & d:: {
     fxFffUsed

@@ -3,10 +3,12 @@ SC21 & Tab:: {
 }
 SC21 & q:: {
     fxFffUsed
+    send("^!{f1}")
 
 }
 SC21 & w:: {
-    send("#{3}")
+    fxFffUsed
+    send("^!{f3}")
 }
 SC21 & e:: {
     send("#{2}")

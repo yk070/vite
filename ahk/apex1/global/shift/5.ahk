@@ -11,5 +11,9 @@ Shift & SC07B:: {
     Reload()
 }
 #SuspendExempt
-Shift & SC39:: Suspend
+Shift & SC39:: {
+    global manualSuspend
+    manualSuspend := !manualSuspend
+    UpdateSuspend()
+}
 #SuspendExempt false
