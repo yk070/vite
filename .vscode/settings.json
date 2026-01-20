@@ -1,0 +1,12 @@
+{
+  "favorites.resources": [
+    {
+      "filePath": "ahk\\apex1\\apex1.ahk",
+      "group": "Default"
+    },
+    {
+      "filePath": "ahk\\apex1\\global\\global.ahk",
+      "group": "Default"
+    }
+  ]
+}
