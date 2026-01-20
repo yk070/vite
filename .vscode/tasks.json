@@ -18,6 +18,12 @@
       "type": "shell",
       "command": "npm run build; npm run dev;",
       "problemMatcher": []
+    },
+    {
+      "label": "remotePull",
+      "type": "shell",
+      "command": "git fetch origin; git reset --hard origin/main",
+      "problemMatcher": []
     }
   ]
 }
