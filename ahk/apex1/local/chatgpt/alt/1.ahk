@@ -1,4 +1,4 @@
-Alt & SC029:: {
+Alt & SC29:: {
     send("{Esc}")
     send("^+{o}")
 }

@@ -1,7 +1,7 @@
-SC39 & vkF4:: {
-    fxBarUsed
-    send("!{f4}")
-}
+; SC39 & vkF4:: {
+;     fxBarUsed
+;     send("!{f4}")
+; }
 SC39 & SC29:: {
     fxBarUsed
     send("!{f4}"

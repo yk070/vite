@@ -1,3 +1,3 @@
-Shift & SC029:: {
+Shift & SC29:: {
     send("+#{s}")
 }

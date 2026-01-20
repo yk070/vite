@@ -1,4 +1,10 @@
-Alt & SC029:: {
+Alt & SC29:: {
+    edge_bookmark(0)
+}
+; Alt & vkF4:: {
+;     edge_bookmark(0)
+; }
+Alt & vk19:: {
     edge_bookmark(0)
 }
 Alt & 1:: {

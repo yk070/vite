@@ -5,9 +5,9 @@
         if (ImeState = 0) {
             SendText(text)
         } else {
-            Send "{vkF3sc029}"
+            Send "{vkF3SC29}"
             SendText(text)
             Sleep StrLen(text) * 20
-            Send "{vkF3sc029}"
+            Send "{vkF3SC29}"
         }
     }

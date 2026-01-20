@@ -1,4 +1,4 @@
-Ctrl & SC029:: {
+Ctrl & SC29:: {
     Send("#!{SC39}")
     Sleep(200)
     Send("{x}")

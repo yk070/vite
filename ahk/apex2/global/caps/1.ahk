@@ -1,4 +1,4 @@
-SC029:: {
+SC29:: {
     Send("#!{Space}")
     Sleep(200)
     Send("{x}")

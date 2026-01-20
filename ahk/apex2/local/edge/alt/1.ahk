@@ -1,4 +1,4 @@
-Alt & SC029:: {
+Alt & SC29:: {
     edge_bookmark(0)
 }
 Alt & 1:: {

@@ -3,9 +3,9 @@ $SC79:: send("{" sc_hankaku "}")
 ; $SC7B:: send("{" sc_enter "}")
 $SC3A:: send("{" sc_backspace "}")
 $Esc:: send("{" sc_hankaku "}")
-$vkf4:: {
-    send("{0}")
-}
+; $vkf4:: {
+;     send("{0}")
+; }
 $SC29:: {
     send("{0}")
 }
