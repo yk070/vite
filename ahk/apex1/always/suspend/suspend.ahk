@@ -1,7 +1,7 @@
 global isSuspended := false
 
 if (A_ComputerName = "pc") {
-    ; SetTimer(ShowMousePos, 50)
+    SetTimer(ShowMousePos, 50)
 }
 ShowMousePos() {
     global isSuspended
