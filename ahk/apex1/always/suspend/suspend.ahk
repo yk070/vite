@@ -1,6 +1,6 @@
 global isSuspended := false
 
-if (A_ComputerName = "PRO7") {
+if (A_ComputerName = "pc") {
     SetTimer(ShowMousePos, 50)
 }
 ShowMousePos() {
