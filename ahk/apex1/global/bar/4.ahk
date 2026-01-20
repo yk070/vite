@@ -20,7 +20,7 @@ SC39 & v:: {
 }
 SC39 & b:: {
     fxBarUsed
-    send("+{enter}")
+    send("^{enter}")
 }
 
 SC39 & n:: {
