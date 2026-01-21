@@ -27,10 +27,12 @@ SC39 & g:: {
 
 SC39 & h:: {
     fxBarUsed
-    send("{F7}") ;katakana
+    send("^{Left}") ;delBlock
     sleep(100)
-    send("{Enter}")
-    sleep(10)
+    send("^+{right}")
+    sleep(100)
+    send("{backspace}")
+    sleep(100)
 }
 SC39 & j:: {
     fxBarUsed

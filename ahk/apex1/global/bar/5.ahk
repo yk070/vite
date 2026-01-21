@@ -1,13 +1,16 @@
 SC39 & Ctrl:: {
-    send("{Delete}")
+    fxBarUsed
 }
 SC39 & LWin:: {
+    fxBarUsed
     send("{F12}")
 }
 SC39 & Alt:: {
+    fxBarUsed
     send("{F11}")
 }
 SC39 & SC7B:: {
+    fxBarUsed
     send("{F2}")
 }
 

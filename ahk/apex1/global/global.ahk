@@ -7,14 +7,6 @@
 #Include .\bar\4.ahk
 #Include .\bar\5.ahk
 #Include .\bar\mouse.ahk
-; ctrl
-#Include .\ctrl\5.ahk
-; fff
-#Include .\fff\2.ahk
-#Include .\fff\3.ahk
-#Include .\fff\4.ahk
-#Include .\fff\5.ahk
-#Include .\fff\mouse.ahk
 ; muh
 #Include .\muh\1.ahk
 #Include .\muh\2.ahk

@@ -1,11 +1,11 @@
 SC7B & Ctrl:: {
-    send("{Delete}")
+    fxMuhUsed
 }
 SC7B & LWin:: {
-    send("{F12}")
+    fxMuhUsed
 }
 SC7B & Alt:: {
-    send("{F11}")
+    fxMuhUsed
 }
 SC7B & SC39:: {
     fxMuhUsed
@@ -13,6 +13,7 @@ SC7B & SC39:: {
 }
 
 SC7B & SC79:: {
+    fxMuhUsed ;katakana
     send("{F7}")
     sleep(100)
     send("{Enter}")
