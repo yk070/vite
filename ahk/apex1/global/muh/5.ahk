@@ -7,6 +7,10 @@ SC7B & LWin:: {
 SC7B & Alt:: {
     send("{F11}")
 }
+SC7B & SC39:: {
+    fxMuhUsed
+    send("{Delete}")
+}
 
 SC7B & SC79:: {
     send("{F7}")
