@@ -1,5 +1,6 @@
 SC7B & Ctrl:: {
     fxMuhUsed
+    send("+{enter}")
 }
 SC7B & LWin:: {
     fxMuhUsed

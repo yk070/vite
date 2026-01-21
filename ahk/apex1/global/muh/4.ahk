@@ -1,5 +1,6 @@
 SC7B & Shift:: {
     fxMuhUsed
+    send("^{enter}")
 }
 SC7B & z:: {
     fxMuhUsed

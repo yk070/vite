@@ -4,11 +4,11 @@ SC7B & Tab:: {
 }
 SC7B & q:: {
     fxMuhUsed
-    send("^{enter}")
+    send("^!{f1}")
 }
 SC7B & w:: {
     fxMuhUsed
-    send("+{enter}")
+    send("^!{f3}")
 }
 SC7B & e:: {
     fxMuhUsed
