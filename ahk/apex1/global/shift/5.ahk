@@ -7,11 +7,11 @@ Shift & LAlt:: {
         SetTimer(ime_gui, 0)   ; タイマー無効化
     myGui.Destroy()
 }
-Shift & SC07B:: {
+Shift & SC39:: {
     Reload()
 }
 #SuspendExempt
-Shift & SC39:: {
+Shift & SC7B:: {
     global manualSuspend
     manualSuspend := !manualSuspend
     UpdateSuspend()

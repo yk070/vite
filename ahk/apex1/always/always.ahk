@@ -3,4 +3,3 @@
 
 #Include .\press\bar.ahk
 #Include .\press\muh.ahk
-#Include .\press\fff.ahk
