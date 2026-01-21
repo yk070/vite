@@ -19,6 +19,7 @@ SC7B & SC21:: {
 }
 SC7B & g:: {
     fxMuhUsed
+    KeyHistory
 }
 
 SC7B & h:: {

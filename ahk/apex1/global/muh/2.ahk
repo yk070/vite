@@ -4,10 +4,11 @@ SC7B & Tab:: {
 }
 SC7B & q:: {
     fxMuhUsed
-    KeyHistory
+    send("^{enter}")
 }
 SC7B & w:: {
     fxMuhUsed
+    send("+{enter}")
 }
 SC7B & e:: {
     fxMuhUsed

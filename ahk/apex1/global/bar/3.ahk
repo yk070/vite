@@ -36,11 +36,11 @@ SC39 & h:: {
 }
 SC39 & j:: {
     fxBarUsed
-    send("{space}") ;henkan1
-    sleep(100)
-    send("{space}")
-    sleep(10)
-    send("{home}")
+    fxBarUsed
+    send("{Tab}") ;henkan1
+    sleep(50)
+    send("1")
+    sleep(50)
 }
 SC39 & k:: {
     fxBarUsed
