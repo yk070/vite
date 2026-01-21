@@ -11,7 +11,11 @@
 #Include ..\common\function\function.ahk
 #Include ..\common\code\code.ahk
 ; メイン
-#Include .\global\global.ahk ;2
 #Include .\test\test.ahk
+
+$F1:: {
+    Run(A_ScriptDir "\..\apex1\apex1.ahk")
+    ExitApp()
+}
 
 TraySetIcon "shell32.dll", 10

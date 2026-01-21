@@ -37,7 +37,7 @@ const useTgLab = ({ buttonObj }) => {
     if (boo.isHd) {
       if (boo.isUnusable) return backLabel;
       if (boo.isFunctionUsed && boo.isLocationUsed) return emptyLabel;
-      if (boo.isFunctionUsed) return "割当済み";
+      if (boo.isFunctionUsed) return "";
     }
     if (boo.isSoSpaceHold) {
       if (boo.isHd && boo.isFunctionUsed) return "";

@@ -2,12 +2,20 @@ import { ModIndexes, basicIndexes } from "../array/namedMods.jsx";
 import AssignConvert from "../convert/AssignConvert.jsx";
 import PositionConvert from "../convert/PositionConvert.jsx";
 import keyLabelObj from "../obj/keyLabelObj.jsx";
+import acConvert from "../convert/acConvert.jsx";
+import tgConvert from "../convert/tgConvert.jsx";
 
 const derivedState = (base) => {
+  const scriptLines = base.AcTgObjs?.map(({ ac, tg }) => {
+    const script_tg = tgConvert(tg);
+    const script_ac = acConvert(ac);
+    return `$${script_tg} ::${script_ac}\n`;
+  });
+  const script = scriptLines?.join("");
   const acTgSet = new Set(base.AcTgObjs.map((obj) => `${obj.ac}|${obj.tg}`));
 
   const isMultiOnHd = base.hdMultiObj?.objs?.every((obj) =>
-    acTgSet.has(`${obj.ac}|${obj.tg}`)
+    acTgSet.has(`${obj.ac}|${obj.tg}`),
   );
 
   const isWoTgNone = base.currentModTg === "none";
@@ -27,7 +35,7 @@ const derivedState = (base) => {
   const { x: TailX, y: TailY } = PositionConvert(HoveredKey);
   // away
   const AwayHoveredModKey = base.AcTgObjs?.find(
-    (o) => o.ac === base.hdModKeyTg
+    (o) => o.ac === base.hdModKeyTg,
   )?.tg;
   const isAwayExist = !!AwayHoveredModKey;
   const [AwayHoveredMod, AwayHoveredKey] = AwayHoveredModKey?.split("*") ?? [];
@@ -70,6 +78,7 @@ const derivedState = (base) => {
     isMultiOnHd,
     // cdMiniObjs,
     isWoAcBasic,
+    script,
   };
 };
 export default derivedState;

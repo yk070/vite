@@ -17,8 +17,8 @@ const Tg = () => {
         <TgSpaceToggle />
         <TgLines containerRef={containerRef} />
         <AlphaNumBlock derive="tg" />
-        <Arrow containerRef={containerRef} />
         <TgButtons />
+        <Arrow containerRef={containerRef} />
       </div>
       <div style={look.tg4}>
         <TgIndexes />

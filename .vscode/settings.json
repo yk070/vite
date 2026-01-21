@@ -7,6 +7,33 @@
     {
       "filePath": "ahk\\apex1\\global\\global.ahk",
       "group": "Default"
+    },
+    {
+      "filePath": "src\\ui\\area\\Body.jsx",
+      "group": "vite"
+    },
+    {
+      "filePath": "src\\ui\\area\\TgButton.jsx",
+      "group": "vite"
+    },
+    {
+      "filePath": "src\\ui\\area\\Header.jsx",
+      "group": "vite"
+    },
+    {
+      "filePath": "src\\ui\\context\\useStateBoss.js",
+      "group": "vite"
+    },
+    {
+      "filePath": "src\\ui\\context\\useEffectBoss.js",
+      "group": "vite"
+    },
+    {
+      "filePath": "src\\ui\\context\\derivedState.js",
+      "group": "vite"
     }
-  ]
+  ],
+  "favorites.groups": ["Default", "vite"],
+  "favorites.currentGroup": "vite",
+  "favorites.sortOrder": "DESC"
 }

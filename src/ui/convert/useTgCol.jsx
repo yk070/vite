@@ -29,6 +29,8 @@ const useTgCol = ({ buttonObj }) => {
     if (ctx.isWoAcSd && !boo.isDisabled && boo.isHd && !boo.isSoSpaceHold)
       return tone.acSelectColor;
 
+    if (boo.isHd && boo.isAssigned && !boo.isVacant) return tone.acSelectColor;
+
     return "transparent";
   };
 

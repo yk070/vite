@@ -22,7 +22,7 @@ const tgScriptObj = {
   space: "Space",
   tab: "Tab",
   enter: "Enter",
-  hankaku: "sc070",
+  hankaku: "sc29",
   backspace: "Backspace",
   capslock: "sc03A",
 
