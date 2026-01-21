@@ -20,22 +20,24 @@ SC39 & v:: {
 }
 SC39 & b:: {
     fxBarUsed
-    send("^{enter}")
+    send("^{y}")
 }
 
 SC39 & n:: {
     fxBarUsed
-    send("^{v}")
 }
 SC39 & m:: {
     fxBarUsed
 }
 SC39 & SC33:: {
     fxBarUsed
+    send_text("、")
 }
 SC39 & SC34:: {
     fxBarUsed
+    send_text("。")
 }
 SC39 & SC35:: {
     fxBarUsed
+    send_text("？")
 }

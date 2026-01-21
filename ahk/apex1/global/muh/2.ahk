@@ -1,16 +1,13 @@
 SC7B & Tab:: {
 }
 SC7B & q:: {
-    send("^{q}")
 }
 SC7B & w:: {
-    send("^{w}")
 }
 SC7B & e:: {
-    send("^{e}")
 }
 SC7B & r:: {
-    send("^{r}")
+    send("^{t}")
 }
 SC7B & t:: {
 }

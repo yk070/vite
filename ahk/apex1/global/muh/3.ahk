@@ -1,6 +1,7 @@
 SC7B & SC3A:: {
 }
 SC7B & a:: {
+    send("^{f}")
 }
 SC7B & s:: {
 }
@@ -8,7 +9,8 @@ SC7B & d:: {
     send("^{t}")
 }
 SC7B & SC21:: {
-    send("^{f}")
+    fxMuhUsed
+    send("#{v}")
 }
 SC7B & g:: {
 }

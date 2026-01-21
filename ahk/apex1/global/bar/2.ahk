@@ -1,34 +1,37 @@
 SC39 & Tab:: {
     fxBarUsed
-    send("!{right}")
+    send("+{enter}")
 }
 SC39 & q:: {
+    fxBarUsed
     send("#{4}")
 }
 SC39 & w:: {
+    fxBarUsed
     send("#{3}")
 }
 SC39 & e:: {
+    fxBarUsed
     send("#{2}")
 }
 SC39 & r:: {
+    fxBarUsed
     send("#{1}")
 }
 SC39 & t:: {
+    fxBarUsed
     send("{" sc_hankaku "}")
 }
+
+SC39 & y:: {
+}
 SC39 & u:: {
-    send("^{Home}")
 }
 SC39 & i:: {
-    send("{Home}")
 }
 SC39 & o:: {
-    send("{End}")
 }
 SC39 & p:: {
-    send("^{End}")
 }
 SC39 & SC1A:: {
-    send("{Up}")
 }

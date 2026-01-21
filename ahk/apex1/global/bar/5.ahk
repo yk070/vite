@@ -10,9 +10,12 @@ SC39 & Alt:: {
 SC39 & SC7B:: {
     send("{F2}")
 }
+
 SC39 & SC79:: {
-    send("{F7}")
+    fxBarUsed
+    send("{space}") ;basicInput
     sleep(100)
-    send("{Enter}")
+    send("{space}")
     sleep(10)
+    send("{home}")
 }

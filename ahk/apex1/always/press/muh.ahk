@@ -1,6 +1,11 @@
 global SC7B_DownTime := 0
 global SC7B_IsDown := false
 global SC7B_Used := false
+
+fxMuhUsed() {
+    global SC7B_Used
+    SC7B_Used := true
+}
 SC7B:: {
     global SC7B_DownTime, SC7B_IsDown, SC7B_Used
     if SC7B_IsDown
