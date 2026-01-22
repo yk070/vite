@@ -1,10 +1,14 @@
-sc_leftctrl := "SC1D"
-sc_leftwin := "SC15B"
-sc_leftalt := "SC38"
-sc_muhenkan := "SC7B"
-sc_space := "SC039"
-sc_henkan := "SC79"
-sc_kana := "SC7D"
-sc_rightalt := "SC138"
-sc_app := "SC15D"
-sc_rightctrl := "SC11D"
+scLeftCtrl := "sc1D"
+scLeftwin := "sc15B"
+scLeftalt := "sc38"
+
+scMuhenkan := "sc7B"
+scSpace := "sc39"
+scHenkan := "sc79"
+scKana := "sc7D"
+
+scRightAlt := "sc138"
+
+scApp := "sc15D"
+
+scRightCtrl := "sc11D"

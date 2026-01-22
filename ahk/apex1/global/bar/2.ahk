@@ -1,4 +1,4 @@
-SC39 & Tab:: {
+SC39 & sc0F:: {
     fxBarUsed
     send("#{5}")
 }

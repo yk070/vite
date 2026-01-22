@@ -1,11 +1,6 @@
-; $Tab:: send("{" sc_backspace "}")
-$SC79:: send("{" sc_hankaku "}")
-; $SC7B:: send("{" sc_enter "}")
-$SC3A:: send("{" sc_backspace "}")
-$Esc:: send("{" sc_hankaku "}")
-$SC29:: {
-    send("{0}")
-}
+$SC79:: send("{" sc_hankaku "}") ;henkan
+$SC3A:: send("{" scBackspace "}") ;capslock
+$SC29:: send("{0}") ;hankaku
 $F1:: {
     Run(A_ScriptDir "\..\apex3\apex3.ahk")
     ExitApp()

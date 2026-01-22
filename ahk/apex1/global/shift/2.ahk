@@ -1,2 +1,2 @@
-shift & tab:: {
+shift & sc0F:: {
 }

@@ -1,4 +1,4 @@
-SC7B & Tab:: {
+SC7B & sc0F:: {
     fxMuhUsed
     send("!{rigt}")
 }

@@ -1,4 +1,4 @@
-XButton2 & Tab:: {
+XButton2 & sc0F:: {
     send("{Up}")
 }
 XButton2 & q:: {

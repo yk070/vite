@@ -21,7 +21,7 @@ SC7B:: {
         return
     elapsed := A_TickCount - SC7B_DownTime
     if (elapsed < 250)
-        send("{" sc_enter "}")
+        send("{" scEnter "}")
     else
         return
 }

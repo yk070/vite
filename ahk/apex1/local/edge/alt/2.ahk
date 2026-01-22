@@ -1,4 +1,4 @@
-Alt & Tab:: {
+Alt & sc0F:: {
     edge_bookmark(1)
 }
 Alt & q:: {
