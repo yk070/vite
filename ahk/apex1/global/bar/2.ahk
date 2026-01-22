@@ -12,11 +12,11 @@ SC39 & w:: {
 }
 SC39 & e:: {
     fxBarUsed
-    send("#{2}")
+    send("^+{tab}")
 }
 SC39 & r:: {
     fxBarUsed
-    send("#{1}")
+    send("^{tab}")
 }
 SC39 & t:: {
     fxBarUsed
