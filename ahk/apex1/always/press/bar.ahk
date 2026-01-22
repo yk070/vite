@@ -17,6 +17,7 @@ SC39:: {
     SC39_DownTime := A_TickCount
 }
 ~SC39 Up:: {
+    destroyRemapGui
     global SC39_DownTime, SC39_IsDown, SC39_Used
     SC39_IsDown := false
     if SC39_Used
