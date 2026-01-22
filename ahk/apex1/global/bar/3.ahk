@@ -13,6 +13,7 @@ SC39 & a:: {
 }
 SC39 & s:: {
     fxBarUsed
+    send("^{s}")
 }
 SC39 & d:: {
     fxBarUsed

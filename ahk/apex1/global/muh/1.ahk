@@ -4,6 +4,12 @@ SC7B & SC29:: {
     sleep(100)
     send("{x}")
 }
+SC7B & vkF4:: {
+    fxMuhUsed
+    send("!{space}") ;maximize
+    sleep(100)
+    send("{x}")
+}
 SC7B & 1:: {
     fxMuhUsed
     send("#{v}") ;back1
