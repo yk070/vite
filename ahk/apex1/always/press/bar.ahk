@@ -8,6 +8,7 @@ fxBarUsed() {
 }
 
 SC39:: {
+    displayRemapGui
     global SC39_DownTime, SC39_IsDown, SC39_Used
     if SC39_IsDown
         return

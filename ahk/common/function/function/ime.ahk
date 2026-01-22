@@ -3,9 +3,9 @@ global prevImeState := -1  ; 前回のIME状態を保持
 
 timerEnabled := true
 
-SetTimer(ime_gui, 100)
+SetTimer(guiIme, 100)
 
-ime_gui() {
+guiIme() {
     global myGui, prevImeState
 
     try {

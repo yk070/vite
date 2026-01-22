@@ -1,24 +1,38 @@
+;--- Keyboard GUI ---
+global remapGui := 0
+
 keys := [{ label: "Esc", x: 10, y: 10, w: 50, h: 30, code: "Esc" }, { label: "F1", x: 70, y: 10, w: 50, h: 30, code: "F1" }, { label: "A",
-    x: 10, y: 60, w: 40, h: 40, code: "a" }, { label: "S", x: 55, y: 60, w: 40, h: 40, code: "s" },
+    x: 10, y: 60, w: 40, h: 40, code: "a" }, { label: "S", x: 55, y: 60, w: 40, h: 40, code: "s" }
 ]
 
-KeyButton(gui, key) {
-    btn := gui.Add(
-        "Button",
-        Format("x{} y{} w{} h{}", key.x, key.y, key.w, key.h),
-        key.label
-    )
+CreateremapGui() {
+    global remapGui, keys
+    remapGui := Gui("+AlwaysOnTop -Caption", "Keyboard Layout")
+    remapGui.BackColor := "202020"
 
-    btn.OnEvent("Click", (*) => Send(key.code))
-}
-DrawKeyboard(gui, keys) {
     for _, key in keys {
-        KeyButton(gui, key)
-    } 
+        btn := remapGui.Add("Button", Format("x{} y{} w{} h{}", key.x, key.y, key.w, key.h), key.label)
+        btn.OnEvent("Click", (*) => Send("a"))
+    }
+
+    remapGui.Show("w500 h300 NA")  ; 作成時に必ず表示
 }
-myGui := Gui("+AlwaysOnTop", "Keyboard Layout")
-myGui.BackColor := "202020"
 
-DrawKeyboard(myGui, keys)
+; ホットキーで再表示
+displayRemapGui() {
+    global remapGui
+    if !IsObject(remapGui) {   ; 破棄済みなら再作成
+        CreateremapGui()
+    } else {
+        ; remapGui.Show()        ; 既存オブジェクトを再表示
+    }
+}
 
-f4:: myGui.Show("w500 h300")
+; ホットキーで破棄
+destroyRemapGui() {
+    global remapGui
+    if IsObject(remapGui) {
+        remapGui.Destroy()
+        remapGui := 0        ; ← これが整数に戻す安全策
+    }
+}
