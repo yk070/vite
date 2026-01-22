@@ -1,6 +1,6 @@
-Shift & SC29:: {
+shift & SC29:: {
     send("+#{s}")
 }
-Shift & vkF4:: {
+shift & vkF4:: {
     send("+#{s}")
 }
