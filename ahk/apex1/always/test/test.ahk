@@ -15,7 +15,8 @@ CreateremapGui() {
         btn.OnEvent("Click", (*) => Send("a"))
     }
 
-    WinSetTransparent(100, remapGui.Hwnd)
+    WinSetTransparent(180, remapGui.Hwnd)
+    WinSetExStyle("+0x20", remapGui.Hwnd)
     remapGui.Show("w500 h300 NA")  ; 作成時に必ず表示
 }
 
