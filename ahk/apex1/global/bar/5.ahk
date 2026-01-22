@@ -17,8 +17,8 @@ SC39 & SC7B:: {
 SC39 & SC79:: {
     fxBarUsed
     send("{space}") ;basicInput
-    sleep(100)
+    sleep(200)
     send("{space}")
-    sleep(100)
+    sleep(200)
     send("{home}")
 }
