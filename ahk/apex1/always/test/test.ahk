@@ -7,7 +7,7 @@ keys := [{ label: "Esc", x: 10, y: 10, w: 50, h: 30, code: "Esc" }, { label: "F1
 
 CreateremapGui() {
     global remapGui, keys
-    remapGui := Gui("+AlwaysOnTop -Caption", "Keyboard Layout")
+    remapGui := Gui("+AlwaysOnTop  +ToolWindow -Caption", "Keyboard Layout")
     remapGui.BackColor := "202020"
 
     for _, key in keys {
@@ -15,6 +15,7 @@ CreateremapGui() {
         btn.OnEvent("Click", (*) => Send("a"))
     }
 
+    WinSetTransparent(100, remapGui.Hwnd)
     remapGui.Show("w500 h300 NA")  ; 作成時に必ず表示
 }
 
