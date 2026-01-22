@@ -21,13 +21,13 @@ const tgScriptObj = {
 
   space: "Space",
   tab: "Tab",
-  enter: "Enter",
+  enter: "sc1C",
   hankaku: "sc29",
-  backspace: "Backspace",
-  capslock: "sc03A",
+  backspace: "sc0E",
+  capslock: "sc3A",
 
-  muhenkan: "sc079",
-  henkan: "sc07B",
+  muhenkan: "sc7B",
+  henkan: "sc79",
   kana: "sc070",
   application: "AppsKey",
 

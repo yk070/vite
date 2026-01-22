@@ -2,7 +2,7 @@ import { header, sidebar, base } from "./length.jsx";
 import tone from "../style/color.jsx";
 
 const look = {
-  unusable1: { fontSize: `calc(${base} * 14)` },
+  unusable1: { fontSize: `calc(${base} * 10)` },
   ToggleBaseStyle: (value) => ({
     width: `calc(${base} * 40)`,
     height: `calc(${base} * 20)`,

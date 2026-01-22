@@ -4,7 +4,7 @@ SC7B & Tab:: {
 }
 SC7B & q:: {
     fxMuhUsed
-    send("^!{f1}")
+    send("#{d}")
 }
 SC7B & w:: {
     fxMuhUsed

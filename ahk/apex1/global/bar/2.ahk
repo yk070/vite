@@ -1,6 +1,6 @@
 SC39 & Tab:: {
     fxBarUsed
-    send("+{enter}")
+    send("#{5}")
 }
 SC39 & q:: {
     fxBarUsed

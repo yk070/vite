@@ -24,4 +24,5 @@
     }
     SC39 & 5:: {
         fxBarUsed
+        send("#{6}")
     }

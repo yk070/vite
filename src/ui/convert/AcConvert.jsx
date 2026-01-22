@@ -10,8 +10,8 @@ const acConvert = (modKey) => {
   }
 
   if (Mod === "none") {
-    return `send ("{${Namelabel_Key}} ")`;
+    return `send "{${Namelabel_Key}}"`;
   }
-  return `send ("${Namelabel_Mod} {${Namelabel_Key}} ")`;
+  return `send "${Namelabel_Mod} {${Namelabel_Key}}"`;
 };
 export default acConvert;
