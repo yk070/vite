@@ -1,15 +1,9 @@
-import { ImportantModKeys } from "../array/namedModKeys.jsx";
-
-const AlertConvert = (AcTgObjs, modkey, isWoSpaceHold) => {
-  const isFunctionUsed = AcTgObjs?.some((actgObj) => actgObj.ac === modkey);
-  const isSpaceFunctionUsed = AcTgObjs?.some(
-    (actgObj) => actgObj.ac === "none*space"
-  );
-  const isLocationUsed = AcTgObjs?.some((actgObj) => actgObj.tg === modkey);
-  const isSoSpaceHold = isWoSpaceHold && modkey === "none*space";
-  const AsReturn =
-    (isSoSpaceHold && !isSpaceFunctionUsed) ||
-    (isLocationUsed && !isFunctionUsed && ImportantModKeys.includes(modkey));
+import useCtx from "../context/useCtx.jsx";
+const AlertConvert = (modkey) => {
+  const ctx = useCtx();
+  const isFunctionUsed = ctx.AcTgObjs?.some((actgObj) => actgObj.ac === modkey);
+  const isLocationUsed = ctx.AcTgObjs?.some((actgObj) => actgObj.tg === modkey);
+  const AsReturn = isLocationUsed && !isFunctionUsed;
 
   return AsReturn;
 };

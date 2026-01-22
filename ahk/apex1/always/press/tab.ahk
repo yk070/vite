@@ -20,7 +20,7 @@ SC0F:: {
     if SC0F_Used
         return
     elapsed := A_TickCount - SC0F_DownTime
-    if (elapsed < 250)
+    if (elapsed < 190)
         send("{" scTab "}")
     else
         return

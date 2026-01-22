@@ -1,4 +1,6 @@
 const Colors = {
+  violetTextColor: "#6B5FD2",
+
   buttonsBgColor: "#555555",
   basicBgColor: "#111111",
 

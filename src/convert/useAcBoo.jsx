@@ -1,20 +1,28 @@
-import AlertConvert from "./AlertConvert.jsx";
 import useCtx from "../context/useCtx.jsx";
 import useAcRoo from "./useAcRoo.jsx";
 const useAcBoo = ({ ButtonObj }) => {
   const roo = useAcRoo({ ButtonObj });
   const ctx = useCtx();
 
+  const isEnterBelow = roo.preKey === "enter_below";
   const isActive = ctx.sdAcModKey === roo.modKey;
-  const isAlert = AlertConvert(ctx.AcTgObjs, roo.modKey, ctx.isWoSpaceHold);
+
+  const isFunctionUsed = ctx.AcTgObjs?.some(
+    (actgObj) => actgObj.ac === roo.modKey,
+  );
+  const isLocationUsed = ctx.AcTgObjs?.some(
+    (actgObj) => actgObj.tg === roo.modKey,
+  );
+  const isAlert = isLocationUsed && !isFunctionUsed;
+
   const isHd = ctx.hdModKeyAc === roo.modKey;
-  const isFunctionUsed = ctx.AcTgObjs.some((obj) => obj.ac === roo.modKey);
 
   return {
+    isEnterBelow,
     isActive,
+    isFunctionUsed,
     isAlert,
     isHd,
-    isFunctionUsed,
   };
 };
 

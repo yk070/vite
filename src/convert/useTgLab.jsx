@@ -29,7 +29,6 @@ const useTgLab = ({ buttonObj }) => {
   const getLabel = () => {
     if (boo.isMultiPseudoHd) return multiHdAcModKeyLabel;
     if (ctx.isWoAcSd && boo.isHd) {
-      if (boo.isSoSpaceHold) return "修飾キー化";
       if (boo.isAssigned) return assignModKeyLabel;
       if (boo.isEmptyLabel) return "";
       return originKeyLabel;
@@ -39,15 +38,7 @@ const useTgLab = ({ buttonObj }) => {
       if (boo.isFunctionUsed && boo.isLocationUsed) return emptyLabel;
       if (boo.isFunctionUsed) return "";
     }
-    if (boo.isSoSpaceHold) {
-      if (boo.isHd && boo.isFunctionUsed) return "";
-      return "修飾キー化";
-    }
     if (boo.isAssigned) return assignModKeyLabel;
-    if (ctx.isWoTgSpace) {
-      if (boo.isHd && !boo.isModKeySame) return originKeyLabel;
-      return "";
-    }
     if (boo.isEmptyLabel) return "";
     return originKeyLabel;
   };

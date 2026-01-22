@@ -19,6 +19,6 @@ SC39 & SC79:: {
     send("{space}") ;basicInput
     sleep(100)
     send("{space}")
-    sleep(10)
+    sleep(100)
     send("{home}")
 }

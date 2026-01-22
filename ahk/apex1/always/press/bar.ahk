@@ -37,7 +37,7 @@ SC39:: {
     if SC39_Used
         return
     elapsed := A_TickCount - SC39_DownTime
-    if (elapsed < 250)
+    if (elapsed < 190)
         send("{" scSpace "}")
     else
         return

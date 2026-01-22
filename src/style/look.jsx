@@ -1,5 +1,6 @@
 import { header, sidebar, base } from "./length.jsx";
 import tone from "../style/color.jsx";
+import zObj from "../obj/zObj.jsx";
 
 const look = {
   download2: {
@@ -17,7 +18,7 @@ const look = {
     width: `calc(${base} * 40)`,
     height: `calc(${base} * 20)`,
     borderRadius: `calc(${base} * 20)`,
-    backgroundColor: value ? tone.AccentColor : "#3A3A3C",
+    backgroundColor: value ? tone.violetTextColor : "#3A3A3C",
     position: "relative",
     cursor: "pointer",
     transition: "background-color 0.2s ease",
@@ -194,14 +195,14 @@ const look = {
     backgroundColor: col.buttonColor,
   }),
 
-  tgButton1: (roo, col) => ({
+  tgButton1: (roo, col, boo) => ({
     position: "absolute",
     width: "100%",
     height: "100%",
     cursor: roo.isCursorPointer ? "pointer" : "default",
     backgroundColor: col.borderColor,
     ...roo.style,
-    zIndex: roo?.isHd ? 4 : 1,
+    zIndex: boo?.isHd ? zObj.hdTgButton : zObj.notHdTgButton,
   }),
   tg_Index1: {
     flex: 1,
@@ -308,12 +309,17 @@ const look = {
   ac_Matrix1: {
     position: "absolute",
   },
+  tgIndex5: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+  },
   tgIndex4: {
     pointerEvents: "none",
     backgroundColor: tone.AwayHoveredColor,
     color: tone.TextColor,
   },
-  tgIndex2: {
+  tgIndex2: (col) => ({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
@@ -322,7 +328,8 @@ const look = {
     minHeight: 0,
     fontSize: `calc(${base} * 18)`,
     gap: `calc(${base} * 2)`,
-  },
+    color: col.textColor,
+  }),
   ac_Index_Button2: {
     fontSize: `calc(${base} * 40)`,
     position: "absolute",
@@ -573,14 +580,15 @@ const look = {
     fontWeight: 400,
   },
   ac_Index1: {},
-  tgIndex3: {
+  tgIndex3: (col) => ({
     position: "absolute",
     top: "50%",
     left: "50%",
     width: `calc(100% - ${base} * 10)`,
     height: `calc(100% - ${base} * 8)`,
     transform: "translate(-50%, -50%)",
-  },
+    backgroundColor: col.buttonColor,
+  }),
   tgIndex1: {
     position: "relative",
     flex: 1,

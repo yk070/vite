@@ -2,6 +2,7 @@ import React from "react";
 import useCtx from "../context/useCtx.jsx";
 import { header, sidebar } from "../style/length.jsx";
 import tone from "../style/color.jsx";
+import zObj from "../obj/zObj.jsx";
 import Tg from "./Tg.jsx";
 const Arrow = ({ containerRef }) => {
   const ctx = useCtx();
@@ -53,7 +54,7 @@ const Arrow = ({ containerRef }) => {
         transform: `rotate(${angle}deg)`,
         transformOrigin: "0 50%",
         pointerEvents: "none",
-        zIndex: 1, // ← 高くして常に前面
+        zIndex: zObj.arrow, // ← 高くして常に前面
       }}
     >
       <div

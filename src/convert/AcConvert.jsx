@@ -1,9 +1,9 @@
 import { scriptAcModObj } from "../obj/namedObj.jsx";
-import tgScriptObj from "../obj/tgScriptObj.jsx";
+import scObj from "../obj/scObj.jsx";
 const acConvert = (modKey) => {
   const [Mod, Key] = modKey.split("*");
   const Namelabel_Mod = scriptAcModObj[Mod] ?? "";
-  const Namelabel_Key = tgScriptObj[Key] ?? Key;
+  const Namelabel_Key = scObj[Key] ?? Key;
 
   if (modKey === "alt*tab") {
     return `AltTab`;

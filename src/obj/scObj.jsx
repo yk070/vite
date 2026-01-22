@@ -1,4 +1,4 @@
-const tgScriptObj = {
+const scObj = {
   //0
   esc: "sc01",
   f1: "sc3B",
@@ -45,7 +45,7 @@ const tgScriptObj = {
   left_bracket: "sc1B",
   enter: "sc1C",
   //3
-  capslock: "sc03A",
+  capslock: "sc3A",
   a: "sc1E",
   s: "sc1F",
   d: "sc20",
@@ -85,4 +85,4 @@ const tgScriptObj = {
   right_ctrl: "sc11D",
 };
 
-export default tgScriptObj;
+export default scObj;

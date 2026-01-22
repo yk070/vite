@@ -25,7 +25,7 @@ const derivedState = (base) => {
   const isWoAcSd = !!base.sdAcModKey;
 
   const isModAcOften = base.currentModAc.includes("often");
-  const ContextIndexes = base.isWoSpaceHold
+  const contextIndexes = base.isWoSpaceHold
     ? [...ModIndexes, "space"]
     : ModIndexes;
 
@@ -41,10 +41,10 @@ const derivedState = (base) => {
   const [AwayHoveredMod, AwayHoveredKey] = AwayHoveredModKey?.split("*") ?? [];
   const AwayHoveredKeyLabel = keyLabelObj[AwayHoveredKey];
   // arrow position
-  const IndexesNumber = ContextIndexes.length;
-  const HomeNumber = ContextIndexes.indexOf(HoveredMod);
-  const AwayNumber = ContextIndexes.indexOf(AwayHoveredMod);
-  const currentModNumber = ContextIndexes.indexOf(base.currentModTg);
+  const IndexesNumber = contextIndexes.length;
+  const HomeNumber = contextIndexes.indexOf(HoveredMod);
+  const AwayNumber = contextIndexes.indexOf(AwayHoveredMod);
+  const currentModNumber = contextIndexes.indexOf(base.currentModTg);
   const ModX = ((currentModNumber + 0.5) * 100) / IndexesNumber;
   const isAwaySame = HoveredMod === AwayHoveredMod;
   let HeadX;
@@ -59,7 +59,7 @@ const derivedState = (base) => {
     isWoTgNone,
     isWoTgSpace,
     isWoAcSd,
-    ContextIndexes,
+    contextIndexes,
     HoveredModKeyTgLabel,
     TailX,
     TailY,

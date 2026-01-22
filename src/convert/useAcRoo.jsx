@@ -7,13 +7,11 @@ const useAcRoo = ({ ButtonObj }) => {
   const preKey = ButtonObj.key;
   const key = EnterObj[preKey] ?? preKey;
   const modKey = ctx.currentModAc + "*" + key;
-  const isEnterBelow = preKey === "enter_below";
   const style = ButtonObj.style;
   return {
     preKey,
     key,
     modKey,
-    isEnterBelow,
     style,
   };
 };

@@ -30,9 +30,9 @@ const useTgBoo = ({ buttonObj }) => {
   const isSoSpaceHold = ctx.isWoSpaceHold && roo.originModKey === "none*space";
 
   const isVacant = isFunctionUsed && !isLocationUsed;
-  const isUnusable = !isFunctionUsed && (isLocationUsed || isSoSpaceHold);
+  const isUnusable = !isFunctionUsed && isLocationUsed;
 
-  const isAssigned = !!roo.assignModKey || isSoSpaceHold;
+  const isAssigned = !!roo.assignModKey;
   const isDisabled = DisabledModKeys.includes(roo.originModKey);
   const isAlphabetNumber = AlphabetNumberKeys.includes(roo.originKey);
   const isNoneAlphabetNumber = isAlphabetNumber && ctx.isWoTgNone;
@@ -43,15 +43,6 @@ const useTgBoo = ({ buttonObj }) => {
 
   const isMultiPseudoHd = !!roo.multiHdAcModKey;
   // const isMultiCd = !!roo.multiCdAcModKey && !ctx.cdMultiObjs.isPickedBlock;
-
-  const isFirst = roo.level === "first";
-  const isSecond = roo.level === "second";
-
-  const isCircle = ctx.isWoAcSd && !isLocationUsed && !isSoSpaceHold;
-  const isFirstCircle =
-    ctx.isWoAcSd && !isLocationUsed && !isSoSpaceHold && isFirst;
-  const isSecondCircle =
-    ctx.isWoAcSd && !isLocationUsed && !isSoSpaceHold && isSecond;
 
   const easeLevelObj = easeObj[ctx.currentModTg];
   function getLevel() {
@@ -77,11 +68,6 @@ const useTgBoo = ({ buttonObj }) => {
     isMultiPseudoHd,
     isUnusable,
     isVacant,
-    isFirst,
-    isSecond,
-    isFirstCircle,
-    isSecondCircle,
-    isCircle,
     level,
   };
 };

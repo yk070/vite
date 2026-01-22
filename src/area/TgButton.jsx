@@ -20,7 +20,7 @@ const TgButton = ({ buttonObj }) => {
 
   return (
     <div
-      style={look.tgButton1(roo, col)}
+      style={look.tgButton1(roo, col, boo)}
       onClick={run.click}
       onMouseEnter={run.hover}
       onMouseLeave={run.leave}

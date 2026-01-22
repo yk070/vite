@@ -23,8 +23,12 @@ const AcButton = ({ ButtonObj }) => {
     >
       <div style={look.acButton2(col)}>
         <span style={look.acButton3}>{lab.label}</span>
-        {boo.isAlert && <LuTriangleAlert style={look.acButton4} />}
-        {boo.isFunctionUsed && <FaCheck style={look.acButton5} />}
+        {!boo.isEnterBelow && boo.isAlert && (
+          <LuTriangleAlert style={look.acButton4} />
+        )}
+        {!boo.isEnterBelow && boo.isFunctionUsed && (
+          <FaCheck style={look.acButton5} />
+        )}
       </div>
     </div>
   );

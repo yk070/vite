@@ -21,10 +21,10 @@ const acIndexLabelObj = {
 
 import keyObjs from "../array/keyObjs.jsx";
 const ModButtonsObj = Object.fromEntries(
-  AllIndexes.map((ContextIndex) => [
-    ContextIndex,
+  AllIndexes.map((contextIndex) => [
+    contextIndex,
     keyObjs.map((KeyObj) => ({ ...KeyObj })),
-  ])
+  ]),
 );
 
 const ModBigger = {
