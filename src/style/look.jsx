@@ -2,6 +2,16 @@ import { header, sidebar, base } from "./length.jsx";
 import tone from "../style/color.jsx";
 
 const look = {
+  download2: {
+    position: "absolute",
+    left: "10px",
+    backgroundColor: tone.OftenGridColor,
+  },
+  download1: {
+    position: "absolute",
+    right: "10px",
+    backgroundColor: tone.AccentColor,
+  },
   unusable1: { fontSize: `calc(${base} * 10)` },
   ToggleBaseStyle: (value) => ({
     width: `calc(${base} * 40)`,

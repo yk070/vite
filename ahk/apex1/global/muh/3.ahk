@@ -8,6 +8,7 @@ SC7B & a:: {
 }
 SC7B & s:: {
     fxMuhUsed
+    send("^{s}")
 }
 SC7B & d:: {
     fxMuhUsed

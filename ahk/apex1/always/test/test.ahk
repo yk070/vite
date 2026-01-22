@@ -24,7 +24,7 @@ CreateremapGui() {
 displayRemapGui() {
     global remapGui
     if !IsObject(remapGui) {   ; 破棄済みなら再作成
-        CreateremapGui()
+        ; CreateremapGui()
     } else {
         ; remapGui.Show()        ; 既存オブジェクトを再表示
     }
