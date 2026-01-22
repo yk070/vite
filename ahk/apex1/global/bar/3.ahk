@@ -17,12 +17,10 @@ SC39 & s:: {
 }
 SC39 & d:: {
     fxBarUsed
-    send("^+{tab}")
 }
 SC39 & SC21::AltTab
 SC39 & g:: {
     fxBarUsed
-    send("^{tab}")
 }
 
 SC39 & h:: {
