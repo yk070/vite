@@ -1,10 +1,11 @@
 import React from "react";
-import Header from "./ui/area/Header.jsx";
-import Sidebar from "./ui/area/Sidebar.jsx";
-import Body from "./ui/area/Body.jsx";
-import { CtxProvider } from "./ui/context/useCtx.jsx";
+import Header from "./Header.jsx";
+import Sidebar from "./Sidebar.jsx";
+import Body from "./Body.jsx";
+import { CtxProvider } from "../context/useCtx.jsx";
+import styles from "../style/scroll.module.css";
 
-import Style from "./ui/style/look.jsx";
+import Style from "../style/look.jsx";
 
 const App = () => {
   return (
@@ -15,7 +16,7 @@ const App = () => {
       <div className="scrollContainer" style={Style.Sidebar1}>
         <Sidebar />
       </div>
-      <div style={Style.Body1}>
+      <div className={styles.bodyScroll} style={Style.Body1}>
         <Body />
       </div>
     </CtxProvider>

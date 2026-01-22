@@ -3,7 +3,6 @@ import look from "../style/look.jsx";
 import Ac from "./Ac.jsx";
 import Tg from "./Tg.jsx";
 import MultiButtons from "./MultiButtons.jsx";
-import "../css/css.css";
 import Body from "./Body.jsx";
 
 const AcTg = () => {

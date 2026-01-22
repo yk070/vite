@@ -1,12 +1,12 @@
 import React from "react";
 import useCtx from "../context/useCtx.jsx";
-import tgConvert from "../convert/tgConvert.jsx";
-import acConvert from "../convert/acConvert.jsx";
+import styles from "../style/scroll.module.css";
 
 const Script = () => {
   const ctx = useCtx();
   return (
     <div
+      className={styles.scriptScroll}
       style={{
         margin: 10,
         backgroundColor: "#444",
