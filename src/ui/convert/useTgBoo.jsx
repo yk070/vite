@@ -21,10 +21,10 @@ const useTgBoo = ({ buttonObj }) => {
     roo.originKey.includes(ctx.currentModTg);
 
   const isLocationUsed = ctx.AcTgObjs.some(
-    (actgObj) => actgObj.tg === roo.originModKey
+    (actgObj) => actgObj.tg === roo.originModKey,
   );
   const isFunctionUsed = ctx.AcTgObjs.some(
-    (actgObj) => actgObj.ac === roo.originModKey
+    (actgObj) => actgObj.ac === roo.originModKey,
   );
 
   const isSoSpaceHold = ctx.isWoSpaceHold && roo.originModKey === "none*space";
@@ -57,7 +57,7 @@ const useTgBoo = ({ buttonObj }) => {
   function getLevel() {
     if (!ctx.isWoAcSd || isDisabled || isAssigned) return "";
     const entry = Object.entries(easeLevelObj)?.find(([_, keys]) =>
-      keys?.includes(roo.originKey)
+      keys?.includes(roo.originKey),
     );
     return entry?.[0] ?? "third";
   }

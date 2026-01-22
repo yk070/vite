@@ -34,7 +34,7 @@ const useRunConvert = ({ buttonObj }) => {
       ctx.setHoverLocktg(null);
     }
   };
-  return { click, hover, leave,  };
+  return { click, hover, leave };
 };
 
 export default useRunConvert;

@@ -1,0 +1,101 @@
+{
+  "folders": [
+    {
+      "path": "vite",
+    },
+    {
+      "path": "vite/src/ui/obj",
+    },
+    {
+      "path": "vite/src/ui/array",
+    },
+    {
+      "path": "vite/src/ui/context",
+    },
+    {
+      "path": "vite/src/ui/convert",
+    },
+    {
+      "path": "vite/src/ui/area",
+    },
+  ],
+  "settings": {
+    "favorites.resources": [
+      {
+        "filePath": "ahk\\apex1\\apex1.ahk",
+        "group": "Default",
+      },
+      {
+        "filePath": "ahk\\apex1\\global\\global.ahk",
+        "group": "Default",
+      },
+      {
+        "filePath": "src\\ui\\area\\Body.jsx",
+        "group": "vite",
+      },
+      {
+        "filePath": "src\\ui\\area\\TgButton.jsx",
+        "group": "vite",
+      },
+      {
+        "filePath": "src\\ui\\area\\Header.jsx",
+        "group": "vite",
+      },
+      {
+        "filePath": "src\\ui\\context\\useStateBoss.js",
+        "group": "vite",
+      },
+      {
+        "filePath": "src\\ui\\context\\useEffectBoss.js",
+        "group": "vite",
+      },
+      {
+        "filePath": "src\\ui\\context\\derivedState.js",
+        "group": "vite",
+      },
+      {
+        "filePath": "c:\\Users\\ykx07\\Documents\\vite\\src\\ui\\context\\useStateBoss.js",
+        "group": "Default",
+      },
+      {
+        "filePath": "c:\\Users\\ykx07\\Documents\\vite\\src\\ui\\context\\derivedState.js",
+        "group": "Default",
+      },
+      {
+        "filePath": "c:\\Users\\ykx07\\Documents\\vite\\ahk\\link.ahk",
+        "group": "Default",
+      },
+      {
+        "filePath": "c:\\Users\\ykx07\\Documents\\vite\\src\\ui\\context\\useEffectBoss.js",
+        "group": "Default",
+      },
+      {
+        "filePath": "c:\\Users\\ykx07\\Documents\\vite\\src\\ui\\area\\Body.jsx",
+        "group": "Default",
+      },
+      {
+        "filePath": "c:\\Users\\ykx07\\Documents\\vite\\src\\ui\\area\\TgButton.jsx",
+        "group": "Default",
+      },
+      {
+        "filePath": "c:\\Users\\ykx07\\Documents\\vite\\src\\ui\\area\\AcButton.jsx",
+        "group": "Default",
+      },
+      {
+        "filePath": "c:\\Users\\ykx07\\Documents\\vite\\src\\ui\\area\\BasicButton.jsx",
+        "group": "Default",
+      },
+      {
+        "filePath": "c:\\Users\\ykx07\\Documents\\vite\\ahk\\link.ahk",
+        "group": "vite",
+      },
+      {
+        "filePath": "c:\\Users\\ykx07\\Documents\\vite\\ahk\\common\\function",
+        "group": "vite",
+      },
+    ],
+    "favorites.groups": ["Default", "vite"],
+    "favorites.currentGroup": "vite",
+    "favorites.sortOrder": "ASC",
+  },
+}
