@@ -1,38 +1,42 @@
+global SC39_DownTime := 0
 global SC39_IsDown := false
 global SC39_Used := false
-global SC39_SendTimer := 0
-
+; global SC39_Timer := 0  ; ← ここで初期化
+; ShowRemapGuiAfterDelay() {
+;     global SC39_IsDown
+;     if SC39_IsDown
+;         displayRemapGui()
+; }
 fxBarUsed() {
-    global SC39_Used, SC39_SendTimer
+    global SC39_Used
     SC39_Used := true
-    if SC39_SendTimer {
-        SC39_SendTimer.Stop()
-        SC39_SendTimer := 0
-    }
-}
-
-SendSpaceIfUnused() {
-    global SC39_IsDown, SC39_Used
-    if (SC39_IsDown)
-        return
-    if (SC39_Used)
-        return
-    Send("{Space}")
+    ; global SC39_Timer
+    ; if SC39_Timer
+    ;     SC39_Timer.Stop(), SC39_Timer := 0
+    ; destroyRemapGui
 }
 
 SC39:: {
-    global SC39_IsDown, SC39_Used, SC39_SendTimer
+    global SC39_DownTime, SC39_IsDown, SC39_Used, SC39_Timer
     if SC39_IsDown
         return
-
     SC39_IsDown := true
     SC39_Used := false
-
-    ; 350ms 保留してから確定
-    SC39_SendTimer := SetTimer(SendSpaceIfUnused, -200)
+    SC39_DownTime := A_TickCount
+    ; SC39_Timer := SetTimer(ShowRemapGuiAfterDelay, -500)
 }
-
 ~SC39 Up:: {
-    global SC39_IsDown
+    ; global SC39_Timer
+    ; if SC39_Timer
+    ;     SC39_Timer.Stop(), SC39_Timer := 0
+    ; destroyRemapGui
+    global SC39_DownTime, SC39_IsDown, SC39_Used
     SC39_IsDown := false
+    if SC39_Used
+        return
+    elapsed := A_TickCount - SC39_DownTime
+    if (elapsed < 190)
+        send("{" scSpace "}")
+    else
+        return
 }
