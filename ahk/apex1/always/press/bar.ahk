@@ -11,6 +11,11 @@ ShowRemapGuiAfterDelay() {
 fxBarUsed() {
     global SC39_Used
     SC39_Used := true
+
+    global SC39_Timer
+    if SC39_Timer
+        SC39_Timer.Stop(), SC39_Timer := 0
+    destroyRemapGui
 }
 
 SC39:: {
