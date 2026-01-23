@@ -1,43 +1,43 @@
 SC39 & Shift:: {
-    fxBarUsed
+    completeSpa
     send("{Esc}")
 }
 SC39 & z:: {
-    fxBarUsed
+    completeSpa
     send("^{z}")
 }
 SC39 & x:: {
-    fxBarUsed
+    completeSpa
     send("^{x}")
 }
 SC39 & c:: {
-    fxBarUsed
+    completeSpa
     send("^{c}")
 }
 SC39 & v:: {
-    fxBarUsed
+    completeSpa
     send("^{v}")
 }
 SC39 & b:: {
-    fxBarUsed
+    completeSpa
     send("^{y}")
 }
 
 SC39 & n:: {
-    fxBarUsed
+    completeSpa
 }
 SC39 & m:: {
-    fxBarUsed
+    completeSpa
 }
 SC39 & SC33:: {
-    fxBarUsed
+    completeSpa
     send_text("、")
 }
 SC39 & SC34:: {
-    fxBarUsed
+    completeSpa
     send_text("。")
 }
 SC39 & SC35:: {
-    fxBarUsed
+    completeSpa
     send_text("？")
 }

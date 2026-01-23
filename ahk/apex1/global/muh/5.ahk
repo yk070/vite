@@ -1,20 +1,20 @@
 SC7B & Ctrl:: {
-    fxMuhUsed
+    completeMuh
     send("+{enter}")
 }
 SC7B & LWin:: {
-    fxMuhUsed
+    completeMuh
 }
 SC7B & Alt:: {
-    fxMuhUsed
+    completeMuh
 }
 SC7B & SC39:: {
-    fxMuhUsed
+    completeMuh
     send("{Delete}")
 }
 
 SC7B & SC79:: {
-    fxMuhUsed ;katakana
+    completeMuh ;katakana
     send("{F7}")
     sleep(100)
     send("{Enter}")

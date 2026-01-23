@@ -1,48 +1,48 @@
 SC7B & SC3A:: {
-    fxMuhUsed
+    completeMuh
     send("!{Left}")
 }
 SC7B & a:: {
-    fxMuhUsed
+    completeMuh
     send("^{f}")
 }
 SC7B & s:: {
-    fxMuhUsed
+    completeMuh
     send("^{s}")
 }
 SC7B & d:: {
-    fxMuhUsed
+    completeMuh
     send("^{d}")
 }
 SC7B & SC21:: {
-    fxMuhUsed
+    completeMuh
     send("#{v}")
 }
 SC7B & g:: {
-    fxMuhUsed
+    completeMuh
     KeyHistory
 }
 
 SC7B & h:: {
-    fxMuhUsed
+    completeMuh
 }
 SC7B & j:: {
-    fxMuhUsed
+    completeMuh
     send("{Home}")
 }
 SC7B & k:: {
-    fxMuhUsed
+    completeMuh
     send("{Left}")
 }
 SC7B & l:: {
-    fxMuhUsed
+    completeMuh
     send("{Right}")
 }
 SC7B & SC27:: {
-    fxMuhUsed
+    completeMuh
     send("{End}")
 }
 SC7B & SC28:: {
-    fxMuhUsed
+    completeMuh
     send("{Down}")
 }

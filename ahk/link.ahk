@@ -9,3 +9,5 @@
 #Include .\apex1\local\vscode\vscode.ahk
 ; apex3
 #Include .\apex3\test\test.ahk
+
+#Include .\commentout\commentout.ahk

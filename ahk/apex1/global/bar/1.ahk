@@ -1,28 +1,28 @@
     SC39 & SC29:: {
-        fxBarUsed
+        completeSpa
         send("!{f4}")
     }
     SC39 & vkF4:: {
-        fxBarUsed
+        completeSpa
         send("!{f4}")
     }
     SC39 & 1:: {
-        fxBarUsed
+        completeSpa
         send("{6}")
     }
     SC39 & 2:: {
-        fxBarUsed
+        completeSpa
         send("{7}")
     }
     SC39 & 3:: {
-        fxBarUsed
+        completeSpa
         send("{8}")
     }
     SC39 & 4:: {
-        fxBarUsed
+        completeSpa
         send("{9}")
     }
     SC39 & 5:: {
-        fxBarUsed
+        completeSpa
         send("#{6}")
     }

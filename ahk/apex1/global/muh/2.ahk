@@ -1,42 +1,42 @@
 SC7B & sc0F:: {
-    fxMuhUsed
+    completeMuh
     send("!{rigt}")
 }
 SC7B & q:: {
-    fxMuhUsed
+    completeMuh
     send("#{d}")
 }
 SC7B & w:: {
-    fxMuhUsed
+    completeMuh
     send("^!{f3}")
 }
 SC7B & e:: {
-    fxMuhUsed
+    completeMuh
 }
 SC7B & r:: {
-    fxMuhUsed
+    completeMuh
     send("^{t}")
 }
 SC7B & t:: {
-    fxMuhUsed
+    completeMuh
 }
 
 SC7B & u:: {
-    fxMuhUsed
+    completeMuh
     send("^{home}")
 }
 SC7B & i:: {
-    fxMuhUsed
+    completeMuh
 }
 SC7B & o:: {
-    fxMuhUsed
+    completeMuh
     send("{Ctrl Down}{Shift Down}{Right}{Shift Up}{Ctrl Up}")
 }
 SC7B & p:: {
-    fxMuhUsed
+    completeMuh
     send("^{End}")
 }
 SC7B & SC1A:: {
-    fxMuhUsed
+    completeMuh
     send("{Up}")
 }

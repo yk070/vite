@@ -1,21 +1,22 @@
 SC39 & Ctrl:: {
-    fxBarUsed
+    completeSpa
+    send("{delete}")
 }
 SC39 & LWin:: {
-    fxBarUsed
+    completeSpa
     send("{F12}")
 }
 SC39 & Alt:: {
-    fxBarUsed
+    completeSpa
     send("{F11}")
 }
 SC39 & SC7B:: {
-    fxBarUsed
+    completeSpa
     send("{F2}")
 }
 
 SC39 & SC79:: {
-    fxBarUsed
+    completeSpa
     send("{space}") ;basicInput
     sleep(200)
     send("{space}")

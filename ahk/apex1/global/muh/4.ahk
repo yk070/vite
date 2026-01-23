@@ -1,43 +1,43 @@
 SC7B & Shift:: {
-    fxMuhUsed
+    completeMuh
     send("^{enter}")
 }
 SC7B & z:: {
-    fxMuhUsed
+    completeMuh
     send("^{q}")
 }
 SC7B & x:: {
-    fxMuhUsed
+    completeMuh
     send("^{w}")
 }
 SC7B & c:: {
-    fxMuhUsed
+    completeMuh
     send("^{e}")
 }
 SC7B & v:: {
-    fxMuhUsed
+    completeMuh
     send("^{r}")
 }
 SC7B & b:: {
-    fxMuhUsed
+    completeMuh
 }
 
 SC7B & n:: {
-    fxMuhUsed
+    completeMuh
 }
 SC7B & m:: {
-    fxMuhUsed
+    completeMuh
     send("+{home}")
 }
 SC7B & SC33:: {
-    fxMuhUsed
+    completeMuh
     send("+{left}")
 }
 SC7B & SC34:: {
-    fxMuhUsed
+    completeMuh
     send("+{right}")
 }
 SC7B & SC35:: {
-    fxMuhUsed
+    completeMuh
     send("+{end}")
 }

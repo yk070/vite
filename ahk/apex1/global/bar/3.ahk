@@ -1,5 +1,5 @@
 SC39 & SC3A:: {
-    fxBarUsed
+    completeSpa
     loop 1 { ;komoji
         send("{F10}")
         sleep(100)
@@ -8,25 +8,25 @@ SC39 & SC3A:: {
     sleep(10)
 }
 SC39 & a:: {
-    fxBarUsed
+    completeSpa
     send("^{a}")
 }
 SC39 & s:: {
-    fxBarUsed
+    completeSpa
     send("^{s}")
 }
 SC39 & d:: {
-    fxBarUsed
-    send("#{2}")
+    completeSpa
+    send("^{d}")
 }
 SC39 & SC21::AltTab
 SC39 & g:: {
-    fxBarUsed
-    send("#{1}")
+    completeSpa
+    send("^{y}")
 }
 
 SC39 & h:: {
-    fxBarUsed
+    completeSpa
     send("^{Left}") ;delBlock
     sleep(100)
     send("^+{right}")
@@ -35,36 +35,36 @@ SC39 & h:: {
     sleep(100)
 }
 SC39 & j:: {
-    fxBarUsed
-    fxBarUsed
+    completeSpa
+    completeSpa
     send("{Tab}") ;henkan1
     sleep(50)
     send("1")
     sleep(50)
 }
 SC39 & k:: {
-    fxBarUsed
+    completeSpa
     send("{Tab}") ;henkan2
     sleep(50)
     send("2")
     sleep(50)
 }
 SC39 & l:: {
-    fxBarUsed
+    completeSpa
     send("{Tab}") ;henkan3
     sleep(50)
     send("3")
     sleep(50)
 }
 SC39 & SC27:: {
-    fxBarUsed
+    completeSpa
     send("{Tab}") ;henkan4
     sleep(50)
     send("4")
     sleep(50)
 }
 SC39 & SC28:: {
-    fxBarUsed
+    completeSpa
     send("{Tab}") ;henkan5
     sleep(50)
     send("5")

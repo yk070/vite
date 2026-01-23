@@ -1,25 +1,25 @@
 SC39 & sc0F:: {
-    fxBarUsed
+    completeSpa
     send("#{5}")
 }
 SC39 & q:: {
-    fxBarUsed
+    completeSpa
     send("#{4}")
 }
 SC39 & w:: {
-    fxBarUsed
+    completeSpa
     send("#{3}")
 }
 SC39 & e:: {
-    fxBarUsed
-    send("^+{tab}")
+    completeSpa
+    send("#{2}")
 }
 SC39 & r:: {
-    fxBarUsed
-    send("^{tab}")
+    completeSpa
+    send("#{1}")
 }
 SC39 & t:: {
-    fxBarUsed
+    completeSpa
     send("{" sc_hankaku "}")
 }
 

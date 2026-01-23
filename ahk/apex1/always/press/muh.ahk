@@ -1,27 +1,31 @@
-global SC7B_DownTime := 0
-global SC7B_IsDown := false
-global SC7B_Used := false
+global lastUpTimeMuh := 0
+global isDownMuh := false
+global isCompletedMuh := false
 
-fxMuhUsed() {
-    global SC7B_Used
-    SC7B_Used := true
+completeMuh() {
+    global isCompletedMuh
+    isCompletedMuh := true
 }
-SC7B:: {
-    global SC7B_DownTime, SC7B_IsDown, SC7B_Used
-    if SC7B_IsDown
+
+$sc7b:: {
+    global isDownMuh, isCompletedMuh
+    if isDownMuh
         return
-    SC7B_IsDown := true
-    SC7B_Used := false
-    SC7B_DownTime := A_TickCount
+
+    isDownMuh := true
+    isCompletedMuh := false
 }
-~SC7B Up:: {
-    global SC7B_DownTime, SC7B_IsDown, SC7B_Used
-    SC7B_IsDown := false
-    if SC7B_Used
+
+$sc7b Up:: {
+    global isDownMuh, isCompletedMuh
+    global lastUpTimeMuh
+    isDownMuh := false
+    if isCompletedMuh {
         return
-    elapsed := A_TickCount - SC7B_DownTime
-    if (elapsed < 190)
-        send("{" scEnter "}")
-    else
-        return
+    }
+    now := A_TickCount
+    if (now - lastUpTimeMuh < 333) {
+        SendInput("{" scEnter "}")
+    }
+    lastUpTimeMuh := now
 }

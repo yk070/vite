@@ -14,12 +14,13 @@
 #Include .\muh\4.ahk
 #Include .\muh\5.ahk
 #Include .\muh\mouse.ahk
+; ctrl
+#Include .\ctrl\5.ahk
 ; shift
 #Include .\shift\1.ahk
 #Include .\shift\2.ahk
 #Include .\shift\5.ahk
 ; tab
-#Include .\tab\5.ahk
 ; x2
 #Include .\x2\mouse.ahk
 #Include .\x2\1.ahk

@@ -1,7 +1,7 @@
 SC39 & LButton:: {
-    fxBarUsed
+    completeSpa
 }
 SC39 & RButton:: {
-    fxBarUsed
+    completeSpa
     Click "Left", 2
 }
