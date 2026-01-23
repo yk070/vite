@@ -1,8 +1,8 @@
-Alt & SC29:: {
+sc38 & SC29:: {
     send("{Esc}")
     send("^+{o}")
 }
-Alt & vk19:: {
+sc38 & vk19:: {
     send("{Esc}")
     send("^+{o}")
 }

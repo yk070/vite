@@ -1,6 +1,6 @@
-Alt & Shift:: {
+sc38 & Shift:: {
     send("^{/}") ; コメントアウト
 }
-Alt & z:: {
+sc38 & z:: {
     send("+!{y}") ; コメントアウト
 }

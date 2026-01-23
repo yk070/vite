@@ -1,4 +1,4 @@
-scLeftShift := "vkA0"
+scLeftShift := "sc2A"
 scZ := "sc2C"
 scX := "sc2D"
 scC := "sc2E"

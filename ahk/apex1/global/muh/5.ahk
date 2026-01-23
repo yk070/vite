@@ -5,7 +5,7 @@ SC7B & Ctrl:: {
 SC7B & LWin:: {
     completeMuh
 }
-SC7B & Alt:: {
+SC7B & sc38:: {
     completeMuh
 }
 SC7B & SC39:: {

@@ -1,12 +1,12 @@
-Alt & sc0F:: {
+sc38 & sc0F:: {
     edge_bookmark(1)
 }
-Alt & q:: {
+sc38 & q:: {
     edge_bookmark(3)
 }
-Alt & w:: {
+sc38 & w:: {
     edge_bookmark(5)
 }
-Alt & e:: {
+sc38 & e:: {
     edge_bookmark(7)
 }

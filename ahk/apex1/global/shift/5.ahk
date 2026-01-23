@@ -1,4 +1,4 @@
-shift & LAlt:: {
+sc2A & LAlt:: {
     global timerEnabled
     timerEnabled := !timerEnabled
     if (timerEnabled)
@@ -7,11 +7,11 @@ shift & LAlt:: {
         SetTimer(guiIme, 0)   ; タイマー無効化
     myGui.Destroy()
 }
-shift & SC39:: {
+sc2A & SC39:: {
     Reload()
 }
 #SuspendExempt
-shift & SC7B:: {
+sc2A & SC7B:: {
     global manualSuspend
     manualSuspend := !manualSuspend
     UpdateSuspend()

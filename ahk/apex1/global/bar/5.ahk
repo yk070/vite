@@ -6,7 +6,7 @@ SC39 & LWin:: {
     completeSpa
     send("{F12}")
 }
-SC39 & Alt:: {
+SC39 & sc38:: {
     completeSpa
     send("{F11}")
 }

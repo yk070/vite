@@ -1,3 +1,3 @@
-Alt & sc0F:: {
+sc38 & sc0F:: {
     send("^{k}")
 }

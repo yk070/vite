@@ -1,6 +1,6 @@
-Alt & Ctrl:: {
+sc38 & Ctrl:: {
     send("^!{Enter}")
 }
-Alt & Lwin:: {
+sc38 & Lwin:: {
     send("+!{6}")
 }
