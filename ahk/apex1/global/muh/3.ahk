@@ -4,19 +4,19 @@ SC7B & SC3A:: {
 }
 SC7B & a:: {
     completeMuh
-    send("^{f}")
+    send("#{v}")
 }
 SC7B & s:: {
     completeMuh
-    send("^{s}")
+    send("^!{f3}")
 }
 SC7B & d:: {
     completeMuh
-    send("^{d}")
+    send("#{d}")
 }
 SC7B & SC21:: {
     completeMuh
-    send("#{v}")
+    send("^{f}")
 }
 SC7B & g:: {
     completeMuh

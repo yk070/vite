@@ -4,21 +4,23 @@ SC7B & sc0F:: {
 }
 SC7B & q:: {
     completeMuh
-    send("#{d}")
+    send("^{q}")
 }
 SC7B & w:: {
     completeMuh
-    send("^!{f3}")
+    send("^{w}")
 }
 SC7B & e:: {
     completeMuh
+    send("^{e}")
 }
 SC7B & r:: {
     completeMuh
-    send("^{t}")
+    send("^{r}")
 }
 SC7B & t:: {
     completeMuh
+    send("^{t}")
 }
 
 SC7B & u:: {

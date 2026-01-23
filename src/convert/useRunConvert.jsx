@@ -14,7 +14,8 @@ const useRunConvert = ({ buttonObj }) => {
   };
 
   const click = () => {
-    if (boo.isDisabled || (boo.isVacant && !ctx.isWoAcSd)) return;
+    if (boo.isDisabled || (boo.isVacant && !ctx.isWoAcSd) || boo.isSoSpaceHold)
+      return;
     if (ctx.sdAcModKey) {
       if (boo.isAssigned) remove();
       ctx.setSdTgModKey(roo.originModKey);

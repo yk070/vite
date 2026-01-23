@@ -34,10 +34,12 @@ const useTgLab = ({ buttonObj }) => {
       return originKeyLabel;
     }
     if (boo.isHd) {
+      if (boo.isSoSpaceHold) return "修飾キー化中";
       if (boo.isUnusable) return backLabel;
       if (boo.isFunctionUsed && boo.isLocationUsed) return emptyLabel;
       if (boo.isFunctionUsed) return "";
     }
+    if (boo.isSoSpaceHold) return "Space(wClick)";
     if (boo.isAssigned) return assignModKeyLabel;
     if (boo.isEmptyLabel) return "";
     return originKeyLabel;

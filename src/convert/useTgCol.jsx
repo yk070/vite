@@ -17,9 +17,9 @@ const useTgCol = ({ buttonObj }) => {
       if (boo.isAssigned) return tone.AccentColor;
     }
     if (boo.isAwayHovered) return tone.AwayHoveredColor;
-    if (boo.isHd && (boo.isLocationUsed || boo.isVacant))
+    if (boo.isHd && (boo.isLocationUsed || boo.isVacant || boo.isSoSpaceHold))
       return tone.AwayHoveredColor;
-    if (boo.isAssigned) return tone.AccentColor;
+    if (boo.isAssigned || boo.isSoSpaceHold) return tone.AccentColor;
     if (boo.isDisabled) return tone.DisabledButtonColor;
     if (ctx.isWoAcSd) return tone.normalButtonColor;
     return tone.normalButtonColor;

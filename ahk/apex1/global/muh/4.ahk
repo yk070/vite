@@ -4,19 +4,15 @@ SC7B & Shift:: {
 }
 SC7B & z:: {
     completeMuh
-    send("^{q}")
 }
 SC7B & x:: {
     completeMuh
-    send("^{w}")
 }
 SC7B & c:: {
     completeMuh
-    send("^{e}")
 }
 SC7B & v:: {
     completeMuh
-    send("^{r}")
 }
 SC7B & b:: {
     completeMuh
