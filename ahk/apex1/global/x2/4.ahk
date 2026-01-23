@@ -1,4 +1,4 @@
-XButton2 & Shift:: {
+XButton2 & sc2A:: {
     send("{LButton}")
     sleep(10)
     send("{End}")

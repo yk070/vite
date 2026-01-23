@@ -1,4 +1,4 @@
-sc38 & Shift:: {
+sc38 & sc2A:: {
     send("+!{o}")  ; Shift + sc38 + O
     sleep(10)
 }
@@ -13,6 +13,6 @@ sc38 & z:: {
 }
 
 sc38 & x:: {
-    send("^+k")  ; Ctrl + Shift + K
+    send("^+k")  ; sc1D + Shift + K
     sleep(10)
 }

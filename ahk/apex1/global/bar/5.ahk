@@ -1,4 +1,4 @@
-SC39 & Ctrl:: {
+SC39 & sc1D:: {
     completeSpa
     send("{delete}")
 }

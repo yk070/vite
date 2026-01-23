@@ -32,7 +32,7 @@ SC7B & i:: {
 }
 SC7B & o:: {
     completeMuh
-    send("{Ctrl Down}{Shift Down}{Right}{Shift Up}{Ctrl Up}")
+    send("{sc1D Down}{Shift Down}{Right}{Shift Up}{sc1D Up}")
 }
 SC7B & p:: {
     completeMuh

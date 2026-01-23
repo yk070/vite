@@ -8,7 +8,7 @@ XButton2 & w:: {
 
 }
 XButton2 & e:: {
-    send("{Ctrl Down}{Shift Down}{Right}{Shift Up}{Ctrl Up}")
+    send("{sc1D Down}{Shift Down}{Right}{Shift Up}{sc1D Up}")
 }
 XButton2 & r:: {
     send("^{End}")

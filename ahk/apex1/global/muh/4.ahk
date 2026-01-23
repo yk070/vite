@@ -1,4 +1,4 @@
-SC7B & Shift:: {
+SC7B & sc2A:: {
     completeMuh
     send("^{enter}")
 }

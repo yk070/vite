@@ -1,4 +1,4 @@
-XButton2 & Ctrl:: {
+XButton2 & sc1D:: {
 }
 XButton2 & LWin:: {
 }

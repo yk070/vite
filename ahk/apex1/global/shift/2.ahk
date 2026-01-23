@@ -1,2 +1,2 @@
-; Shift & sc0F:: {
+; sc2A & sc0F:: {
 ; }

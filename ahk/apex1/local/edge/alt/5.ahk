@@ -1,4 +1,4 @@
-sc38 & Ctrl:: {
+sc38 & sc1D:: {
     send("+!{v}")  ; Shift + sc38 + V
     sleep(10)
 }

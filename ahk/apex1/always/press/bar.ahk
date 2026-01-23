@@ -25,7 +25,7 @@ $SC39 Up:: {
     }
     now := A_TickCount
     if (now - lastUpTimeSpa < 333) {
-        SendInput("{" scSpace "}")
+        SendInput("{" scTab "}")
     }
     lastUpTimeSpa := now
 }

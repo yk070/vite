@@ -1,4 +1,4 @@
-SC7B & Ctrl:: {
+SC7B & sc1D:: {
     completeMuh
     send("+{enter}")
 }

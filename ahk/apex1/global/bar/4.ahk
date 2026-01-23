@@ -1,4 +1,4 @@
-SC39 & Shift:: {
+SC39 & sc2A:: {
     completeSpa
     send("{Esc}")
 }

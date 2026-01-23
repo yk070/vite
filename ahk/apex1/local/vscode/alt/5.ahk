@@ -1,4 +1,4 @@
-sc38 & Ctrl:: {
+sc38 & sc1D:: {
     send("^!{Enter}")
 }
 sc38 & Lwin:: {
