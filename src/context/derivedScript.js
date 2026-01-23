@@ -1,7 +1,7 @@
 import acConvert from "../convert/acConvert.jsx";
 import tgConvert from "../convert/tgConvert.jsx";
 
-export const generateScript = (base) => {
+export const derivedScript = (base) => {
   const scriptLines = base.AcTgObjs?.map(({ ac, tg }) => {
     const script_tg = tgConvert(tg);
     const script_ac = acConvert(ac);
@@ -13,4 +13,4 @@ export const generateScript = (base) => {
   return { script };
 };
 
-export default generateScript;
+export default derivedScript;

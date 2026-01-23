@@ -6,7 +6,6 @@ SC7B & LWin:: {
 SC7B & sc38:: {
 }
 SC7B & SC39:: {
-    send("{Delete}")
 }
 
 SC7B & SC79:: { ;katakana

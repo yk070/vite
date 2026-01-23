@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import multiObj from "../obj/multiObj.jsx";
 
-const useMultiClickObj = (base, derived) => {
+const useMultiClickObj = (base, main) => {
   useEffect(() => {
     base.setCdMultiObj(null);
     const objs = base.cdMultiObjs?.objs;
@@ -12,10 +12,10 @@ const useMultiClickObj = (base, derived) => {
     base.setAcTgObjs((prev) => {
       const filteredAcTgObjs = prev.filter(
         (acTgObj) =>
-          !objs.some((targetMiniObj) => targetMiniObj.tg === acTgObj.tg)
+          !objs.some((targetMiniObj) => targetMiniObj.tg === acTgObj.tg),
       );
       const isAlreadySd = objs?.every((targetMiniObj) =>
-        derived.acTgSet.has(`${targetMiniObj.ac}|${targetMiniObj.tg}`)
+        main.acTgSet.has(`${targetMiniObj.ac}|${targetMiniObj.tg}`),
       );
       return isAlreadySd ? filteredAcTgObjs : [...filteredAcTgObjs, ...objs];
     });

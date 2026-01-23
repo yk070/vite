@@ -3,7 +3,7 @@ import { ModIndexes } from "../array/namedMods.jsx";
 import keyLabelObj from "../obj/keyLabelObj.jsx";
 import AssignConvert from "../convert/AssignConvert.jsx";
 
-export const derivedArrow = (base) => {
+export const derivedArrow = (base, main) => {
   const HoveredModKeyTgLabel = AssignConvert(base.hdModKeyTg);
   const [HoveredMod, HoveredKey] = base.hdModKeyTg?.split("*") ?? [];
   const { x: TailX, y: TailY } = PositionConvert(HoveredKey);
@@ -13,13 +13,11 @@ export const derivedArrow = (base) => {
   const isAwayExist = !!AwayHoveredModKey;
   const [AwayHoveredMod, AwayHoveredKey] = AwayHoveredModKey?.split("*") ?? [];
   const AwayHoveredKeyLabel = keyLabelObj[AwayHoveredKey];
-  const contextIndexes = base.isWoSpaceHold
-    ? [...ModIndexes, "space"]
-    : ModIndexes;
-  const IndexesNumber = contextIndexes.length;
-  const HomeNumber = contextIndexes.indexOf(HoveredMod);
-  const AwayNumber = contextIndexes.indexOf(AwayHoveredMod);
-  const currentModNumber = contextIndexes.indexOf(base.currentModTg);
+
+  const IndexesNumber = main.contextIndexes.length;
+  const HomeNumber = main.contextIndexes.indexOf(HoveredMod);
+  const AwayNumber = main.contextIndexes.indexOf(AwayHoveredMod);
+  const currentModNumber = main.contextIndexes.indexOf(base.currentModTg);
   const ModX = ((currentModNumber + 0.5) * 100) / IndexesNumber;
   const isAwaySame = HoveredMod === AwayHoveredMod;
 
@@ -51,7 +49,6 @@ export const derivedArrow = (base) => {
     HoveredModKeyTgLabel,
     TailX,
     TailY,
-    contextIndexes,
   };
 };
 

@@ -1,10 +1,15 @@
 import { basicIndexes } from "../array/namedMods.jsx";
+import { ModIndexes } from "../array/namedMods.jsx";
 
-const derivedState = (base) => {
+const derivedMain = (base) => {
   const acTgSet = new Set(base.AcTgObjs?.map((obj) => `${obj.ac}|${obj.tg}`));
   const isMultiOnHd = base.hdMultiObj?.objs?.every((obj) =>
     acTgSet.has(`${obj.ac}|${obj.tg}`),
   );
+
+  const contextIndexes = base.isWoSpaceHold
+    ? [...ModIndexes, "space"]
+    : ModIndexes;
 
   const isWoTgNone = base.currentModTg === "none";
   const isWoTgSpace = base.currentModTg === "space";
@@ -14,9 +19,6 @@ const derivedState = (base) => {
 
   const isModAcOften = base.currentModAc.includes("often");
 
-  // hovered Tg
-  // away
-  // arrow position
   return {
     isWoTgNone,
     isWoTgSpace,
@@ -25,6 +27,7 @@ const derivedState = (base) => {
     isMultiOnHd,
     isWoAcBasic,
     acTgSet,
+    contextIndexes,
   };
 };
-export default derivedState;
+export default derivedMain;

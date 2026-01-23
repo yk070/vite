@@ -1,5 +1,6 @@
 $sc01:: send("{" scTab "}") ;esc
 $sc29:: send("{" scBackspace "}") ;hankaku
+$vkF4:: send("{" scBackspace "}") ;hankaku
 $sc0F:: send("{" scEnter "}") ;tab
 $sc3A:: send("{" scSpace "}") ;capslock
 

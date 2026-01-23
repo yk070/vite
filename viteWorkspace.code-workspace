@@ -50,7 +50,7 @@
         "group": "vite",
       },
       {
-        "filePath": "src\\ui\\context\\derivedState.js",
+        "filePath": "src\\ui\\context\\derivedMain.js",
         "group": "vite",
       },
       {
@@ -58,7 +58,7 @@
         "group": "Default",
       },
       {
-        "filePath": "c:\\Users\\ykx07\\Documents\\vite\\src\\ui\\context\\derivedState.js",
+        "filePath": "c:\\Users\\ykx07\\Documents\\vite\\src\\ui\\context\\derivedMain.js",
         "group": "Default",
       },
       {

@@ -1,18 +1,18 @@
 import React, { createContext, useContext } from "react";
 import useStateBoss from "./useStateBoss.js";
-import derivedState from "./derivedState.js";
+import derivedMain from "./derivedMain.js";
 import useEffectBoss from "./useEffectBoss.js";
-import generateScript from "./generateScript.js";
+import derivedScript from "./derivedScript.js";
 import derivedArrow from "./derivedArrow.js";
 const AppContext = createContext(null);
 export const CtxProvider = ({ children }) => {
   const base = useStateBoss();
-  const script = generateScript(base);
-  const derived = derivedState(base);
-  const arrow = derivedArrow(base);
-  useEffectBoss(base, derived);
+  const main = derivedMain(base);
+  const script = derivedScript(base);
+  const arrow = derivedArrow(base, main);
+  useEffectBoss(base, main);
   return (
-    <AppContext.Provider value={{ ...base, ...script, ...derived, ...arrow }}>
+    <AppContext.Provider value={{ ...base, ...script, ...main, ...arrow }}>
       {children}
     </AppContext.Provider>
   );
