@@ -1,4 +1,4 @@
-sc_hankaku := "sc29"
+scHankaku := "sc29"
 scOne := "sc02"
 scTwo := "sc03"
 scThree := "sc04"

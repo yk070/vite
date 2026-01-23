@@ -1,4 +1,4 @@
-import { ModIndexes, basicIndexes } from "../array/namedMods.jsx";
+import { basicIndexes } from "../array/namedMods.jsx";
 
 const derivedState = (base) => {
   const acTgSet = new Set(base.AcTgObjs?.map((obj) => `${obj.ac}|${obj.tg}`));
@@ -9,7 +9,7 @@ const derivedState = (base) => {
   const isWoTgNone = base.currentModTg === "none";
   const isWoTgSpace = base.currentModTg === "space";
   const isWoAcBasic = basicIndexes?.includes(base.currentModAc);
-  // console.log("isWoAcBasic", isWoAcBasic);
+
   const isWoAcSd = !!base.sdAcModKey;
 
   const isModAcOften = base.currentModAc.includes("often");

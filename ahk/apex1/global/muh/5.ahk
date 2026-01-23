@@ -1,20 +1,15 @@
 SC7B & sc1D:: {
-    completeMuh
     send("+{enter}")
 }
 SC7B & LWin:: {
-    completeMuh
 }
 SC7B & sc38:: {
-    completeMuh
 }
 SC7B & SC39:: {
-    completeMuh
     send("{Delete}")
 }
 
-SC7B & SC79:: {
-    completeMuh ;katakana
+SC7B & SC79:: { ;katakana
     send("{F7}")
     sleep(100)
     send("{Enter}")

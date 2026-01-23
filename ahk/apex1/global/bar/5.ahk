@@ -1,22 +1,17 @@
 SC39 & sc1D:: {
-    completeSpa
     send("{delete}")
 }
 SC39 & LWin:: {
-    completeSpa
     send("{F12}")
 }
 SC39 & sc38:: {
-    completeSpa
     send("{F11}")
 }
 SC39 & SC7B:: {
-    completeSpa
     send("{F2}")
 }
 
 SC39 & SC79:: {
-    completeSpa
     send("{space}") ;basicInput
     sleep(200)
     send("{space}")

@@ -4,7 +4,7 @@ import derivedState from "./derivedState.js";
 import useEffectBoss from "./useEffectBoss.js";
 import generateScript from "./generateScript.js";
 import derivedArrow from "./derivedArrow.js";
-const ContextProvider = createContext(null);
+const AppContext = createContext(null);
 export const CtxProvider = ({ children }) => {
   const base = useStateBoss();
   const script = generateScript(base);
@@ -12,12 +12,10 @@ export const CtxProvider = ({ children }) => {
   const arrow = derivedArrow(base);
   useEffectBoss(base, derived);
   return (
-    <ContextProvider.Provider
-      value={{ ...base, ...script, ...derived, ...arrow }}
-    >
+    <AppContext.Provider value={{ ...base, ...script, ...derived, ...arrow }}>
       {children}
-    </ContextProvider.Provider>
+    </AppContext.Provider>
   );
 };
-const useCtx = () => useContext(ContextProvider);
+const useCtx = () => useContext(AppContext);
 export default useCtx;
