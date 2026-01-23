@@ -45,13 +45,13 @@ const MultiCircleDiv = ({
 const levelConfig = {
   first: {
     layers: 1,
-    stroke: 13,
-    fill: true,
-    topMultiplier: 1,
-    rightMultiplier: -30,
+    stroke: 20,
+    // fill: true,
+    topMultiplier: -1,
+    rightMultiplier: -11,
   },
-  second: { layers: 1, stroke: 10, topMultiplier: 2, rightMultiplier: -33 },
-  third: { layers: 1, stroke: 1, topMultiplier: 2, rightMultiplier: -27 },
+  second: { layers: 1, stroke: 10, topMultiplier: 2, rightMultiplier: -29 },
+  third: { layers: 1, stroke: 1, topMultiplier: 4, rightMultiplier: -36 },
 };
 
 export default function MultiCircle({ level }) {

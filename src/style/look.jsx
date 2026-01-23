@@ -169,19 +169,12 @@ const look = {
   }),
 
   tgButton8: {
-    zIndex: 2,
-
     position: "absolute",
     top: 0,
-    left: 0,
-    paddingLeft: `calc(${base} * 8)`,
-    fontSize: `calc(${base} * 18)`,
-    display: "flex",
-    alignItems: "center",
-    color: tone.textBlackColor, // 例
-    pointerEvents: "none",
-    whiteSpace: "nowrap",
-    backgroundColor: tone.multiColor,
+    right: 0,
+    // backgroundColor: "red",
+    height: "100%",
+    aspectRatio: "1 / 1", // 高さに合わせて幅も同じに
   },
 
   tgButton2: (col) => ({

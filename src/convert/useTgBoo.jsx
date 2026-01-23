@@ -46,7 +46,13 @@ const useTgBoo = ({ buttonObj }) => {
 
   const easeLevelObj = easeObj[ctx.currentModTg];
   function getLevel() {
-    if (!ctx.isWoAcSd || isDisabled || isAssigned) return "";
+    if (
+      // !ctx.isWoAcSd ||
+      isSoSpaceHold ||
+      isDisabled ||
+      isAssigned
+    )
+      return "";
     const entry = Object.entries(easeLevelObj)?.find(([_, keys]) =>
       keys?.includes(roo.originKey),
     );

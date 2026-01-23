@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 const useStateBoss = () => {
   const [AcTgObjs, setAcTgObjs] = useState([]);
   // console.log("AcTgObjs", AcTgObjs);
@@ -11,6 +11,7 @@ const useStateBoss = () => {
   const [currentModTg, setcurrentModTg] = useState("none");
   // space hold
   const [isWoSpaceHold, setisWoSpaceHold] = useState(false);
+  const [isWoMuhHold, setIsWoMuhHold] = useState(false);
   // multi
   const [cdMultiObjs, setCdMultiObj] = useState({});
   // selected
@@ -47,6 +48,8 @@ const useStateBoss = () => {
     setHoverLocktg,
     cdMultiObjs,
     setCdMultiObj,
+    isWoMuhHold,
+    setIsWoMuhHold,
   };
 };
 export default useStateBoss;
