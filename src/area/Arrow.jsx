@@ -2,7 +2,7 @@ import React from "react";
 import useCtx from "../context/useCtx.jsx";
 import { header, sidebar } from "../style/length.jsx";
 import tone from "../style/color.jsx";
-import zObj from "../obj/zObj.jsx";
+import zObj from "../obj/zObj.js";
 import Tg from "./Tg.jsx";
 const Arrow = ({ containerRef }) => {
   const ctx = useCtx();

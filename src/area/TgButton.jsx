@@ -13,7 +13,7 @@ const TgButton = ({ buttonObj }) => {
   const lab = useTgLab({ buttonObj });
   const run = useRunConvert({ buttonObj });
 
-  if (boo.isNoneAlphabetNumber) return null;
+  if (boo.isReturn) return null;
 
   return (
     <div

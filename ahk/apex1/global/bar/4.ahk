@@ -18,15 +18,15 @@ SC39 & b:: {
 }
 
 SC39 & n:: {
+    send("{Up}")
 }
 SC39 & m:: {
+    send("^{Home}")
 }
 SC39 & SC33:: {
-    send_text("、")
+    send("^{End}")
 }
 SC39 & SC34:: {
-    send_text("。")
 }
 SC39 & SC35:: {
-    send_text("？")
 }

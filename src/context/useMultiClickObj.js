@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import multiObj from "../obj/multiObj.jsx";
+import multiObj from "../obj/multiObj.js";
 
 const useMultiClickObj = (base, main) => {
   useEffect(() => {

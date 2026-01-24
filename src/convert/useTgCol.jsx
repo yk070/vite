@@ -1,7 +1,7 @@
 import useCtx from "../context/useCtx.jsx";
 import tone from "../style/color.jsx";
 import useTgBoo from "./useTgBoo.jsx";
-import TgButton from "../area/TgButton.jsx";
+
 const useTgCol = ({ buttonObj }) => {
   const boo = useTgBoo({ buttonObj });
   const ctx = useCtx();

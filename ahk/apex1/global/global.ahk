@@ -15,6 +15,8 @@
 #Include .\muh\5.ahk
 #Include .\muh\mouse.ahk
 ; ctrl
+#Include .\ctrl\3.ahk
+#Include .\ctrl\4.ahk
 #Include .\ctrl\5.ahk
 ; shift
 #Include .\shift\1.ahk

@@ -1,7 +1,7 @@
 import React from "react";
 import useCtx from "../context/useCtx.jsx";
 import { header, sidebar } from "../style/length.jsx";
-import keyObjs from "../array/keyObjs.jsx";
+import keyObjs from "../array/keyObjs.js";
 import tone from "../style/color.jsx";
 import Tg from "./Tg.jsx";
 const Line = ({ containerRef, headX, headY }) => {
@@ -16,7 +16,7 @@ const Line = ({ containerRef, headX, headY }) => {
     win: "left_win",
   };
   const style = keyObjs.find(
-    (obj) => obj.key === modLineObj[ctx.currentModTg]
+    (obj) => obj.key === modLineObj[ctx.currentModTg],
   )?.style;
 
   const left = parseFloat(style?.left ?? "0");

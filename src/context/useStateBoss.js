@@ -7,7 +7,7 @@ const useStateBoss = () => {
   const [hdMultiObj, setHdMultiObj] = useState(null);
 
   // current mod
-  const [currentModAc, setCurrentModAc] = useState("basic1");
+  const [currentModAc, setCurrentModAc] = useState("none");
   const [currentModTg, setcurrentModTg] = useState("none");
   // space hold
   const [isWoSpaHold, setIsWoSpaHold] = useState(false);

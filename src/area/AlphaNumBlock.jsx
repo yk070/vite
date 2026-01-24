@@ -7,7 +7,7 @@ import Ac from "./Ac.jsx";
 const AlphaNumBlock = ({ derive }) => {
   const ctx = useCtx();
   if (
-    (derive === "tg" && ctx.isWoTgNone) ||
+    (derive === "tg" && (ctx.isWoTgNone || ctx.isWoTgShift)) ||
     (derive === "ac" && ctx.isWoAcBasic)
   )
     return;

@@ -1,7 +1,7 @@
 import React from "react";
 import look from "../style/look.jsx";
 import useCtx from "../context/useCtx.jsx";
-import basicObj from "../obj/basicObj.jsx";
+import basicObj from "../obj/basicObj.js";
 import BasicButtons from "./BasicButtons.jsx";
 import AcButtons from "./AcButtons.jsx";
 const BasicHalf = ({ basicProps }) => {

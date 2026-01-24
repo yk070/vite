@@ -1,5 +1,5 @@
-import { ModBigger } from "../obj/namedObj.jsx";
-import scObj from "../obj/scObj.jsx";
+import { ModBigger } from "../obj/namedObj.js";
+import scObj from "../obj/scObj.js";
 
 const tgConvert = (modKey) => {
   const [Mod, Key] = modKey.split("*");

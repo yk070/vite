@@ -1,6 +1,6 @@
-import { EnterObj } from "../obj/namedObj.jsx";
+import { EnterObj } from "../obj/namedObj.js";
 import useCtx from "../context/useCtx.jsx";
-import easeObj from "../obj/easeObj.jsx";
+import easeObj from "../obj/easeObj.js";
 const useTgRoo = ({ buttonObj }) => {
   const ctx = useCtx();
   const style = buttonObj.style;
@@ -9,17 +9,17 @@ const useTgRoo = ({ buttonObj }) => {
   const originModKey = ctx.currentModTg + "*" + originKey;
 
   const assignModKey = ctx.AcTgObjs.find(
-    (actgObj) => actgObj.tg === originModKey
+    (actgObj) => actgObj.tg === originModKey,
   )?.ac;
 
   const multiHdAcModKey = ctx.hdMultiObj?.objs?.find(
-    (hdMiniObj) => hdMiniObj.tg === originModKey
+    (hdMiniObj) => hdMiniObj.tg === originModKey,
   )?.ac;
   const cdMultiList = Array.isArray(ctx.cdMultiObjs?.objs)
     ? ctx.cdMultiObjs?.objs
     : [];
   const multiCdAcModKey = cdMultiList?.find(
-    (cdMultiObj) => cdMultiObj.tg === originModKey
+    (cdMultiObj) => cdMultiObj.tg === originModKey,
   )?.ac;
 
   return {

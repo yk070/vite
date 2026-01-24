@@ -1,4 +1,3 @@
-import React from "react";
 import look from "../style/look.jsx";
 import { FaCheck } from "react-icons/fa6";
 import { LuTriangleAlert } from "react-icons/lu";
@@ -6,7 +5,6 @@ import useBasicLab from "../convert/useBasicLab.jsx";
 import useBasicBoo from "../convert/useBasicBoo.jsx";
 import useBasicRun from "../convert/useBasicRun.jsx";
 import useBasicCol from "../convert/useBasicCol.jsx";
-import BasicButtons from "./BasicButtons.jsx";
 const BasicButton = ({ modKey }) => {
   const boo = useBasicBoo({ modKey });
   const col = useBasicCol({ modKey });

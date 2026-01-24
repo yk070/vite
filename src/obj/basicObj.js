@@ -1,7 +1,7 @@
 const basicObj = {
   basic1: {
     left: {
-      Esc: {
+      基本: {
         row: 2,
         modKeys: [
           "none*hankaku",
@@ -15,6 +15,10 @@ const basicObj = {
       fa: {
         row: 1,
         modKeys: ["alt*tab", "alt*f4", "win*d", "ctrl*tab", "ctrl*shift*tab"],
+      },
+      操作: {
+        row: 1,
+        modKeys: ["reload", "suspend"],
       },
     },
     right: {

@@ -1,4 +1,4 @@
-import { ModIndexes, AllIndexes } from "../array/namedMods.jsx";
+import { ModIndexes, AllIndexes } from "../array/namedMods.js";
 
 const scriptAcModObj = {
   none: "",
@@ -20,7 +20,7 @@ const acIndexLabelObj = {
   muhenkan: "無変換",
 };
 
-import keyObjs from "../array/keyObjs.jsx";
+import keyObjs from "../array/keyObjs.js";
 const ModButtonsObj = Object.fromEntries(
   AllIndexes.map((contextIndex) => [
     contextIndex,

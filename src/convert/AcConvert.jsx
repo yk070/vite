@@ -1,5 +1,5 @@
-import { scriptAcModObj } from "../obj/namedObj.jsx";
-import scObj from "../obj/scObj.jsx";
+import { scriptAcModObj } from "../obj/namedObj.js";
+import scObj from "../obj/scObj.js";
 const acConvert = (modKey) => {
   const [Mod, Key] = modKey.split("*");
   const Namelabel_Mod = scriptAcModObj[Mod] ?? "";

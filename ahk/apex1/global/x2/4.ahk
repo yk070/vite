@@ -1,28 +1,19 @@
 XButton2 & sc2A:: {
-    send("{LButton}")
-    sleep(10)
-    send("{End}")
-    sleep(10)
-    send("+{Home}")
-    sleep(10)
-    send("+{Home}")
-    sleep(10)
+    send("{Up}")
 }
 
 XButton2 & z:: {
-    send("+{Home}")
+    send("^{Home}")
 }
 
 XButton2 & x:: {
-    send("+{Left}")
+    send("^{End}")
 }
 
 XButton2 & c:: {
-    send("+{Right}")
 }
 
 XButton2 & v:: {
-    send("+{End}")
 }
 
 XButton2 & b:: {

@@ -1,5 +1,5 @@
 import useCtx from "../context/useCtx.jsx";
-import { acIndexLabelObj } from "../obj/namedObj.jsx";
+import { acIndexLabelObj } from "../obj/namedObj.js";
 import useTgIndexBoo from "./useTgIndexBoo.jsx";
 import look from "../style/look.jsx";
 

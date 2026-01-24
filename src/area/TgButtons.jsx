@@ -1,6 +1,6 @@
 import React from "react";
 import useCtx from "../context/useCtx.jsx";
-import { ModButtonsObj } from "../obj/namedObj.jsx";
+import { ModButtonsObj } from "../obj/namedObj.js";
 import TgButton from "./TgButton.jsx";
 import Tg from "./Tg.jsx";
 

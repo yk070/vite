@@ -1,6 +1,6 @@
 import PositionConvert from "../convert/PositionConvert.jsx";
-import { ModIndexes } from "../array/namedMods.jsx";
-import keyLabelObj from "../obj/keyLabelObj.jsx";
+import { ModIndexes } from "../array/namedMods.js";
+import keyLabelObj from "../obj/keyLabelObj.js";
 import AssignConvert from "../convert/AssignConvert.jsx";
 
 export const derivedArrow = (base, main) => {

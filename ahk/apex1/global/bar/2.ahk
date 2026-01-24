@@ -18,14 +18,19 @@ SC39 & t:: {
 }
 
 SC39 & y:: {
+    send("+{Home}")
 }
 SC39 & u:: {
 }
 SC39 & i:: {
+    send("+{Left}")
 }
 SC39 & o:: {
+    send("+{Right}")
 }
 SC39 & p:: {
+    send("^+{Right}")
 }
 SC39 & SC1A:: {
+    send("+{End}")
 }

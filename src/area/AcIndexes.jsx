@@ -1,8 +1,8 @@
 import React from "react";
 import AcIndex from "./AcIndex.jsx";
 import useCtx from "../context/useCtx.jsx";
-import { DefaultIndexes } from "../array/namedMods.jsx";
-import { acIndexLabelObj } from "../obj/namedObj.jsx";
+import { DefaultIndexes } from "../array/namedMods.js";
+import { acIndexLabelObj } from "../obj/namedObj.js";
 import tone from "../style/color.jsx";
 const AcIndexes = () => {
   const { currentModAc, setCurrentModAc } = useCtx();

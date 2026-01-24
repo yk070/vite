@@ -1,4 +1,4 @@
-import keyObjs from "../array/keyObjs.jsx";
+import keyObjs from "../array/keyObjs.js";
 const PositionConvert = (HoveredKey) => {
   const keyToFind = HoveredKey === "enter" ? "enter_above" : HoveredKey;
   const style = keyObjs.find((KeyObj) => KeyObj.key === keyToFind)?.style;

@@ -1,6 +1,6 @@
 import { header, sidebar, base } from "./length.jsx";
 import tone from "../style/color.jsx";
-import zObj from "../obj/zObj.jsx";
+import zObj from "../obj/zObj.js";
 
 const look = {
   download2: {
@@ -207,17 +207,6 @@ const look = {
     alignItems: "center", // 縦中央
     color: tone.TextColor, // ← やさしい白
   },
-  acButton5: {
-    position: "absolute",
-    right: `calc(${base} * 6)`, // ← 右からの距離
-    top: "50%",
-    transform: "translateY(-50%)",
-
-    display: "flex",
-    alignItems: "center",
-    fontSize: `calc(${base} * 18)`,
-    color: "#22C55E",
-  },
   BasicButtons3: {
     display: "flex",
     alignItems: "center",
@@ -236,15 +225,24 @@ const look = {
     marginRight: `calc(${base} * 4)`, // ← 右からの距離
     marginLeft: "auto",
   },
-  acButton4: {
+  acButton5: {
     position: "absolute",
-    right: `calc(${base} * 6)`, // ← 右からの距離
-    top: "50%",
-    transform: "translateY(-50%)",
+    right: `calc(${base} * -1)`,
+    top: `calc(${base} * 1)`,
 
     display: "flex",
     alignItems: "center",
-    fontSize: `calc(${base} * 18)`,
+    fontSize: `calc(${base} * 13)`,
+    color: "#22C55E",
+  },
+  acButton4: {
+    position: "absolute",
+    right: `calc(${base} * 2)`,
+    top: `calc(${base} * 1)`,
+
+    display: "flex",
+    alignItems: "center",
+    fontSize: `calc(${base} * 13 )`,
     color: "yellow",
   },
   multi1: {
@@ -270,18 +268,22 @@ const look = {
     alignItems: "center",
     justifyContent: "flex-start",
     paddingLeft: `calc(${base} * 8)`,
-    fontSize: `calc(${base} * 18)`,
+    fontSize: `calc(${base} * 15)`,
     color: col.textColor,
   }),
-  acButton3: {
+  acButton3: (boo) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-start",
-    paddingLeft: `calc(${base} * 8)`,
-    fontSize: `calc(${base} * 18)`,
+    paddingLeft: `calc(${base} * 3)`,
+    fontSize: `calc(${base} * 15)`,
     color: tone.TextColor,
+    textDecorationLine: boo.isImportant ? "underline" : "none",
+    textDecorationThickness: `calc(${base} * 7)`,
+    textUnderlineOffset: `calc(${base} * 2)`,
+    textDecorationSkipInk: "none",
     // gap: `calc(${base} * 2)`,
-  },
+  }),
   acButton2: (col) => ({
     position: "absolute",
     top: "50%",

@@ -1,6 +1,6 @@
 import AssignConvert from "./AssignConvert.jsx";
 import look from "../style/look.jsx";
-import keyLabelObj from "../obj/keyLabelObj.jsx";
+import keyLabelObj from "../obj/keyLabelObj.js";
 import useTgBoo from "./useTgBoo.jsx";
 import useTgRoo from "./useTgRoo.jsx";
 import useCtx from "../context/useCtx.jsx";

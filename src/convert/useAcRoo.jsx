@@ -1,4 +1,4 @@
-import { EnterObj } from "../obj/namedObj.jsx";
+import { EnterObj } from "../obj/namedObj.js";
 import useCtx from "../context/useCtx.jsx";
 
 const useAcRoo = ({ ButtonObj }) => {

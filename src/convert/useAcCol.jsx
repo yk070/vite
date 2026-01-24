@@ -1,18 +1,19 @@
-import useAcRoo from "./useAcRoo.jsx";
 import tone from "../style/color.jsx";
 import useAcBoo from "./useAcBoo.jsx";
 import useCtx from "../context/useCtx.jsx";
+
 const useAcCol = ({ ButtonObj }) => {
   const boo = useAcBoo({ ButtonObj });
   const ctx = useCtx();
+
   const getButtonColor = () => {
+    if (boo.isDisabled) return tone.DisabledButtonColor;
     if (boo.isActive) return tone.acSelectColor;
     return tone.normalButtonColor;
   };
   const getBorderColor = () => {
+    if (boo.isDisabled && boo.isHd) return "transparent";
     if (!ctx.isWoAcSd && boo.isHd) return tone.acSelectColor;
-    if (ctx.isWoAcSd) {
-    }
     return "transparent";
   };
 

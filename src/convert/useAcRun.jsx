@@ -1,16 +1,18 @@
 import useAcRoo from "./useAcRoo.jsx";
-import tone from "../style/color.jsx";
+import useAcBoo from "./useAcBoo.jsx";
 import useCtx from "../context/useCtx.jsx";
 const useAcRun = ({ ButtonObj }) => {
   const roo = useAcRoo({ ButtonObj });
+  const boo = useAcBoo({ ButtonObj });
   const ctx = useCtx();
 
   const click = () => {
+    if (boo.isDisabled) return;
     if (ctx.isWoAcSd) {
       ctx.setSdAcModKey(null);
-    } else {
-      ctx.setSdAcModKey(roo.modKey);
+      return;
     }
+    ctx.setSdAcModKey(roo.modKey);
   };
 
   const hover = () => {

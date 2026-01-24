@@ -1,5 +1,5 @@
-import { basicIndexes } from "../array/namedMods.jsx";
-import { ModIndexes } from "../array/namedMods.jsx";
+import { basicIndexes } from "../array/namedMods.js";
+import { ModIndexes } from "../array/namedMods.js";
 
 const derivedMain = (base) => {
   const acTgSet = new Set(base.AcTgObjs?.map((obj) => `${obj.ac}|${obj.tg}`));
@@ -20,6 +20,7 @@ const derivedMain = (base) => {
 
   const isWoTgNone = base.currentModTg === "none";
   const isWoTgSpace = base.currentModTg === "space";
+  const isWoTgShift = base.currentModTg === "shift";
   const isWoAcBasic = basicIndexes?.includes(base.currentModAc);
 
   const isWoAcSd = !!base.sdAcModKey;
@@ -35,6 +36,7 @@ const derivedMain = (base) => {
     isWoAcBasic,
     acTgSet,
     contextIndexes,
+    isWoTgShift,
   };
 };
 export default derivedMain;

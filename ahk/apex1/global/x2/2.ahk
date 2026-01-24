@@ -1,17 +1,17 @@
 XButton2 & sc0F:: {
-    send("{Up}")
+    send("+{Home}")
 }
 XButton2 & q:: {
-    send("^{Home}")
 }
 XButton2 & w:: {
-
+    send("+{Left}")
 }
 XButton2 & e:: {
-    send("{sc1D Down}{Shift Down}{Right}{Shift Up}{sc1D Up}")
+    send("+{Right}")
 }
 XButton2 & r:: {
-    send("^{End}")
+    send("^+{Right}")
 }
 XButton2 & t:: {
+    send("+{End}")
 }

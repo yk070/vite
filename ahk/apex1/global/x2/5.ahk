@@ -1,4 +1,5 @@
 XButton2 & sc1D:: {
+    send("{Down}")
 }
 XButton2 & LWin:: {
 }

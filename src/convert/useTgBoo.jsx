@@ -1,13 +1,13 @@
-import { DisabledModKeys } from "../array/namedModKeys.jsx";
+import { disabledModKeys } from "../array/namedModKeys.js";
 import {
   ModifierKeys,
   AlphabetNumberKeys,
   VirtualModifierKeys,
-} from "../array/namedKeys.jsx";
-import easeObj from "../obj/easeObj.jsx";
+} from "../array/namedKeys.js";
+import easeObj from "../obj/easeObj.js";
 import useCtx from "../context/useCtx.jsx";
 import useTgRoo from "./useTgRoo.jsx";
-import TgButton from "../area/TgButton.jsx";
+
 const useTgBoo = ({ buttonObj }) => {
   const roo = useTgRoo({ buttonObj });
   const ctx = useCtx();
@@ -35,9 +35,9 @@ const useTgBoo = ({ buttonObj }) => {
   const isUnusable = !isFunctionUsed && isLocationUsed;
 
   const isAssigned = !!roo.assignModKey;
-  const isDisabled = DisabledModKeys.includes(roo.originModKey);
+  const isDisabled = disabledModKeys.includes(roo.originModKey);
   const isAlphabetNumber = AlphabetNumberKeys.includes(roo.originKey);
-  const isNoneAlphabetNumber = isAlphabetNumber && ctx.isWoTgNone;
+  const isReturn = isAlphabetNumber && (ctx.isWoTgNone || ctx.isWoTgShift);
 
   const isEmptyLabel = isVacant || isEnterBelow || isModKeySame;
 
@@ -61,7 +61,7 @@ const useTgBoo = ({ buttonObj }) => {
     isDisabled,
     isHd,
     isModKeySame,
-    isNoneAlphabetNumber,
+    isReturn,
     isLocationUsed,
     isFunctionUsed,
     isAwayHovered,

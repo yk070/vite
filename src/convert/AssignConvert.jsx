@@ -1,5 +1,5 @@
-import { ModBigger } from "../obj/namedObj.jsx";
-import keyLabelObj from "../obj/keyLabelObj.jsx";
+import { ModBigger } from "../obj/namedObj.js";
+import keyLabelObj from "../obj/keyLabelObj.js";
 import ModLabelReuse from "../reuse/ModLabelReuse.jsx";
 const AssignConvert = (modKey) => {
   if (!modKey) return null;

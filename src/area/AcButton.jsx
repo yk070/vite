@@ -1,4 +1,3 @@
-import React from "react";
 import useAcRoo from "../convert/useAcRoo.jsx";
 import useAcBoo from "../convert/useAcBoo.jsx";
 import useAcCol from "../convert/useAcCol.jsx";
@@ -7,7 +6,7 @@ import useAcLab from "../convert/useAcLab.jsx";
 import look from "../style/look.jsx";
 import { FaCheck } from "react-icons/fa6";
 import { LuTriangleAlert } from "react-icons/lu";
-import AcButtons from "./AcButtons.jsx";
+
 const AcButton = ({ ButtonObj }) => {
   const roo = useAcRoo({ ButtonObj });
   const boo = useAcBoo({ ButtonObj });
@@ -22,13 +21,9 @@ const AcButton = ({ ButtonObj }) => {
       onMouseLeave={run.leave}
     >
       <div style={look.acButton2(col)}>
-        <span style={look.acButton3}>{lab.label}</span>
-        {!boo.isEnterBelow && boo.isAlert && (
-          <LuTriangleAlert style={look.acButton4} />
-        )}
-        {!boo.isEnterBelow && boo.isFunctionUsed && (
-          <FaCheck style={look.acButton5} />
-        )}
+        <span style={look.acButton3(boo)}>{lab.label}</span>
+        {boo.isAlert && <LuTriangleAlert style={look.acButton4} />}
+        {boo.isFunctionUsed && <FaCheck style={look.acButton5} />}
       </div>
     </div>
   );
