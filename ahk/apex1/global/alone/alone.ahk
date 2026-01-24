@@ -10,6 +10,4 @@ $F1:: {
     Run(A_ScriptDir "\..\apex3\apex3.ahk")
     ExitApp()
 }
-$NumpadEnter:: {
-    DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
-}
+$NumpadEnter:: DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)

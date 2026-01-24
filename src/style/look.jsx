@@ -44,6 +44,34 @@ const look = {
     borderBottom: "5px solid transparent",
     borderLeft: "8px solid white",
   },
+  sidebar1: {
+    display: "flex",
+    // alignItems: "center",
+    width: "100%",
+    // justifyContent: "center",
+    // backgroundColor: "#888888",
+    // fontSize: `calc(${base} * 20)`,
+    // color: tone.TextColor,
+    gap: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    // backgroundColor: "red",
+  },
+  reset1: {
+    position: "sticky",
+    top: 0,
+    backgroundColor: "#e74c3c",
+    color: "#fff",
+    border: "none",
+    cursor: "pointer",
+    width: "100%",
+    height: "56px",
+    fontSize: "16px",
+  },
+  sidebar2: {
+    position: "relative",
+    padding: 10,
+  },
   Multi3: {
     display: "flex",
     alignItems: "center",
@@ -188,13 +216,13 @@ const look = {
     backgroundColor: col.buttonColor,
   }),
 
-  tgButton1: (roo, col, boo) => ({
+  tgButton1: (styleObj, roo, col, boo) => ({
     position: "absolute",
     width: "100%",
     height: "100%",
     cursor: roo.isCursorPointer ? "pointer" : "default",
     backgroundColor: col.borderColor,
-    ...roo.style,
+    ...styleObj,
     zIndex: boo?.isHd ? zObj.hdTgButton : zObj.notHdTgButton,
   }),
   tg_Index1: {
@@ -293,13 +321,13 @@ const look = {
     transform: "translate(-50%, -50%)",
     backgroundColor: col.buttonColor,
   }),
-  acButton1: (roo, col) => ({
+  acButton1: (styleObj, col) => ({
     position: "absolute",
     width: "100%",
     height: "100%",
     zIndex: 2,
     backgroundColor: col.borderColor,
-    ...roo.style,
+    ...styleObj,
   }),
   ac_Matrix1: {
     position: "absolute",

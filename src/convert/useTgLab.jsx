@@ -1,23 +1,21 @@
-import AssignConvert from "./AssignConvert.jsx";
+import convLabel from "./convLabel.jsx";
 import look from "../style/look.jsx";
 import keyLabelObj from "../obj/keyLabelObj.js";
 import useTgBoo from "./useTgBoo.jsx";
 import useTgRoo from "./useTgRoo.jsx";
 import useCtx from "../context/useCtx.jsx";
-import TgButton from "../area/TgButton.jsx";
-const useTgLab = ({ buttonObj }) => {
-  const boo = useTgBoo({ buttonObj });
-  const roo = useTgRoo({ buttonObj });
+const useTgLab = ({ preKey }) => {
+  const boo = useTgBoo({ preKey });
+  const roo = useTgRoo({ preKey });
   const ctx = useCtx();
 
   const originKeyLabel = keyLabelObj[roo.originKey];
-  const originModKeyLabel = AssignConvert(roo.originModKey);
-  const assignModKeyLabel = AssignConvert(roo.assignModKey);
-  const multiHdAcModKeyLabel = AssignConvert(roo.multiHdAcModKey);
+  const originModKeyLabel = convLabel(roo.originModKey);
+  const assignModKeyLabel = convLabel(roo.assignModKey);
+  const multiHdAcModKeyLabel = convLabel(roo.multiHdAcModKey);
   const backLabel = (
     <>
       <span>{originModKeyLabel}</span>
-      {/* <span style={look.unusable1}>{"に戻す"}</span> */}
     </>
   );
 
@@ -28,12 +26,15 @@ const useTgLab = ({ buttonObj }) => {
   );
   const getLabel = () => {
     if (boo.isMultiPseudoHd) return multiHdAcModKeyLabel;
-    if (ctx.isWoAcSd && boo.isHd) {
-      if (boo.isAssigned) return assignModKeyLabel;
-      if (boo.isEmptyLabel) return "";
-      return originKeyLabel;
-    }
     if (boo.isHd) {
+      if (ctx.isWoAcSd) {
+        if (boo.isAssigned) return assignModKeyLabel;
+        if (boo.isSoVirtualHold) {
+          return "修飾キー";
+        }
+        if (boo.isEmptyLabel) return "";
+        return originKeyLabel;
+      }
       if (boo.isSoVirtualHold) {
         if (boo.isFunctionUsed) return "";
         return originKeyLabel;

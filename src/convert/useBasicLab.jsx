@@ -1,6 +1,6 @@
-import AssignConvert from "./AssignConvert.jsx";
+import convLabel from "./convLabel.jsx";
 const useBasicLab = ({ modKey }) => {
-  const label = AssignConvert(modKey);
+  const label = convLabel(modKey);
   return { label };
 };
 

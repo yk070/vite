@@ -1,4 +1,9 @@
-import { ModIndexes, AllIndexes } from "../array/namedMods.js";
+import { AllIndexes } from "../array/namedMods.js";
+import keyStyleObj from "./keyStyleObj.js";
+
+const indexKeyObjObj = Object.fromEntries(
+  AllIndexes.map((index) => [index, structuredClone(keyStyleObj)]),
+);
 
 const scriptAcModObj = {
   none: "",
@@ -19,14 +24,6 @@ const acIndexLabelObj = {
   space: "Space",
   muhenkan: "無変換",
 };
-
-import keyObjs from "../array/keyObjs.js";
-const ModButtonsObj = Object.fromEntries(
-  AllIndexes.map((contextIndex) => [
-    contextIndex,
-    keyObjs.map((KeyObj) => ({ ...KeyObj })),
-  ]),
-);
 
 const ModBigger = {
   none: "",
@@ -56,7 +53,7 @@ const tgIndexObj = {
 export {
   scriptAcModObj,
   acIndexLabelObj,
-  ModButtonsObj,
+  indexKeyObjObj,
   ModBigger,
   EnterObj,
   tgIndexObj,

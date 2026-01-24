@@ -1,9 +1,13 @@
 import { scriptAcModObj } from "../obj/namedObj.js";
-import scObj from "../obj/scObj.js";
+import keyScObj from "../obj/keyScObj.js";
+import notModKeyObj from "../obj/notModKeyObj.js";
 const acConvert = (modKey) => {
   const [Mod, Key] = modKey.split("*");
+  if (!modKey.includes("*")) {
+    return notModKeyObj[modKey];
+  }
   const Namelabel_Mod = scriptAcModObj[Mod] ?? "";
-  const Namelabel_Key = scObj[Key] ?? Key;
+  const Namelabel_Key = keyScObj[Key] ?? Key;
 
   if (modKey === "alt*tab") {
     return `AltTab`;

@@ -2,10 +2,10 @@ import useCtx from "../context/useCtx.jsx";
 import TgButtons from "../area/TgButtons.jsx";
 import useTgBoo from "../convert/useTgBoo.jsx";
 import useTgRoo from "../convert/useTgRoo.jsx";
-const useRunConvert = ({ buttonObj }) => {
+const useRunConvert = ({ preKey }) => {
   const ctx = useCtx();
-  const roo = useTgRoo({ buttonObj });
-  const boo = useTgBoo({ buttonObj });
+  const roo = useTgRoo({ preKey });
+  const boo = useTgBoo({ preKey });
 
   const remove = () => {
     ctx.setAcTgObjs((prev) =>

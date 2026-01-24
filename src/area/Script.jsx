@@ -8,11 +8,13 @@ const Script = () => {
     <div
       className={styles.scriptScroll}
       style={{
-        margin: 10,
+        height: 200,
+        position: "relative",
+        // margin: 10,
         backgroundColor: "#444",
         overflowY: "scroll",
         whiteSpace: "pre-wrap",
-        flex: 1,
+        // flex: 1,
       }}
     >
       {ctx.script}

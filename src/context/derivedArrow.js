@@ -1,13 +1,13 @@
-import PositionConvert from "../convert/PositionConvert.jsx";
-import { ModIndexes } from "../array/namedMods.js";
+import convPosition from "../convert/convPosition.jsx";
 import keyLabelObj from "../obj/keyLabelObj.js";
-import AssignConvert from "../convert/AssignConvert.jsx";
+import convLabel from "../convert/convLabel.jsx";
 
 export const derivedArrow = (base, main) => {
-  const HoveredModKeyTgLabel = AssignConvert(base.hdModKeyTg);
-  const [HoveredMod, HoveredKey] = base.hdModKeyTg?.split("*") ?? [];
-  const { x: TailX, y: TailY } = PositionConvert(HoveredKey);
-  const AwayHoveredModKey = base.AcTgObjs?.find(
+  const HoveredModKeyTgLabel = convLabel(base.hdModKeyTg);
+
+  const [HoveredMod, hoveredKey] = base.hdModKeyTg?.split("*") ?? [];
+  const { x: TailX, y: TailY } = convPosition(hoveredKey);
+  const AwayHoveredModKey = base.acTgObjs?.find(
     (o) => o.ac === base.hdModKeyTg,
   )?.tg;
   const isAwayExist = !!AwayHoveredModKey;
@@ -24,7 +24,7 @@ export const derivedArrow = (base, main) => {
   let HeadX;
   let HeadY;
   if (isAwaySame) {
-    ({ x: HeadX, y: HeadY } = PositionConvert(AwayHoveredKey));
+    ({ x: HeadX, y: HeadY } = convPosition(AwayHoveredKey));
   } else {
     HeadX = ((AwayNumber + 0.5) * 100) / IndexesNumber;
     HeadY = 108;
@@ -45,7 +45,7 @@ export const derivedArrow = (base, main) => {
     AwayHoveredKeyLabel,
     AwayHoveredModKey,
     HoveredMod,
-    HoveredKey,
+    hoveredKey,
     HoveredModKeyTgLabel,
     TailX,
     TailY,

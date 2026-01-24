@@ -18,7 +18,7 @@ const basicObj = {
       },
       操作: {
         row: 1,
-        modKeys: ["reload", "suspend"],
+        modKeys: ["reload", "sleep"],
       },
     },
     right: {

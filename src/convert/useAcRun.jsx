@@ -1,9 +1,9 @@
 import useAcRoo from "./useAcRoo.jsx";
 import useAcBoo from "./useAcBoo.jsx";
 import useCtx from "../context/useCtx.jsx";
-const useAcRun = ({ ButtonObj }) => {
-  const roo = useAcRoo({ ButtonObj });
-  const boo = useAcBoo({ ButtonObj });
+const useAcRun = ({ preKey }) => {
+  const roo = useAcRoo({ preKey });
+  const boo = useAcBoo({ preKey });
   const ctx = useCtx();
 
   const click = () => {

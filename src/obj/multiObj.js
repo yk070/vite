@@ -48,7 +48,15 @@ const multiObj = {
       { ac: "none*tab", tg: "space*tab" },
       { ac: "shift*tab", tg: "space*capslock" },
     ],
-    あ: [{ ac: "alt*tab", tg: "ctrl*f" }],
+    window切替: [{ ac: "alt*tab", tg: "space*f" }],
+    取消: [{ ac: "ctrl*y", tg: "space*g" }],
+    特定window切替: [
+      { ac: "win*two", tg: "space*e" },
+      { ac: "win*three", tg: "space*w" },
+      { ac: "win*four", tg: "space*q" },
+      { ac: "win*five", tg: "space*tab" },
+      { ac: "win*one", tg: "space*r" },
+    ],
   },
 };
 export default multiObj;

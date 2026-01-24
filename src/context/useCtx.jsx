@@ -1,18 +1,23 @@
-import React, { createContext, useContext } from "react";
-import useStateBoss from "./useStateBoss.js";
+import { createContext, useContext } from "react";
+import useStateMain from "./useStateMain.js";
 import derivedMain from "./derivedMain.js";
-import useactgObjs from "./useactgObjs.js";
+import useAcTgObjs from "./useAcTgObjs.js";
 import useMultiClickObj from "./useMultiClickObj.js";
+import useStateHistory from "./useStateHistory.js";
 import derivedScript from "./derivedScript.js";
 import derivedArrow from "./derivedArrow.js";
 const AppContext = createContext(null);
+
 export const CtxProvider = ({ children }) => {
-  const base = useStateBoss();
+  const base = {
+    ...useStateMain(),
+    ...useStateHistory(),
+  };
   const main = derivedMain(base);
   const script = derivedScript(base);
   const arrow = derivedArrow(base, main);
 
-  useactgObjs(base);
+  useAcTgObjs(base);
   useMultiClickObj(base, main);
 
   return (

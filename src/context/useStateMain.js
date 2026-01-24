@@ -1,7 +1,6 @@
 import { useState } from "react";
-const useStateBoss = () => {
-  const [AcTgObjs, setAcTgObjs] = useState([]);
-  console.log("AcTgObjs", AcTgObjs);
+const useStateMain = () => {
+  // console.log("acTgObjs", acTgObjs);
   const [HoverLocktg, setHoverLocktg] = useState(null);
 
   const [hdMultiObj, setHdMultiObj] = useState(null);
@@ -34,8 +33,6 @@ const useStateBoss = () => {
     setSdAcModKey,
     sdTgModKey,
     setSdTgModKey,
-    AcTgObjs,
-    setAcTgObjs,
     hdModKeyTg,
     setHdModKeyTg,
     hdModKeyAc,
@@ -52,4 +49,4 @@ const useStateBoss = () => {
     setIsWoMuhHold,
   };
 };
-export default useStateBoss;
+export default useStateMain;

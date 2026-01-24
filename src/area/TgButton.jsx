@@ -5,19 +5,18 @@ import useRunConvert from "../convert/useRunConvert.jsx";
 import useTgRoo from "../convert/useTgRoo.jsx";
 import look from "../style/look.jsx";
 import MultiCircleDiv from "../area/MultiCircle.jsx";
-import TgButtons from "./TgButtons.jsx";
-const TgButton = ({ buttonObj }) => {
-  const roo = useTgRoo({ buttonObj });
-  const boo = useTgBoo({ buttonObj });
-  const col = useTgCol({ buttonObj });
-  const lab = useTgLab({ buttonObj });
-  const run = useRunConvert({ buttonObj });
+const TgButton = ({ preKey, styleObj }) => {
+  const roo = useTgRoo({ preKey });
+  const boo = useTgBoo({ preKey });
+  const col = useTgCol({ preKey });
+  const lab = useTgLab({ preKey });
+  const run = useRunConvert({ preKey });
 
   if (boo.isReturn) return null;
 
   return (
     <div
-      style={look.tgButton1(roo, col, boo)}
+      style={look.tgButton1(styleObj, roo, col, boo)}
       onClick={run.click}
       onMouseEnter={run.hover}
       onMouseLeave={run.leave}

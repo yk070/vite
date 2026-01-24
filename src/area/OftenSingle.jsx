@@ -2,7 +2,7 @@ import React from "react";
 import useCtx from "../context/useCtx.jsx";
 import OftenSingleButton from "./OftenSingleButton.jsx";
 import OftenSingleLogic from "../logic/OftenSingleLogic.js";
-import AssignConvert from "../convert/AssignConvert.jsx";
+import convLabel from "../convert/convLabel.jsx";
 import tone from "../style/color.jsx";
 import OftenBlock from "./OftenBlock.jsx";
 const OftenSingle = ({ modKeys }) => {
@@ -36,7 +36,7 @@ const OftenSingle = ({ modKeys }) => {
             Click={Click}
             Hover={() => ctx.setHdModKeyAc(modKey)}
             Leave={() => ctx.setHdModKeyAc(null)}
-            Label={AssignConvert(modKey)}
+            Label={convLabel(modKey)}
             ButtonColor={getButtonColor()}
             BorderColor={getBorderColor()}
           />

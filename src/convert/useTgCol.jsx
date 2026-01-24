@@ -2,23 +2,28 @@ import useCtx from "../context/useCtx.jsx";
 import tone from "../style/color.jsx";
 import useTgBoo from "./useTgBoo.jsx";
 
-const useTgCol = ({ buttonObj }) => {
-  const boo = useTgBoo({ buttonObj });
+const useTgCol = ({ preKey }) => {
+  const boo = useTgBoo({ preKey });
   const ctx = useCtx();
 
   const getButtonColor = () => {
+    if (boo.isDisabled) return tone.DisabledButtonColor;
     if (boo.isModKeySame) return tone.ModColor;
     if (boo.isMultiPseudoHd) {
       if (ctx.isMultiOnHd) return tone.multiOnColor;
       return tone.acSelectColor;
     }
-    if (boo.isDisabled) return tone.DisabledButtonColor;
-    if (boo.isHd) return tone.normalButtonColor;
-    if (boo.isSoVirtualHold) return tone.violetTextColor;
+    if (boo.isHd) {
+      if (ctx.isWoAcSd && (boo.isAssigned || boo.isSoVirtualHold))
+        return tone.violetTextColor;
+      return tone.normalButtonColor;
+    }
     if (ctx.isWoAcSd) {
-      if (!boo.isAssigned && !boo.isDisabled) return tone.normalButtonColor;
+      if (boo.isAssigned || boo.isSoVirtualHold) return tone.violetTextColor;
+      if (!boo.isAssigned) return tone.normalButtonColor;
       if (boo.isAssigned) return tone.AccentColor;
     }
+    if (boo.isSoVirtualHold) return tone.violetTextColor;
     if (boo.isAwayHovered) return tone.AwayHoveredColor;
     if (boo.isAssigned || boo.isSoVirtualHold) return tone.AccentColor;
     if (ctx.isWoAcSd) return tone.normalButtonColor;

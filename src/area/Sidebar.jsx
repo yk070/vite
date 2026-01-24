@@ -1,15 +1,19 @@
-import React from "react";
-import ResetButton from "./ResetButton.jsx";
-import BackButton from "./BackButton.jsx";
+import Reset from "./Reset.jsx";
+import Back from "./Back.jsx";
+import Forward from "./Forward.jsx";
 import Script from "./Script.jsx";
+import look from "../style/look.jsx";
 
 const Sidebar = () => {
   return (
-    <>
-      <ResetButton />
-      <BackButton />
+    <div style={look.sidebar2}>
+      <Reset />
+      <div style={look.sidebar1}>
+        <Back />
+        <Forward />
+      </div>
       <Script />
-    </>
+    </div>
   );
 };
 

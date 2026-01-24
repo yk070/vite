@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const useactgObjs = (base) => {
+const useAcTgObjs = (base) => {
   useEffect(() => {
     if (!base.sdAcModKey || !base.sdTgModKey) return;
 
@@ -17,4 +17,4 @@ const useactgObjs = (base) => {
   }, [base.sdAcModKey, base.sdTgModKey]);
 };
 
-export default useactgObjs;
+export default useAcTgObjs;

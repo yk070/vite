@@ -1,16 +1,11 @@
 import { EnterObj } from "../obj/namedObj.js";
 import useCtx from "../context/useCtx.jsx";
-import easeObj from "../obj/easeObj.js";
-const useTgRoo = ({ buttonObj }) => {
+const useTgRoo = ({ preKey }) => {
   const ctx = useCtx();
-  const style = buttonObj.style;
-  const preKey = buttonObj.key;
   const originKey = EnterObj[preKey] ?? preKey;
   const originModKey = ctx.currentModTg + "*" + originKey;
 
-  const assignModKey = ctx.AcTgObjs.find(
-    (actgObj) => actgObj.tg === originModKey,
-  )?.ac;
+  const assignModKey = ctx.acTgObjs.find((obj) => obj.tg === originModKey)?.ac;
 
   const multiHdAcModKey = ctx.hdMultiObj?.objs?.find(
     (hdMiniObj) => hdMiniObj.tg === originModKey,
@@ -23,8 +18,6 @@ const useTgRoo = ({ buttonObj }) => {
   )?.ac;
 
   return {
-    style,
-    preKey,
     originKey,
     originModKey,
     assignModKey,

@@ -8,11 +8,11 @@ import easeObj from "../obj/easeObj.js";
 import useCtx from "../context/useCtx.jsx";
 import useTgRoo from "./useTgRoo.jsx";
 
-const useTgBoo = ({ buttonObj }) => {
-  const roo = useTgRoo({ buttonObj });
+const useTgBoo = ({ preKey }) => {
+  const roo = useTgRoo({ preKey });
   const ctx = useCtx();
 
-  const isEnterBelow = roo.preKey === "enter_below";
+  const isEnterBelow = preKey === "enter_below";
   const isHd = ctx.hdModKeyTg === roo.originModKey;
 
   const isAwayHovered = ctx.hdModKeyTg === roo.assignModKey;
@@ -20,10 +20,10 @@ const useTgBoo = ({ buttonObj }) => {
     [...ModifierKeys, ...VirtualModifierKeys].includes(roo.originKey) &&
     roo.originKey.includes(ctx.currentModTg);
 
-  const isLocationUsed = ctx.AcTgObjs.some(
+  const isLocationUsed = ctx.acTgObjs.some(
     (obj) => obj.tg === roo.originModKey,
   );
-  const isFunctionUsed = ctx.AcTgObjs.some(
+  const isFunctionUsed = ctx.acTgObjs.some(
     (obj) => obj.ac === roo.originModKey,
   );
 

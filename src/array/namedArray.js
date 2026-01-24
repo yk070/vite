@@ -1,12 +1,9 @@
-import keyObjs from "./keyObjs.js";
-const keyPositions = keyObjs.map((KeyObj) => {
-  const style = KeyObj.style;
-  const key = KeyObj.key;
-
-  const left = parseFloat(style?.left ?? "0");
-  const top = parseFloat(style?.top ?? "0");
-  const width = parseFloat(style?.width ?? "0");
-  const height = parseFloat(style?.height ?? "0");
+import keyStyleObj from "../obj/keyStyleObj.js";
+const keyPositions = Object.entries(keyStyleObj).map(([key, styleObj]) => {
+  const left = parseFloat(styleObj?.left ?? "0");
+  const top = parseFloat(styleObj?.top ?? "0");
+  const width = parseFloat(styleObj?.width ?? "0");
+  const height = parseFloat(styleObj?.height ?? "0");
   return {
     key,
     headX: left + width / 2,

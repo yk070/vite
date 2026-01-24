@@ -7,15 +7,15 @@ import look from "../style/look.jsx";
 import { FaCheck } from "react-icons/fa6";
 import { LuTriangleAlert } from "react-icons/lu";
 
-const AcButton = ({ ButtonObj }) => {
-  const roo = useAcRoo({ ButtonObj });
-  const boo = useAcBoo({ ButtonObj });
-  const col = useAcCol({ ButtonObj });
-  const run = useAcRun({ ButtonObj });
-  const lab = useAcLab({ ButtonObj });
+const AcButton = ({ preKey, styleObj }) => {
+  const roo = useAcRoo({ preKey });
+  const boo = useAcBoo({ preKey });
+  const col = useAcCol({ preKey });
+  const run = useAcRun({ preKey });
+  const lab = useAcLab({ preKey });
   return (
     <div
-      style={look.acButton1(roo, col)}
+      style={look.acButton1(styleObj, col)}
       onClick={run.click}
       onMouseEnter={run.hover}
       onMouseLeave={run.leave}

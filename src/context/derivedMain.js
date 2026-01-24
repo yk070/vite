@@ -2,7 +2,7 @@ import { basicIndexes } from "../array/namedMods.js";
 import { ModIndexes } from "../array/namedMods.js";
 
 const derivedMain = (base) => {
-  const acTgSet = new Set(base.AcTgObjs?.map((obj) => `${obj.ac}|${obj.tg}`));
+  const acTgSet = new Set(base.acTgObjs?.map((obj) => `${obj.ac}|${obj.tg}`));
   const isMultiOnHd = base.hdMultiObj?.objs?.every((obj) =>
     acTgSet.has(`${obj.ac}|${obj.tg}`),
   );

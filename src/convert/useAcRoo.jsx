@@ -1,18 +1,13 @@
 import { EnterObj } from "../obj/namedObj.js";
 import useCtx from "../context/useCtx.jsx";
 
-const useAcRoo = ({ ButtonObj }) => {
+const useAcRoo = ({ preKey }) => {
   const ctx = useCtx();
-  // normal
-  const preKey = ButtonObj.key;
-  const key = EnterObj[preKey] ?? preKey;
-  const modKey = ctx.currentModAc + "*" + key;
-  const style = ButtonObj.style;
+  const originKey = EnterObj[preKey] ?? preKey;
+  const modKey = ctx.currentModAc + "*" + originKey;
   return {
-    preKey,
-    key,
+    originKey,
     modKey,
-    style,
   };
 };
 

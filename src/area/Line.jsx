@@ -1,9 +1,7 @@
-import React from "react";
 import useCtx from "../context/useCtx.jsx";
 import { header, sidebar } from "../style/length.jsx";
-import keyObjs from "../array/keyObjs.js";
-import tone from "../style/color.jsx";
-import Tg from "./Tg.jsx";
+import keyStyleObj from "../obj/keyStyleObj.js";
+
 const Line = ({ containerRef, headX, headY }) => {
   const ctx = useCtx();
   if (ctx.isWoTgNone) return null;
@@ -15,14 +13,13 @@ const Line = ({ containerRef, headX, headY }) => {
     capslock: "capslock",
     win: "left_win",
   };
-  const style = keyObjs.find(
-    (obj) => obj.key === modLineObj[ctx.currentModTg],
-  )?.style;
 
-  const left = parseFloat(style?.left ?? "0");
-  const top = parseFloat(style?.top ?? "0");
-  const width = parseFloat(style?.width ?? "0");
-  const height = parseFloat(style?.height ?? "0");
+  const styleObj = keyStyleObj[modLineObj[ctx.currentModTg]];
+
+  const left = parseFloat(styleObj?.left ?? "0");
+  const top = parseFloat(styleObj?.top ?? "0");
+  const width = parseFloat(styleObj?.width ?? "0");
+  const height = parseFloat(styleObj?.height ?? "0");
 
   const tailX = left + width / 2;
   const tailY = top + height / 2;
