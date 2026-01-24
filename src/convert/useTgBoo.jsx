@@ -21,13 +21,15 @@ const useTgBoo = ({ buttonObj }) => {
     roo.originKey.includes(ctx.currentModTg);
 
   const isLocationUsed = ctx.AcTgObjs.some(
-    (actgObj) => actgObj.tg === roo.originModKey,
+    (obj) => obj.tg === roo.originModKey,
   );
   const isFunctionUsed = ctx.AcTgObjs.some(
-    (actgObj) => actgObj.ac === roo.originModKey,
+    (obj) => obj.ac === roo.originModKey,
   );
 
-  const isSoSpaceHold = ctx.isWoSpaceHold && roo.originModKey === "none*space";
+  const isSoSpaHold = ctx.isWoSpaHold && roo.originModKey === "none*space";
+  const isSoMuhHold = ctx.isWoMuhHold && roo.originModKey === "none*muhenkan";
+  const isSoVirtualHold = isSoSpaHold || isSoMuhHold;
 
   const isVacant = isFunctionUsed && !isLocationUsed;
   const isUnusable = !isFunctionUsed && isLocationUsed;
@@ -46,13 +48,7 @@ const useTgBoo = ({ buttonObj }) => {
 
   const easeLevelObj = easeObj[ctx.currentModTg];
   function getLevel() {
-    if (
-      // !ctx.isWoAcSd ||
-      isSoSpaceHold ||
-      isDisabled ||
-      isAssigned
-    )
-      return "";
+    if (!ctx.isWoAcSd || isSoVirtualHold || isDisabled || isAssigned) return "";
     const entry = Object.entries(easeLevelObj)?.find(([_, keys]) =>
       keys?.includes(roo.originKey),
     );
@@ -61,7 +57,7 @@ const useTgBoo = ({ buttonObj }) => {
   const level = getLevel();
   return {
     isAssigned,
-    isSoSpaceHold,
+    isSoVirtualHold,
     isDisabled,
     isHd,
     isModKeySame,
@@ -75,6 +71,9 @@ const useTgBoo = ({ buttonObj }) => {
     isUnusable,
     isVacant,
     level,
+    isEnterBelow,
+    isSoSpaHold,
+    isSoMuhHold,
   };
 };
 

@@ -17,6 +17,7 @@ const acIndexLabelObj = {
   alt: "Alt",
   win: "Win",
   space: "Space",
+  muhenkan: "無変換",
 };
 
 import keyObjs from "../array/keyObjs.jsx";

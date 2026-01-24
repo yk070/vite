@@ -12,15 +12,15 @@ const useTgCol = ({ buttonObj }) => {
       if (ctx.isMultiOnHd) return tone.multiOnColor;
       return tone.acSelectColor;
     }
+    if (boo.isDisabled) return tone.DisabledButtonColor;
+    if (boo.isHd) return tone.normalButtonColor;
+    if (boo.isSoVirtualHold) return tone.violetTextColor;
     if (ctx.isWoAcSd) {
       if (!boo.isAssigned && !boo.isDisabled) return tone.normalButtonColor;
       if (boo.isAssigned) return tone.AccentColor;
     }
     if (boo.isAwayHovered) return tone.AwayHoveredColor;
-    if (boo.isHd && (boo.isLocationUsed || boo.isVacant || boo.isSoSpaceHold))
-      return tone.AwayHoveredColor;
-    if (boo.isAssigned || boo.isSoSpaceHold) return tone.AccentColor;
-    if (boo.isDisabled) return tone.DisabledButtonColor;
+    if (boo.isAssigned || boo.isSoVirtualHold) return tone.AccentColor;
     if (ctx.isWoAcSd) return tone.normalButtonColor;
     return tone.normalButtonColor;
   };
@@ -28,7 +28,10 @@ const useTgCol = ({ buttonObj }) => {
   const getBorderColor = () => {
     if (ctx.isWoAcSd && !boo.isDisabled && boo.isHd) return tone.acSelectColor;
 
-    if (boo.isHd && boo.isAssigned && !boo.isVacant) return tone.acSelectColor;
+    if (boo.isHd) {
+      if (boo.isAssigned && !boo.isVacant) return tone.acSelectColor;
+      if (boo.isSoVirtualHold) return tone.acSelectColor;
+    }
 
     return "transparent";
   };

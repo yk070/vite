@@ -1,9 +1,11 @@
 const multiObj = {
   none: {
-    Esc: [
+    左手寄せ: [
+      { ac: "none*tab", tg: "none*esc" },
+      { ac: "none*space", tg: "none*capslock" },
+      { ac: "none*enter", tg: "none*tab" },
+      { ac: "none*backspace", tg: "none*hankaku" },
       { ac: "none*hankaku", tg: "none*henkan" },
-      { ac: "none*backspace", tg: "none*capslock" },
-      { ac: "none*enter", tg: "none*muhenkan" },
     ],
     半角: [
       { ac: "none*six", tg: "none*f1" },

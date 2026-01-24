@@ -1,7 +1,7 @@
 import { useState } from "react";
 const useStateBoss = () => {
   const [AcTgObjs, setAcTgObjs] = useState([]);
-  // console.log("AcTgObjs", AcTgObjs);
+  console.log("AcTgObjs", AcTgObjs);
   const [HoverLocktg, setHoverLocktg] = useState(null);
 
   const [hdMultiObj, setHdMultiObj] = useState(null);
@@ -10,7 +10,7 @@ const useStateBoss = () => {
   const [currentModAc, setCurrentModAc] = useState("basic1");
   const [currentModTg, setcurrentModTg] = useState("none");
   // space hold
-  const [isWoSpaceHold, setisWoSpaceHold] = useState(false);
+  const [isWoSpaHold, setIsWoSpaHold] = useState(false);
   const [isWoMuhHold, setIsWoMuhHold] = useState(false);
   // multi
   const [cdMultiObjs, setCdMultiObj] = useState({});
@@ -28,8 +28,8 @@ const useStateBoss = () => {
     setCurrentModAc,
     currentModTg,
     setcurrentModTg,
-    isWoSpaceHold,
-    setisWoSpaceHold,
+    isWoSpaHold,
+    setIsWoSpaHold,
     sdAcModKey,
     setSdAcModKey,
     sdTgModKey,

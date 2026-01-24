@@ -1,16 +1,12 @@
-import React from "react";
 import useTgBoo from "../convert/useTgBoo.jsx";
 import useTgLab from "../convert/useTgLab.jsx";
 import useTgCol from "../convert/useTgCol.jsx";
 import useRunConvert from "../convert/useRunConvert.jsx";
 import useTgRoo from "../convert/useTgRoo.jsx";
 import look from "../style/look.jsx";
-import useCtx from "../context/useCtx.jsx";
 import MultiCircleDiv from "../area/MultiCircle.jsx";
 import TgButtons from "./TgButtons.jsx";
 const TgButton = ({ buttonObj }) => {
-  const ctx = useCtx();
-
   const roo = useTgRoo({ buttonObj });
   const boo = useTgBoo({ buttonObj });
   const col = useTgCol({ buttonObj });

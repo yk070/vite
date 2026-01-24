@@ -1,5 +1,6 @@
 const Colors = {
   violetTextColor: "#6B5FD2",
+  AccentColor: "#6B5FD2",
 
   buttonsBgColor: "#555555",
   basicBgColor: "#111111",
@@ -7,8 +8,8 @@ const Colors = {
   multiNormalColor: "#8E8B82",
   circleColor: "#D8679B",
 
-  multiOnColor: "#CC5000",
-  hoveredSelectedMultiColor: "#CC5000",
+  multiOnColor: "#A7A0EB",
+  hoveredSelectedMultiColor: "#A7A0EB",
 
   firstButtonColor: "#3B82F6",
   secondButtonColor: "#2563EB",
@@ -29,7 +30,6 @@ const Colors = {
   TextColor: "#FAFAF2",
   AssignedColor: "#42A5F5",
   AlertColor: "#FF0000",
-  AccentColor: "#FF8C00",
   HoveredtgBorderColor: "#222222",
 
   normalButtonColor: "#222222",

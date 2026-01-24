@@ -6,10 +6,17 @@ const derivedMain = (base) => {
   const isMultiOnHd = base.hdMultiObj?.objs?.every((obj) =>
     acTgSet.has(`${obj.ac}|${obj.tg}`),
   );
-
-  const contextIndexes = base.isWoSpaceHold
-    ? [...ModIndexes, "space"]
-    : ModIndexes;
+  const getContextIndexes = (base) => {
+    let indexes = [...ModIndexes];
+    if (base.isWoSpaHold) {
+      indexes.push("space");
+    }
+    if (base.isWoMuhHold) {
+      indexes.push("muhenkan");
+    }
+    return indexes;
+  };
+  const contextIndexes = getContextIndexes(base);
 
   const isWoTgNone = base.currentModTg === "none";
   const isWoTgSpace = base.currentModTg === "space";

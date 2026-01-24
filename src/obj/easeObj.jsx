@@ -23,5 +23,9 @@ const easeObj = {
     first: [],
     second: [],
   },
+  muhenkan: {
+    first: [],
+    second: [],
+  },
 };
 export default easeObj;

@@ -515,7 +515,7 @@ const look = {
     // backgroundColor: "red",
     paddingLeft: `calc(${base} * 8)`,
     paddingRight: `calc(${base} * 8)`,
-    border: `calc(${base} * 2) solid yellow`,
+    border: `calc(${base} * 2) solid ${tone.textWhiteColor}`,
   },
   tg3: {
     display: "flex",

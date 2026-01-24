@@ -17,13 +17,13 @@ const useTgLab = ({ buttonObj }) => {
   const backLabel = (
     <>
       <span>{originModKeyLabel}</span>
-      <span style={look.unusable1}>{"に戻す"}</span>
+      {/* <span style={look.unusable1}>{"に戻す"}</span> */}
     </>
   );
 
   const emptyLabel = (
     <>
-      <span style={look.unusable1}>{"空にする"}</span>
+      <span style={look.unusable1}>{""}</span>
     </>
   );
   const getLabel = () => {
@@ -34,12 +34,15 @@ const useTgLab = ({ buttonObj }) => {
       return originKeyLabel;
     }
     if (boo.isHd) {
-      if (boo.isSoSpaceHold) return "修飾キー化中";
+      if (boo.isSoVirtualHold) {
+        if (boo.isFunctionUsed) return "";
+        return originKeyLabel;
+      }
       if (boo.isUnusable) return backLabel;
       if (boo.isFunctionUsed && boo.isLocationUsed) return emptyLabel;
       if (boo.isFunctionUsed) return "";
     }
-    if (boo.isSoSpaceHold) return "Space(wClick)";
+    if (boo.isSoVirtualHold) return "修飾キー";
     if (boo.isAssigned) return assignModKeyLabel;
     if (boo.isEmptyLabel) return "";
     return originKeyLabel;

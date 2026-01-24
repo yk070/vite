@@ -11,10 +11,10 @@ const TgSpaceToggle = () => {
     <span style={look.tg3}>
       <span
         style={look.tg5}
-        onClick={() => ctx.setisWoSpaceHold((prev) => !prev)}
+        onClick={() => ctx.setIsWoSpaHold((prev) => !prev)}
       >
         <span>{"Space 修飾キー化"}</span>
-        <Toggle value={ctx.isWoSpaceHold} />
+        <Toggle value={ctx.isWoSpaHold} />
       </span>
       <span
         style={look.tg5}

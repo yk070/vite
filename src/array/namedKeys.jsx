@@ -88,7 +88,7 @@ const ModifierKeys = [
   "left_win",
   "right_win",
 ];
-const VirtualModifierKeys = ["space", "capslock"];
+const VirtualModifierKeys = ["space", "muhenkan"];
 const PeculiarKeys = ["hold", "toggle"];
 const AllKeys = [
   ...NumberKeys,
