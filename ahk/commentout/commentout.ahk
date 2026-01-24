@@ -1,82 +1,16 @@
-const keyLabelObj = {
-    esc: "Esc",
-    hankaku: "半角",
-    backspace: "BS",
-    tab: "Tab",
-    enter: "Enter",
-    capslock: "CapsL",
-    space: "Space",
-    muhenkan: "無変換",
-    henkan: "変換",
-    kana: "かな",
-    application: "App",
-    minus: "-",
-    caret: "^",
-    yen: "¥",
-    at: "@",
-    left_branch: "[",
-    semicolon: ";",
-    colon: ":",
-    right_branch: "]",
-    comma: ",",
-    period: ".",
-    slash: "/",
-    backslash: "\\",
-    left_shift: "Shift",
-    right_shift: "Shift",
-    left_ctrl: "Ctrl",
-    left_win: "Win",
-    left_alt: "Alt",
-    right_alt: "Alt",
-    right_win: "Win",
-    right_ctrl: "Ctrl",
-    a: "A",
-    b: "B",
-    c: "C",
-    d: "D",
-    e: "E",
-    f: "F",
-    g: "G",
-    h: "H",
-    i: "I",
-    j: "J",
-    k: "K",
-    l: "L",
-    m: "M",
-    n: "N",
-    o: "O",
-    p: "P",
-    q: "Q",
-    r: "R",
-    s: "S",
-    t: "T",
-    u: "U",
-    v: "V",
-    w: "W",
-    x: "X",
-    y: "Y",
-    z: "Z",
-    f1: "F1",
-    f2: "F2",
-    f3: "F3",
-    f4: "F4",
-    f5: "F5",
-    f6: "F6",
-    f7: "F7",
-    f8: "F8",
-    f9: "F9",
-    f10: "F10",
-    f11: "F11",
-    f12: "F12",
-    one: "1",
-    two: "2",
-    three: "3",
-    four: "4",
-    five: "5",
-    six: "6",
-    seven: "7",
-    eight: "8",
-    nine: "9",
-    zero: "0",
-};
-export default keyLabelObj;
+const scriptLines = base.acTgObjs?.map(item => {
+    if (typeof item == = "object" && item !== null) {
+        // item がオブジェクトの場合のみ分解代入
+        const { ac, tg } = item;
+        return`$ {
+            ac
+        }
+        - > $ {
+            tg
+        }
+        `;
+    } else {
+        // 文字列などオブジェクトじゃない場合はそのまま返す
+        return item;
+    }
+}) ?? [];

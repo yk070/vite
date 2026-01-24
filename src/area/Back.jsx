@@ -4,6 +4,7 @@ const Back = () => {
   const ctx = useCtx();
   const click = () => {
     if (ctx.historyIndex > 0) ctx.restoreFromHistory(ctx.historyIndex - 1);
+    if (ctx.historyIndex > 0) console.log("base.sdAcModKey");
   };
   return (
     <div

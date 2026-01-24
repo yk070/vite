@@ -9,8 +9,6 @@ const useStateMain = () => {
   const [currentModAc, setCurrentModAc] = useState("none");
   const [currentModTg, setcurrentModTg] = useState("none");
   // space hold
-  const [isWoSpaHold, setIsWoSpaHold] = useState(false);
-  const [isWoMuhHold, setIsWoMuhHold] = useState(false);
   // multi
   const [cdMultiObjs, setCdMultiObj] = useState({});
   // selected
@@ -27,8 +25,6 @@ const useStateMain = () => {
     setCurrentModAc,
     currentModTg,
     setcurrentModTg,
-    isWoSpaHold,
-    setIsWoSpaHold,
     sdAcModKey,
     setSdAcModKey,
     sdTgModKey,
@@ -45,8 +41,6 @@ const useStateMain = () => {
     setHoverLocktg,
     cdMultiObjs,
     setCdMultiObj,
-    isWoMuhHold,
-    setIsWoMuhHold,
   };
 };
 export default useStateMain;
