@@ -1,5 +1,5 @@
 import useCtx from "../context/useCtx.jsx";
-import { ModIndexes } from "../array/namedKeys.js";
+import { ModIndexes } from "../array/namedNous.js";
 
 const useTgBoo = ({ contextIndex }) => {
   const ctx = useCtx();

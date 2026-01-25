@@ -1,7 +1,11 @@
-import { combiKeys } from "../array/namedKeys.js";
+import { combiNous } from "../array/namedNous.js";
 const disabledObj = {
-  none: combiKeys,
-  ctrl: ["leftCtrl"],
-  alt: [],
+  none: combiNous,
+  ctrl: ["leftCtrl", "rightCtrl"],
+  shift: ["leftShift", "rightShift"],
+  alt: ["leftAlt", "rightAlt"],
+  win: ["leftWin", "rightWin"],
+  space: ["space"],
+  muhenkan: ["muhenkan"],
 };
 export default disabledObj;

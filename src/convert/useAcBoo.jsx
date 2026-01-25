@@ -1,7 +1,7 @@
 import useCtx from "../context/useCtx.jsx";
 import useAcRoo from "./useAcRoo.jsx";
-import { importantModKeys } from "../array/namedModKeys.js";
-import { disabledModKeys } from "../array/namedModKeys.js";
+import { importantModNous } from "../array/namedModNous.js";
+import { disabledModNous } from "../array/namedModNous.js";
 const useAcBoo = ({ preKey }) => {
   const roo = useAcRoo({ preKey });
   const ctx = useCtx();
@@ -18,8 +18,8 @@ const useAcBoo = ({ preKey }) => {
 
   const isHd = ctx.hdModKeyAc === roo.modKey;
 
-  const isImportant = importantModKeys.includes(roo.modKey);
-  const isDisabled = disabledModKeys.includes(roo.modKey);
+  const isImportant = importantModNous.includes(roo.modKey);
+  const isDisabled = disabledModNous.includes(roo.modKey);
   return {
     isEnterBelow,
     isActive,

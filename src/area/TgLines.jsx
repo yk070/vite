@@ -1,12 +1,12 @@
 import Line from "./Line.jsx";
 import keyPositions from "../array/keyPositions.js";
-import { alphabetNumberKeys } from "../array/namedKeys.js";
+import { alphabetNumberNous } from "../array/namedNous.js";
 
 const TgLines = ({ containerRef }) => {
   return (
     <>
       {keyPositions.map(({ key, headX, headY }, index) => {
-        if (alphabetNumberKeys.includes(key)) return null;
+        if (alphabetNumberNous.includes(key)) return null;
         return (
           <Line
             key={index}

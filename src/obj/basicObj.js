@@ -3,7 +3,7 @@ const basicObj = {
     left: {
       基本: {
         row: 2,
-        modKeys: [
+        modNous: [
           "none*hankaku",
           "none*backspace",
           "none*enter",
@@ -14,21 +14,54 @@ const basicObj = {
       },
       便利: {
         row: 1,
-        modKeys: ["alt*tab", "alt*f4", "win*d", "ctrl*tab", "ctrl*shift*tab"],
+        modNous: ["alt*tab", "alt*f4", "win*d", "ctrl*tab", "ctrl*shift*tab"],
       },
       操作: {
-        row: 1,
-        modKeys: ["reload", "sleep"],
+        row: 2,
+        modNous: ["スリープ", "再起動", "シャットダウン"],
       },
       予測変換: {
         row: 1,
-        modKeys: ["第1候補", "第2候補", "第3候補", "第4候補"],
+        modNous: ["第1候補", "第2候補", "第3候補", "第4候補"],
+      },
+    },
+    right: {
+      faa: {
+        row: 1,
+        modNous: [
+          "入力モード入力ミス挽回",
+          "頭文字大文字",
+          "大文字小文字チェンジ",
+        ],
+      },
+      設定: {
+        row: 1,
+        modNous: ["reload"],
+      },
+    },
+  },
+  basic2: {
+    left: {
+      Esc: {
+        row: 2,
+        modNous: [
+          "none*hankaku",
+          "none*backspace",
+          "none*enter",
+          "none*space",
+          "none*esc",
+          "none*tab",
+        ],
+      },
+      fa: {
+        row: 2,
+        modNous: ["alt*tab", "alt*f4", "win*d", "ctrl*tab", "ctrl*shift*tab"],
       },
     },
     right: {
       faa: {
         row: 2,
-        modKeys: [
+        modNous: [
           "win*one",
           "win*two",
           "win*three",
@@ -42,11 +75,11 @@ const basicObj = {
       },
     },
   },
-  basic2: {
+  naviTen: {
     left: {
       Esc: {
         row: 2,
-        modKeys: [
+        modNous: [
           "none*hankaku",
           "none*backspace",
           "none*enter",
@@ -57,13 +90,13 @@ const basicObj = {
       },
       fa: {
         row: 2,
-        modKeys: ["alt*tab", "alt*f4", "win*d", "ctrl*tab", "ctrl*shift*tab"],
+        modNous: ["alt*tab", "alt*f4", "win*d", "ctrl*tab", "ctrl*shift*tab"],
       },
     },
     right: {
       faa: {
         row: 2,
-        modKeys: [
+        modNous: [
           "win*one",
           "win*two",
           "win*three",

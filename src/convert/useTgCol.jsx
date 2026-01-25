@@ -7,8 +7,8 @@ const useTgCol = ({ preKey }) => {
   const ctx = useCtx();
 
   const getButtonColor = () => {
-    if (boo.isDisabled) return tone.DisabledButtonColor;
     if (boo.isModKeySame) return tone.ModColor;
+    if (boo.isDisabled) return tone.DisabledButtonColor;
     if (boo.isMultiPseudoHd) {
       if (ctx.isMultiOnHd) return tone.multiOnColor;
       return tone.acSelectColor;

@@ -1,10 +1,11 @@
+import { homeNous } from "../array/namedNous.js";
 const easeObj = {
   none: {
     first: ["space", "tab", "capslock", "muhenkan"],
     second: ["hankaku", "henkan"],
   },
   ctrl: {
-    first: ["a", "s", "d", "f", "space", "muhenkan"],
+    first: [...homeNous, "space", "muhenkan"],
     second: ["tab", "capslock"],
   },
   alt: {
@@ -20,11 +21,11 @@ const easeObj = {
     second: [],
   },
   space: {
-    first: [],
+    first: [...homeNous],
     second: [],
   },
   muhenkan: {
-    first: [],
+    first: [...homeNous],
     second: [],
   },
 };

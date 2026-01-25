@@ -1,8 +1,4 @@
-import {
-  basicIndexes,
-  ModIndexes,
-  virtualCombiKeys,
-} from "../array/namedKeys.js";
+import { basicIndexes, ModIndexes, virtualAdjs } from "../array/namedNous.js";
 
 const derivedMain = (base) => {
   const toggleAcTg = (key) => {
@@ -30,7 +26,7 @@ const derivedMain = (base) => {
   const contextIndexes = getContextIndexes(base);
 
   const isWoTgNone = base.currentModTg === "none";
-  const isWoTgVirtual = virtualCombiKeys.includes(base.currentModTg);
+  const isWoTgVirtual = virtualAdjs.includes(base.currentModTg);
   const isWoTgShift = base.currentModTg === "shift";
   const isWoAcBasic = basicIndexes?.includes(base.currentModAc);
 

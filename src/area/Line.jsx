@@ -1,18 +1,11 @@
 import useCtx from "../context/useCtx.jsx";
 import { header, sidebar } from "../style/length.jsx";
 import keyStyleObj from "../obj/keyStyleObj.js";
+import { modLineObj } from "../obj/namedObj.js";
 
 const Line = ({ containerRef, headX, headY }) => {
   const ctx = useCtx();
   if (ctx.isWoTgNone) return null;
-  const modLineObj = {
-    ctrl: "leftCtrl",
-    alt: "leftAlt",
-    shift: "leftShift",
-    space: "space",
-    capslock: "capslock",
-    win: "leftWin",
-  };
 
   const styleObj = keyStyleObj[modLineObj[ctx.currentModTg]];
 

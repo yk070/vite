@@ -6,7 +6,7 @@ const ConvLabel = ({ modKey }) => {
   if (!modKey) return null;
 
   const [part1, part2, part3] = modKey.split("*");
-
+  if (part1 === part2) return null;
   // 修飾キー2つ + 通常キー（例: ctrl*alt*a）
   if (part3) {
     const ModLabel1 = ModBigger[part1] ?? "";

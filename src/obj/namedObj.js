@@ -1,4 +1,4 @@
-import { AllIndexes } from "../array/namedKeys.js";
+import { AllIndexes } from "../array/namedNous.js";
 import keyStyleObj from "./keyStyleObj.js";
 
 const indexKeyObjObj = Object.fromEntries(
@@ -31,8 +31,26 @@ const ModBigger = {
   alt: "Alt",
   win: "Win",
   space: "Space",
+  muhenkan: "無変換",
 };
 
+const combiIndexObj = {
+  ctrl: ["leftCtrl", "rightCtrl"],
+  shift: ["leftShift", "rightShift"],
+  alt: ["leftAlt", "rightAlt"],
+  win: ["leftWin", "rightWin"],
+  space: ["space"],
+  muhenkan: ["muhenkan"],
+};
+
+const modLineObj = {
+  ctrl: "leftCtrl",
+  alt: "leftAlt",
+  shift: "leftShift",
+  win: "leftWin",
+  space: "space",
+  muhenkan: "muhenkan",
+};
 const acIndexLabelObj = {
   basic1: "Basic1",
   basic2: "Basic2",
@@ -69,4 +87,6 @@ export {
   tgIndexObj,
   ModBigger,
   modScObj,
+  combiIndexObj,
+  modLineObj,
 };

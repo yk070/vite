@@ -53,13 +53,19 @@ const multiObj = {
       { ac: "ctrl*r", tg: "space*r" },
       { ac: "ctrl*t", tg: "space*t" },
     ],
-    Tab進退: [
-      { ac: "none*tab", tg: "space*tab" },
-      { ac: "shift*tab", tg: "space*capslock" },
-    ],
     window切替: [{ ac: "alt*tab", tg: "space*f" }],
-    取消: [{ ac: "ctrl*y", tg: "space*g" }],
+    戻る進む: [
+      { ac: "ctrl*z", tg: "space*z" },
+      { ac: "ctrl*y", tg: "space*g" },
+    ],
     特定window切替: [
+      { ac: "win*two", tg: "space*e" },
+      { ac: "win*three", tg: "space*w" },
+      { ac: "win*four", tg: "space*q" },
+      { ac: "win*five", tg: "space*tab" },
+      { ac: "win*one", tg: "space*r" },
+    ],
+    デリート: [
       { ac: "win*two", tg: "space*e" },
       { ac: "win*three", tg: "space*w" },
       { ac: "win*four", tg: "space*q" },
@@ -69,3 +75,8 @@ const multiObj = {
   },
 };
 export default multiObj;
+
+// Tab進退: [
+//   { ac: "none*tab", tg: "space*tab" },
+//   { ac: "shift*tab", tg: "space*capslock" },
+// ],

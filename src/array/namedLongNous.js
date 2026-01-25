@@ -1,4 +1,4 @@
-const numberKeys = [
+const numberNous = [
   "zero",
   "one",
   "two",
@@ -10,7 +10,7 @@ const numberKeys = [
   "eight",
   "nine",
 ];
-const functionKeys = [
+const functionNous = [
   "f1",
   "f2",
   "f3",
@@ -24,7 +24,7 @@ const functionKeys = [
   "f11",
   "f12",
 ];
-const alphabetKeys = [
+const alphabetNous = [
   "a",
   "b",
   "c",
@@ -64,7 +64,7 @@ const alphabetKeys = [
   "caret",
   "yen",
 ];
-const commandKeys = [
+const commandNous = [
   "esc",
   "hankaku",
   "backspace",
@@ -77,7 +77,7 @@ const commandKeys = [
   "kana",
   "application",
 ];
-const combiKeys = [
+const combiNous = [
   "leftCtrl",
   "rightCtrl",
   "leftAlt",
@@ -87,5 +87,12 @@ const combiKeys = [
   "leftWin",
   "rightWin",
 ];
-
-export { numberKeys, functionKeys, alphabetKeys, commandKeys, combiKeys };
+const homeNous = ["a", "s", "d", "f", "j", "k", "l", "semicolon"];
+export {
+  numberNous,
+  functionNous,
+  alphabetNous,
+  commandNous,
+  combiNous,
+  homeNous,
+};

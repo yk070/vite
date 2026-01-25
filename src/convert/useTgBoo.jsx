@@ -1,8 +1,9 @@
-import { disabledModKeys } from "../array/namedModKeys.js";
-import { alphabetNumberKeys, allCombiKeys } from "../array/namedKeys.js";
+import { disabledModNous } from "../array/namedModNous.js";
+import { alphabetNumberNous, allCombiNous } from "../array/namedNous.js";
 import easeObj from "../obj/easeObj.js";
 import useCtx from "../context/useCtx.jsx";
 import useTgRoo from "./useTgRoo.jsx";
+import { combiIndexObj } from "../obj/namedObj.js";
 
 const useTgBoo = ({ preKey }) => {
   const roo = useTgRoo({ preKey });
@@ -13,8 +14,8 @@ const useTgBoo = ({ preKey }) => {
 
   const isAwayHovered = ctx.hdModKeyTg === roo.assignModKey;
   const isModKeySame =
-    allCombiKeys.includes(roo.originKey) &&
-    roo.originKey.includes(ctx.currentModTg);
+    allCombiNous.includes(roo.originKey) &&
+    combiIndexObj[ctx.currentModTg]?.includes(roo.originKey);
 
   const isLocationUsed = ctx.acTgObjs.some(
     (obj) => obj.tg === roo.originModKey,
@@ -27,12 +28,14 @@ const useTgBoo = ({ preKey }) => {
   const isSoMuhHold = ctx.isWoMuhHold && roo.originModKey === "none*muhenkan";
   const isSoVirtualHold = isSoSpaHold || isSoMuhHold;
 
-  const isVacant = isFunctionUsed && !isLocationUsed;
+  const isVacant =
+    (isFunctionUsed && !isLocationUsed) ||
+    (ctx.isWoTgVirtual && !isLocationUsed);
   const isUnusable = !isFunctionUsed && isLocationUsed;
 
   const isAssigned = !!roo.assignModKey;
-  const isDisabled = disabledModKeys.includes(roo.originModKey);
-  const isAlphabetNumber = alphabetNumberKeys.includes(roo.originKey);
+  const isDisabled = disabledModNous.includes(roo.originModKey);
+  const isAlphabetNumber = alphabetNumberNous.includes(roo.originKey);
   const isReturn = isAlphabetNumber && (ctx.isWoTgNone || ctx.isWoTgShift);
 
   const isEmptyLabel = isVacant || isEnterBelow || isModKeySame;
