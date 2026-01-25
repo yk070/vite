@@ -1,4 +1,4 @@
-sc7B & SC29:: {
+sc7B & sc29:: {
     send("!{space}") ;maximize
     sleep(800)
     send("{x}")

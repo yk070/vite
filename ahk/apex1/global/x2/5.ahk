@@ -1,28 +1,16 @@
 XButton2 & sc1D:: {
-    send("{Down}")
+    fxCtlUsed() ;fxUsed
+    fxSc1D()
 }
 XButton2 & LWin:: {
 }
 XButton2 & LAlt:: {
 }
-XButton2 & SC07B:: {
-
-    send("{LButton}") ;'lineChoice
-    sleep(10)
-    send("{End}")
-    sleep(10)
-    send("+{Home}")
-    sleep(10)
+XButton2 & sc07B:: {
+    fxMhkUsed() ;fxUsed
+    fxSc07B()
 }
-XButton2 & SC39:: {
-    send("{LButton}") ;lineUpChoice
-    sleep(10)
-    send("{End}")
-    sleep(10)
-    send("+{Home}")
-    sleep(10)
-    send("+{Up}")
-    sleep(10)
-    send("+{End}")
-    sleep(10)
+XButton2 & sc39:: {
+    fxSpcUsed() ;fxUsed
+    fxSc39()
 }

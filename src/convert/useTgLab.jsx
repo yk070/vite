@@ -14,11 +14,6 @@ const useTgLab = ({ preKey }) => {
   const originModKeyLabel = <ConvLabel modKey={roo.originModKey} />;
   const assignModKeyLabel = <ConvLabel modKey={roo.assignModKey} />;
   const multiHdAcModKeyLabel = <ConvLabel modKey={roo.multiHdAcModKey} />;
-  const backLabel = (
-    <>
-      <span>{originModKeyLabel}</span>
-    </>
-  );
 
   const emptyLabel = (
     <>
@@ -27,12 +22,14 @@ const useTgLab = ({ preKey }) => {
   );
   const alertLabel = (
     <>
-      <span style={look.alertLabel1}>{originKeyLabel}</span>
+      <span style={look.alertLabel1}>{originModKeyLabel}</span>
       <LuTriangleAlert style={look.acButton4} />
     </>
   );
+
   const getLabel = () => {
     if (boo.isMultiPseudoHd) return multiHdAcModKeyLabel;
+
     if (boo.isHd) {
       if (ctx.isWoAcSd) {
         if (boo.isAssigned) return assignModKeyLabel;
@@ -42,17 +39,21 @@ const useTgLab = ({ preKey }) => {
         if (boo.isEmptyLabel) return "";
         return originKeyLabel;
       }
+
       if (boo.isSoVirtualHold) {
         if (boo.isFunctionUsed) return "";
         return alertLabel;
       }
+
       if (boo.isUnusable) return alertLabel;
       if (boo.isFunctionUsed && boo.isLocationUsed) return emptyLabel;
       if (boo.isFunctionUsed) return "";
     }
+
     if (boo.isSoVirtualHold) return "修飾キー";
     if (boo.isAssigned) return assignModKeyLabel;
-    if (boo.isEmptyLabel) return "";
+    if (boo.isEmptyLabel || ctx.isWoTgSpace) return "";
+
     return originKeyLabel;
   };
 

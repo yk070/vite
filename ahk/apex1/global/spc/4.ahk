@@ -1,32 +1,33 @@
-SC39 & sc2A:: {
+sc39 & sc2A:: {
+    fxSftUsed() ;fxUsed
     send("{Esc}")
 }
-SC39 & z:: {
+sc39 & z:: {
     send("^{z}")
 }
-SC39 & x:: {
+sc39 & x:: {
     send("^{x}")
 }
-SC39 & c:: {
+sc39 & c:: {
     send("^{c}")
 }
-SC39 & v:: {
+sc39 & v:: {
     send("^{v}")
 }
-SC39 & b:: {
+sc39 & b:: {
     send("^{y}")
 }
 
-SC39 & n:: {
+sc39 & n:: {
     send("{Up}")
 }
-SC39 & m:: {
+sc39 & m:: {
     send("^{Home}")
 }
-SC39 & SC33:: {
+sc39 & sc33:: {
     send("^{End}")
 }
-SC39 & SC34:: {
+sc39 & sc34:: {
 }
-SC39 & SC35:: {
+sc39 & sc35:: {
 }

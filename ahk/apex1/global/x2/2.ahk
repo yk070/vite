@@ -1,17 +1,18 @@
 XButton2 & sc0F:: {
-    send("+{Home}")
+    fxSc0F()
 }
 XButton2 & q:: {
+    fxQ()
 }
 XButton2 & w:: {
-    send("+{Left}")
+    fxW()
 }
 XButton2 & e:: {
-    send("+{Right}")
+    fxE()
 }
 XButton2 & r:: {
-    send("^+{Right}")
+    fxR()
 }
 XButton2 & t:: {
-    send("+{End}")
+    fxT()
 }

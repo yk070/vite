@@ -10,5 +10,4 @@ const keyPositions = Object.entries(keyStyleObj).map(([key, styleObj]) => {
     headY: top + height / 2,
   };
 });
-
-export { keyPositions };
+export default keyPositions;

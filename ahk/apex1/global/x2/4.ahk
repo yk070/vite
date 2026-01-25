@@ -1,13 +1,14 @@
 XButton2 & sc2A:: {
-    send("{Up}")
+    fxSftUsed() ;fxUsed
+    fxSc2A()
 }
 
 XButton2 & z:: {
-    send("^{Home}")
+    fxZ()
 }
 
 XButton2 & x:: {
-    send("^{End}")
+    fxX()
 }
 
 XButton2 & c:: {
@@ -17,5 +18,5 @@ XButton2 & v:: {
 }
 
 XButton2 & b:: {
-    return
+    fxB()
 }

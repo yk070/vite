@@ -1,4 +1,4 @@
-sc7B & SC3A:: {
+sc7B & sc3A:: {
     send("!{Left}")
 }
 sc7B & a:: {
@@ -10,7 +10,7 @@ sc7B & s:: {
 sc7B & d:: {
     send("#{d}")
 }
-sc7B & SC21:: {
+sc7B & sc21:: {
     send("^{f}")
 }
 sc7B & g:: {
@@ -28,9 +28,9 @@ sc7B & k:: {
 sc7B & l:: {
     send("{Right}")
 }
-sc7B & SC27:: {
+sc7B & sc27:: {
     send("{End}")
 }
-sc7B & SC28:: {
+sc7B & sc28:: {
     send("{Down}")
 }

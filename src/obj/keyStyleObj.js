@@ -235,13 +235,13 @@ const keyStyleObj = {
     width: `${100 * (1 / 15)}%`,
     height: `${100 * (1 / 6)}%`,
   },
-  at: {
+  atmark: {
     left: `${100 * (11.5 / 15)}%`,
     top: `${100 * (2 / 6)}%`,
     width: `${100 * (1 / 15)}%`,
     height: `${100 * (1 / 6)}%`,
   },
-  left_branch: {
+  leftBracket: {
     left: `${100 * (12.5 / 15)}%`,
     top: `${100 * (2 / 6)}%`,
     width: `${100 * (1 / 15)}%`,
@@ -332,14 +332,14 @@ const keyStyleObj = {
     width: `${100 * (1 / 15)}%`,
     height: `${100 * (1 / 6)}%`,
   },
-  right_branch: {
+  rightBracket: {
     left: `${100 * (12.7 / 15)}%`,
     top: `${100 * (3 / 6)}%`,
     width: `${100 * (1 / 15)}%`,
     height: `${100 * (1 / 6)}%`,
   },
 
-  left_shift: {
+  leftShift: {
     left: `${100 * (0 / 15)}%`,
     top: `${100 * (4 / 6)}%`,
     width: `${100 * (2.2 / 15)}%`,
@@ -411,26 +411,26 @@ const keyStyleObj = {
     width: `${100 * (1 / 15)}%`,
     height: `${100 * (1 / 6)}%`,
   },
-  right_shift: {
+  rightShift: {
     left: `${100 * (13.2 / 15)}%`,
     top: `${100 * (4 / 6)}%`,
     width: `${100 * (1.8 / 15)}%`,
     height: `${100 * (1 / 6)}%`,
   },
 
-  left_ctrl: {
+  leftCtrl: {
     left: `${100 * (0 / 15)}%`,
     top: `${100 * (5 / 6)}%`,
     width: `${100 * (1.5 / 15)}%`,
     height: `${100 * (1 / 6)}%`,
   },
-  left_win: {
+  leftWin: {
     left: `${100 * (1.5 / 15)}%`,
     top: `${100 * (5 / 6)}%`,
     width: `${100 * (1.1 / 15)}%`,
     height: `${100 * (1 / 6)}%`,
   },
-  left_alt: {
+  leftAlt: {
     left: `${100 * (2.6 / 15)}%`,
     top: `${100 * (5 / 6)}%`,
     width: `${100 * (1.5 / 15)}%`,
@@ -460,13 +460,13 @@ const keyStyleObj = {
     width: `${100 * (1.1 / 15)}%`,
     height: `${100 * (1 / 6)}%`,
   },
-  right_alt: {
+  rightAlt: {
     left: `${100 * (10.5 / 15)}%`,
     top: `${100 * (5 / 6)}%`,
     width: `${100 * (1 / 15)}%`,
     height: `${100 * (1 / 6)}%`,
   },
-  right_win: {
+  rightWin: {
     left: `${100 * (11.5 / 15)}%`,
     top: `${100 * (5 / 6)}%`,
     width: `${100 * (1 / 15)}%`,
@@ -478,7 +478,7 @@ const keyStyleObj = {
     width: `${100 * (1 / 15)}%`,
     height: `${100 * (1 / 6)}%`,
   },
-  right_ctrl: {
+  rightCtrl: {
     left: `${100 * (13.5 / 15)}%`,
     top: `${100 * (5 / 6)}%`,
     width: `${100 * (1.5 / 15)}%`,

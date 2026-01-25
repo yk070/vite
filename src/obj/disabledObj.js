@@ -1,7 +1,7 @@
-import { ModifierKeys } from "../array/namedKeys.js";
+import { combiKeys } from "../array/namedKeys.js";
 const disabledObj = {
-  none: ModifierKeys,
-  ctrl: [],
+  none: combiKeys,
+  ctrl: ["leftCtrl"],
   alt: [],
 };
 export default disabledObj;

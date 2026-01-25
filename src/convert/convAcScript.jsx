@@ -1,21 +1,39 @@
 import { scriptAcModObj } from "../obj/namedObj.js";
 import keyScObj from "../obj/keyScObj.js";
 import notModKeyObj from "../obj/notModKeyObj.js";
+
 const convAcScript = (modKey) => {
-  const [Mod, Key] = modKey.split("*");
   if (!modKey.includes("*")) {
-    return notModKeyObj[modKey];
+    return `{${notModKeyObj[modKey]}}`;
   }
-  const Namelabel_Mod = scriptAcModObj[Mod] ?? "";
-  const Namelabel_Key = keyScObj[Key] ?? Key;
-
   if (modKey === "alt*tab") {
-    return `AltTab`;
+    return "AltTab";
   }
 
-  if (Mod === "none") {
-    return `send "{${Namelabel_Key}}"`;
+  const [part1, part2, part3] = modKey.split("*");
+
+  if (part1 === "none") {
+    const label = "{" + keyScObj[part2] + "}";
+
+    return `{\n  send "${label}"\n}`;
   }
-  return `send "${Namelabel_Mod}{${Namelabel_Key}}"`;
+
+  if (part3) {
+    const modLabel1 = scriptAcModObj[part1];
+    const modLabel2 = scriptAcModObj[part2];
+    const keyLabel = keyScObj[part3];
+
+    const label = modLabel1 + modLabel2 + "{" + keyLabel + "}";
+
+    return `{\n  send "${label}"\n}`;
+  }
+
+  const modLabel = scriptAcModObj[part1];
+  const keyLabel = keyScObj[part2];
+
+  const label = modLabel + "{" + keyLabel + "}";
+
+  return `{\n  send "${label}"\n}`;
 };
+
 export default convAcScript;

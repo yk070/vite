@@ -6,7 +6,7 @@ const useStateMain = () => {
 
   // current mod
   const [currentModAc, setCurrentModAc] = useState("none");
-  const [currentModTg, setcurrentModTg] = useState("none");
+  const [currentModTg, setCurrentModTg] = useState("none");
   // space hold
   // multi
   const [cdMultiObjs, setCdMultiObj] = useState({});
@@ -23,7 +23,7 @@ const useStateMain = () => {
     currentModAc,
     setCurrentModAc,
     currentModTg,
-    setcurrentModTg,
+    setCurrentModTg,
     sdAcModKey,
     setSdAcModKey,
     sdTgModKey,

@@ -28,6 +28,6 @@ sc7B & o:: {
 sc7B & p:: {
     send("^{End}")
 }
-sc7B & SC1A:: {
+sc7B & sc1A:: {
     send("{Up}")
 }

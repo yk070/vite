@@ -1,36 +1,35 @@
-SC39 & sc0F:: {
+sc39 & sc0F:: {
     send("#{5}")
 }
-SC39 & q:: {
+sc39 & q:: {
     send("#{4}")
 }
-SC39 & w:: {
+sc39 & w:: {
     send("#{3}")
 }
-SC39 & e:: {
+sc39 & e:: {
     send("#{2}")
 }
-SC39 & r:: {
+sc39 & r:: {
     send("#{1}")
 }
-SC39 & t:: {
-    send("{" scHankaku "}")
+sc39 & t:: {
 }
 
-SC39 & y:: {
+sc39 & y:: {
     send("+{Home}")
 }
-SC39 & u:: {
+sc39 & u:: {
 }
-SC39 & i:: {
+sc39 & i:: {
     send("+{Left}")
 }
-SC39 & o:: {
+sc39 & o:: {
     send("+{Right}")
 }
-SC39 & p:: {
+sc39 & p:: {
     send("^+{Right}")
 }
-SC39 & SC1A:: {
+sc39 & sc1A:: {
     send("+{End}")
 }

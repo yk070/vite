@@ -11,7 +11,7 @@ export const derivedScript = (base) => {
     }
   });
 
-  const scriptDash = scriptLines?.join("");
+  const preScript = scriptLines?.join("");
   const hasCtrl =
     base.acTgObjs?.some(
       (item) =>
@@ -20,7 +20,7 @@ export const derivedScript = (base) => {
         item.tg.includes("ctrl"),
     ) ?? false;
 
-  const script = hasCtrl ? "sc1D::return\n" + scriptDash : scriptDash;
+  const script = hasCtrl ? "sc1D::return\n" + preScript : preScript;
 
   return { script };
 };

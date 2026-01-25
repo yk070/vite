@@ -3,7 +3,7 @@ import useCtx from "../context/useCtx.jsx";
 const useTgIndexRun = ({ contextIndex }) => {
   const ctx = useCtx();
 
-  const click = () => ctx.setcurrentModTg(contextIndex);
+  const click = () => ctx.setCurrentModTg(contextIndex);
 
   return { click };
 };

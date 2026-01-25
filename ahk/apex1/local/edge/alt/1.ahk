@@ -1,4 +1,4 @@
-!SC29:: {
+!sc29:: {
     edge_bookmark(0)
 }
 !vk19:: {

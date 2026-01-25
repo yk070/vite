@@ -6,12 +6,12 @@ const Line = ({ containerRef, headX, headY }) => {
   const ctx = useCtx();
   if (ctx.isWoTgNone) return null;
   const modLineObj = {
-    ctrl: "left_ctrl",
-    alt: "left_alt",
-    shift: "left_shift",
+    ctrl: "leftCtrl",
+    alt: "leftAlt",
+    shift: "leftShift",
     space: "space",
     capslock: "capslock",
-    win: "left_win",
+    win: "leftWin",
   };
 
   const styleObj = keyStyleObj[modLineObj[ctx.currentModTg]];

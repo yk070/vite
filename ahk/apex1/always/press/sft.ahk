@@ -2,6 +2,10 @@ global lastUpTimeSft := 0
 global isDownSft := false
 global isCompletedSft := false
 
+fxSftUsed() {
+    global isCompletedSft
+    isCompletedSft := true
+}
 $sc2A:: {
     global isDownSft, isCompletedSft
     if isDownSft

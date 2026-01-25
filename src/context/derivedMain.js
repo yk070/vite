@@ -1,5 +1,4 @@
-import { basicIndexes } from "../array/namedMods.js";
-import { ModIndexes } from "../array/namedMods.js";
+import { basicIndexes, ModIndexes } from "../array/namedKeys.js";
 
 const derivedMain = (base) => {
   const toggleAcTg = (key) => {

@@ -1,7 +1,10 @@
 global lastUpTimeSpc := 0
 global isDownSpc := false
 global isCompletedSpc := false
-
+fxSpcUsed() {
+    global isCompletedSpc
+    isCompletedSpc := true
+}
 $sc39:: {
     global isDownSpc, isCompletedSpc
     if isDownSpc

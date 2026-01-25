@@ -13,7 +13,6 @@ const keyLabelObj = {
   f10: "F10",
   f11: "F11",
   f12: "F12",
-
   //1
   hankaku: "半角",
   one: "1",
@@ -30,7 +29,6 @@ const keyLabelObj = {
   caret: "^",
   yen: "¥",
   backspace: "BS",
-
   //2
   tab: "Tab",
   q: "Q",
@@ -43,10 +41,9 @@ const keyLabelObj = {
   i: "I",
   o: "O",
   p: "P",
-  at: "@",
-  left_branch: "[",
+  atmark: "@",
+  leftBracket: "[",
   enter: "Enter",
-
   //3
   capslock: "CapsL",
   a: "A",
@@ -60,10 +57,10 @@ const keyLabelObj = {
   l: "L",
   semicolon: ";",
   colon: ":",
-  right_branch: "]",
+  rightBracket: "]",
 
   //4
-  left_shift: "Shift",
+  leftShift: "Shift",
   z: "Z",
   x: "X",
   c: "C",
@@ -75,20 +72,20 @@ const keyLabelObj = {
   period: ".",
   slash: "/",
   backslash: "\\",
-  right_shift: "Shift",
+  rightShift: "Shift",
 
   //5
-  left_ctrl: "Ctrl",
-  left_win: "Win",
-  left_alt: "Alt",
+  leftCtrl: "Ctrl",
+  leftWin: "Win",
+  leftAlt: "Alt",
   muhenkan: "無変換",
   space: "Space",
   henkan: "変換",
   kana: "かな",
-  right_alt: "Alt",
-  right_win: "Win",
+  rightAlt: "Alt",
+  rightWin: "Win",
   application: "App",
-  right_ctrl: "Ctrl",
+  rightCtrl: "Ctrl",
 };
 
 export default keyLabelObj;

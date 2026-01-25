@@ -24,13 +24,13 @@ sc1D & l:: {
     send("3")
     sleep(50)
 }
-sc1D & SC27:: {
+sc1D & sc27:: {
     send("{Tab}") ;henkan4
     sleep(50)
     send("4")
     sleep(50)
 }
-sc1D & SC28:: {
+sc1D & sc28:: {
     send("{Tab}") ;henkan5
     sleep(50)
     send("5")

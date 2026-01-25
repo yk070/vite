@@ -1,111 +1,29 @@
-const NumberKeys = [
-  "zero",
-  "one",
-  "two",
-  "three",
-  "four",
-  "five",
-  "six",
-  "seven",
-  "eight",
-  "nine",
-];
-const FunctionKeys = [
-  "f1",
-  "f2",
-  "f3",
-  "f4",
-  "f5",
-  "f6",
-  "f7",
-  "f8",
-  "f9",
-  "f10",
-  "f11",
-  "f12",
-];
-const AlpahabetKeys = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-  "comma",
-  "colon",
-  "slash",
-  "backslash",
-  "semicolon",
-  "period",
-  "right_branch",
-  "at",
-  "left_branch",
-  "minus",
-  "caret",
-  "yen",
-];
-const AlphabetNumberKeys = [...AlpahabetKeys, ...NumberKeys];
-const CommandKeys = [
-  "esc",
-  "hankaku",
-  "backspace",
-  "tab",
-  "enter",
-  "capslock",
-  "muhenkan",
-  "space",
-  "henkan",
-  "kana",
-  "application",
-];
-const ModifierKeys = [
-  "left_ctrl",
-  "right_ctrl",
-  "left_alt",
-  "right_alt",
-  "left_shift",
-  "right_shift",
-  "left_win",
-  "right_win",
-];
-const VirtualModifierKeys = ["space", "muhenkan"];
-const PeculiarKeys = ["hold", "toggle"];
-const AllKeys = [
-  ...NumberKeys,
-  ...FunctionKeys,
-  ...AlpahabetKeys,
-  ...CommandKeys,
-  ...ModifierKeys,
-  ...PeculiarKeys,
-];
+import {
+  numberKeys,
+  functionKeys,
+  alphabetKeys,
+  commandKeys,
+  combiKeys,
+} from "./namedLongKeys.js";
+
+const virtualCombiKeys = ["space", "muhenkan"];
+const alphabetNumberKeys = [...alphabetKeys, ...numberKeys];
+const allCombiKeys = [...combiKeys, ...virtualCombiKeys];
+const ModIndexes = ["none", "ctrl", "alt", "shift", "win"];
+const basicIndexes = ["basic1", "basic2"];
+const DefaultIndexes = [...basicIndexes, ...ModIndexes];
+const AllIndexes = [...ModIndexes, ...virtualCombiKeys];
+
 export {
-  NumberKeys,
-  FunctionKeys,
-  AlpahabetKeys,
-  CommandKeys,
-  ModifierKeys,
-  PeculiarKeys,
-  AllKeys,
-  AlphabetNumberKeys,
-  VirtualModifierKeys,
+  numberKeys,
+  functionKeys,
+  alphabetKeys,
+  commandKeys,
+  combiKeys,
+  alphabetNumberKeys,
+  allCombiKeys,
+  ModIndexes,
+  basicIndexes,
+  DefaultIndexes,
+  AllIndexes,
 };

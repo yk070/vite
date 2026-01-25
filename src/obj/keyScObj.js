@@ -59,7 +59,7 @@ const keyScObj = {
   colon: "sc28",
   right_bracket: "sc2B",
   //4
-  left_shift: "vkA0",
+  leftShift: "vkA0",
   z: "sc2C",
   x: "sc2D",
   c: "sc2E",
@@ -71,18 +71,18 @@ const keyScObj = {
   period: "sc34",
   slash: "sc35",
   backslash: "sc73",
-  right_shift: "sc36",
+  rightShift: "sc36",
   //5
-  left_ctrl: "sc1D",
-  left_win: "sc15B",
-  left_alt: "sc38",
+  leftCtrl: "sc1D",
+  leftWin: "sc15B",
+  leftAlt: "sc38",
   muhenkan: "sc7B",
   space: "sc39",
   henkan: "sc79",
   kana: "sc7D",
-  right_alt: "sc138",
+  rightAlt: "sc138",
   app: "sc15D",
-  right_ctrl: "sc11D",
+  rightCtrl: "sc11D",
 };
 
 export default keyScObj;

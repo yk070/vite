@@ -1,19 +1,21 @@
 const multiObj = {
   none: {
-    左手寄せ: [
+    左手寄せ基本: [
       { ac: "none*tab", tg: "none*esc" },
       { ac: "none*space", tg: "none*capslock" },
-      { ac: "none*enter", tg: "none*tab" },
-      { ac: "none*backspace", tg: "none*hankaku" },
+      { ac: "none*backspace", tg: "none*tab" },
+      { ac: "none*enter", tg: "none*hankaku" },
       { ac: "none*hankaku", tg: "none*henkan" },
     ],
-    半角: [
+    左寄せ数字: [
       { ac: "none*six", tg: "none*f1" },
       { ac: "none*seven", tg: "none*f2" },
       { ac: "none*eight", tg: "none*f3" },
       { ac: "none*nine", tg: "none*f4" },
       { ac: "none*zero", tg: "none*esc" },
     ],
+    即時sleep: [{ ac: "sleep", tg: "none*esc" }],
+    Enter最適化: [{ ac: "none*enter", tg: "none*muhenkan" }],
   },
   ctrl: {
     タブ切替: [
@@ -28,6 +30,9 @@ const multiObj = {
     予測変換: [
       { ac: "第1候補", tg: "ctrl*j" },
       { ac: "第2候補", tg: "ctrl*k" },
+      { ac: "第3候補", tg: "ctrl*l" },
+      { ac: "第4候補", tg: "ctrl*semicolon" },
+      { ac: "第5候補", tg: "ctrl*colon" },
     ],
   },
   space: {

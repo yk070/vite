@@ -2,6 +2,10 @@ global lastUpTimeCtl := 0
 global isDownCtl := false
 global isCompletedCtl := false
 
+fxCtlUsed() {
+    global isCompletedCtl
+    isCompletedCtl := true
+}
 $sc1D:: {
     global isDownCtl, isCompletedCtl
     if isDownCtl

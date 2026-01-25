@@ -7,11 +7,13 @@ sc2A & LAlt:: {
         SetTimer(guiIme, 0)   ; タイマー無効化
     myGui.Destroy()
 }
-sc2A & SC39:: {
+sc2A & sc39:: {
+    fxSpcUsed() ;fxUsed
     Reload()
 }
 #SuspendExempt
 sc2A & sc7B:: {
+    fxMhkUsed() ;fxUsed
     global manualSuspend
     manualSuspend := !manualSuspend
     UpdateSuspend()

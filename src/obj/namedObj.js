@@ -1,4 +1,4 @@
-import { AllIndexes } from "../array/namedMods.js";
+import { AllIndexes } from "../array/namedKeys.js";
 import keyStyleObj from "./keyStyleObj.js";
 
 const indexKeyObjObj = Object.fromEntries(

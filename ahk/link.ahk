@@ -3,7 +3,7 @@
 
 #Include .\apex1\local\vscode\vscode.ahk
 
-#Include .\apex3\test\test.ahk ;テスト
+#Include .\apex2\test\test.ahk ;テスト
 
 #Include .\common\function\function.ahk
 #Include .\common\code\code.ahk
@@ -12,13 +12,13 @@
 
 ; alone
 #Include .\apex1\global\alone\alone.ahk
-; bar
-#Include .\apex1\global\bar\1.ahk
-#Include .\apex1\global\bar\2.ahk
-#Include .\apex1\global\bar\3.ahk
-#Include .\apex1\global\bar\4.ahk
-#Include .\apex1\global\bar\5.ahk
-#Include .\apex1\global\bar\mouse.ahk
+; spc
+#Include .\apex1\global\spc\1.ahk
+#Include .\apex1\global\spc\2.ahk
+#Include .\apex1\global\spc\3.ahk
+#Include .\apex1\global\spc\4.ahk
+#Include .\apex1\global\spc\5.ahk
+#Include .\apex1\global\spc\mouse.ahk
 ; muh
 #Include .\apex1\global\muh\1.ahk
 #Include .\apex1\global\muh\2.ahk
@@ -26,14 +26,14 @@
 #Include .\apex1\global\muh\4.ahk
 #Include .\apex1\global\muh\5.ahk
 #Include .\apex1\global\muh\mouse.ahk
-; ctrl
-#Include .\apex1\global\ctrl\3.ahk
-#Include .\apex1\global\ctrl\4.ahk
-#Include .\apex1\global\ctrl\5.ahk
-; shift
-#Include .\apex1\global\shift\1.ahk
-#Include .\apex1\global\shift\2.ahk
-#Include .\apex1\global\shift\5.ahk
+; ctl
+#Include .\apex1\global\ctl\3.ahk
+#Include .\apex1\global\ctl\4.ahk
+#Include .\apex1\global\ctl\5.ahk
+; sft
+#Include .\apex1\global\sft\1.ahk
+#Include .\apex1\global\sft\2.ahk
+#Include .\apex1\global\sft\5.ahk
 ; tab
 ; x2
 #Include .\apex1\global\x2\mouse.ahk
@@ -42,5 +42,12 @@
 #Include .\apex1\global\x2\3.ahk
 #Include .\apex1\global\x2\4.ahk
 #Include .\apex1\global\x2\5.ahk
+; hnk
+#Include .\apex1\global\hnk\1.ahk
+#Include .\apex1\global\hnk\2.ahk
+#Include .\apex1\global\hnk\3.ahk
+#Include .\apex1\global\hnk\4.ahk
+#Include .\apex1\global\hnk\5.ahk
+#Include .\apex1\global\hnk\mouse.ahk
 ; x1
 #Include .\apex1\global\x1\mouse.ahk

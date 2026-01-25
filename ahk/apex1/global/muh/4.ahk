@@ -1,4 +1,5 @@
 sc7B & sc2A:: {
+    fxSftUsed() ;fxUsed
     send("^{enter}")
 }
 sc7B & z:: {
@@ -17,12 +18,12 @@ sc7B & n:: {
 sc7B & m:: {
     send("+{home}")
 }
-sc7B & SC33:: {
+sc7B & sc33:: {
     send("+{left}")
 }
-sc7B & SC34:: {
+sc7B & sc34:: {
     send("+{right}")
 }
-sc7B & SC35:: {
+sc7B & sc35:: {
     send("+{end}")
 }

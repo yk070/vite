@@ -1,4 +1,4 @@
-SC39 & SC3A:: {
+sc39 & sc3A:: {
     loop 1 { ;komoji
         send("{F10}")
         sleep(100)
@@ -6,35 +6,35 @@ SC39 & SC3A:: {
     send("{Enter}")
     sleep(10)
 }
-SC39 & a:: {
+sc39 & a:: {
     send("^{a}")
 }
-SC39 & s:: {
+sc39 & s:: {
     send("^{s}")
 }
-SC39 & d:: {
+sc39 & d:: {
     send("^{d}")
 }
-SC39 & SC21::AltTab
-SC39 & g:: {
+sc39 & sc21::AltTab
+sc39 & g:: {
     send("^{y}")
 }
 
-SC39 & h:: {
+sc39 & h:: {
     send("{Home}")
 }
-SC39 & j:: {
+sc39 & j:: {
     send("^{Left}")
 }
-SC39 & k:: {
+sc39 & k:: {
     send("{Left}")
 }
-SC39 & l:: {
+sc39 & l:: {
     send("{Right}")
 }
-SC39 & SC27:: {
+sc39 & sc27:: {
     send("^{Right}")
 }
-SC39 & SC28:: {
+sc39 & sc28:: {
     send("{End}")
 }

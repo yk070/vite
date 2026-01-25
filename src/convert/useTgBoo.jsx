@@ -1,9 +1,5 @@
 import { disabledModKeys } from "../array/namedModKeys.js";
-import {
-  ModifierKeys,
-  AlphabetNumberKeys,
-  VirtualModifierKeys,
-} from "../array/namedKeys.js";
+import { alphabetNumberKeys, allCombiKeys } from "../array/namedKeys.js";
 import easeObj from "../obj/easeObj.js";
 import useCtx from "../context/useCtx.jsx";
 import useTgRoo from "./useTgRoo.jsx";
@@ -17,7 +13,7 @@ const useTgBoo = ({ preKey }) => {
 
   const isAwayHovered = ctx.hdModKeyTg === roo.assignModKey;
   const isModKeySame =
-    [...ModifierKeys, ...VirtualModifierKeys].includes(roo.originKey) &&
+    allCombiKeys.includes(roo.originKey) &&
     roo.originKey.includes(ctx.currentModTg);
 
   const isLocationUsed = ctx.acTgObjs.some(
@@ -36,7 +32,7 @@ const useTgBoo = ({ preKey }) => {
 
   const isAssigned = !!roo.assignModKey;
   const isDisabled = disabledModKeys.includes(roo.originModKey);
-  const isAlphabetNumber = AlphabetNumberKeys.includes(roo.originKey);
+  const isAlphabetNumber = alphabetNumberKeys.includes(roo.originKey);
   const isReturn = isAlphabetNumber && (ctx.isWoTgNone || ctx.isWoTgShift);
 
   const isEmptyLabel = isVacant || isEnterBelow || isModKeySame;

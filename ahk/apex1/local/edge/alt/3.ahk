@@ -1,4 +1,4 @@
-!SC3A:: {
+!sc3A:: {
     send("+!{l}")  ; Shift+sc38+L
     sleep(10)
 }
