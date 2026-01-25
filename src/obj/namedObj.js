@@ -1,8 +1,8 @@
-import { AllIndexes } from "../array/namedNous.js";
-import keyStyleObj from "./keyStyleObj.js";
+import { allAdjs } from "../array/namedNous.js";
+import posiIdObj from "./posiIdObj.js";
 
-const indexKeyObjObj = Object.fromEntries(
-  AllIndexes.map((index) => [index, structuredClone(keyStyleObj)]),
+const adjPosiIdObjObj = Object.fromEntries(
+  allAdjs.map((index) => [index, structuredClone(posiIdObj)]),
 );
 
 const scriptAcModObj = {
@@ -14,7 +14,7 @@ const scriptAcModObj = {
   space: "sc39",
 };
 
-const modScObj = {
+const adjScObj = {
   none: "",
   ctrl: "sc1D",
   shift: "sc36",
@@ -34,7 +34,7 @@ const ModBigger = {
   muhenkan: "無変換",
 };
 
-const combiIndexObj = {
+const adjAdjectiveNousObj = {
   ctrl: ["leftCtrl", "rightCtrl"],
   shift: ["leftShift", "rightShift"],
   alt: ["leftAlt", "rightAlt"],
@@ -43,7 +43,7 @@ const combiIndexObj = {
   muhenkan: ["muhenkan"],
 };
 
-const modLineObj = {
+const adjLineObj = {
   ctrl: "leftCtrl",
   alt: "leftAlt",
   shift: "leftShift",
@@ -51,7 +51,7 @@ const modLineObj = {
   space: "space",
   muhenkan: "muhenkan",
 };
-const acIndexLabelObj = {
+const acCapLabelObj = {
   basic1: "Basic1",
   basic2: "Basic2",
   none: "None",
@@ -69,24 +69,13 @@ const EnterObj = {
   enter_below: "enter",
 };
 
-const tgIndexObj = {
-  basic1: "【Often1】",
-  often2: "【Often2】",
-  none: "【None】",
-  ctrl: "【Ctrl】",
-  shift: "【Shift】",
-  alt: "【Alt】",
-  win: "【Win】",
-  space: "【Space】",
-};
 export {
   scriptAcModObj,
-  acIndexLabelObj,
-  indexKeyObjObj,
+  acCapLabelObj,
+  adjPosiIdObjObj,
   EnterObj,
-  tgIndexObj,
   ModBigger,
-  modScObj,
-  combiIndexObj,
-  modLineObj,
+  adjScObj,
+  adjAdjectiveNousObj,
+  adjLineObj,
 };

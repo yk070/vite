@@ -4,34 +4,34 @@ const useStateMain = () => {
 
   const [hdMultiObj, setHdMultiObj] = useState(null);
 
-  // current mod
-  const [currentModAc, setCurrentModAc] = useState("none");
-  const [currentModTg, setCurrentModTg] = useState("none");
+  // current adj
+  const [currentCapAc, setcurrentCapAc] = useState("none");
+  const [currentAdjTg, setCurrentAdjTg] = useState("none");
   // space hold
   // multi
   const [cdMultiObjs, setCdMultiObj] = useState({});
   // selected
-  const [sdAcModKey, setSdAcModKey] = useState(null);
-  const [sdTgModKey, setSdTgModKey] = useState(null);
+  const [sdAcAdjNou, setSdAcAdjNou] = useState(null);
+  const [sdTgAdjNou, setSdTgAdjNou] = useState(null);
   // ac-Tg
   // hovered
-  const [hdModKeyTg, setHdModKeyTg] = useState(null);
-  const [hdModKeyAc, setHdModKeyAc] = useState(null);
+  const [hdAdjNouTg, setHdAdjNouTg] = useState(null);
+  const [hdAdjNouAc, setHdAdjNouAc] = useState(null);
   // enter
   const [isEnterSelected, setisEnterSelected] = useState(false);
   return {
-    currentModAc,
-    setCurrentModAc,
-    currentModTg,
-    setCurrentModTg,
-    sdAcModKey,
-    setSdAcModKey,
-    sdTgModKey,
-    setSdTgModKey,
-    hdModKeyTg,
-    setHdModKeyTg,
-    hdModKeyAc,
-    setHdModKeyAc,
+    currentCapAc,
+    setcurrentCapAc,
+    currentAdjTg,
+    setCurrentAdjTg,
+    sdAcAdjNou,
+    setSdAcAdjNou,
+    sdTgAdjNou,
+    setSdTgAdjNou,
+    hdAdjNouTg,
+    setHdAdjNouTg,
+    hdAdjNouAc,
+    setHdAdjNouAc,
     isEnterSelected,
     setisEnterSelected,
     hdMultiObj,

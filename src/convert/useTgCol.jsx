@@ -2,12 +2,12 @@ import useCtx from "../context/useCtx.jsx";
 import tone from "../style/color.jsx";
 import useTgBoo from "./useTgBoo.jsx";
 
-const useTgCol = ({ preKey }) => {
-  const boo = useTgBoo({ preKey });
+const useTgCol = ({ posiId }) => {
+  const boo = useTgBoo({ posiId });
   const ctx = useCtx();
 
   const getButtonColor = () => {
-    if (boo.isModKeySame) return tone.ModColor;
+    if (boo.isAdjNouSame) return tone.ModColor;
     if (boo.isDisabled) return tone.DisabledButtonColor;
     if (boo.isMultiPseudoHd) {
       if (ctx.isMultiOnHd) return tone.multiOnColor;

@@ -5,9 +5,9 @@ const Reset = () => {
   const ctx = useCtx();
   const click = () => {
     ctx.setAcTgObjs([]);
-    ctx.setCurrentModAc("none");
-    ctx.setCurrentModTg("none");
-    ctx.setSdAcModKey(null);
+    ctx.setcurrentCapAc("none");
+    ctx.setCurrentAdjTg("none");
+    ctx.setSdAcAdjNou(null);
   };
   return (
     <div onClick={click} style={look.reset1}>

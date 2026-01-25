@@ -1,4 +1,4 @@
-const keyLabelObj = {
+const nouLabelObj = {
   //0
   esc: "Esc",
   f1: "F1",
@@ -88,4 +88,4 @@ const keyLabelObj = {
   rightCtrl: "Ctrl",
 };
 
-export default keyLabelObj;
+export default nouLabelObj;

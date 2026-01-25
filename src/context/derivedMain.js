@@ -1,4 +1,8 @@
-import { basicIndexes, ModIndexes, virtualAdjs } from "../array/namedNous.js";
+import {
+  notAdjAcCaps,
+  defaultAdjs,
+  virtualVerstiles,
+} from "../array/namedNous.js";
 
 const derivedMain = (base) => {
   const toggleAcTg = (key) => {
@@ -14,7 +18,7 @@ const derivedMain = (base) => {
     acTgSet.has(`${obj.ac}|${obj.tg}`),
   );
   const getContextIndexes = (base) => {
-    let indexes = [...ModIndexes];
+    let indexes = [...defaultAdjs];
     if (base.acTgObjs.includes("spaceHold")) {
       indexes.push("space");
     }
@@ -25,20 +29,20 @@ const derivedMain = (base) => {
   };
   const contextIndexes = getContextIndexes(base);
 
-  const isWoTgNone = base.currentModTg === "none";
-  const isWoTgVirtual = virtualAdjs.includes(base.currentModTg);
-  const isWoTgShift = base.currentModTg === "shift";
-  const isWoAcBasic = basicIndexes?.includes(base.currentModAc);
+  const isWoTgNone = base.currentAdjTg === "none";
+  const isWoTgVirtual = virtualVerstiles.includes(base.currentAdjTg);
+  const isWoTgShift = base.currentAdjTg === "shift";
+  const isWoAcBasic = notAdjAcCaps?.includes(base.currentCapAc);
 
-  const isWoAcSd = !!base.sdAcModKey;
+  const isWoAcSd = !!base.sdAcAdjNou;
 
-  const isModAcOften = base.currentModAc.includes("often");
+  const isAdjAcOften = base.currentCapAc.includes("often");
 
   return {
     isWoTgNone,
     isWoTgVirtual,
     isWoAcSd,
-    isModAcOften,
+    isAdjAcOften,
     isMultiOnHd,
     isWoAcBasic,
     acTgSet,

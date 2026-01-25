@@ -19,7 +19,7 @@ const useMultiClickObj = (base, main) => {
       );
       return isAlreadySd ? filteredAcTgObjs : [...filteredAcTgObjs, ...objs];
     });
-  }, [base.cdMultiObjs, base.currentModTg]);
+  }, [base.cdMultiObjs, base.currentAdjTg]);
 };
 
 export default useMultiClickObj;

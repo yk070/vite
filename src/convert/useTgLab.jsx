@@ -1,19 +1,19 @@
 import ConvLabel from "./ConvLabel.jsx";
 import look from "../style/look.jsx";
-import keyLabelObj from "../obj/keyLabelObj.js";
+import nouLabelObj from "../obj/nouLabelObj.js";
 import useTgBoo from "./useTgBoo.jsx";
 import useTgRoo from "./useTgRoo.jsx";
 import useCtx from "../context/useCtx.jsx";
 import { LuTriangleAlert } from "react-icons/lu";
-const useTgLab = ({ preKey }) => {
-  const boo = useTgBoo({ preKey });
-  const roo = useTgRoo({ preKey });
+const useTgLab = ({ posiId }) => {
+  const boo = useTgBoo({ posiId });
+  const roo = useTgRoo({ posiId });
   const ctx = useCtx();
 
-  const originKeyLabel = keyLabelObj[roo.originKey];
-  const originModKeyLabel = <ConvLabel modKey={roo.originModKey} />;
-  const assignModKeyLabel = <ConvLabel modKey={roo.assignModKey} />;
-  const multiHdAcModKeyLabel = <ConvLabel modKey={roo.multiHdAcModKey} />;
+  const originKeyLabel = nouLabelObj[roo.originKey];
+  const originAdjNouLabel = <ConvLabel adjKey={roo.originAdjNou} />;
+  const assignAdjNouLabel = <ConvLabel adjKey={roo.assignAdjNou} />;
+  const multiHdAcAdjNouLabel = <ConvLabel adjKey={roo.multiHdAcAdjNou} />;
 
   const emptyLabel = (
     <>
@@ -22,17 +22,17 @@ const useTgLab = ({ preKey }) => {
   );
   const alertLabel = (
     <>
-      <span style={look.alertLabel1}>{originModKeyLabel}</span>
+      <span style={look.alertLabel1}>{originAdjNouLabel}</span>
       <LuTriangleAlert style={look.acButton4} />
     </>
   );
 
   const getLabel = () => {
-    if (boo.isMultiPseudoHd) return multiHdAcModKeyLabel;
+    if (boo.isMultiPseudoHd) return multiHdAcAdjNouLabel;
 
     if (boo.isHd) {
       if (ctx.isWoAcSd) {
-        if (boo.isAssigned) return assignModKeyLabel;
+        if (boo.isAssigned) return assignAdjNouLabel;
         if (boo.isSoVirtualHold) {
           return "修飾キー";
         }
@@ -45,14 +45,14 @@ const useTgLab = ({ preKey }) => {
         return alertLabel;
       }
 
-      if (ctx.isWoTgVirtual) return originModKeyLabel;
+      if (ctx.isWoTgVirtual) return originAdjNouLabel;
       if (boo.isUnusable) return alertLabel;
       if (boo.isFunctionUsed && boo.isLocationUsed) return emptyLabel;
       if (boo.isFunctionUsed) return "";
     }
 
     if (boo.isSoVirtualHold) return "修飾キー";
-    if (boo.isAssigned) return assignModKeyLabel;
+    if (boo.isAssigned) return assignAdjNouLabel;
     if (boo.isEmptyLabel || ctx.isWoTgVirtual) return "";
 
     return originKeyLabel;

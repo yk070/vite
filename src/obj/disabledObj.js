@@ -1,6 +1,6 @@
-import { combiNous } from "../array/namedNous.js";
+import { defaultAdjectiveNous } from "../array/namedNous.js";
 const disabledObj = {
-  none: combiNous,
+  none: defaultAdjectiveNous,
   ctrl: ["leftCtrl", "rightCtrl"],
   shift: ["leftShift", "rightShift"],
   alt: ["leftAlt", "rightAlt"],

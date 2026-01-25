@@ -1,4 +1,4 @@
-const keyStyleObj = {
+const posiIdObj = {
   esc: {
     left: `${100 * (0 / 15)}%`,
     top: `${100 * (0 / 6)}%`,
@@ -485,4 +485,4 @@ const keyStyleObj = {
     height: `${100 * (1 / 6)}%`,
   },
 };
-export default keyStyleObj;
+export default posiIdObj;

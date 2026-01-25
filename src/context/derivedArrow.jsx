@@ -1,30 +1,30 @@
 import convPosition from "../convert/convPosition.jsx";
-import keyLabelObj from "../obj/keyLabelObj.js";
+import nouLabelObj from "../obj/nouLabelObj.js";
 import ConvLabel from "../convert/ConvLabel.jsx";
 
 export const derivedArrow = (base, main) => {
-  const HoveredModKeyTgLabel = <ConvLabel modKey={base.hdModKeyTg} />;
+  const HoveredAdjNouTgLabel = <ConvLabel adjKey={base.hdAdjNouTg} />;
 
-  const [HoveredMod, hoveredKey] = base.hdModKeyTg?.split("*") ?? [];
-  const { x: TailX, y: TailY } = convPosition(hoveredKey);
-  const AwayHoveredModKey = base.acTgObjs?.find(
-    (o) => o.ac === base.hdModKeyTg,
+  const [HoveredAdj, hoveredNou] = base.hdAdjNouTg?.split("*") ?? [];
+  const { x: TailX, y: TailY } = convPosition(hoveredNou);
+  const AwayHoveredAdjNou = base.acTgObjs?.find(
+    (o) => o.ac === base.hdAdjNouTg,
   )?.tg;
-  const isAwayExist = !!AwayHoveredModKey;
-  const [AwayHoveredMod, AwayHoveredKey] = AwayHoveredModKey?.split("*") ?? [];
-  const AwayHoveredKeyLabel = keyLabelObj[AwayHoveredKey];
+  const isAwayExist = !!AwayHoveredAdjNou;
+  const [AwayHoveredAdj, AwayhoveredNou] = AwayHoveredAdjNou?.split("*") ?? [];
+  const AwayhoveredNouLabel = nouLabelObj[AwayhoveredNou];
 
   const IndexesNumber = main.contextIndexes.length;
-  const HomeNumber = main.contextIndexes.indexOf(HoveredMod);
-  const AwayNumber = main.contextIndexes.indexOf(AwayHoveredMod);
-  const currentModNumber = main.contextIndexes.indexOf(base.currentModTg);
+  const HomeNumber = main.contextIndexes.indexOf(HoveredAdj);
+  const AwayNumber = main.contextIndexes.indexOf(AwayHoveredAdj);
+  const currentModNumber = main.contextIndexes.indexOf(base.currentAdjTg);
   const ModX = ((currentModNumber + 0.5) * 100) / IndexesNumber;
-  const isAwaySame = HoveredMod === AwayHoveredMod;
+  const isAwaySame = HoveredAdj === AwayHoveredAdj;
 
   let HeadX;
   let HeadY;
   if (isAwaySame) {
-    ({ x: HeadX, y: HeadY } = convPosition(AwayHoveredKey));
+    ({ x: HeadX, y: HeadY } = convPosition(AwayhoveredNou));
   } else {
     HeadX = ((AwayNumber + 0.5) * 100) / IndexesNumber;
     HeadY = 108;
@@ -40,13 +40,13 @@ export const derivedArrow = (base, main) => {
     IndexesNumber,
     isAwaySame,
     isAwayExist,
-    AwayHoveredMod,
-    AwayHoveredKey,
-    AwayHoveredKeyLabel,
-    AwayHoveredModKey,
-    HoveredMod,
-    hoveredKey,
-    HoveredModKeyTgLabel,
+    AwayHoveredAdj,
+    AwayhoveredNou,
+    AwayhoveredNouLabel,
+    AwayHoveredAdjNou,
+    HoveredAdj,
+    hoveredNou,
+    HoveredAdjNouTgLabel,
     TailX,
     TailY,
   };

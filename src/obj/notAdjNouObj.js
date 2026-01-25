@@ -1,4 +1,4 @@
-const notModKeyObj = {
+const notAdjNouObj = {
   reload: `
 Reload()
 `,
@@ -66,4 +66,4 @@ sleep(50)
     sleep(10)
 `,
 };
-export default notModKeyObj;
+export default notAdjNouObj;

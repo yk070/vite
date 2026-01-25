@@ -1,6 +1,6 @@
 import React from "react";
 import look from "../style/look";
-const AcIndex = ({ onclick, color, label }) => {
+const AcCap = ({ onclick, color, label }) => {
   return (
     <div
       onClick={onclick}
@@ -13,4 +13,4 @@ const AcIndex = ({ onclick, color, label }) => {
     </div>
   );
 };
-export default AcIndex;
+export default AcCap;

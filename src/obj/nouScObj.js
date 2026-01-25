@@ -1,4 +1,4 @@
-const keyScObj = {
+const nouScObj = {
   //0
   esc: "sc01",
   f1: "sc3B",
@@ -85,4 +85,4 @@ const keyScObj = {
   rightCtrl: "sc11D",
 };
 
-export default keyScObj;
+export default nouScObj;

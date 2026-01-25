@@ -1,37 +1,37 @@
 import { scriptAcModObj } from "../obj/namedObj.js";
-import keyScObj from "../obj/keyScObj.js";
-import notModKeyObj from "../obj/notModKeyObj.js";
+import nouScObj from "../obj/nouScObj.js";
+import notAdjNouObj from "../obj/notAdjNouObj.js";
 
-const convAcScript = (modKey) => {
-  if (!modKey.includes("*")) {
-    return `{${notModKeyObj[modKey]}}`;
+const convAcScript = (adjKey) => {
+  if (!adjKey.includes("*")) {
+    return `{${notAdjNouObj[adjKey]}}`;
   }
-  if (modKey === "alt*tab") {
+  if (adjKey === "alt*tab") {
     return "AltTab";
   }
 
-  const [part1, part2, part3] = modKey.split("*");
+  const [part1, part2, part3] = adjKey.split("*");
 
   if (part1 === "none") {
-    const label = "{" + keyScObj[part2] + "}";
+    const label = "{" + nouScObj[part2] + "}";
 
     return `{\n  send "${label}"\n}`;
   }
 
   if (part3) {
-    const modLabel1 = scriptAcModObj[part1];
-    const modLabel2 = scriptAcModObj[part2];
-    const keyLabel = keyScObj[part3];
+    const adjLabel1 = scriptAcModObj[part1];
+    const adjLabel2 = scriptAcModObj[part2];
+    const keyLabel = nouScObj[part3];
 
-    const label = modLabel1 + modLabel2 + "{" + keyLabel + "}";
+    const label = adjLabel1 + adjLabel2 + "{" + keyLabel + "}";
 
     return `{\n  send "${label}"\n}`;
   }
 
-  const modLabel = scriptAcModObj[part1];
-  const keyLabel = keyScObj[part2];
+  const adjLabel = scriptAcModObj[part1];
+  const keyLabel = nouScObj[part2];
 
-  const label = modLabel + "{" + keyLabel + "}";
+  const label = adjLabel + "{" + keyLabel + "}";
 
   return `{\n  send "${label}"\n}`;
 };

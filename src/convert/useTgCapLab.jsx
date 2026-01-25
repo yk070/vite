@@ -1,22 +1,22 @@
 import useCtx from "../context/useCtx.jsx";
-import { acIndexLabelObj } from "../obj/namedObj.js";
-import useTgIndexBoo from "./useTgIndexBoo.jsx";
+import { acCapLabelObj } from "../obj/namedObj.js";
+import useTgCapBoo from "./useTgCapBoo.jsx";
 import look from "../style/look.jsx";
 
-const useTgIndexLab = ({ contextIndex }) => {
+const useTgCapLab = ({ contextIndex }) => {
   const ctx = useCtx();
-  const boo = useTgIndexBoo({ contextIndex });
+  const boo = useTgCapBoo({ contextIndex });
   const planeLabel = (
     <>
-      <span>{acIndexLabelObj[contextIndex]}</span>
+      <span>{acCapLabelObj[contextIndex]}</span>
     </>
   );
   const AwayHoveredLabel = (
     <>
       {planeLabel}
-      <span>{ctx.AwayHoveredKeyLabel}</span>
+      <span>{ctx.AwayhoveredNouLabel}</span>
       {"="}
-      <span style={look.tgIndex4}>{ctx.HoveredModKeyTgLabel}</span>
+      <span style={look.TgCap4}>{ctx.HoveredAdjNouTgLabel}</span>
     </>
   );
   {
@@ -31,4 +31,4 @@ const useTgIndexLab = ({ contextIndex }) => {
   return { label };
 };
 
-export default useTgIndexLab;
+export default useTgCapLab;

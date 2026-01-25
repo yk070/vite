@@ -1,13 +1,13 @@
 import { EnterObj } from "../obj/namedObj.js";
 import useCtx from "../context/useCtx.jsx";
 
-const useAcRoo = ({ preKey }) => {
+const useAcRoo = ({ posiId }) => {
   const ctx = useCtx();
-  const originKey = EnterObj[preKey] ?? preKey;
-  const modKey = ctx.currentModAc + "*" + originKey;
+  const originKey = EnterObj[posiId] ?? posiId;
+  const adjKey = ctx.currentCapAc + "*" + originKey;
   return {
     originKey,
-    modKey,
+    adjKey,
   };
 };
 

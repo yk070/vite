@@ -37,8 +37,8 @@ const Colors = {
   importantColor: "#111111",
   DisabledButtonColor: "#CCCCCC",
 
-  tgIndexColor: "#CCCCCC",
-  tgIndexSelectedColor: "#42A5F5",
+  TgCapColor: "#CCCCCC",
+  TgCapSelectedColor: "#42A5F5",
   NormalIndexBorderColor: "#777777",
 
   OftenGridColor: "#888888",

@@ -5,12 +5,12 @@ import useRunConvert from "../convert/useRunConvert.jsx";
 import useTgRoo from "../convert/useTgRoo.jsx";
 import look from "../style/look.jsx";
 import MultiCircleDiv from "../area/MultiCircle.jsx";
-const TgButton = ({ preKey, styleObj }) => {
-  const roo = useTgRoo({ preKey });
-  const boo = useTgBoo({ preKey });
-  const col = useTgCol({ preKey });
-  const lab = useTgLab({ preKey });
-  const run = useRunConvert({ preKey });
+const TgEle = ({ posiId, styleObj }) => {
+  const roo = useTgRoo({ posiId });
+  const boo = useTgBoo({ posiId });
+  const col = useTgCol({ posiId });
+  const lab = useTgLab({ posiId });
+  const run = useRunConvert({ posiId });
 
   if (boo.isReturn) return null;
 
@@ -30,4 +30,4 @@ const TgButton = ({ preKey, styleObj }) => {
     </div>
   );
 };
-export default TgButton;
+export default TgEle;

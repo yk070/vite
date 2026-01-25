@@ -1,25 +1,25 @@
 import useAcRoo from "./useAcRoo.jsx";
 import useAcBoo from "./useAcBoo.jsx";
 import useCtx from "../context/useCtx.jsx";
-const useAcRun = ({ preKey }) => {
-  const roo = useAcRoo({ preKey });
-  const boo = useAcBoo({ preKey });
+const useAcRun = ({ posiId }) => {
+  const roo = useAcRoo({ posiId });
+  const boo = useAcBoo({ posiId });
   const ctx = useCtx();
 
   const click = () => {
     if (boo.isDisabled) return;
     if (ctx.isWoAcSd) {
-      ctx.setSdAcModKey(null);
+      ctx.setSdAcAdjNou(null);
       return;
     }
-    ctx.setSdAcModKey(roo.modKey);
+    ctx.setSdAcAdjNou(roo.adjKey);
   };
 
   const hover = () => {
-    ctx.setHdModKeyAc(roo.modKey);
+    ctx.setHdAdjNouAc(roo.adjKey);
   };
   const leave = () => {
-    ctx.setHdModKeyAc(null);
+    ctx.setHdAdjNouAc(null);
   };
   return { click, hover, leave };
 };

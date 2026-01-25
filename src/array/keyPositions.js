@@ -1,5 +1,5 @@
-import keyStyleObj from "../obj/keyStyleObj.js";
-const keyPositions = Object.entries(keyStyleObj).map(([key, styleObj]) => {
+import posiIdObj from "../obj/posiIdObj.js";
+const keyPositions = Object.entries(posiIdObj).map(([key, styleObj]) => {
   const left = parseFloat(styleObj?.left ?? "0");
   const top = parseFloat(styleObj?.top ?? "0");
   const width = parseFloat(styleObj?.width ?? "0");

@@ -5,7 +5,7 @@ import MultiButton from "./MultiButton.jsx";
 import AcTg from "./AcTg.jsx";
 const MultiButtons = () => {
   const ctx = useCtx();
-  const currentOftenObj = multiObj[ctx.currentModTg] ?? {};
+  const currentOftenObj = multiObj[ctx.currentAdjTg] ?? {};
   return (
     <>
       {Object.entries(currentOftenObj).map(([title, objs]) => (

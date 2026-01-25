@@ -1,25 +1,25 @@
 import useCtx from "../context/useCtx.jsx";
 import useAcRoo from "./useAcRoo.jsx";
-import { importantModNous } from "../array/namedModNous.js";
-import { disabledModNous } from "../array/namedModNous.js";
-const useAcBoo = ({ preKey }) => {
-  const roo = useAcRoo({ preKey });
+import { importantAdjNous } from "../array/namedAdjNous.js";
+import { disabledAdjNous } from "../array/namedAdjNous.js";
+const useAcBoo = ({ posiId }) => {
+  const roo = useAcRoo({ posiId });
   const ctx = useCtx();
 
-  const isEnterBelow = roo.preKey === "enter_below";
-  const isActive = ctx.sdAcModKey === roo.modKey;
+  const isEnterBelow = roo.posiId === "enter_below";
+  const isActive = ctx.sdAcAdjNou === roo.adjKey;
 
   const isFunctionUsed =
-    !isEnterBelow && ctx.acTgObjs?.some((actgObj) => actgObj.ac === roo.modKey);
+    !isEnterBelow && ctx.acTgObjs?.some((actgObj) => actgObj.ac === roo.adjKey);
   const isLocationUsed = ctx.acTgObjs?.some(
-    (actgObj) => actgObj.tg === roo.modKey,
+    (actgObj) => actgObj.tg === roo.adjKey,
   );
   const isAlert = isLocationUsed && !isFunctionUsed && !isEnterBelow;
 
-  const isHd = ctx.hdModKeyAc === roo.modKey;
+  const isHd = ctx.hdAdjNouAc === roo.adjKey;
 
-  const isImportant = importantModNous.includes(roo.modKey);
-  const isDisabled = disabledModNous.includes(roo.modKey);
+  const isImportant = importantAdjNous.includes(roo.adjKey);
+  const isDisabled = disabledAdjNous.includes(roo.adjKey);
   return {
     isEnterBelow,
     isActive,

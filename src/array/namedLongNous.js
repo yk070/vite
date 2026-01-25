@@ -77,7 +77,7 @@ const commandNous = [
   "kana",
   "application",
 ];
-const combiNous = [
+const defaultAdjectiveNous = [
   "leftCtrl",
   "rightCtrl",
   "leftAlt",
@@ -93,6 +93,6 @@ export {
   functionNous,
   alphabetNous,
   commandNous,
-  combiNous,
+  defaultAdjectiveNous,
   homeNous,
 };

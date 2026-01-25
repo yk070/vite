@@ -366,17 +366,17 @@ const look = {
   ac_Matrix1: {
     position: "absolute",
   },
-  tgIndex5: {
+  TgCap5: {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
   },
-  tgIndex4: {
+  TgCap4: {
     pointerEvents: "none",
     backgroundColor: tone.AwayHoveredColor,
     color: tone.TextColor,
   },
-  tgIndex2: (col) => ({
+  TgCap2: (col) => ({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
@@ -637,7 +637,7 @@ const look = {
     fontWeight: 400,
   },
   ac_Index1: {},
-  tgIndex3: (col) => ({
+  TgCap3: (col) => ({
     position: "absolute",
     top: "50%",
     left: "50%",
@@ -646,11 +646,11 @@ const look = {
     transform: "translate(-50%, -50%)",
     backgroundColor: col.buttonColor,
   }),
-  tgIndex1: {
+  TgCap1: {
     position: "relative",
     flex: 1,
     fontSize: `calc(${base} * 20)`,
-    // backC.groundColor: tgIndexColor,
+    // backC.groundColor: TgCapColor,
     // border: "none",
     cursor: "pointer",
     // overflow: "visible",

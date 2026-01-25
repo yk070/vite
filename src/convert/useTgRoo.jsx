@@ -1,28 +1,28 @@
 import { EnterObj } from "../obj/namedObj.js";
 import useCtx from "../context/useCtx.jsx";
-const useTgRoo = ({ preKey }) => {
+const useTgRoo = ({ posiId }) => {
   const ctx = useCtx();
-  const originKey = EnterObj[preKey] ?? preKey;
-  const originModKey = ctx.currentModTg + "*" + originKey;
+  const originKey = EnterObj[posiId] ?? posiId;
+  const originAdjNou = ctx.currentAdjTg + "*" + originKey;
 
-  const assignModKey = ctx.acTgObjs.find((obj) => obj.tg === originModKey)?.ac;
+  const assignAdjNou = ctx.acTgObjs.find((obj) => obj.tg === originAdjNou)?.ac;
 
-  const multiHdAcModKey = ctx.hdMultiObj?.objs?.find(
-    (hdMiniObj) => hdMiniObj.tg === originModKey,
+  const multiHdAcAdjNou = ctx.hdMultiObj?.objs?.find(
+    (hdMiniObj) => hdMiniObj.tg === originAdjNou,
   )?.ac;
   const cdMultiList = Array.isArray(ctx.cdMultiObjs?.objs)
     ? ctx.cdMultiObjs?.objs
     : [];
-  const multiCdAcModKey = cdMultiList?.find(
-    (cdMultiObj) => cdMultiObj.tg === originModKey,
+  const multiCdAcAdjNou = cdMultiList?.find(
+    (cdMultiObj) => cdMultiObj.tg === originAdjNou,
   )?.ac;
 
   return {
     originKey,
-    originModKey,
-    assignModKey,
-    multiHdAcModKey,
-    multiCdAcModKey,
+    originAdjNou,
+    assignAdjNou,
+    multiHdAcAdjNou,
+    multiCdAcAdjNou,
   };
 };
 

@@ -1,15 +1,15 @@
 import useCtx from "../context/useCtx.jsx";
-import TgButtons from "../area/TgButtons.jsx";
+import TgEles from "../area/TgEles.jsx";
 import useTgBoo from "../convert/useTgBoo.jsx";
 import useTgRoo from "../convert/useTgRoo.jsx";
-const useRunConvert = ({ preKey }) => {
+const useRunConvert = ({ posiId }) => {
   const ctx = useCtx();
-  const roo = useTgRoo({ preKey });
-  const boo = useTgBoo({ preKey });
+  const roo = useTgRoo({ posiId });
+  const boo = useTgBoo({ posiId });
 
   const remove = () => {
     ctx.setAcTgObjs((prev) =>
-      prev.filter((actgObj) => actgObj.tg !== roo.originModKey),
+      prev.filter((actgObj) => actgObj.tg !== roo.originAdjNou),
     );
   };
 
@@ -17,22 +17,22 @@ const useRunConvert = ({ preKey }) => {
     if (boo.isSoSpaHold) ctx.toggleAcTg("spaceHold");
     if (boo.isSoMuhHold) ctx.toggleAcTg("muhHold");
     if (boo.isDisabled || (boo.isVacant && !ctx.isWoAcSd)) return;
-    if (ctx.sdAcModKey) {
+    if (ctx.sdAcAdjNou) {
       if (boo.isAssigned) remove();
-      ctx.setSdTgModKey(roo.originModKey);
+      ctx.setSdTgAdjNou(roo.originAdjNou);
     } else if (boo.isAssigned) remove();
-    ctx.setHdModKeyTg(null);
-    ctx.setHoverLocktg(roo.originModKey);
+    ctx.setHdAdjNouTg(null);
+    ctx.setHoverLocktg(roo.originAdjNou);
   };
 
   const hover = () => {
-    if (ctx.HoverLocktg === roo.originModKey) return;
-    ctx.setHdModKeyTg(roo.originModKey);
+    if (ctx.HoverLocktg === roo.originAdjNou) return;
+    ctx.setHdAdjNouTg(roo.originAdjNou);
   };
 
   const leave = () => {
-    ctx.setHdModKeyTg(null);
-    if (ctx.HoverLocktg === roo.originModKey) {
+    ctx.setHdAdjNouTg(null);
+    if (ctx.HoverLocktg === roo.originAdjNou) {
       ctx.setHoverLocktg(null);
     }
   };

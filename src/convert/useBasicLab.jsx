@@ -1,6 +1,6 @@
 import ConvLabel from "./ConvLabel.jsx";
-const useBasicLab = ({ modKey }) => {
-  const label = <ConvLabel modKey={modKey} />;
+const useBasicLab = ({ adjKey }) => {
+  const label = <ConvLabel adjKey={adjKey} />;
   return { label };
 };
 

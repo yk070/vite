@@ -1,7 +1,7 @@
 import multiObj from "../obj/multiObj.js";
-const makeMiniObjsConvert = (currentModTg, blockTitle, smallTitle) => {
+const makeMiniObjsConvert = (currentAdjTg, blockTitle, smallTitle) => {
   return (
-    multiObj?.[currentModTg]?.[blockTitle]?.mediumObj?.[smallTitle]?.miniObjs ??
+    multiObj?.[currentAdjTg]?.[blockTitle]?.mediumObj?.[smallTitle]?.miniObjs ??
     []
   );
 };

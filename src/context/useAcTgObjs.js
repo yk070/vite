@@ -2,19 +2,19 @@ import { useEffect } from "react";
 
 const useAcTgObjs = (base) => {
   useEffect(() => {
-    if (!base.sdAcModKey || !base.sdTgModKey) return;
+    if (!base.sdAcAdjNou || !base.sdTgAdjNou) return;
 
     base.setAcTgObjs((prev) => [
-      ...prev.filter((obj) => obj.tg !== base.sdTgModKey),
+      ...prev.filter((obj) => obj.tg !== base.sdTgAdjNou),
       {
-        ac: base.sdAcModKey,
-        tg: base.sdTgModKey,
+        ac: base.sdAcAdjNou,
+        tg: base.sdTgAdjNou,
       },
     ]);
 
-    base.setSdAcModKey(null);
-    base.setSdTgModKey(null);
-  }, [base.sdAcModKey, base.sdTgModKey]);
+    base.setSdAcAdjNou(null);
+    base.setSdTgAdjNou(null);
+  }, [base.sdAcAdjNou, base.sdTgAdjNou]);
 };
 
 export default useAcTgObjs;

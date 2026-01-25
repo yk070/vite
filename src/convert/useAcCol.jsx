@@ -2,8 +2,8 @@ import tone from "../style/color.jsx";
 import useAcBoo from "./useAcBoo.jsx";
 import useCtx from "../context/useCtx.jsx";
 
-const useAcCol = ({ preKey }) => {
-  const boo = useAcBoo({ preKey });
+const useAcCol = ({ posiId }) => {
+  const boo = useAcBoo({ posiId });
   const ctx = useCtx();
 
   const getButtonColor = () => {

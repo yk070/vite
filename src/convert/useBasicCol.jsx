@@ -2,9 +2,9 @@ import useCtx from "../context/useCtx.jsx";
 import tone from "../style/color.jsx";
 import useBasicBoo from "./useBasicBoo.jsx";
 
-const useBasicCol = ({ modKey }) => {
+const useBasicCol = ({ adjKey }) => {
   const ctx = useCtx();
-  const boo = useBasicBoo({ modKey });
+  const boo = useBasicBoo({ adjKey });
 
   const getButtonColor = () => {
     if (boo.isActive) return tone.acSelectColor;

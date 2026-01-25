@@ -1,7 +1,7 @@
-import keyStyleObj from "../obj/keyStyleObj.js";
-const convPosition = (hoveredKey) => {
-  const revisedHoveredKey = hoveredKey === "enter" ? "enter_above" : hoveredKey;
-  const style = keyStyleObj[revisedHoveredKey];
+import posiIdObj from "../obj/posiIdObj.js";
+const convPosition = (hoveredNou) => {
+  const revisedhoveredNou = hoveredNou === "enter" ? "enter_above" : hoveredNou;
+  const style = posiIdObj[revisedhoveredNou];
 
   const left = parseFloat(style?.left ?? "0");
   const top = parseFloat(style?.top ?? "0");

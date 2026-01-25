@@ -1,13 +1,13 @@
 import useCtx from "../context/useCtx.jsx";
 import { header, sidebar } from "../style/length.jsx";
-import keyStyleObj from "../obj/keyStyleObj.js";
-import { modLineObj } from "../obj/namedObj.js";
+import posiIdObj from "../obj/posiIdObj.js";
+import { adjLineObj } from "../obj/namedObj.js";
 
 const Line = ({ containerRef, headX, headY }) => {
   const ctx = useCtx();
   if (ctx.isWoTgNone) return null;
 
-  const styleObj = keyStyleObj[modLineObj[ctx.currentModTg]];
+  const styleObj = posiIdObj[adjLineObj[ctx.currentAdjTg]];
 
   const left = parseFloat(styleObj?.left ?? "0");
   const top = parseFloat(styleObj?.top ?? "0");

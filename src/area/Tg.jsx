@@ -1,12 +1,12 @@
 import React from "react";
 import look from "../style/look.jsx";
-import TgButtons from "./TgButtons.jsx";
+import TgEles from "./TgEles.jsx";
 import AlphaNumBlock from "./AlphaNumBlock.jsx";
 import useCtx from "../context/useCtx.jsx";
 import Arrow from "./Arrow.jsx";
 import TgLines from "./TgLines.jsx";
 import TgSpaceToggle from "./TgSpaceToggle.jsx";
-import TgIndex from "./TgIndex.jsx";
+import TgCap from "./TgCap.jsx";
 import AcTg from "./AcTg.jsx";
 const Tg = () => {
   const ctx = useCtx();
@@ -17,12 +17,12 @@ const Tg = () => {
         <TgSpaceToggle />
         <TgLines containerRef={containerRef} />
         <AlphaNumBlock derive="tg" />
-        <TgButtons />
+        <TgEles />
         <Arrow containerRef={containerRef} />
       </div>
       <div style={look.tg4}>
         {ctx.contextIndexes.map((contextIndex) => (
-          <TgIndex key={contextIndex} contextIndex={contextIndex} />
+          <TgCap key={contextIndex} contextIndex={contextIndex} />
         ))}
       </div>
     </>

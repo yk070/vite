@@ -1,7 +1,7 @@
 import multiObj from "../obj/multiObj.js";
 
-const getMiniObjs = ({ mod, position, blockTitle, smallTitle }) => {
-  const mediumObj = multiObj?.[mod]?.[position]?.[blockTitle]?.mediumObj;
+const getMiniObjs = ({ adj, position, blockTitle, smallTitle }) => {
+  const mediumObj = multiObj?.[adj]?.[position]?.[blockTitle]?.mediumObj;
 
   return mediumObj?.[smallTitle]?.miniObjs ?? [];
 };

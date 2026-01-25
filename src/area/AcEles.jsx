@@ -1,0 +1,21 @@
+import React from "react";
+import useCtx from "../context/useCtx.jsx";
+import Basic from "./Basic.jsx";
+import { adjPosiIdObjObj } from "../obj/namedObj.js";
+import AcEle from "./AcEle.jsx";
+import Ac from "./Ac.jsx";
+const AcEles = () => {
+  const ctx = useCtx();
+  if (ctx.isWoAcBasic) return <Basic />;
+  return (
+    <>
+      {Object.entries(adjPosiIdObjObj[ctx.currentCapAc]).map(
+        ([posiId, styleObj]) => (
+          <AcEle key={posiId} posiId={posiId} styleObj={styleObj} />
+        ),
+      )}
+    </>
+  );
+};
+
+export default AcEles;
