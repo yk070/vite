@@ -1,23 +1,13 @@
 import React from "react";
 import useCtx from "../context/useCtx.jsx";
 import styles from "../style/scroll.module.css";
+import look from "../style/look.jsx";
 
 const Script = () => {
   const ctx = useCtx();
   return (
-    <div
-      className={styles.scriptScroll}
-      style={{
-        height: 200,
-        position: "relative",
-        // margin: 10,
-        backgroundColor: "#444",
-        overflowY: "scroll",
-        whiteSpace: "pre-wrap",
-        // flex: 1,
-      }}
-    >
-      {ctx.script}
+    <div className={styles.scriptScroll} style={look.script1}>
+      <div style={{ paddingBottom: 10 }}>{ctx.script}</div>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import useAcTgObjs from "./useAcTgObjs.js";
 import useMultiClickObj from "./useMultiClickObj.js";
 import useStateHistory from "./useStateHistory.js";
 import derivedScript from "./derivedScript.js";
-import derivedArrow from "./derivedArrow.js";
+import derivedArrow from "./derivedArrow.jsx";
 
 const AppContext = createContext(null);
 

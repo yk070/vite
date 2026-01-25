@@ -1,9 +1,9 @@
 import convPosition from "../convert/convPosition.jsx";
 import keyLabelObj from "../obj/keyLabelObj.js";
-import convLabel from "../convert/convLabel.jsx";
+import ConvLabel from "../convert/ConvLabel.jsx";
 
 export const derivedArrow = (base, main) => {
-  const HoveredModKeyTgLabel = convLabel(base.hdModKeyTg);
+  const HoveredModKeyTgLabel = <ConvLabel modKey={base.hdModKeyTg} />;
 
   const [HoveredMod, hoveredKey] = base.hdModKeyTg?.split("*") ?? [];
   const { x: TailX, y: TailY } = convPosition(hoveredKey);

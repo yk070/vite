@@ -1,17 +1,14 @@
-import { ModifierKeys } from "./namedKeys.js";
+import disabledObj from "../obj/disabledObj.js";
+import importantObj from "../obj/importantObj.js";
 
-const importantModKeys = [
-  {
-    mod: "none",
-    keys: ["enter", "space", "tab", "backspace", "esc", "hankaku"],
-  },
-  { mod: "ctrl", keys: ["a", "s", "d", "f", "j", "k", "l", "semicolon"] },
-  { mod: "alt", keys: ["tab"] },
-].flatMap(({ mod, keys }) => keys.map((key) => `${mod}*${key}`));
+const importantModKeys = Object.entries(importantObj).flatMap(([mod, keys]) =>
+  keys.map((key) => `${mod}*${key}`),
+);
 
-const disabledModKeys = [
-  { mod: "none", keys: ModifierKeys },
-  { mod: "ctrl", keys: [] },
-  { mod: "alt", keys: [] },
-].flatMap(({ mod, keys }) => keys.map((key) => `${mod}*${key}`));
+const disabledModKeys = Object.entries(disabledObj).flatMap(([mod, keys]) =>
+  keys.map((key) => `${mod}*${key}`),
+);
+
+export default disabledModKeys;
+
 export { disabledModKeys, importantModKeys };

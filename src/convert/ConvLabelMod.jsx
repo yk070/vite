@@ -1,4 +1,4 @@
-const ModLabelReuse = ({ label }) => {
+const ConvLabelMod = ({ label }) => {
   if (!label) return null;
 
   return (
@@ -23,4 +23,4 @@ const ModLabelReuse = ({ label }) => {
   );
 };
 
-export default ModLabelReuse;
+export default ConvLabelMod;

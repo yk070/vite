@@ -1,16 +1,16 @@
 sc7B & SC29:: {
     send("!{space}") ;maximize
-    sleep(100)
+    sleep(200)
     send("{x}")
 }
 sc7B & vkF4:: {
     send("!{space}") ;maximize
-    sleep(100)
+    sleep(200)
     send("{x}")
 }
 sc7B & 1:: {
     send("#{v}") ;back1
-    sleep(500)
+    sleep(800)
     loop 0 {
         send("{Down}")
         sleep(200)
@@ -21,7 +21,7 @@ sc7B & 1:: {
 }
 sc7B & 2:: {
     send("#{v}") ;back2
-    sleep(500)
+    sleep(800)
     loop 1 {
         send("{Down}")
         sleep(200)
@@ -32,7 +32,7 @@ sc7B & 2:: {
 }
 sc7B & 3:: {
     send("#{v}") ;back3
-    sleep(500)
+    sleep(800)
     loop 2 {
         send("{Down}")
         sleep(200)
@@ -43,7 +43,7 @@ sc7B & 3:: {
 }
 sc7B & 4:: {
     send("#{v}") ;back4
-    sleep(500)
+    sleep(800)
     loop 3 {
         send("{Down}")
         sleep(200)
@@ -54,7 +54,7 @@ sc7B & 4:: {
 }
 sc7B & 5:: {
     send("#{v}") ;back5
-    sleep(500)
+    sleep(800)
     loop 4 {
         send("{Down}")
         sleep(200)

@@ -12,13 +12,17 @@ const basicObj = {
           "none*tab",
         ],
       },
-      fa: {
+      便利: {
         row: 1,
         modKeys: ["alt*tab", "alt*f4", "win*d", "ctrl*tab", "ctrl*shift*tab"],
       },
       操作: {
         row: 1,
         modKeys: ["reload", "sleep"],
+      },
+      予測変換: {
+        row: 1,
+        modKeys: ["第1候補", "第2候補", "第3候補", "第4候補"],
       },
     },
     right: {

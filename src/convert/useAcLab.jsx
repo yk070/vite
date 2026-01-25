@@ -1,6 +1,6 @@
 import useAcRoo from "./useAcRoo.jsx";
 import useCtx from "../context/useCtx.jsx";
-import convLabel from "./convLabel.jsx";
+import ConvLabel from "./ConvLabel.jsx";
 import useAcBoo from "./useAcBoo.jsx";
 const useAcLab = ({ preKey }) => {
   const roo = useAcRoo({ preKey });
@@ -9,7 +9,7 @@ const useAcLab = ({ preKey }) => {
 
   const getLabel = () => {
     if (boo.isEnterBelow) return "";
-    return convLabel(roo.modKey);
+    return <ConvLabel modKey={roo.modKey} />;
   };
   const label = getLabel();
   return { label };

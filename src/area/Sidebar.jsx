@@ -3,6 +3,7 @@ import Back from "./Back.jsx";
 import Forward from "./Forward.jsx";
 import Script from "./Script.jsx";
 import look from "../style/look.jsx";
+import Copy from "./Copy.jsx";
 
 const Sidebar = () => {
   return (
@@ -13,6 +14,7 @@ const Sidebar = () => {
         <Forward />
       </div>
       <Script />
+      <Copy />
     </div>
   );
 };

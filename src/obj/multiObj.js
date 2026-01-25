@@ -25,6 +25,10 @@ const multiObj = {
       { ac: "alt*right", tg: "ctrl*tab" },
     ],
     AltTab: [{ ac: "alt*tab", tg: "ctrl*f" }],
+    予測変換: [
+      { ac: "第1候補", tg: "ctrl*j" },
+      { ac: "第2候補", tg: "ctrl*k" },
+    ],
   },
   space: {
     Ctrl右手: [

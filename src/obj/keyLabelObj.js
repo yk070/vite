@@ -86,6 +86,7 @@ const keyLabelObj = {
   henkan: "変換",
   kana: "かな",
   right_alt: "Alt",
+  right_win: "Win",
   application: "App",
   right_ctrl: "Ctrl",
 };
