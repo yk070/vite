@@ -1,3 +1,0 @@
-MButton:: {
-    Send("^{r}")
-}

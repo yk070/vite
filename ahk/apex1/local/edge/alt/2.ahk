@@ -1,12 +1,12 @@
-sc38 & sc0F:: {
+!sc0F:: {
     edge_bookmark(1)
 }
-sc38 & q:: {
+!q:: {
     edge_bookmark(3)
 }
-sc38 & w:: {
+!w:: {
     edge_bookmark(5)
 }
-sc38 & e:: {
+!e:: {
     edge_bookmark(7)
 }

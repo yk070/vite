@@ -1,9 +1,9 @@
-sc38 & sc1D:: {
+!sc1D:: {
     send("+!{v}")  ; Shift + sc38 + V
     sleep(10)
 }
 
-sc38 & LWin:: {
+!LWin:: {
     send("+!{n}")  ; Shift + sc38 + N
     sleep(10)
 }

@@ -1,6 +1,6 @@
-sc38 & sc1D:: {
+!sc1D:: {
     send("^!{Enter}")
 }
-sc38 & Lwin:: {
+!Lwin:: {
     send("+!{6}")
 }

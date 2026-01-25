@@ -1,4 +1,5 @@
-#Include .\apex1\global\global.ahk
+#Include .\apex1\global\global.ahk ;グローバル
+#Include .\apex1\global\alone\alone.ahk ;グローバル アローン
 #Include .\apex1\local\local.ahk
 #Include .\apex1\always\always.ahk
 

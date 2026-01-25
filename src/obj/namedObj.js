@@ -11,6 +11,16 @@ const scriptAcModObj = {
   shift: "+",
   alt: "!",
   win: "#",
+  space: "sc39",
+};
+
+const ModBigger = {
+  none: "",
+  ctrl: "Ctrl",
+  shift: "Shift",
+  alt: "Alt",
+  win: "Win",
+  space: "Space",
 };
 
 const acIndexLabelObj = {
@@ -23,15 +33,6 @@ const acIndexLabelObj = {
   win: "Win",
   space: "Space",
   muhenkan: "無変換",
-};
-
-const ModBigger = {
-  none: "",
-  ctrl: "sc1D",
-  shift: "vkA0",
-  alt: "sc38",
-  win: "sc15B",
-  space: "sc39",
 };
 
 const EnterObj = {
@@ -54,7 +55,7 @@ export {
   scriptAcModObj,
   acIndexLabelObj,
   indexKeyObjObj,
-  ModBigger,
   EnterObj,
   tgIndexObj,
+  ModBigger,
 };

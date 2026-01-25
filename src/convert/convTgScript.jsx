@@ -1,13 +1,19 @@
-import { ModBigger } from "../obj/namedObj.js";
+import { scriptAcModObj } from "../obj/namedObj.js";
 import keyScObj from "../obj/keyScObj.js";
+import { ModIndexes } from "../array/namedMods.js";
 
 const convTgScript = (modKey) => {
-  const [Mod, Key] = modKey.split("*");
-  const Namelabel_Mod = ModBigger[Mod] ?? "";
-  const Namelabel_Key = keyScObj[Key] ?? Key;
-  if (Mod === "none") {
+  const [mod, key] = modKey.split("*");
+  const Namelabel_Mod = scriptAcModObj[mod] ?? "";
+  const getLabel = () => {
+    if (ModIndexes.includes(mod)) return "";
+    return " & ";
+  };
+  const label = getLabel();
+  const Namelabel_Key = keyScObj[key] ?? key;
+  if (mod === "none") {
     return Namelabel_Key;
   }
-  return `${Namelabel_Mod} & ${Namelabel_Key}`;
+  return `${Namelabel_Mod}${label}${Namelabel_Key}`;
 };
 export default convTgScript;

@@ -1,9 +1,9 @@
-sc38 & sc2A:: {
+!sc2A:: {
     send("+!{o}")  ; Shift + sc38 + O
     sleep(10)
 }
 
-sc38 & z:: {
+!z:: {
     send("+!{f}")  ; Shift + sc38 + F
     sleep(10)
     send("+!{e}")  ; Shift + sc38 + E
@@ -12,7 +12,7 @@ sc38 & z:: {
     sleep(10)
 }
 
-sc38 & x:: {
+!x:: {
     send("^+k")  ; sc1D + Shift + K
     sleep(10)
 }
