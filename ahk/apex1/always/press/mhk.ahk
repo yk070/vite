@@ -20,7 +20,7 @@ $sc7B Up:: {
     }
     now := A_TickCount
     if (now - lastUpTimeMhk < 333) {
-        SendInput("{" scEnter "}")
+        SendInput("{" "}")
     }
     lastUpTimeMhk := now
 }

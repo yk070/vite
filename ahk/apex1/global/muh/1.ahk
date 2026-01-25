@@ -1,6 +1,6 @@
 sc7B & SC29:: {
     send("!{space}") ;maximize
-    sleep(200)
+    sleep(800)
     send("{x}")
 }
 sc7B & vkF4:: {

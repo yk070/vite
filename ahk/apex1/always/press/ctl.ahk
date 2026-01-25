@@ -20,7 +20,7 @@ $sc1D Up:: {
     }
     now := A_TickCount
     if (now - lastUpTimeCtl < 333) {
-        SendInput("{" scBackspace "}")
+        SendInput("{" scEnter "}")
     }
     lastUpTimeCtl := now
 }
