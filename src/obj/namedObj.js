@@ -5,13 +5,14 @@ const adjPosiIdObjObj = Object.fromEntries(
   allAdjs.map((index) => [index, structuredClone(posiIdObj)]),
 );
 
-const scriptAcModObj = {
+const acScriptAdjObj = {
   none: "",
   ctrl: "^",
   shift: "+",
   alt: "!",
   win: "#",
   space: "sc39",
+  muhenkan: "sc7B",
 };
 
 const adjScObj = {
@@ -24,7 +25,7 @@ const adjScObj = {
   muhenkan: "sc7B",
 };
 
-const ModBigger = {
+const adjLabelObj = {
   none: "",
   ctrl: "Ctrl",
   shift: "Shift",
@@ -52,8 +53,8 @@ const adjLineObj = {
   muhenkan: "muhenkan",
 };
 const acCapLabelObj = {
-  basic1: "Basic1",
-  basic2: "Basic2",
+  basic1: "基本1",
+  basic2: "基本2",
   none: "None",
   ctrl: "Ctrl",
   shift: "Shift",
@@ -61,6 +62,7 @@ const acCapLabelObj = {
   win: "Win",
   space: "Space",
   muhenkan: "無変換",
+  naviTen: "テンキー",
 };
 
 const EnterObj = {
@@ -70,11 +72,11 @@ const EnterObj = {
 };
 
 export {
-  scriptAcModObj,
+  acScriptAdjObj,
   acCapLabelObj,
   adjPosiIdObjObj,
   EnterObj,
-  ModBigger,
+  adjLabelObj,
   adjScObj,
   adjAdjectiveNousObj,
   adjLineObj,

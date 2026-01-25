@@ -1,7 +1,7 @@
 import look from "../style/look.jsx";
 import useCtx from "../context/useCtx.jsx";
 import basicObj from "../obj/basicObj.js";
-import BasicButton from "./BasicButton.jsx";
+import BasicEle from "./BasicEle.jsx";
 
 const BasicHalf = ({ basicProps }) => {
   const ctx = useCtx();
@@ -18,8 +18,8 @@ const BasicHalf = ({ basicProps }) => {
             <div style={look.basic2}>
               <div style={look.basic3}>{title}</div>
               <div style={look.basic4(column)}>
-                {adjNous?.map((adjKey) => (
-                  <BasicButton key={adjKey} adjKey={adjKey} />
+                {adjNous?.map((adjNou) => (
+                  <BasicEle key={adjNou} adjNou={adjNou} />
                 ))}
               </div>
             </div>

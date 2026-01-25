@@ -7,7 +7,7 @@ const useTgCol = ({ posiId }) => {
   const ctx = useCtx();
 
   const getButtonColor = () => {
-    if (boo.isAdjNouSame) return tone.ModColor;
+    if (boo.isAdjNouSame) return tone.adjColor;
     if (boo.isDisabled) return tone.DisabledButtonColor;
     if (boo.isMultiPseudoHd) {
       if (ctx.isMultiOnHd) return tone.multiOnColor;
@@ -24,7 +24,7 @@ const useTgCol = ({ posiId }) => {
       if (boo.isAssigned) return tone.AccentColor;
     }
     if (boo.isSoVirtualHold) return tone.violetTextColor;
-    if (boo.isAwayHovered) return tone.AwayHoveredColor;
+    if (boo.isRemoteHovered) return tone.RemoteHoveredColor;
     if (boo.isAssigned || boo.isSoVirtualHold) return tone.AccentColor;
     if (ctx.isWoAcSd) return tone.normalButtonColor;
     return tone.normalButtonColor;

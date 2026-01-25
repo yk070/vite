@@ -1,5 +1,4 @@
 import tone from "../style/color.jsx";
-import MultiButtons from "../area/MultiButtons.jsx";
 const useMultiColConvert = ({ boo }) => {
   const getButtonColor = () => {
     if (boo.isSelected && !boo.isHd) return tone.AccentColor;

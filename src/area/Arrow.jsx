@@ -5,11 +5,11 @@ import zObj from "../obj/zObj.js";
 
 const Arrow = ({ containerRef }) => {
   const ctx = useCtx();
-  if (!ctx.isAwayExist || ctx.isWoAcSd) return null;
-  const TailX = ctx.TailX;
-  const TailY = ctx.TailY;
-  const HeadX = ctx.HeadX;
-  const HeadY = ctx.HeadY;
+  if (!ctx.isRemoteExist || ctx.isWoAcSd) return null;
+  const tailX = ctx.tailX;
+  const tailY = ctx.tailY;
+  const headX = ctx.headX;
+  const headY = ctx.headY;
   const rect = containerRef.current?.getBoundingClientRect();
   if (!rect) return null;
 
@@ -20,10 +20,10 @@ const Arrow = ({ containerRef }) => {
     Math.min((vh - parseInt(header)) * (16 / 9), vw - parseInt(sidebar)) / 1000;
 
   // 線の始点・終点の座標
-  const x1 = (TailX / 100) * rect.width;
-  const y1 = (TailY / 100) * rect.height;
-  const x2 = (HeadX / 100) * rect.width;
-  const y2 = (HeadY / 100) * rect.height;
+  const x1 = (tailX / 100) * rect.width;
+  const y1 = (tailY / 100) * rect.height;
+  const x2 = (headX / 100) * rect.width;
+  const y2 = (headY / 100) * rect.height;
 
   // 差分
   const dx = x2 - x1;

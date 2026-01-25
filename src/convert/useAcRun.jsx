@@ -12,11 +12,11 @@ const useAcRun = ({ posiId }) => {
       ctx.setSdAcAdjNou(null);
       return;
     }
-    ctx.setSdAcAdjNou(roo.adjKey);
+    ctx.setSdAcAdjNou(roo.adjNou);
   };
 
   const hover = () => {
-    ctx.setHdAdjNouAc(roo.adjKey);
+    ctx.setHdAdjNouAc(roo.adjNou);
   };
   const leave = () => {
     ctx.setHdAdjNouAc(null);

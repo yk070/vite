@@ -2,7 +2,7 @@ import React from "react";
 import look from "../style/look.jsx";
 import Ac from "./Ac.jsx";
 import Tg from "./Tg.jsx";
-import MultiButtons from "./MultiButtons.jsx";
+import MultiEles from "./MultiEles.jsx";
 import Body from "./Body.jsx";
 
 const AcTg = () => {
@@ -17,7 +17,7 @@ const AcTg = () => {
             <span style={look.multi2}>{"おすすめ一括設定"}</span>
           </div>
           <div style={look.ac5}>
-            <MultiButtons />
+            <MultiEles />
           </div>
         </div>
       </div>

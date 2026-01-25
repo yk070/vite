@@ -1,12 +1,12 @@
 import useCtx from "../context/useCtx.jsx";
-const useBasicBoo = ({ adjKey }) => {
+const useBasicBoo = ({ adjNou }) => {
   const ctx = useCtx();
 
-  const isActive = ctx.sdAcAdjNou === adjKey;
-  const isHd = ctx.hdAdjNouAc === adjKey;
+  const isActive = ctx.sdAcAdjNou === adjNou;
+  const isHd = ctx.hdAdjNouAc === adjNou;
 
-  const isFunctionUsed = ctx.acTgObjs?.some((actgObj) => actgObj.ac === adjKey);
-  const isLocationUsed = ctx.acTgObjs?.some((actgObj) => actgObj.tg === adjKey);
+  const isFunctionUsed = ctx.acTgObjs?.some((actgObj) => actgObj.ac === adjNou);
+  const isLocationUsed = ctx.acTgObjs?.some((actgObj) => actgObj.tg === adjNou);
   const isAlert = isLocationUsed && !isFunctionUsed;
 
   return { isActive, isHd, isAlert, isFunctionUsed };

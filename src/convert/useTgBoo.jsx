@@ -12,7 +12,7 @@ const useTgBoo = ({ posiId }) => {
   const isEnterBelow = posiId === "enter_below";
   const isHd = ctx.hdAdjNouTg === roo.originAdjNou;
 
-  const isAwayHovered = ctx.hdAdjNouTg === roo.assignAdjNou;
+  const isRemoteHovered = ctx.hdAdjNouTg === roo.assignAdjNou;
   const isAdjNouSame =
     allAdjectiveNous.includes(roo.originKey) &&
     adjAdjectiveNousObj[ctx.currentAdjTg]?.includes(roo.originKey);
@@ -63,7 +63,7 @@ const useTgBoo = ({ posiId }) => {
     isReturn,
     isLocationUsed,
     isFunctionUsed,
-    isAwayHovered,
+    isRemoteHovered,
     isEmptyLabel,
     isCursorPointer,
     isMultiPseudoHd,

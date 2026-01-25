@@ -21,8 +21,8 @@ const Tg = () => {
         <Arrow containerRef={containerRef} />
       </div>
       <div style={look.tg4}>
-        {ctx.contextIndexes.map((contextIndex) => (
-          <TgCap key={contextIndex} contextIndex={contextIndex} />
+        {ctx.tgCaps.map((tgCap) => (
+          <TgCap key={tgCap} tgCap={tgCap} />
         ))}
       </div>
     </>

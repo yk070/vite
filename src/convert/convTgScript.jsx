@@ -1,11 +1,11 @@
 import { adjScObj } from "../obj/namedObj.js";
 import nouScObj from "../obj/nouScObj.js";
 
-const convTgScript = (adjKey) => {
-  const [adj, key] = adjKey.split("*");
-  const labelMod = adjScObj[adj];
-  const labelKey = nouScObj[key] ?? key;
-  if (adj === "none") return labelKey;
-  return `${labelMod} & ${labelKey}`;
+const convTgScript = (adjNou) => {
+  const [adj, key] = adjNou.split("*");
+  const adjSc = adjScObj[adj];
+  const nouSc = nouScObj[key] ?? key;
+  if (adj === "none") return nouSc;
+  return `${adjSc} & ${nouSc}`;
 };
 export default convTgScript;

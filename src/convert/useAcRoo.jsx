@@ -4,10 +4,10 @@ import useCtx from "../context/useCtx.jsx";
 const useAcRoo = ({ posiId }) => {
   const ctx = useCtx();
   const originKey = EnterObj[posiId] ?? posiId;
-  const adjKey = ctx.currentCapAc + "*" + originKey;
+  const adjNou = ctx.currentCapAc + "*" + originKey;
   return {
     originKey,
-    adjKey,
+    adjNou,
   };
 };
 

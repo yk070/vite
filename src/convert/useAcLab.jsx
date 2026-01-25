@@ -9,7 +9,7 @@ const useAcLab = ({ posiId }) => {
 
   const getLabel = () => {
     if (boo.isEnterBelow) return "";
-    return <ConvLabel adjKey={roo.adjKey} />;
+    return <ConvLabel adjNou={roo.adjNou} />;
   };
   const label = getLabel();
   return { label };

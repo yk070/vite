@@ -7,19 +7,19 @@ const useAcBoo = ({ posiId }) => {
   const ctx = useCtx();
 
   const isEnterBelow = roo.posiId === "enter_below";
-  const isActive = ctx.sdAcAdjNou === roo.adjKey;
+  const isActive = ctx.sdAcAdjNou === roo.adjNou;
 
   const isFunctionUsed =
-    !isEnterBelow && ctx.acTgObjs?.some((actgObj) => actgObj.ac === roo.adjKey);
+    !isEnterBelow && ctx.acTgObjs?.some((actgObj) => actgObj.ac === roo.adjNou);
   const isLocationUsed = ctx.acTgObjs?.some(
-    (actgObj) => actgObj.tg === roo.adjKey,
+    (actgObj) => actgObj.tg === roo.adjNou,
   );
   const isAlert = isLocationUsed && !isFunctionUsed && !isEnterBelow;
 
-  const isHd = ctx.hdAdjNouAc === roo.adjKey;
+  const isHd = ctx.hdAdjNouAc === roo.adjNou;
 
-  const isImportant = importantAdjNous.includes(roo.adjKey);
-  const isDisabled = disabledAdjNous.includes(roo.adjKey);
+  const isImportant = importantAdjNous.includes(roo.adjNou);
+  const isDisabled = disabledAdjNous.includes(roo.adjNou);
   return {
     isEnterBelow,
     isActive,

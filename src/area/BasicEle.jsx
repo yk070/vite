@@ -5,11 +5,11 @@ import useBasicLab from "../convert/useBasicLab.jsx";
 import useBasicBoo from "../convert/useBasicBoo.jsx";
 import useBasicRun from "../convert/useBasicRun.jsx";
 import useBasicCol from "../convert/useBasicCol.jsx";
-const BasicButton = ({ adjKey }) => {
-  const boo = useBasicBoo({ adjKey });
-  const col = useBasicCol({ adjKey });
-  const run = useBasicRun({ adjKey });
-  const lab = useBasicLab({ adjKey });
+const BasicEle = ({ adjNou }) => {
+  const boo = useBasicBoo({ adjNou });
+  const col = useBasicCol({ adjNou });
+  const run = useBasicRun({ adjNou });
+  const lab = useBasicLab({ adjNou });
   return (
     <div
       style={look.basic5(col)}
@@ -26,4 +26,4 @@ const BasicButton = ({ adjKey }) => {
   );
 };
 
-export default BasicButton;
+export default BasicEle;

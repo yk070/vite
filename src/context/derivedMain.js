@@ -17,17 +17,20 @@ const derivedMain = (base) => {
   const isMultiOnHd = base.hdMultiObj?.objs?.every((obj) =>
     acTgSet.has(`${obj.ac}|${obj.tg}`),
   );
-  const getContextIndexes = (base) => {
-    let indexes = [...defaultAdjs];
+  const getTgCaps = (base) => {
+    if (["spaceHold", "muhHold"].every((k) => base.acTgObjs.includes(k))) {
+      return [...defaultAdjs, "space", "muhenkan"];
+    }
     if (base.acTgObjs.includes("spaceHold")) {
-      indexes.push("space");
+      return [...defaultAdjs, "space"];
     }
     if (base.acTgObjs.includes("muhHold")) {
-      indexes.push("muhenkan");
+      return [...defaultAdjs, "muhenkan"];
     }
-    return indexes;
+    return [...defaultAdjs];
   };
-  const contextIndexes = getContextIndexes(base);
+
+  const tgCaps = getTgCaps(base);
 
   const isWoTgNone = base.currentAdjTg === "none";
   const isWoTgVirtual = virtualVerstiles.includes(base.currentAdjTg);
@@ -46,7 +49,7 @@ const derivedMain = (base) => {
     isMultiOnHd,
     isWoAcBasic,
     acTgSet,
-    contextIndexes,
+    tgCaps,
     isWoTgShift,
     isWoSpaHold,
     isWoMuhHold,

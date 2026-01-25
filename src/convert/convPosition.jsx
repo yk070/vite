@@ -1,7 +1,7 @@
 import posiIdObj from "../obj/posiIdObj.js";
-const convPosition = (hoveredNou) => {
-  const revisedhoveredNou = hoveredNou === "enter" ? "enter_above" : hoveredNou;
-  const style = posiIdObj[revisedhoveredNou];
+const convPosition = (hdNou) => {
+  const revisedhdNou = hdNou === "enter" ? "enter_above" : hdNou;
+  const style = posiIdObj[revisedhdNou];
 
   const left = parseFloat(style?.left ?? "0");
   const top = parseFloat(style?.top ?? "0");

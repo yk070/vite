@@ -3,27 +3,27 @@ import { acCapLabelObj } from "../obj/namedObj.js";
 import useTgCapBoo from "./useTgCapBoo.jsx";
 import look from "../style/look.jsx";
 
-const useTgCapLab = ({ contextIndex }) => {
+const useTgCapLab = ({ tgCap }) => {
   const ctx = useCtx();
-  const boo = useTgCapBoo({ contextIndex });
+  const boo = useTgCapBoo({ tgCap });
   const planeLabel = (
     <>
-      <span>{acCapLabelObj[contextIndex]}</span>
+      <span>{acCapLabelObj[tgCap]}</span>
     </>
   );
-  const AwayHoveredLabel = (
+  const RemoteHoveredLabel = (
     <>
       {planeLabel}
-      <span>{ctx.AwayhoveredNouLabel}</span>
+      <span>{ctx.remoteHdNouLabel}</span>
       {"="}
-      <span style={look.TgCap4}>{ctx.HoveredAdjNouTgLabel}</span>
+      <span style={look.TgCap4}>{ctx.hdAdjNouTgLabel}</span>
     </>
   );
   {
     <></>;
   }
   const getLabel = () => {
-    if (boo.isAwayHovered) return AwayHoveredLabel;
+    if (boo.isRemoteHovered) return RemoteHoveredLabel;
     return planeLabel;
   };
 

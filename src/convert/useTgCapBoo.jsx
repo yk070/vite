@@ -1,15 +1,14 @@
 import useCtx from "../context/useCtx.jsx";
 import { defaultAdjs } from "../array/namedNous.js";
 
-const useTgBoo = ({ contextIndex }) => {
+const useTgBoo = ({ tgCap }) => {
   const ctx = useCtx();
 
-  const isSelected = contextIndex === ctx.currentAdjTg;
-  const isAwayHovered =
-    ctx.AwayHoveredAdj === contextIndex &&
-    ctx.currentAdjTg !== ctx.AwayHoveredAdj;
-  const isVirtual = !defaultAdjs.includes(contextIndex);
-  return { isSelected, isAwayHovered, isVirtual };
+  const isSelected = tgCap === ctx.currentAdjTg;
+  const isRemoteHovered =
+    ctx.remoteHdAdj === tgCap && ctx.currentAdjTg !== ctx.remoteHdAdj;
+  const isVirtual = !defaultAdjs.includes(tgCap);
+  return { isSelected, isRemoteHovered, isVirtual };
 };
 
 export default useTgBoo;

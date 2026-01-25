@@ -4,7 +4,7 @@ import useMultiBooConvert from "../convert/useMultiBooConvert.jsx";
 import useMultiRunConvert from "../convert/useMultiRunConvert.jsx";
 import useMultiColConvert from "../convert/useMultiColConvert.jsx";
 
-const MultiButton = ({ title, objs }) => {
+const MultiEle = ({ title, objs }) => {
   const boo = useMultiBooConvert({ title, objs });
   const col = useMultiColConvert({ boo });
   const run = useMultiRunConvert({ title, objs });
@@ -23,4 +23,4 @@ const MultiButton = ({ title, objs }) => {
   );
 };
 
-export default MultiButton;
+export default MultiEle;

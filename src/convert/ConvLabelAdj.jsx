@@ -1,4 +1,4 @@
-const ConvLabelMod = ({ label }) => {
+const ConvLabelAdj = ({ label }) => {
   if (!label) return null;
 
   return (
@@ -23,4 +23,4 @@ const ConvLabelMod = ({ label }) => {
   );
 };
 
-export default ConvLabelMod;
+export default ConvLabelAdj;

@@ -1,6 +1,6 @@
 import ConvLabel from "./ConvLabel.jsx";
-const useBasicLab = ({ adjKey }) => {
-  const label = <ConvLabel adjKey={adjKey} />;
+const useBasicLab = ({ adjNou }) => {
+  const label = <ConvLabel adjNou={adjNou} />;
   return { label };
 };
 

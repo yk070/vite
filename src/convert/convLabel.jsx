@@ -1,22 +1,22 @@
-import { ModBigger } from "../obj/namedObj.js";
+import { adjLabelObj } from "../obj/namedObj.js";
 import nouLabelObj from "../obj/nouLabelObj.js";
-import ConvLabelMod from "./ConvLabelMod.jsx";
+import ConvLabelAdj from "./ConvLabelAdj.jsx";
 
-const ConvLabel = ({ adjKey }) => {
-  if (!adjKey) return null;
+const ConvLabel = ({ adjNou }) => {
+  if (!adjNou) return null;
 
-  const [part1, part2, part3] = adjKey.split("*");
+  const [part1, part2, part3] = adjNou.split("*");
   if (part1 === part2) return null;
   // 修飾キー2つ + 通常キー（例: ctrl*alt*a）
   if (part3) {
-    const ModLabel1 = ModBigger[part1] ?? "";
-    const ModLabel2 = ModBigger[part2] ?? "";
+    const adjLabel1 = adjLabelObj[part1] ?? "";
+    const adjLabel2 = adjLabelObj[part2] ?? "";
     const KeyLabel = nouLabelObj[part3] ?? "";
 
     return (
       <span>
-        <ConvLabelMod label={ModLabel1} />
-        <ConvLabelMod label={ModLabel2} />
+        <ConvLabelAdj label={adjLabel1} />
+        <ConvLabelAdj label={adjLabel2} />
         {KeyLabel}
       </span>
     );
@@ -24,12 +24,12 @@ const ConvLabel = ({ adjKey }) => {
 
   // 修飾キー1つ + 通常キー（例: ctrl*a）
   if (part2) {
-    const ModLabel = ModBigger[part1] ?? "";
+    const adjLabel = adjLabelObj[part1] ?? "";
     const KeyLabel = nouLabelObj[part2] ?? "";
 
     return (
       <span>
-        <ConvLabelMod label={ModLabel} />
+        <ConvLabelAdj label={adjLabel} />
         {KeyLabel}
       </span>
     );
@@ -37,7 +37,7 @@ const ConvLabel = ({ adjKey }) => {
 
   // 修飾なし or 単体キー
   if (part1) {
-    return <span>{adjKey}</span>;
+    return <span>{adjNou}</span>;
   }
 
   return null;

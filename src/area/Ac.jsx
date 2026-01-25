@@ -1,16 +1,15 @@
-import React from "react";
 import look from "../style/look.jsx";
-import AcCaps from "./AcCaps.jsx";
 import AcEles from "./AcEles.jsx";
 import AlphaNumBlock from "./AlphaNumBlock.jsx";
-import useCtx from "../context/useCtx.jsx";
-import AcTg from "./AcTg.jsx";
+import { acCaps } from "../array/namedNous.js";
+import AcCap from "./AcCap.jsx";
 const Ac = () => {
-  const ctx = useCtx();
   return (
     <>
       <div style={look.ac2}>
-        <AcCaps />
+        {acCaps.map((acCap) => (
+          <AcCap key={acCap} acCap={acCap} />
+        ))}
       </div>
       <div style={look.ac3}>
         <AlphaNumBlock derive="ac" />

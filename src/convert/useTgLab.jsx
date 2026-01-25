@@ -11,9 +11,9 @@ const useTgLab = ({ posiId }) => {
   const ctx = useCtx();
 
   const originKeyLabel = nouLabelObj[roo.originKey];
-  const originAdjNouLabel = <ConvLabel adjKey={roo.originAdjNou} />;
-  const assignAdjNouLabel = <ConvLabel adjKey={roo.assignAdjNou} />;
-  const multiHdAcAdjNouLabel = <ConvLabel adjKey={roo.multiHdAcAdjNou} />;
+  const originAdjNouLabel = <ConvLabel adjNou={roo.originAdjNou} />;
+  const assignAdjNouLabel = <ConvLabel adjNou={roo.assignAdjNou} />;
+  const multiHdAcAdjNouLabel = <ConvLabel adjNou={roo.multiHdAcAdjNou} />;
 
   const emptyLabel = (
     <>

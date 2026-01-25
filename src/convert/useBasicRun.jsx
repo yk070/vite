@@ -1,17 +1,17 @@
 import useCtx from "../context/useCtx.jsx";
-const useBasicRun = ({ adjKey }) => {
+const useBasicRun = ({ adjNou }) => {
   const ctx = useCtx();
 
   const click = () => {
     if (ctx.isWoAcSd) {
       ctx.setSdAcAdjNou(null);
     } else {
-      ctx.setSdAcAdjNou(adjKey);
+      ctx.setSdAcAdjNou(adjNou);
     }
   };
 
   const hover = () => {
-    ctx.setHdAdjNouAc(adjKey);
+    ctx.setHdAdjNouAc(adjNou);
   };
   const leave = () => {
     ctx.setHdAdjNouAc(null);

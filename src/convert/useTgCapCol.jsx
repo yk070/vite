@@ -1,13 +1,13 @@
 import useCtx from "../context/useCtx.jsx";
 import tone from "../style/color.jsx";
 import useTgCapBoo from "./useTgCapBoo.jsx";
-const useTgCapCol = ({ contextIndex }) => {
+const useTgCapCol = ({ tgCap }) => {
   const ctx = useCtx();
-  const boo = useTgCapBoo({ contextIndex });
+  const boo = useTgCapBoo({ tgCap });
 
   const getButtonColor = () => {
     if (boo.isSelected && ctx.isWoTgNone) return "#444444";
-    if (boo.isSelected) return tone.ModColor;
+    if (boo.isSelected) return tone.adjColor;
     return tone.TgCapColor;
   };
 

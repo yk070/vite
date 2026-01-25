@@ -1,15 +1,20 @@
-import React from "react";
 import look from "../style/look";
-const AcCap = ({ onclick, color, label }) => {
+import useAcCapBoo from "../convert/useAcCapBoo";
+import useAcCapCol from "../convert/useAcCapCol";
+import useAcCapRun from "../convert/useAcCapRun";
+import useAcCapLab from "../convert/useAcCapLab";
+
+const AcCap = ({ acCap }) => {
+  const boo = useAcCapBoo({ acCap });
+  const col = useAcCapCol({ acCap });
+  const run = useAcCapRun({ acCap });
+  const lab = useAcCapLab({ acCap });
+
   return (
-    <div
-      onClick={onclick}
-      style={{
-        backgroundColor: color,
-        ...look.acIndex1,
-      }}
-    >
-      <span style={look.ac_Index_Button2}>{label}</span>
+    <div onClick={run.click} style={look.acIndex2}>
+      <div style={look.acIndex1(col)}>
+        <span style={look.ac_Index_Button2}>{lab.label}</span>
+      </div>
     </div>
   );
 };

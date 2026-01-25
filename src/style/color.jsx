@@ -21,9 +21,9 @@ const Colors = {
   textWhiteColor: "#FFFFFF",
   multiColor: "#D8679B",
   NoneColor: "#999999",
-  ModColor: "#2ECC71",
+  adjColor: "#2ECC71",
   VirtualColor: "#9B59B6",
-  AwayHoveredColor: "#FF0000",
+  RemoteHoveredColor: "#FF0000",
 
   ArrowColor: "#FF0000",
 
