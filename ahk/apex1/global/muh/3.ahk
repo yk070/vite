@@ -1,36 +1,36 @@
-SC7B & SC3A:: {
+sc7B & SC3A:: {
     send("!{Left}")
 }
-SC7B & a:: {
+sc7B & a:: {
     send("#{v}")
 }
-SC7B & s:: {
+sc7B & s:: {
     send("^!{f3}")
 }
-SC7B & d:: {
+sc7B & d:: {
     send("#{d}")
 }
-SC7B & SC21:: {
+sc7B & SC21:: {
     send("^{f}")
 }
-SC7B & g:: {
+sc7B & g:: {
     KeyHistory
 }
 
-SC7B & h:: {
+sc7B & h:: {
 }
-SC7B & j:: {
+sc7B & j:: {
     send("{Home}")
 }
-SC7B & k:: {
+sc7B & k:: {
     send("{Left}")
 }
-SC7B & l:: {
+sc7B & l:: {
     send("{Right}")
 }
-SC7B & SC27:: {
+sc7B & SC27:: {
     send("{End}")
 }
-SC7B & SC28:: {
+sc7B & SC28:: {
     send("{Down}")
 }

@@ -1,28 +1,28 @@
-SC7B & sc2A:: {
+sc7B & sc2A:: {
     send("^{enter}")
 }
-SC7B & z:: {
+sc7B & z:: {
 }
-SC7B & x:: {
+sc7B & x:: {
 }
-SC7B & c:: {
+sc7B & c:: {
 }
-SC7B & v:: {
+sc7B & v:: {
 }
-SC7B & b:: {
+sc7B & b:: {
 }
 
-SC7B & n:: {
+sc7B & n:: {
 }
-SC7B & m:: {
+sc7B & m:: {
     send("+{home}")
 }
-SC7B & SC33:: {
+sc7B & SC33:: {
     send("+{left}")
 }
-SC7B & SC34:: {
+sc7B & SC34:: {
     send("+{right}")
 }
-SC7B & SC35:: {
+sc7B & SC35:: {
     send("+{end}")
 }

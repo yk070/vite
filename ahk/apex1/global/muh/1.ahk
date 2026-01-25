@@ -1,14 +1,14 @@
-SC7B & SC29:: {
+sc7B & SC29:: {
     send("!{space}") ;maximize
     sleep(100)
     send("{x}")
 }
-SC7B & vkF4:: {
+sc7B & vkF4:: {
     send("!{space}") ;maximize
     sleep(100)
     send("{x}")
 }
-SC7B & 1:: {
+sc7B & 1:: {
     send("#{v}") ;back1
     sleep(500)
     loop 0 {
@@ -19,7 +19,7 @@ SC7B & 1:: {
     send("{Enter}")
     sleep(10)
 }
-SC7B & 2:: {
+sc7B & 2:: {
     send("#{v}") ;back2
     sleep(500)
     loop 1 {
@@ -30,7 +30,7 @@ SC7B & 2:: {
     send("{Enter}")
     sleep(10)
 }
-SC7B & 3:: {
+sc7B & 3:: {
     send("#{v}") ;back3
     sleep(500)
     loop 2 {
@@ -41,7 +41,7 @@ SC7B & 3:: {
     send("{Enter}")
     sleep(10)
 }
-SC7B & 4:: {
+sc7B & 4:: {
     send("#{v}") ;back4
     sleep(500)
     loop 3 {
@@ -52,7 +52,7 @@ SC7B & 4:: {
     send("{Enter}")
     sleep(10)
 }
-SC7B & 5:: {
+sc7B & 5:: {
     send("#{v}") ;back5
     sleep(500)
     loop 4 {
@@ -64,7 +64,7 @@ SC7B & 5:: {
     sleep(10)
 }
 
-SC7B & 6:: {
+sc7B & 6:: {
 }
-SC7B & 7:: {
+sc7B & 7:: {
 }

@@ -1,6 +1,6 @@
-SC7B & LButton:: {
+sc7B & LButton:: {
     Click "Left", 2
 }
-SC7B & RButton:: {
+sc7B & RButton:: {
     Click "Left", 2
 }

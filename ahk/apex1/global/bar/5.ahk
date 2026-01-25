@@ -7,7 +7,7 @@ SC39 & LWin:: {
 SC39 & sc38:: {
     send("{F11}")
 }
-SC39 & SC7B:: {
+SC39 & sc7B:: {
     send("{F2}")
 }
 

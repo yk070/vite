@@ -1,14 +1,14 @@
-SC7B & sc1D:: {
+sc7B & sc1D:: {
     send("+{enter}")
 }
-SC7B & LWin:: {
+sc7B & LWin:: {
 }
-SC7B & sc38:: {
+sc7B & sc38:: {
 }
-SC7B & SC39:: {
+sc7B & SC39:: {
 }
 
-SC7B & SC79:: { ;katakana
+sc7B & SC79:: { ;katakana
     send("{F7}")
     sleep(100)
     send("{Enter}")
