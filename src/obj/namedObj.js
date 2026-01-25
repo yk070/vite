@@ -14,6 +14,16 @@ const scriptAcModObj = {
   space: "sc39",
 };
 
+const modScObj = {
+  none: "",
+  ctrl: "sc1D",
+  shift: "sc36",
+  alt: "sc38",
+  win: "sc15B",
+  space: "sc39",
+  muhenkan: "sc7B",
+};
+
 const ModBigger = {
   none: "",
   ctrl: "Ctrl",
@@ -58,4 +68,5 @@ export {
   EnterObj,
   tgIndexObj,
   ModBigger,
+  modScObj,
 };

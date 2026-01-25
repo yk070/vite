@@ -11,7 +11,16 @@ export const derivedScript = (base) => {
     }
   });
 
-  const script = scriptLines?.join("");
+  const scriptDash = scriptLines?.join("");
+  const hasCtrl =
+    base.acTgObjs?.some(
+      (item) =>
+        typeof item === "object" &&
+        typeof item.tg === "string" &&
+        item.tg.includes("ctrl"),
+    ) ?? false;
+
+  const script = hasCtrl ? "sc1D::return\n" + scriptDash : scriptDash;
 
   return { script };
 };
