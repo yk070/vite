@@ -5,10 +5,4 @@ sc1D & sc39:: {
     send("^{tab}")
 }
 
-sc1D & SC79:: {
-    send("{space}") ;basicInput
-    sleep(200)
-    send("{space}")
-    sleep(200)
-    send("{home}")
-}
+sc1D & sc79:: send "{a}"

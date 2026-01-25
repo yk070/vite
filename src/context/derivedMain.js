@@ -2,16 +2,24 @@ import { basicIndexes } from "../array/namedMods.js";
 import { ModIndexes } from "../array/namedMods.js";
 
 const derivedMain = (base) => {
+  const toggleAcTg = (key) => {
+    base.setAcTgObjs((prev) =>
+      prev.includes(key) ? prev.filter((v) => v !== key) : [...prev, key],
+    );
+  };
+
+  const isWoSpaHold = base.acTgObjs.includes("spaceHold");
+  const isWoMuhHold = base.acTgObjs.includes("muhHold");
   const acTgSet = new Set(base.acTgObjs?.map((obj) => `${obj.ac}|${obj.tg}`));
   const isMultiOnHd = base.hdMultiObj?.objs?.every((obj) =>
     acTgSet.has(`${obj.ac}|${obj.tg}`),
   );
   const getContextIndexes = (base) => {
     let indexes = [...ModIndexes];
-    if (base.isWoSpaHold) {
+    if (base.acTgObjs.includes("spaceHold")) {
       indexes.push("space");
     }
-    if (base.isWoMuhHold) {
+    if (base.acTgObjs.includes("muhHold")) {
       indexes.push("muhenkan");
     }
     return indexes;
@@ -37,6 +45,9 @@ const derivedMain = (base) => {
     acTgSet,
     contextIndexes,
     isWoTgShift,
+    isWoSpaHold,
+    isWoMuhHold,
+    toggleAcTg,
   };
 };
 export default derivedMain;

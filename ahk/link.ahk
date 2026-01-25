@@ -4,7 +4,7 @@
 
 #Include .\apex1\local\vscode\vscode.ahk
 
-#Include .\apex3\test\test.ahk
+#Include .\apex3\test\test.ahk ;テスト
 
 #Include .\common\function\function.ahk
 #Include .\common\code\code.ahk

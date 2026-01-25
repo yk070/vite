@@ -1,7 +1,7 @@
 import { scriptAcModObj } from "../obj/namedObj.js";
 import keyScObj from "../obj/keyScObj.js";
 import notModKeyObj from "../obj/notModKeyObj.js";
-const acConvert = (modKey) => {
+const convAcScript = (modKey) => {
   const [Mod, Key] = modKey.split("*");
   if (!modKey.includes("*")) {
     return notModKeyObj[modKey];
@@ -16,6 +16,6 @@ const acConvert = (modKey) => {
   if (Mod === "none") {
     return `send "{${Namelabel_Key}}"`;
   }
-  return `send "${Namelabel_Mod} {${Namelabel_Key}}"`;
+  return `send "${Namelabel_Mod}{${Namelabel_Key}}"`;
 };
-export default acConvert;
+export default convAcScript;

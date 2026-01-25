@@ -14,8 +14,8 @@ const useRunConvert = ({ preKey }) => {
   };
 
   const click = () => {
-    if (boo.isSoSpaHold) ctx.setIsWoSpaHold((prev) => !prev);
-    if (boo.isSoMuhHold) ctx.setIsWoMuhHold((prev) => !prev);
+    if (boo.isSoSpaHold) ctx.toggleAcTg("spaceHold");
+    if (boo.isSoMuhHold) ctx.toggleAcTg("muhHold");
     if (boo.isDisabled || (boo.isVacant && !ctx.isWoAcSd)) return;
     if (ctx.sdAcModKey) {
       if (boo.isAssigned) remove();

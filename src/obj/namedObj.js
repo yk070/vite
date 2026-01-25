@@ -27,11 +27,11 @@ const acIndexLabelObj = {
 
 const ModBigger = {
   none: "",
-  ctrl: "Ctrl",
-  shift: "Shift",
-  alt: "Alt",
-  win: "Win",
-  space: "Space",
+  ctrl: "sc1D",
+  shift: "vkA0",
+  alt: "sc38",
+  win: "sc15B",
+  space: "sc39",
 };
 
 const EnterObj = {

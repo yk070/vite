@@ -1,11 +1,6 @@
 import { useRef, useState } from "react";
 
 const useStateHistory = () => {
-  const [isWoSpaHold, setIsWoSpaHold] = useState(false);
-  // console.log("isWoSpaHold", isWoSpaHold);
-  // muhenkan hold
-  const [isWoMuhHold, setIsWoMuhHold] = useState(false);
-
   const [acTgObjs, _setAcTgObjs] = useState([]);
   const [historyIndex, setHistoryIndex] = useState(0); // ←初期は0
   const historyRef = useRef([[]]); // ←初期状態も履歴に登録
@@ -35,23 +30,7 @@ const useStateHistory = () => {
     if (index >= 0 && index < historyRef.current.length) {
       skipHistoryRef.current = true;
 
-      _setAcTgObjs((prev) => {
-        const restored = historyRef.current[index];
-
-        // ここで直前 (prev) と直後 (restored) を比較できる
-        const added = restored.filter((x) => !prev.includes(x));
-        const removed = prev.filter((x) => !restored.includes(x));
-
-        console.log("直前1:", prev);
-        console.log("復元後2:", restored);
-        // console.log("追加3:", added);
-        // console.log("削除4:", removed);
-        if (prev.includes("spaceHold") && !restored.includes("spaceHold")) {
-          setIsWoSpaHold(false);
-        }
-
-        return restored;
-      });
+      _setAcTgObjs(historyRef.current[index]);
 
       setHistoryIndex(index);
     }
@@ -64,10 +43,6 @@ const useStateHistory = () => {
     setHistoryIndex,
     restoreFromHistory,
     historyRef,
-    isWoSpaHold,
-    setIsWoSpaHold,
-    isWoMuhHold,
-    setIsWoMuhHold,
   };
 };
 export default useStateHistory;
