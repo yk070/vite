@@ -1,2 +1,3 @@
 #Include .\suspend\suspend.ahk
-#Include .\test\test.ahk
+#Include .\test\1.ahk
+#Include .\test\2.ahk

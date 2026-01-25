@@ -1,13 +1,13 @@
-^n:: {
+sc1D & n:: {
 }
-^m:: {
+sc1D & m:: {
 }
-^SC33:: {
+sc1D & SC33:: {
     send_text("、")
 }
-^SC34:: {
+sc1D & SC34:: {
     send_text("。")
 }
-^SC35:: {
+sc1D & SC35:: {
     send_text("？")
 }
