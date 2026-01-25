@@ -45,6 +45,7 @@ const useTgLab = ({ preKey }) => {
         return alertLabel;
       }
 
+      if (ctx.isWoTgVirtual) return originModKeyLabel;
       if (boo.isUnusable) return alertLabel;
       if (boo.isFunctionUsed && boo.isLocationUsed) return emptyLabel;
       if (boo.isFunctionUsed) return "";
@@ -52,7 +53,7 @@ const useTgLab = ({ preKey }) => {
 
     if (boo.isSoVirtualHold) return "修飾キー";
     if (boo.isAssigned) return assignModKeyLabel;
-    if (boo.isEmptyLabel || ctx.isWoTgSpace) return "";
+    if (boo.isEmptyLabel || ctx.isWoTgVirtual) return "";
 
     return originKeyLabel;
   };

@@ -26,4 +26,5 @@ export {
   basicIndexes,
   DefaultIndexes,
   AllIndexes,
+  virtualCombiKeys,
 };
