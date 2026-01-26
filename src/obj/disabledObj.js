@@ -1,4 +1,4 @@
-import { defaultAdjectiveNous } from "../array/namedNous.js";
+import { defaultAdjectiveNous } from "../array/namedArray.js";
 const disabledObj = {
   none: defaultAdjectiveNous,
   ctrl: ["leftCtrl", "rightCtrl"],

@@ -83,6 +83,16 @@ const nouScObj = {
   rightAlt: "sc138",
   app: "sc15D",
   rightCtrl: "sc11D",
+  //navi
+  delete: "sc153",
+  home: "sc147",
+  end: "sc14F",
+  pageUp: "sc149",
+  pageDown: "sc151",
+  left: "sc14B",
+  right: "sc14D",
+  up: "sc148",
+  down: "sc150",
 };
 
 export default nouScObj;

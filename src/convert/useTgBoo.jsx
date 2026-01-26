@@ -1,5 +1,5 @@
 import { disabledAdjNous } from "../array/namedAdjNous.js";
-import { alphabetNumberNous, allAdjectiveNous } from "../array/namedNous.js";
+import { alphabetNumberNous, allAdjectiveNous } from "../array/namedArray.js";
 import easeObj from "../obj/easeObj.js";
 import useCtx from "../context/useCtx.jsx";
 import useTgRoo from "./useTgRoo.jsx";

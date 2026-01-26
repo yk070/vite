@@ -65,13 +65,7 @@ const multiObj = {
       { ac: "win*five", tg: "space*tab" },
       { ac: "win*one", tg: "space*r" },
     ],
-    デリート: [
-      { ac: "win*two", tg: "space*e" },
-      { ac: "win*three", tg: "space*w" },
-      { ac: "win*four", tg: "space*q" },
-      { ac: "win*five", tg: "space*tab" },
-      { ac: "win*one", tg: "space*r" },
-    ],
+    デリート: [{ ac: "none*delete", tg: "space*leftCtrl" }],
   },
 };
 export default multiObj;

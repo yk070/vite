@@ -1,30 +1,15 @@
-const numberNous = [
-  "zero",
-  "one",
-  "two",
-  "three",
-  "four",
-  "five",
-  "six",
-  "seven",
-  "eight",
-  "nine",
+const homeNous = ["a", "s", "d", "f", "j", "k", "l", "semicolon"];
+const defaultAdjectiveNous = [
+  "leftCtrl",
+  "rightCtrl",
+  "leftAlt",
+  "rightAlt",
+  "leftShift",
+  "rightShift",
+  "leftWin",
+  "rightWin",
 ];
-const functionNous = [
-  "f1",
-  "f2",
-  "f3",
-  "f4",
-  "f5",
-  "f6",
-  "f7",
-  "f8",
-  "f9",
-  "f10",
-  "f11",
-  "f12",
-];
-const alphabetNous = [
+const alphabetNumberNous = [
   "a",
   "b",
   "c",
@@ -63,36 +48,16 @@ const alphabetNous = [
   "minus",
   "caret",
   "yen",
+
+  "zero",
+  "one",
+  "two",
+  "three",
+  "four",
+  "five",
+  "six",
+  "seven",
+  "eight",
+  "nine",
 ];
-const commandNous = [
-  "esc",
-  "hankaku",
-  "backspace",
-  "tab",
-  "enter",
-  "capslock",
-  "muhenkan",
-  "space",
-  "henkan",
-  "kana",
-  "application",
-];
-const defaultAdjectiveNous = [
-  "leftCtrl",
-  "rightCtrl",
-  "leftAlt",
-  "rightAlt",
-  "leftShift",
-  "rightShift",
-  "leftWin",
-  "rightWin",
-];
-const homeNous = ["a", "s", "d", "f", "j", "k", "l", "semicolon"];
-export {
-  numberNous,
-  functionNous,
-  alphabetNous,
-  commandNous,
-  defaultAdjectiveNous,
-  homeNous,
-};
+export { alphabetNumberNous, defaultAdjectiveNous, homeNous };

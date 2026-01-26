@@ -1,6 +1,6 @@
 import Line from "./Line.jsx";
 import keyPositions from "../array/keyPositions.js";
-import { alphabetNumberNous } from "../array/namedNous.js";
+import { alphabetNumberNous } from "../array/namedArray.js";
 
 const TgLines = ({ containerRef }) => {
   return (

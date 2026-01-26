@@ -1,5 +1,5 @@
 import useCtx from "../context/useCtx.jsx";
-import { defaultAdjs } from "../array/namedNous.js";
+import { defaultAdjs } from "../array/namedArray.js";
 
 const useTgBoo = ({ tgCap }) => {
   const ctx = useCtx();

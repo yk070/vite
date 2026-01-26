@@ -1,4 +1,4 @@
-import { allAdjs } from "../array/namedNous.js";
+import { allAdjs } from "../array/namedArray.js";
 import posiIdObj from "./posiIdObj.js";
 
 const adjPosiIdObjObj = Object.fromEntries(

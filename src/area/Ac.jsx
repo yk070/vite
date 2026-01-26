@@ -1,7 +1,7 @@
 import look from "../style/look.jsx";
 import AcEles from "./AcEles.jsx";
 import AlphaNumBlock from "./AlphaNumBlock.jsx";
-import { acCaps } from "../array/namedNous.js";
+import { acCaps } from "../array/namedArray.js";
 import AcCap from "./AcCap.jsx";
 const Ac = () => {
   return (

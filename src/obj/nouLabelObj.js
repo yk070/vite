@@ -58,7 +58,6 @@ const nouLabelObj = {
   semicolon: ";",
   colon: ":",
   rightBracket: "]",
-
   //4
   leftShift: "Shift",
   z: "Z",
@@ -73,7 +72,6 @@ const nouLabelObj = {
   slash: "/",
   backslash: "\\",
   rightShift: "Shift",
-
   //5
   leftCtrl: "Ctrl",
   leftWin: "Win",
@@ -86,6 +84,16 @@ const nouLabelObj = {
   rightWin: "Win",
   application: "App",
   rightCtrl: "Ctrl",
+  //navi
+  delete: "Delete",
+  home: "Home",
+  end: "End",
+  pageUp: "PageUp",
+  pageDown: "PageDown",
+  left: "Left",
+  right: "Right",
+  up: "Up",
+  down: "Down",
 };
 
 export default nouLabelObj;

@@ -2,7 +2,7 @@ import {
   notAdjAcCaps,
   defaultAdjs,
   virtualVerstiles,
-} from "../array/namedNous.js";
+} from "../array/namedArray.js";
 
 const derivedMain = (base) => {
   const toggleAcTg = (key) => {

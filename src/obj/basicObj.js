@@ -77,8 +77,8 @@ const basicObj = {
   },
   naviTen: {
     left: {
-      Esc: {
-        row: 2,
+      最上部ナビ: {
+        row: 1,
         adjNous: [
           "none*hankaku",
           "none*backspace",

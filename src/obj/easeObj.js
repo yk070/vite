@@ -1,4 +1,4 @@
-import { homeNous } from "../array/namedNous.js";
+import { homeNous } from "../array/namedArray.js";
 const easeObj = {
   none: {
     first: ["space", "tab", "capslock", "muhenkan"],
