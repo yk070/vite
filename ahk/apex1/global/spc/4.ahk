@@ -1,5 +1,4 @@
 sc39 & sc2A:: {
-    fxSftUsed() ;fxUsed
     send("{Esc}")
 }
 sc39 & z:: {

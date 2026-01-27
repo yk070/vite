@@ -1,6 +1,6 @@
-import { acScriptAdjObj } from "../obj/namedObj.js";
-import nouScObj from "../obj/nouScObj.js";
-import notAdjNouObj from "../obj/notAdjNouObj.js";
+import { acScriptAdjObj } from "../../src/obj/namedObj.js";
+import nouScObj from "../../src/obj/nouScObj.js";
+import notAdjNouObj from "../../src/obj/notAdjNouObj.js";
 
 const convAcScript = (x) => {
   if (!x.includes("*")) {

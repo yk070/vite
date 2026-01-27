@@ -1,5 +1,4 @@
 XButton2 & sc2A:: {
-    fxSftUsed() ;fxUsed
     fxSc2A()
 }
 

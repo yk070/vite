@@ -1,5 +1,5 @@
 sc39 & sc0F:: {
-    send("#{5}")
+    send("{" scHankaku "}")
 }
 sc39 & q:: {
     send("#{4}")
@@ -14,6 +14,7 @@ sc39 & r:: {
     send("#{1}")
 }
 sc39 & t:: {
+    send("#{5}")
 }
 
 sc39 & y:: {

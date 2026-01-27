@@ -8,12 +8,10 @@ sc2A & LAlt:: {
     myGui.Destroy()
 }
 sc2A & sc39:: {
-    fxSpcUsed() ;fxUsed
     Reload()
 }
 #SuspendExempt
 sc2A & sc7B:: {
-    fxMhkUsed() ;fxUsed
     global manualSuspend
     manualSuspend := !manualSuspend
     UpdateSuspend()

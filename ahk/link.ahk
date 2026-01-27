@@ -12,30 +12,29 @@
 #Include .\commentOut\memo.txt ;メモ
 
 ; alone
-#Include .\apex1\global\alone\alone.ahk
+#Include .\apex1\global\alone\alone.ahk ;アローン
 ; spc
-#Include .\apex1\global\spc\1.ahk
+#Include .\apex1\global\spc\1.ahk ;スペース
 #Include .\apex1\global\spc\2.ahk
 #Include .\apex1\global\spc\3.ahk
 #Include .\apex1\global\spc\4.ahk
 #Include .\apex1\global\spc\5.ahk
 #Include .\apex1\global\spc\mouse.ahk
 ; muh
-#Include .\apex1\global\muh\1.ahk
+#Include .\apex1\global\muh\1.ahk ;無変換
 #Include .\apex1\global\muh\2.ahk
 #Include .\apex1\global\muh\3.ahk
 #Include .\apex1\global\muh\4.ahk
 #Include .\apex1\global\muh\5.ahk
 #Include .\apex1\global\muh\mouse.ahk
 ; ctl
-#Include .\apex1\global\ctl\3.ahk
+#Include .\apex1\global\ctl\3.ahk ;コントロール
 #Include .\apex1\global\ctl\4.ahk
 #Include .\apex1\global\ctl\5.ahk
 ; sft
-#Include .\apex1\global\sft\1.ahk
+#Include .\apex1\global\sft\1.ahk ;シフト
 #Include .\apex1\global\sft\2.ahk
 #Include .\apex1\global\sft\5.ahk
-; tab
 ; x2
 #Include .\apex1\global\x2\mouse.ahk
 #Include .\apex1\global\x2\1.ahk

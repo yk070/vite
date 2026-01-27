@@ -1,8 +1,8 @@
 sc7B & sc2A:: {
-    fxSftUsed() ;fxUsed
-    send("^{enter}")
+    send("{tab}")
 }
 sc7B & z:: {
+    send("^{enter}")
 }
 sc7B & x:: {
 }

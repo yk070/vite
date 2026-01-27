@@ -10,7 +10,7 @@ const derivedMain = (ctx) => {
       if (prev.includes(x)) {
         return prev.filter((item) => item !== x);
       } else {
-        return [...prev, x, { ac: "none*space", tg: "wSpace" }];
+        return [...prev, x];
       }
     });
   };
