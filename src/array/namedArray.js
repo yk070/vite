@@ -9,6 +9,7 @@ const allAdjectiveNous = [...defaultAdjectiveNous, ...virtualVerstiles];
 const defaultAdjs = ["none", "ctrl", "alt", "shift", "win"];
 const notAdjAcCaps = ["basic1", "basic2", "naviTen"];
 const acCaps = [
+  "acLocked",
   "basic1",
   "basic2",
   ...defaultAdjs,

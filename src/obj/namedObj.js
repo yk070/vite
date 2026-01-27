@@ -53,6 +53,7 @@ const adjLineObj = {
   muhenkan: "muhenkan",
 };
 const acCapLabelObj = {
+  acLocked: "acLocked",
   basic1: "基本1",
   basic2: "基本2",
   none: "None",
