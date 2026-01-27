@@ -1,5 +1,5 @@
 import { useState } from "react";
-const useStateMain = () => {
+const useStateMain = ({ ctx }) => {
   const [HoverLocktg, setHoverLocktg] = useState(null);
 
   const [hdMultiObj, setHdMultiObj] = useState(null);

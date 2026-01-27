@@ -26,6 +26,7 @@ const TgEle = ({ posiId, styleObj }) => {
         <span style={look.tgButton8}>
           <MultiCircleDiv level={boo.level} />
         </span>
+        {boo.isHomeNoun && <div style={look.tgButton12}></div>}
       </div>
     </div>
   );

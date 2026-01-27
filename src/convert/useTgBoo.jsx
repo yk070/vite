@@ -14,13 +14,13 @@ const useTgBoo = ({ posiId }) => {
 
   const isRemoteHovered = ctx.hdAdjNouTg === roo.assignAdjNou;
   const isAdjNouSame =
-    allAdjectiveNous.includes(roo.originKey) &&
-    adjAdjectiveNousObj[ctx.currentAdjTg]?.includes(roo.originKey);
+    allAdjectiveNous.includes(roo.originNou) &&
+    adjAdjectiveNousObj[ctx.currentAdjTg]?.includes(roo.originNou);
 
-  const isLocationUsed = ctx.acTgObjs.some(
+  const isLocationUsed = ctx.preferences.some(
     (obj) => obj.tg === roo.originAdjNou,
   );
-  const isFunctionUsed = ctx.acTgObjs.some(
+  const isFunctionUsed = ctx.preferences.some(
     (obj) => obj.ac === roo.originAdjNou,
   );
 
@@ -35,7 +35,7 @@ const useTgBoo = ({ posiId }) => {
 
   const isAssigned = !!roo.assignAdjNou;
   const isDisabled = disabledAdjNous.includes(roo.originAdjNou);
-  const isAlphabetNumber = alphabetNumberNous.includes(roo.originKey);
+  const isAlphabetNumber = alphabetNumberNous.includes(roo.originNou);
   const isReturn = isAlphabetNumber && (ctx.isWoTgNone || ctx.isWoTgShift);
 
   const isEmptyLabel = isVacant || isEnterBelow || isAdjNouSame;
@@ -49,11 +49,12 @@ const useTgBoo = ({ posiId }) => {
   function getLevel() {
     if (!ctx.isWoAcSd || isSoVirtualHold || isDisabled || isAssigned) return "";
     const entry = Object.entries(easeLevelObj)?.find(([_, nous]) =>
-      nous?.includes(roo.originKey),
+      nous?.includes(roo.originNou),
     );
     return entry?.[0] ?? "third";
   }
   const level = getLevel();
+  const isHomeNoun = ["f", "j"].includes(roo.originNou);
   return {
     isAssigned,
     isSoVirtualHold,
@@ -73,6 +74,7 @@ const useTgBoo = ({ posiId }) => {
     isEnterBelow,
     isSoSpaHold,
     isSoMuhHold,
+    isHomeNoun,
   };
 };
 

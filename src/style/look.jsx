@@ -230,6 +230,16 @@ const look = {
     pointerEvents: "none",
   }),
 
+  tgButton12: {
+    position: "absolute",
+    backgroundColor: tone.homePositionColor,
+    height: "10%",
+    width: "15%",
+    top: "75%",
+    left: "50%",
+    transform: "translateX(-50%)",
+    borderRadius: `calc(${base} * 20)`,
+  },
   tgButton8: {
     position: "absolute",
     top: 0,

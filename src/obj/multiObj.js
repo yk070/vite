@@ -1,6 +1,6 @@
 const multiObj = {
   none: {
-    左手寄せ基本: [
+    左寄せ多数: [
       { ac: "none*tab", tg: "none*esc" },
       { ac: "none*space", tg: "none*capslock" },
       { ac: "none*backspace", tg: "none*tab" },

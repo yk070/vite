@@ -4,42 +4,46 @@ import {
   virtualVerstiles,
 } from "../array/namedArray.js";
 
-const derivedMain = (base) => {
-  const toggleAcTg = (key) => {
-    base.setAcTgObjs((prev) =>
-      prev.includes(key) ? prev.filter((v) => v !== key) : [...prev, key],
-    );
+const derivedMain = (ctx) => {
+  const toggleAcTg = (x) => {
+    ctx.setPreferences((prev) => {
+      if (prev.includes(x)) {
+        return prev.filter((item) => item !== x);
+      } else {
+        return [...prev, x, { ac: "none*space", tg: "wSpace" }];
+      }
+    });
   };
 
-  const isWoSpaHold = base.acTgObjs.includes("spaceHold");
-  const isWoMuhHold = base.acTgObjs.includes("muhHold");
-  const acTgSet = new Set(base.acTgObjs?.map((obj) => `${obj.ac}|${obj.tg}`));
-  const isMultiOnHd = base.hdMultiObj?.objs?.every((obj) =>
+  const isWoSpaHold = ctx.preferences.includes("spaceHold");
+  const isWoMuhHold = ctx.preferences.includes("muhHold");
+  const acTgSet = new Set(ctx.preferences?.map((obj) => `${obj.ac}|${obj.tg}`));
+  const isMultiOnHd = ctx.hdMultiObj?.objs?.every((obj) =>
     acTgSet.has(`${obj.ac}|${obj.tg}`),
   );
-  const getTgCaps = (base) => {
-    if (["spaceHold", "muhHold"].every((k) => base.acTgObjs.includes(k))) {
+  const getTgCaps = (ctx) => {
+    if (["spaceHold", "muhHold"].every((k) => ctx.preferences.includes(k))) {
       return [...defaultAdjs, "space", "muhenkan"];
     }
-    if (base.acTgObjs.includes("spaceHold")) {
+    if (ctx.preferences.includes("spaceHold")) {
       return [...defaultAdjs, "space"];
     }
-    if (base.acTgObjs.includes("muhHold")) {
+    if (ctx.preferences.includes("muhHold")) {
       return [...defaultAdjs, "muhenkan"];
     }
     return [...defaultAdjs];
   };
 
-  const tgCaps = getTgCaps(base);
+  const tgCaps = getTgCaps(ctx);
 
-  const isWoTgNone = base.currentAdjTg === "none";
-  const isWoTgVirtual = virtualVerstiles.includes(base.currentAdjTg);
-  const isWoTgShift = base.currentAdjTg === "shift";
-  const isWoAcBasic = notAdjAcCaps?.includes(base.currentCapAc);
+  const isWoTgNone = ctx.currentAdjTg === "none";
+  const isWoTgVirtual = virtualVerstiles.includes(ctx.currentAdjTg);
+  const isWoTgShift = ctx.currentAdjTg === "shift";
+  const isWoAcBasic = notAdjAcCaps?.includes(ctx.currentCapAc);
 
-  const isWoAcSd = !!base.sdAcAdjNou;
+  const isWoAcSd = !!ctx.sdAcAdjNou;
 
-  const isAdjAcOften = base.currentCapAc.includes("often");
+  const isAdjAcOften = ctx.currentCapAc.includes("often");
 
   return {
     isWoTgNone,

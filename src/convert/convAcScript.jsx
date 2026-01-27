@@ -2,15 +2,15 @@ import { acScriptAdjObj } from "../obj/namedObj.js";
 import nouScObj from "../obj/nouScObj.js";
 import notAdjNouObj from "../obj/notAdjNouObj.js";
 
-const convAcScript = (adjNou) => {
-  if (!adjNou.includes("*")) {
-    return `{${notAdjNouObj[adjNou]}}`;
+const convAcScript = (x) => {
+  if (!x.includes("*")) {
+    return `{${notAdjNouObj[x]}}`;
   }
-  if (adjNou === "alt*tab") {
+  if (x === "alt*tab") {
     return "AltTab";
   }
 
-  const [part1, part2, part3] = adjNou.split("*");
+  const [part1, part2, part3] = x.split("*");
 
   if (part1 === "none") {
     const label = "{" + nouScObj[part2] + "}";

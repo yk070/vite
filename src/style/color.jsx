@@ -7,6 +7,7 @@ const Colors = {
   multiOnColor: "#A7A0EB",
   hoveredSelectedMultiColor: "#A7A0EB",
 
+  homePositionColor: "#888888",
   buttonsBgColor: "#555555",
   basicBgColor: "#111111",
 

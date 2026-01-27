@@ -1,13 +1,13 @@
 import { useRef, useState } from "react";
 
-const useStateHistory = () => {
-  const [acTgObjs, _setAcTgObjs] = useState([]);
+const useStateHistory = ({ ctx }) => {
+  const [preferences, _setPreferences] = useState([]);
   const [historyIndex, setHistoryIndex] = useState(0); // ←初期は0
   const historyRef = useRef([[]]); // ←初期状態も履歴に登録
   const skipHistoryRef = useRef(false);
 
-  const setAcTgObjs = (next) => {
-    _setAcTgObjs((prev) => {
+  const setPreferences = (next) => {
+    _setPreferences((prev) => {
       const value = typeof next === "function" ? next(prev) : next;
 
       if (!skipHistoryRef.current) {
@@ -30,15 +30,15 @@ const useStateHistory = () => {
     if (index >= 0 && index < historyRef.current.length) {
       skipHistoryRef.current = true;
 
-      _setAcTgObjs(historyRef.current[index]);
+      _setPreferences(historyRef.current[index]);
 
       setHistoryIndex(index);
     }
   };
 
   return {
-    acTgObjs,
-    setAcTgObjs,
+    preferences,
+    setPreferences,
     historyIndex,
     setHistoryIndex,
     restoreFromHistory,

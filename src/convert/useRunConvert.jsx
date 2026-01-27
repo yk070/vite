@@ -8,7 +8,7 @@ const useRunConvert = ({ posiId }) => {
   const boo = useTgBoo({ posiId });
 
   const remove = () => {
-    ctx.setAcTgObjs((prev) =>
+    ctx.setPreferences((prev) =>
       prev.filter((actgObj) => actgObj.tg !== roo.originAdjNou),
     );
   };

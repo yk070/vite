@@ -11,11 +11,11 @@ const TgSpaceToggle = () => {
     <span style={look.tg3}>
       <span style={look.tg5} onClick={() => ctx.toggleAcTg("spaceHold")}>
         <span>{"Space 修飾キー化"}</span>
-        <Toggle value={ctx.acTgObjs.includes("spaceHold")} />
+        <Toggle value={ctx.preferences.includes("spaceHold")} />
       </span>
       <span style={look.tg5} onClick={() => ctx.toggleAcTg("muhHold")}>
         <span>{"無変換 修飾キー化"}</span>
-        <Toggle value={ctx.acTgObjs.includes("muhHold")} />
+        <Toggle value={ctx.preferences.includes("muhHold")} />
       </span>
     </span>
   );

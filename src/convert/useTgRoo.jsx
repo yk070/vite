@@ -2,10 +2,12 @@ import { EnterObj } from "../obj/namedObj.js";
 import useCtx from "../context/useCtx.jsx";
 const useTgRoo = ({ posiId }) => {
   const ctx = useCtx();
-  const originKey = EnterObj[posiId] ?? posiId;
-  const originAdjNou = ctx.currentAdjTg + "*" + originKey;
+  const originNou = EnterObj[posiId] ?? posiId;
+  const originAdjNou = ctx.currentAdjTg + "*" + originNou;
 
-  const assignAdjNou = ctx.acTgObjs.find((obj) => obj.tg === originAdjNou)?.ac;
+  const assignAdjNou = ctx.preferences.find(
+    (obj) => obj.tg === originAdjNou,
+  )?.ac;
 
   const multiHdAcAdjNou = ctx.hdMultiObj?.objs?.find(
     (hdMiniObj) => hdMiniObj.tg === originAdjNou,
@@ -18,7 +20,7 @@ const useTgRoo = ({ posiId }) => {
   )?.ac;
 
   return {
-    originKey,
+    originNou,
     originAdjNou,
     assignAdjNou,
     multiHdAcAdjNou,

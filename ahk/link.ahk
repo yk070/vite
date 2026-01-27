@@ -8,7 +8,8 @@
 #Include .\common\function\function.ahk
 #Include .\common\code\code.ahk
 
-#Include .\commentout\commentout.ahk
+#Include .\commentOut\ahk.ahk
+#Include .\commentOut\memo.txt ;メモ
 
 ; alone
 #Include .\apex1\global\alone\alone.ahk

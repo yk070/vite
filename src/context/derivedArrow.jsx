@@ -2,22 +2,22 @@ import convPosition from "../convert/convPosition.jsx";
 import nouLabelObj from "../obj/nouLabelObj.js";
 import ConvLabel from "../convert/ConvLabel.jsx";
 
-export const derivedArrow = (base, main) => {
-  const hdAdjNouTgLabel = <ConvLabel adjNou={base.hdAdjNouTg} />;
+export const derivedArrow = (ctx) => {
+  const hdAdjNouTgLabel = <ConvLabel adjNou={ctx.hdAdjNouTg} />;
 
-  const [hdAdj, hdNou] = base.hdAdjNouTg?.split("*") ?? [];
+  const [hdAdj, hdNou] = ctx.hdAdjNouTg?.split("*") ?? [];
   const { x: tailX, y: tailY } = convPosition(hdNou);
-  const remoteHdAdjNou = base.acTgObjs?.find(
-    (o) => o.ac === base.hdAdjNouTg,
+  const remoteHdAdjNou = ctx.preferences?.find(
+    (o) => o.ac === ctx.hdAdjNouTg,
   )?.tg;
   const isRemoteExist = !!remoteHdAdjNou;
   const [remoteHdAdj, remoteHdNou] = remoteHdAdjNou?.split("*") ?? [];
   const remoteHdNouLabel = nouLabelObj[remoteHdNou];
 
-  const tgCapsLength = main.tgCaps.length;
-  const onsiteNumber = main.tgCaps.indexOf(hdAdj);
-  const remoteNumber = main.tgCaps.indexOf(remoteHdAdj);
-  const currentTgCapsLength = main.tgCaps.indexOf(base.currentAdjTg);
+  const tgCapsLength = ctx.tgCaps.length;
+  const onsiteNumber = ctx.tgCaps.indexOf(hdAdj);
+  const remoteNumber = ctx.tgCaps.indexOf(remoteHdAdj);
+  const currentTgCapsLength = ctx.tgCaps.indexOf(ctx.currentAdjTg);
   const isRemoteSame = hdAdj === remoteHdAdj;
 
   const getHeadPos = () => {

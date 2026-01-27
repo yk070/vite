@@ -4,7 +4,7 @@ import look from "../style/look.jsx";
 const Reset = () => {
   const ctx = useCtx();
   const click = () => {
-    ctx.setAcTgObjs([]);
+    ctx.setPreferences([]);
     ctx.setcurrentCapAc("none");
     ctx.setCurrentAdjTg("none");
     ctx.setSdAcAdjNou(null);

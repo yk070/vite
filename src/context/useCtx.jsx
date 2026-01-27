@@ -1,34 +1,30 @@
 import { createContext, useContext } from "react";
 import useStateMain from "./useStateMain.js";
 import derivedMain from "./derivedMain.js";
-import useAcTgObjs from "./useAcTgObjs.js";
+import usePreferences from "./usePreferences.js";
 import useMultiClickObj from "./useMultiClickObj.js";
 import useStateHistory from "./useStateHistory.js";
 import derivedScript from "./derivedScript.js";
 import derivedArrow from "./derivedArrow.jsx";
 
 const AppContext = createContext(null);
-
 export const CtxProvider = ({ children }) => {
-  const base = {
-    ...useStateMain(),
-    ...useStateHistory(),
-  };
-  console.log(base.acTgObjs);
+  const ctx = {};
 
-  const main = derivedMain(base);
-  const script = derivedScript(base);
-  const arrow = derivedArrow(base, main);
+  Object.assign(ctx, useStateMain(ctx));
+  Object.assign(ctx, useStateHistory(ctx));
+  console.log(ctx.preferences);
 
-  useAcTgObjs(base);
-  useMultiClickObj(base, main);
+  Object.assign(ctx, derivedMain(ctx));
+  Object.assign(ctx, derivedScript(ctx));
+  Object.assign(ctx, derivedArrow(ctx));
 
-  return (
-    <AppContext.Provider value={{ ...base, ...script, ...main, ...arrow }}>
-      {children}
-    </AppContext.Provider>
-  );
+  usePreferences(ctx);
+  useMultiClickObj(ctx);
+
+  return <AppContext.Provider value={ctx}>{children}</AppContext.Provider>;
 };
+
 const useCtx = () => useContext(AppContext);
 
 export default useCtx;
