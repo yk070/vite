@@ -35,6 +35,10 @@ const tgAdjLdObj = {
       { ac: "第5候補", tg: "ctrl*colon" },
     ],
   },
+  alt: {},
+  shift: {},
+  win: {},
+  muhenkan: {},
   space: {
     Ctrl右手: [
       { ac: "ctrl*z", tg: "space*z" },

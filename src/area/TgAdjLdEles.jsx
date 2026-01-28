@@ -3,10 +3,9 @@ import tgAdjLdObj from "../obj/tgAdjLdObj.js";
 import TgAdjLdEle from "./TgAdjLdEle.jsx";
 const TgAdjLdEles = () => {
   const ctx = useCtx();
-  const currentOftenObj = tgAdjLdObj[ctx.currentAdjTg] ?? {};
   return (
     <>
-      {Object.entries(currentOftenObj).map(([title, objs]) => (
+      {Object.entries(tgAdjLdObj[ctx.currentAdjTg]).map(([title, objs]) => (
         <TgAdjLdEle key={title} title={title} objs={objs} />
       ))}
     </>

@@ -8,7 +8,8 @@ const AlphaNumBlock = ({ derive }) => {
   const ctx = useCtx();
   if (
     (derive === "tg" && (ctx.isWoTgNone || ctx.isWoTgShift)) ||
-    (derive === "ac" && ctx.isWoAcBasic)
+    (derive === "ac" && ctx.isWoAcBasic) ||
+    ctx.isWoAcLd
   )
     return;
   return (

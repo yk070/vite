@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import tgAdjLdObj from "../obj/tgAdjLdObj.js";
 
 const useMultiClickObj = (ctx) => {
   useEffect(() => {

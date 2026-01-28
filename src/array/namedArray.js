@@ -8,8 +8,9 @@ const virtualVerstiles = ["space", "muhenkan"];
 const allAdjectiveNous = [...defaultAdjectiveNous, ...virtualVerstiles];
 const defaultAdjs = ["none", "ctrl", "alt", "shift", "win"];
 const notAdjAcCaps = ["basic1", "basic2", "naviTen"];
+const lds = ["acLd1", "acLd2"];
 const acCaps = [
-  "acLocked",
+  ...lds,
   "basic1",
   "basic2",
   ...defaultAdjs,
@@ -27,4 +28,5 @@ export {
   allAdjs,
   virtualVerstiles,
   homeNous,
+  lds,
 };

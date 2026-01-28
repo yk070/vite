@@ -2,6 +2,7 @@ import {
   notAdjAcCaps,
   defaultAdjs,
   virtualVerstiles,
+  lds,
 } from "../array/namedArray.js";
 
 const derivedMain = (ctx) => {
@@ -40,16 +41,14 @@ const derivedMain = (ctx) => {
   const isWoTgVirtual = virtualVerstiles.includes(ctx.currentAdjTg);
   const isWoTgShift = ctx.currentAdjTg === "shift";
   const isWoAcBasic = notAdjAcCaps?.includes(ctx.currentCapAc);
+  const isWoAcLd = lds?.includes(ctx.currentCapAc);
 
   const isWoAcSd = !!ctx.sdAcAdjNou;
-
-  const isAdjAcOften = ctx.currentCapAc.includes("often");
 
   return {
     isWoTgNone,
     isWoTgVirtual,
     isWoAcSd,
-    isAdjAcOften,
     isMultiOnHd,
     isWoAcBasic,
     acTgSet,
@@ -58,6 +57,7 @@ const derivedMain = (ctx) => {
     isWoSpaHold,
     isWoMuhHold,
     toggleAcTg,
+    isWoAcLd,
   };
 };
 export default derivedMain;
