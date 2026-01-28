@@ -9,14 +9,14 @@ const useTgRoo = ({ posiId }) => {
     (obj) => obj.tg === originAdjNou,
   )?.ac;
 
-  const multiHdAcAdjNou = ctx.hdMultiObj?.objs?.find(
+  const multiHdAcAdjNou = ctx.hdmultiObj?.objs?.find(
     (hdMiniObj) => hdMiniObj.tg === originAdjNou,
   )?.ac;
-  const cdMultiList = Array.isArray(ctx.cdMultiObjs?.objs)
-    ? ctx.cdMultiObjs?.objs
+  const cdMultiList = Array.isArray(ctx.cdmultiObjs?.objs)
+    ? ctx.cdmultiObjs?.objs
     : [];
   const multiCdAcAdjNou = cdMultiList?.find(
-    (cdMultiObj) => cdMultiObj.tg === originAdjNou,
+    (cdmultiObj) => cdmultiObj.tg === originAdjNou,
   )?.ac;
 
   return {

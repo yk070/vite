@@ -1,8 +1,8 @@
-import multiObj from "../obj/multiObj.js";
+import tgAdjLdObj from "../obj/tgAdjLdObj.js";
 const makeMiniObjsConvert = (currentAdjTg, blockTitle, smallTitle) => {
   return (
-    multiObj?.[currentAdjTg]?.[blockTitle]?.mediumObj?.[smallTitle]?.miniObjs ??
-    []
+    tgAdjLdObj?.[currentAdjTg]?.[blockTitle]?.mediumObj?.[smallTitle]
+      ?.miniObjs ?? []
   );
 };
 

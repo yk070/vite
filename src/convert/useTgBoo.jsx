@@ -43,7 +43,7 @@ const useTgBoo = ({ posiId }) => {
   const isCursorPointer = !isDisabled && ctx.isWoAcSd && !isAdjNouSame;
 
   const isMultiPseudoHd = !!roo.multiHdAcAdjNou;
-  // const isMultiCd = !!roo.multiCdAcAdjNou && !ctx.cdMultiObjs.isPickedBlock;
+  // const isMultiCd = !!roo.multiCdAcAdjNou && !ctx.cdmultiObjs.isPickedBlock;
 
   const easeLevelObj = easeObj[ctx.currentAdjTg];
   function getLevel() {

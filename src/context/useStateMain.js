@@ -2,14 +2,14 @@ import { useState } from "react";
 const useStateMain = ({ ctx }) => {
   const [HoverLocktg, setHoverLocktg] = useState(null);
 
-  const [hdMultiObj, setHdMultiObj] = useState(null);
+  const [hdmultiObj, setHdmultiObj] = useState(null);
 
   // current adj
   const [currentCapAc, setcurrentCapAc] = useState("none");
   const [currentAdjTg, setCurrentAdjTg] = useState("none");
   // space hold
   // multi
-  const [cdMultiObjs, setCdMultiObj] = useState({});
+  const [cdmultiObjs, setCdmultiObj] = useState({});
   // selected
   const [sdAcAdjNou, setSdAcAdjNou] = useState(null);
   const [sdTgAdjNou, setSdTgAdjNou] = useState(null);
@@ -34,12 +34,12 @@ const useStateMain = ({ ctx }) => {
     setHdAdjNouAc,
     isEnterSelected,
     setisEnterSelected,
-    hdMultiObj,
-    setHdMultiObj,
+    hdmultiObj,
+    setHdmultiObj,
     HoverLocktg,
     setHoverLocktg,
-    cdMultiObjs,
-    setCdMultiObj,
+    cdmultiObjs,
+    setCdmultiObj,
   };
 };
 export default useStateMain;

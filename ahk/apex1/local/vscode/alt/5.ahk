@@ -1,6 +1,6 @@
 !sc1D:: {
-    send("^!{Enter}")
+    send("+!{2}") ;複製
 }
 !Lwin:: {
-    send("+!{6}")
+    send("^!{Enter}")
 }

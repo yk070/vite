@@ -1,7 +1,9 @@
-import multiObj from "../obj/multiObj.js";
+import tgAdjLdObj from "../obj/tgAdjLdObj.js";
 
 const oftenObjConvert = (adj, blockTitle, smallTitle) => {
-  return multiObj?.[adj]?.[blockTitle]?.mediumObj?.[smallTitle]?.miniObjs ?? [];
+  return (
+    tgAdjLdObj?.[adj]?.[blockTitle]?.mediumObj?.[smallTitle]?.miniObjs ?? []
+  );
 };
 
 export default oftenObjConvert;

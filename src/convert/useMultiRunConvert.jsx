@@ -3,13 +3,13 @@ const useMultiRunConvert = ({ title, objs }) => {
   const ctx = useCtx();
 
   const click = () => {
-    ctx.setCdMultiObj({ title, objs });
+    ctx.setCdmultiObj({ title, objs });
   };
   const hover = () => {
-    ctx.setHdMultiObj({ title, objs });
+    ctx.setHdmultiObj({ title, objs });
   };
   const leave = () => {
-    ctx.setHdMultiObj(null);
+    ctx.setHdmultiObj(null);
   };
   return {
     click,

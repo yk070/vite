@@ -4,5 +4,5 @@ aTab asTab
 
 https://www.youtube.com/playlist?list=PLPuEbC5xJcL_5oIHNPZHFHGNnGEUw5JEE
 
-py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list=PLPuEbC5xJcL95-eze1Ei5UGkYFmNLFS3n"
-  
+py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list=PLPuEbC5xJcL9TPVjGt_ZQSAhRUW2NbGUj"
+py -m yt_dlp --js-runtimes node --yes-playlist -f "bv*[height<=1080]+ba/b" "URL"

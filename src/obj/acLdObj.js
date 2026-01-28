@@ -1,13 +1,27 @@
-const acLockedObj = {
+const acLdObj = {
   acLocked: {
     left: {
       Enter: {
         row: 2,
-        acTgObjs: [
-          [
-            { ac: "none*enter", tg: "none*muhenkan" },
-            { ac: "none*enter", tg: "space*ctrl" },
-          ],
+        none: [
+          {
+            objs: [{ ac: "none*enter", tg: "none*tab" }],
+            ease: 1,
+          },
+          {
+            objs: [{ ac: "none*enter", tg: "none*muhenkan" }],
+            ease: 1,
+          },
+        ],
+        ctrl: [
+          {
+            objs: [{ ac: "none*enter", tg: "space*ctrl" }],
+            ease: 1,
+          },
+          {
+            objs: [{ ac: "none*enter", tg: "space*shift" }],
+            ease: 0,
+          },
         ],
       },
       ウィンドウ移動: {
@@ -44,4 +58,4 @@ const acLockedObj = {
     right: {},
   },
 };
-export default acLockedObj;
+export default acLdObj;

@@ -1,4 +1,4 @@
-const multiObj = {
+const tgAdjLdObj = {
   none: {
     左寄せ多数: [
       { ac: "none*tab", tg: "none*esc" },
@@ -68,7 +68,7 @@ const multiObj = {
     デリート: [{ ac: "none*delete", tg: "space*leftCtrl" }],
   },
 };
-export default multiObj;
+export default tgAdjLdObj;
 
 // Tab進退: [
 //   { ac: "none*tab", tg: "space*tab" },

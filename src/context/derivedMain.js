@@ -18,7 +18,7 @@ const derivedMain = (ctx) => {
   const isWoSpaHold = ctx.preferences.includes("spaceHold");
   const isWoMuhHold = ctx.preferences.includes("muhHold");
   const acTgSet = new Set(ctx.preferences?.map((obj) => `${obj.ac}|${obj.tg}`));
-  const isMultiOnHd = ctx.hdMultiObj?.objs?.every((obj) =>
+  const isMultiOnHd = ctx.hdmultiObj?.objs?.every((obj) =>
     acTgSet.has(`${obj.ac}|${obj.tg}`),
   );
   const getTgCaps = (ctx) => {
