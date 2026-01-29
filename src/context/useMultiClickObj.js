@@ -2,8 +2,8 @@ import { useEffect } from "react";
 
 const useMultiClickObj = (ctx) => {
   useEffect(() => {
-    ctx.setCdmultiObj(null);
-    const objs = ctx.cdmultiObjs?.objs;
+    ctx.setCdTgAdjLdObj(null);
+    const objs = ctx.cdTgAdjLdObj?.objs;
     if (objs == null) return;
     if (!Array.isArray(objs)) return;
     if (!objs) return;
@@ -20,7 +20,7 @@ const useMultiClickObj = (ctx) => {
         ? filteredPreferences
         : [...filteredPreferences, ...objs];
     });
-  }, [ctx.cdmultiObjs, ctx.currentAdjTg]);
+  }, [ctx.cdTgAdjLdObj, ctx.currentAdjTg]);
 };
 
 export default useMultiClickObj;

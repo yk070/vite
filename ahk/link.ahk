@@ -1,7 +1,7 @@
 #Include .\apex1\always\always.ahk
-#Include .\apex1\local\local.ahk
+#Include .\apex1\local\local.ahk ;ローカル
 
-#Include .\apex1\local\vscode\vscode.ahk
+#Include .\apex1\local\vscode\vscode.ahk ;vscode
 
 #Include .\apex2\test\test.ahk ;テスト
 

@@ -16,12 +16,11 @@ const derivedMain = (ctx) => {
     });
   };
 
-  const isWoSpaHold = ctx.preferences.includes("spaceHold");
-  const isWoMuhHold = ctx.preferences.includes("muhHold");
   const acTgSet = new Set(ctx.preferences?.map((obj) => `${obj.ac}|${obj.tg}`));
-  const isMultiOnHd = ctx.hdmultiObj?.objs?.every((obj) =>
+  const isTgAdjLdOnHd = ctx.hdTgAdjLdObj?.objs?.every((obj) =>
     acTgSet.has(`${obj.ac}|${obj.tg}`),
   );
+
   const getTgCaps = (ctx) => {
     if (["spaceHold", "muhHold"].every((k) => ctx.preferences.includes(k))) {
       return [...defaultAdjs, "space", "muhenkan"];
@@ -34,22 +33,24 @@ const derivedMain = (ctx) => {
     }
     return [...defaultAdjs];
   };
-
   const tgCaps = getTgCaps(ctx);
 
+  const isWoSpaHold = ctx.preferences.includes("spaceHold");
+  const isWoMuhHold = ctx.preferences.includes("muhHold");
   const isWoTgNone = ctx.currentAdjTg === "none";
   const isWoTgVirtual = virtualVerstiles.includes(ctx.currentAdjTg);
   const isWoTgShift = ctx.currentAdjTg === "shift";
-  const isWoAcBasic = notAdjAcCaps?.includes(ctx.currentCapAc);
   const isWoAcLd = lds?.includes(ctx.currentCapAc);
-
+  const isWoAcBasic = notAdjAcCaps?.includes(ctx.currentCapAc);
+  const isWoAcDefault = defaultAdjs?.includes(ctx.currentCapAc);
   const isWoAcSd = !!ctx.sdAcAdjNou;
+  const isAcLdHd = !!ctx.hdAcLdObj;
 
   return {
     isWoTgNone,
     isWoTgVirtual,
     isWoAcSd,
-    isMultiOnHd,
+    isTgAdjLdOnHd,
     isWoAcBasic,
     acTgSet,
     tgCaps,
@@ -58,6 +59,8 @@ const derivedMain = (ctx) => {
     isWoMuhHold,
     toggleAcTg,
     isWoAcLd,
+    isWoAcDefault,
+    isAcLdHd,
   };
 };
 export default derivedMain;

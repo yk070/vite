@@ -1,13 +1,12 @@
-import React from "react";
 import look from "../style/look.jsx";
-import useMultiBooConvert from "../convert/useMultiBooConvert.jsx";
-import useMultiRunConvert from "../convert/useMultiRunConvert.jsx";
-import useMultiColConvert from "../convert/useMultiColConvert.jsx";
+import useTgAdjLdBoo from "../convert/useTgAdjLdBoo.jsx";
+import useTgAdjLdRun from "../convert/useTgAdjLdRun.jsx";
+import useTgAdjLdCol from "../convert/useTgAdjLdCol.jsx";
 
-const TgAdjLdEle = ({ title, objs }) => {
-  const boo = useMultiBooConvert({ title, objs });
-  const col = useMultiColConvert({ boo });
-  const run = useMultiRunConvert({ title, objs });
+const TgAdjLdEle = ({ props }) => {
+  const boo = useTgAdjLdBoo({ props });
+  const col = useTgAdjLdCol({ boo });
+  const run = useTgAdjLdRun({ props });
 
   return (
     <div
@@ -17,7 +16,7 @@ const TgAdjLdEle = ({ title, objs }) => {
       onMouseLeave={run.leave}
     >
       <div style={look.OftenHalf2(col)}>
-        <span style={look.multi1}>{title}</span>
+        <span style={look.multi1}>{props.title}</span>
       </div>
     </div>
   );

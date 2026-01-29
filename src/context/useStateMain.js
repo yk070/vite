@@ -1,15 +1,23 @@
 import { useState } from "react";
-const useStateMain = ({ ctx }) => {
+const useStateMain = () => {
+  const [acLdAdj, setAcLdAdj] = useState(false);
+  const [isAcLd, setIsAcLd] = useState(false);
+
+  const [hdAcLdObj, setHdAcLdObj] = useState(null);
+  const [cdAcLdObj, setCdAcLdObjs] = useState(null);
+
+  const [hdAcLdUniqueKey, setHdAcLdUniqueKey] = useState(null);
+
   const [HoverLocktg, setHoverLocktg] = useState(null);
 
-  const [hdmultiObj, setHdmultiObj] = useState(null);
+  const [hdTgAdjLdObj, setHdTgAdjLdObj] = useState(null);
 
   // current adj
   const [currentCapAc, setcurrentCapAc] = useState("none");
   const [currentAdjTg, setCurrentAdjTg] = useState("none");
   // space hold
   // multi
-  const [cdmultiObjs, setCdmultiObj] = useState({});
+  const [cdTgAdjLdObj, setCdTgAdjLdObj] = useState({});
   // selected
   const [sdAcAdjNou, setSdAcAdjNou] = useState(null);
   const [sdTgAdjNou, setSdTgAdjNou] = useState(null);
@@ -34,12 +42,22 @@ const useStateMain = ({ ctx }) => {
     setHdAdjNouAc,
     isEnterSelected,
     setisEnterSelected,
-    hdmultiObj,
-    setHdmultiObj,
+    hdTgAdjLdObj,
+    setHdTgAdjLdObj,
     HoverLocktg,
     setHoverLocktg,
-    cdmultiObjs,
-    setCdmultiObj,
+    cdTgAdjLdObj,
+    setCdTgAdjLdObj,
+    hdAcLdUniqueKey,
+    setHdAcLdUniqueKey,
+    cdAcLdObj,
+    setCdAcLdObjs,
+    hdAcLdObj,
+    setHdAcLdObj,
+    isAcLd,
+    setIsAcLd,
+    acLdAdj,
+    setAcLdAdj,
   };
 };
 export default useStateMain;

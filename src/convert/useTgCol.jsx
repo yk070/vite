@@ -10,7 +10,11 @@ const useTgCol = ({ posiId }) => {
     if (boo.isAdjNouSame) return tone.adjColor;
     if (boo.isDisabled) return tone.DisabledButtonColor;
     if (boo.isMultiPseudoHd) {
-      if (ctx.isMultiOnHd) return tone.multiOnColor;
+      if (ctx.isTgAdjLdOnHd) return tone.multiOnColor;
+      return tone.acSelectColor;
+    }
+    if (boo.isAcLdPseudoHd) {
+      // if (ctx.isTgAdjLdOnHd) return tone.multiOnColor;
       return tone.acSelectColor;
     }
     if (boo.isHd) {
@@ -42,7 +46,7 @@ const useTgCol = ({ posiId }) => {
   };
 
   const getTextColor = () => {
-    if (ctx.isMultiOnHd) return tone.TextColor;
+    if (ctx.isTgAdjLdOnHd) return tone.TextColor;
     if (boo.isMultiPseudoHd) return "black";
     return tone.TextColor;
   };

@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-const useStateHistory = ({ ctx }) => {
+const useStateHistory = () => {
   const [preferences, _setPreferences] = useState([]);
   const [historyIndex, setHistoryIndex] = useState(0); // ←初期は0
   const historyRef = useRef([[]]); // ←初期状態も履歴に登録

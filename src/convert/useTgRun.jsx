@@ -1,8 +1,7 @@
 import useCtx from "../context/useCtx.jsx";
-import TgEles from "../area/TgEles.jsx";
-import useTgBoo from "../convert/useTgBoo.jsx";
-import useTgRoo from "../convert/useTgRoo.jsx";
-const useRunConvert = ({ posiId }) => {
+import useTgBoo from "./useTgBoo.jsx";
+import useTgRoo from "./useTgRoo.jsx";
+const useTgRun = ({ posiId }) => {
   const ctx = useCtx();
   const roo = useTgRoo({ posiId });
   const boo = useTgBoo({ posiId });
@@ -39,4 +38,4 @@ const useRunConvert = ({ posiId }) => {
   return { click, hover, leave };
 };
 
-export default useRunConvert;
+export default useTgRun;

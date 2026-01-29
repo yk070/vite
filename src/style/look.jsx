@@ -862,7 +862,8 @@ const look = {
     // left: "50%",
     // width: `calc(100% - ${base} * 10)`,
     // height: `calc(100% - ${base} * 8)`,
-    backgroundColor: "yellow",
+    // backgroundColor: "yellow",
+    //  KIRIWAKE
   }),
   acLd7: {
     // flex: 1,
@@ -875,37 +876,51 @@ const look = {
     backgroundColor: "blue",
   },
   acLd12: {
-    display: "flex",
+    // display: "flex",
     position: "relative",
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: `calc(100% - ${base} * 10)`,
     height: `calc(100% - ${base} * 8)`,
-    backgroundColor: "red",
+    // backgroundColor: "red",
   },
-  acLd9: {
+  acLd17: {
+    // backgroundColor: "purple",
+    fontSize: `calc(${base} * 30)`,
+  },
+  acLd16: {
+    alignItems: "center",
+    justifyContent: "center",
+    display: "flex",
+    position: "absolute",
+    top: "0%",
+    left: "0%",
+    width: "100%",
+    height: "100%",
+    // backgroundColor: "red",
+    pointerEvents: "none", // ← これでマウスイベントを無視
+  },
+  acLd15: {
+    display: "flex",
+    position: "relative",
+    width: "100%",
+    height: "100%",
+    backgroundColor: "gray",
+  },
+  acLd9: (col) => ({
     display: "flex",
     position: "relative",
     height: "100%",
-    backgroundColor: "gray",
+    backgroundColor: col.borderColor,
+    // KIRIWAKE
     width: "100%",
-  },
-  acLd13: {
-    display: "flex",
-    position: "relative",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: `calc(100% - ${base} * 10)`,
-    height: `calc(100% - ${base} * 8)`,
-    backgroundColor: "blue",
-  },
+  }),
   acLd10: {
     display: "flex",
     width: "100%",
     height: "100%",
-    backgroundColor: "blue",
+    // backgroundColor: "purple",
     position: "relative",
   },
   acLd6: {

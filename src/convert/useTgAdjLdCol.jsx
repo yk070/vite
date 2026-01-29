@@ -1,5 +1,5 @@
 import tone from "../style/color.jsx";
-const useMultiColConvert = ({ boo }) => {
+const useTgAdjLdCol = ({ boo }) => {
   const getButtonColor = () => {
     if (boo.isSelected && !boo.isHd) return tone.AccentColor;
     if (boo.isSelected) return tone.hoveredSelectedMultiColor;
@@ -19,4 +19,4 @@ const useMultiColConvert = ({ boo }) => {
   return { buttonColor, borderColor };
 };
 
-export default useMultiColConvert;
+export default useTgAdjLdCol;

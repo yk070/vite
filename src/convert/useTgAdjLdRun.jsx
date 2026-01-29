@@ -1,15 +1,15 @@
 import useCtx from "../context/useCtx.jsx";
-const useMultiRunConvert = ({ title, objs }) => {
+const useTgAdjLdRun = ({ props }) => {
   const ctx = useCtx();
 
   const click = () => {
-    ctx.setCdmultiObj({ title, objs });
+    ctx.setCdTgAdjLdObj(props);
   };
   const hover = () => {
-    ctx.setHdmultiObj({ title, objs });
+    ctx.setHdTgAdjLdObj(props);
   };
   const leave = () => {
-    ctx.setHdmultiObj(null);
+    ctx.setHdTgAdjLdObj(null);
   };
   return {
     click,
@@ -18,4 +18,4 @@ const useMultiRunConvert = ({ title, objs }) => {
   };
 };
 
-export default useMultiRunConvert;
+export default useTgAdjLdRun;

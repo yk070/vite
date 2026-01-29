@@ -6,14 +6,16 @@ import useMultiClickObj from "./useMultiClickObj.js";
 import useStateHistory from "./useStateHistory.js";
 import derivedScript from "./derivedScript.js";
 import derivedArrow from "./derivedArrow.jsx";
+import useHdAcLd from "./useHdAcLd.js";
 
 const AppContext = createContext(null);
 export const CtxProvider = ({ children }) => {
   const ctx = {};
 
-  Object.assign(ctx, useStateMain(ctx));
-  Object.assign(ctx, useStateHistory(ctx));
-  console.log(ctx.preferences);
+  Object.assign(ctx, useStateMain());
+  Object.assign(ctx, useStateHistory());
+  // console.log(ctx.preferences);
+  console.log(ctx.isAcLd);
 
   Object.assign(ctx, derivedMain(ctx));
   Object.assign(ctx, derivedScript(ctx));
@@ -21,6 +23,7 @@ export const CtxProvider = ({ children }) => {
 
   usePreferences(ctx);
   useMultiClickObj(ctx);
+  useHdAcLd(ctx);
 
   return <AppContext.Provider value={ctx}>{children}</AppContext.Provider>;
 };

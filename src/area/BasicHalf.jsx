@@ -5,7 +5,7 @@ import BasicEle from "./BasicEle.jsx";
 
 const BasicHalf = ({ basicProps }) => {
   const ctx = useCtx();
-  const currentBasicObj = basicObj[ctx.currentCapAc][basicProps] ?? {};
+  const currentBasicObj = basicObj[ctx.currentCapAc][basicProps];
 
   return (
     <div style={look.Often1}>

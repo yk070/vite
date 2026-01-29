@@ -20,7 +20,7 @@ const acLdObj = {
             ease: 1,
           },
         ],
-        ctrl: [
+        space: [
           // {
           //   acTgObjs: [{ ac: "none*enter", tg: "space*tab" }],
           //   ease: 0,
@@ -30,17 +30,17 @@ const acLdObj = {
             ease: 0,
           },
           {
-            acTgObjs: [{ ac: "none*enter", tg: "space*shift" }],
+            acTgObjs: [{ ac: "none*enter", tg: "space*leftShift" }],
             ease: 0,
           },
           {
-            acTgObjs: [{ ac: "none*enter", tg: "space*ctrl" }],
+            acTgObjs: [{ ac: "none*enter", tg: "space*leftCtrl" }],
             ease: 1,
           },
         ],
       },
       window切替: {
-        none: [
+        space: [
           {
             acTgObjs: [
               { ac: "win*one", tg: "space*r" },
@@ -50,13 +50,21 @@ const acLdObj = {
           },
           {
             acTgObjs: [
-              { ac: "win*one", tg: "space*1" },
-              { ac: "win*two", tg: "space*2" },
+              { ac: "win*one", tg: "space*one" },
+              { ac: "win*two", tg: "space*two" },
             ],
             ease: 1,
           },
         ],
-        ctrl: [],
+        ctrl: [
+          {
+            acTgObjs: [
+              { ac: "win*one", tg: "ctrl*one" },
+              { ac: "win*two", tg: "ctrl*two" },
+            ],
+            ease: 1,
+          },
+        ],
       },
     },
     right: {},
