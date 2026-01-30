@@ -43,7 +43,7 @@ const useTgBoo = ({ posiId }) => {
   const isCursorPointer = !isDisabled && ctx.isWoAcSd && !isAdjNouSame;
 
   const isMultiPseudoHd = !!roo.tgAdjLdHdAcAdjNou;
-  const isAcLdPseudoHd = !!roo.acLdHdAcAdjNou;
+  const isAcLdHdPseudoHd = !!roo.acLdHdAcAdjNou;
   // const isMultiCd = !!roo.multiCdAcAdjNou && !ctx.cdTgAdjLdObj.isPickedBlock;
 
   const easeLevelObj = easeObj[ctx.currentAdjTg];
@@ -76,7 +76,7 @@ const useTgBoo = ({ posiId }) => {
     isSoSpaHold,
     isSoMuhHold,
     isHomeNoun,
-    isAcLdPseudoHd,
+    isAcLdHdPseudoHd,
   };
 };
 

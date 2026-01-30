@@ -1,16 +1,19 @@
 import { useEffect, useRef } from "react";
 
 const useHdAcLd = (ctx) => {
-  const prevAdjTgRef = useRef("none");
+  const prevFalseAdjTgRef = useRef("none");
+  // console.log(ctx.isAcLdHd, prevFalseAdjTgRef.current);
+
   useEffect(() => {
-    // if (ctx.hdAcLdObj?.adj === "space") return;
-    if (ctx.isAcLd) {
-      if (!ctx.isAcLdHd) prevAdjTgRef.current = ctx.currentAdjTg;
-      ctx.setCurrentAdjTg(ctx.acLdAdj);
-      return;
+    if (ctx.acLdAdj) ctx.setCurrentAdjTg(ctx.acLdAdj);
+  }, [ctx.acLdAdj]);
+
+  useEffect(() => {
+    if (ctx.isAcLdHd) {
+      prevFalseAdjTgRef.current = ctx.currentAdjTg;
     }
-    ctx.setCurrentAdjTg(prevAdjTgRef.current);
-  }, [ctx.hdAcLdObj?.adj]);
+    ctx.setCurrentAdjTg(prevFalseAdjTgRef.current);
+  }, [ctx.isAcLdHd]);
 };
 
 export default useHdAcLd;

@@ -1,8 +1,8 @@
 import useCtx from "../context/useCtx.jsx";
-const useAcLdBoo = ({ props }) => {
+const useAcLdBoo = ({ props2 }) => {
   const ctx = useCtx();
 
-  const isHd = ctx.hdAcLdObj?.uniqueKey === props.uniqueKey;
+  const isHd = ctx.hdAcLdObj?.uniqueKey === props2.uniqueKey;
   return { isHd };
 };
 

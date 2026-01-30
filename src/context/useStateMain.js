@@ -1,7 +1,7 @@
 import { useState } from "react";
 const useStateMain = () => {
   const [acLdAdj, setAcLdAdj] = useState(false);
-  const [isAcLd, setIsAcLd] = useState(false);
+  const [isAcLdHd, setIsAcLdHd] = useState(false);
 
   const [hdAcLdObj, setHdAcLdObj] = useState(null);
   const [cdAcLdObj, setCdAcLdObjs] = useState(null);
@@ -54,8 +54,8 @@ const useStateMain = () => {
     setCdAcLdObjs,
     hdAcLdObj,
     setHdAcLdObj,
-    isAcLd,
-    setIsAcLd,
+    isAcLdHd,
+    setIsAcLdHd,
     acLdAdj,
     setAcLdAdj,
   };

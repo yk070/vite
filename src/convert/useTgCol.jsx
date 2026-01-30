@@ -13,7 +13,7 @@ const useTgCol = ({ posiId }) => {
       if (ctx.isTgAdjLdOnHd) return tone.multiOnColor;
       return tone.acSelectColor;
     }
-    if (boo.isAcLdPseudoHd) {
+    if (boo.isAcLdHdPseudoHd) {
       // if (ctx.isTgAdjLdOnHd) return tone.multiOnColor;
       return tone.acSelectColor;
     }

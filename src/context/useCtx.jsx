@@ -15,7 +15,8 @@ export const CtxProvider = ({ children }) => {
   Object.assign(ctx, useStateMain());
   Object.assign(ctx, useStateHistory());
   // console.log(ctx.preferences);
-  console.log(ctx.isAcLd);
+  // console.log(ctx.currentAdjTg);
+  // console.log(ctx.isAcLdHd);
 
   Object.assign(ctx, derivedMain(ctx));
   Object.assign(ctx, derivedScript(ctx));

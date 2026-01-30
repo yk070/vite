@@ -6,13 +6,13 @@ import useAcLdCol from "../convert/useAcLdCol.jsx";
 import useAcLdRun from "../convert/useAcLdRun.jsx";
 import useAcLdLab from "../convert/useAcLdLab.jsx";
 
-const AcLdEle = ({ props }) => {
+const AcLdEle = ({ props2 }) => {
   const ctx = useCtx();
-  // const roo = useAcLdRoo({ props });
-  const boo = useAcLdBoo({ props });
-  const col = useAcLdCol({ props });
-  const run = useAcLdRun({ props });
-  const lab = useAcLdLab({ props });
+  // const roo = useAcLdRoo({ props2 });
+  const boo = useAcLdBoo({ props2 });
+  const col = useAcLdCol({ props2 });
+  const run = useAcLdRun({ props2 });
+  const lab = useAcLdLab({ props2 });
 
   return (
     <div

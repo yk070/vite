@@ -19,12 +19,13 @@ const AcTg = () => {
             <span style={look.multi2}>{"おすすめ一括設定"}</span>
           </div>
           <div style={look.ac5}>
-            {Object.entries(tgAdjLdObj[ctx.currentAdjTg]).map(
-              ([title, objs]) => {
-                const props = { title, objs };
-                return <TgAdjLdEle key={title} props={props} />;
-              },
-            )}
+            {!ctx.isAcLdHd &&
+              Object.entries(tgAdjLdObj[ctx.currentAdjTg]).map(
+                ([title, objs]) => {
+                  const props = { title, objs };
+                  return <TgAdjLdEle key={title} props={props} />;
+                },
+              )}
           </div>
         </div>
       </div>

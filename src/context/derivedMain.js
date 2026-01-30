@@ -44,7 +44,7 @@ const derivedMain = (ctx) => {
   const isWoAcBasic = notAdjAcCaps?.includes(ctx.currentCapAc);
   const isWoAcDefault = defaultAdjs?.includes(ctx.currentCapAc);
   const isWoAcSd = !!ctx.sdAcAdjNou;
-  const isAcLdHd = !!ctx.hdAcLdObj;
+  const hasAcLdObj = !!ctx.hdAcLdObj;
 
   return {
     isWoTgNone,
@@ -60,7 +60,7 @@ const derivedMain = (ctx) => {
     toggleAcTg,
     isWoAcLd,
     isWoAcDefault,
-    isAcLdHd,
+    hasAcLdObj,
   };
 };
 export default derivedMain;
