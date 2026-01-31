@@ -10,7 +10,8 @@ import useCapable from "./useCapable.js";
 import notUseTgCaps from "./notUseTgCaps.js";
 
 const AppContext = createContext(null);
-export const CtxProvider = ({ children }) => {
+
+const CtxProvider = ({ children }) => {
   const ctx = {};
 
   Object.assign(ctx, useMain());
@@ -31,4 +32,5 @@ export const CtxProvider = ({ children }) => {
 
 const useCtx = () => useContext(AppContext);
 
+export { CtxProvider };
 export default useCtx;
