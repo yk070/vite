@@ -4,7 +4,8 @@ import useTgCol from "../convert/useTgCol.jsx";
 import useTgRun from "../convert/useTgRun.jsx";
 import useTgRoo from "../convert/useTgRoo.jsx";
 import look from "../style/look.jsx";
-import MultiCircleDiv from "../area/MultiCircle.jsx";
+import MultiCircle from "../area/MultiCircle.jsx";
+
 const TgEle = ({ posiId, styleObj }) => {
   const roo = useTgRoo({ posiId });
   const boo = useTgBoo({ posiId });
@@ -24,7 +25,7 @@ const TgEle = ({ posiId, styleObj }) => {
       <div style={look.tgButton2(col)}>
         <span style={look.tgButton3(col)}>{lab.label}</span>
         <span style={look.tgButton8}>
-          <MultiCircleDiv level={boo.level} />
+          <MultiCircle level={boo.level} circleColor={col.circleColor} />
         </span>
         {boo.isHomeNoun && <div style={look.tgButton12}></div>}
       </div>

@@ -9,7 +9,7 @@ const AlphaNumBlock = ({ derive }) => {
   if (
     (derive === "tg" && (ctx.isWoTgNone || ctx.isWoTgShift)) ||
     (derive === "ac" && ctx.isWoAcBasic) ||
-    ctx.isWoAcLd
+    ctx.isWoCapable
   )
     return;
   return (

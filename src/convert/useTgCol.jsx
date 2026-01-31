@@ -9,12 +9,12 @@ const useTgCol = ({ posiId }) => {
   const getButtonColor = () => {
     if (boo.isAdjNouSame) return tone.adjColor;
     if (boo.isDisabled) return tone.DisabledButtonColor;
-    if (boo.isMultiPseudoHd) {
-      if (ctx.isTgAdjLdOnHd) return tone.multiOnColor;
+    if (boo.isStablePseudoHd) {
+      if (ctx.isStableOnHd) return tone.multiOnColor;
       return tone.acSelectColor;
     }
-    if (boo.isAcLdHdPseudoHd) {
-      // if (ctx.isTgAdjLdOnHd) return tone.multiOnColor;
+    if (boo.isCapableHdPseudoHd) {
+      // if (ctx.isStableOnHd) return tone.multiOnColor;
       return tone.acSelectColor;
     }
     if (boo.isHd) {
@@ -35,6 +35,8 @@ const useTgCol = ({ posiId }) => {
   };
 
   const getBorderColor = () => {
+    if (boo.isCapablePseudoHd) return "blue";
+    if (boo.isCapableBlockPseudoHd) return "white";
     if (ctx.isWoAcSd && !boo.isDisabled && boo.isHd) return tone.acSelectColor;
 
     if (boo.isHd) {
@@ -46,11 +48,18 @@ const useTgCol = ({ posiId }) => {
   };
 
   const getTextColor = () => {
-    if (ctx.isTgAdjLdOnHd) return tone.TextColor;
-    if (boo.isMultiPseudoHd) return "black";
+    if (ctx.isStableOnHd) return tone.TextColor;
+    if (boo.isStablePseudoHd) return "black";
+    if (boo.isCapablePseudoHd) return "black";
     return tone.TextColor;
   };
 
+  const getCircleColor = () => {
+    if (boo.isCapablePseudoHd) return "black";
+    return tone.TextColor;
+  };
+
+  const circleColor = getCircleColor();
   const buttonColor = getButtonColor();
   const borderColor = getBorderColor();
   const textColor = getTextColor();
@@ -58,6 +67,7 @@ const useTgCol = ({ posiId }) => {
     buttonColor,
     borderColor,
     textColor,
+    circleColor,
   };
 };
 

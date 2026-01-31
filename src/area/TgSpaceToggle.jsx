@@ -9,13 +9,13 @@ const TgSpaceToggle = () => {
 
   return (
     <span style={look.tg3}>
-      <span style={look.tg5} onClick={() => ctx.toggleAcTg("spaceHold")}>
+      <span style={look.tg5} onClick={() => ctx.toggleVirtual("space")}>
         <span>{"Space 修飾キー化"}</span>
-        <Toggle value={ctx.preferences.includes("spaceHold")} />
+        <Toggle value={ctx.preferences.includes("space")} />
       </span>
-      <span style={look.tg5} onClick={() => ctx.toggleAcTg("muhHold")}>
+      <span style={look.tg5} onClick={() => ctx.toggleVirtual("muhenkan")}>
         <span>{"無変換 修飾キー化"}</span>
-        <Toggle value={ctx.preferences.includes("muhHold")} />
+        <Toggle value={ctx.preferences.includes("muhenkan")} />
       </span>
     </span>
   );

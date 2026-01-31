@@ -1,4 +1,4 @@
-const tgAdjLdObj = {
+const stableObj = {
   none: {
     左寄せ多数: [
       { ac: "none*tab", tg: "none*esc" },
@@ -72,7 +72,7 @@ const tgAdjLdObj = {
     デリート: [{ ac: "none*delete", tg: "space*leftCtrl" }],
   },
 };
-export default tgAdjLdObj;
+export default stableObj;
 
 // Tab進退: [
 //   { ac: "none*tab", tg: "space*tab" },

@@ -1,40 +1,40 @@
-const acLdObj = {
-  acLd1: {
+const capableObj = {
+  capable1: {
     left: {
       Enter: {
         none: [
           {
-            acTgObjs: [{ ac: "none*enter", tg: "none*hankaku" }],
+            objs: [{ ac: "none*enter", tg: "none*hankaku" }],
             ease: 0,
           },
           {
-            acTgObjs: [{ ac: "none*enter", tg: "none*tab" }],
+            objs: [{ ac: "none*enter", tg: "none*tab" }],
             ease: 1,
           },
           {
-            acTgObjs: [{ ac: "none*enter", tg: "none*capslock" }],
+            objs: [{ ac: "none*enter", tg: "none*capslock" }],
             ease: 1,
           },
           {
-            acTgObjs: [{ ac: "none*enter", tg: "none*muhenkan" }],
+            objs: [{ ac: "none*enter", tg: "none*muhenkan" }],
             ease: 1,
           },
         ],
         space: [
           // {
-          //   acTgObjs: [{ ac: "none*enter", tg: "space*tab" }],
+          //   objs: [{ ac: "none*enter", tg: "space*tab" }],
           //   ease: 0,
           // },
           {
-            acTgObjs: [{ ac: "none*enter", tg: "space*capslock" }],
+            objs: [{ ac: "none*enter", tg: "space*capslock" }],
             ease: 0,
           },
           {
-            acTgObjs: [{ ac: "none*enter", tg: "space*leftShift" }],
+            objs: [{ ac: "none*enter", tg: "space*leftShift" }],
             ease: 0,
           },
           {
-            acTgObjs: [{ ac: "none*enter", tg: "space*leftCtrl" }],
+            objs: [{ ac: "none*enter", tg: "space*leftCtrl" }],
             ease: 1,
           },
         ],
@@ -42,14 +42,15 @@ const acLdObj = {
       window切替: {
         space: [
           {
-            acTgObjs: [
+            objs: [
               { ac: "win*one", tg: "space*r" },
               { ac: "win*two", tg: "space*e" },
+              { ac: "win*three", tg: "space*one" },
             ],
             ease: 1,
           },
           {
-            acTgObjs: [
+            objs: [
               { ac: "win*one", tg: "space*one" },
               { ac: "win*two", tg: "space*two" },
             ],
@@ -58,7 +59,7 @@ const acLdObj = {
         ],
         ctrl: [
           {
-            acTgObjs: [
+            objs: [
               { ac: "win*one", tg: "ctrl*one" },
               { ac: "win*two", tg: "ctrl*two" },
             ],
@@ -70,4 +71,4 @@ const acLdObj = {
     right: {},
   },
 };
-export default acLdObj;
+export default capableObj;

@@ -9,15 +9,14 @@ const useTgRoo = ({ posiId }) => {
     (obj) => obj.tg === originAdjNou,
   )?.ac;
 
-  const tgAdjLdHdAcAdjNou = ctx.hdTgAdjLdObj?.objs?.find(
+  const stableHdAcAdjNou = ctx.hdStableObj?.objs?.find(
     (obj) => obj.tg === originAdjNou,
   )?.ac;
-  // console.log(ctx.hdAcLdObj?.adjObj?.acTgObjs);
-  const acLdHdAcAdjNou = ctx.hdAcLdObj?.acTgObjs?.find(
+  const capableHdAcAdjNou = ctx.hdCapableObjs?.find(
     (obj) => obj.tg === originAdjNou,
   )?.ac;
-  const cdMultiList = Array.isArray(ctx.cdTgAdjLdObj?.objs)
-    ? ctx.cdTgAdjLdObj?.objs
+  const cdMultiList = Array.isArray(ctx.cdStableObjs?.objs)
+    ? ctx.cdStableObjs?.objs
     : [];
   const multiCdAcAdjNou = cdMultiList?.find(
     (cdmultiObj) => cdmultiObj.tg === originAdjNou,
@@ -27,9 +26,9 @@ const useTgRoo = ({ posiId }) => {
     originNou,
     originAdjNou,
     assignAdjNou,
-    tgAdjLdHdAcAdjNou,
+    stableHdAcAdjNou,
     multiCdAcAdjNou,
-    acLdHdAcAdjNou,
+    capableHdAcAdjNou,
   };
 };
 

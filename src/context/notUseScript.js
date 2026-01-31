@@ -1,7 +1,7 @@
 import convAcScript from "../../ahk/commentOut/convAcScript.jsx";
 import convTgScript from "../convert/convTgScript.jsx";
 
-export const derivedScript = (ctx) => {
+export const notUseScript = (ctx) => {
   const scriptLines = ctx.preferences?.map((item) => {
     if (typeof item === "object" && item !== null) {
       const { ac, tg } = item;
@@ -26,4 +26,4 @@ export const derivedScript = (ctx) => {
   return { script };
 };
 
-export default derivedScript;
+export default notUseScript;

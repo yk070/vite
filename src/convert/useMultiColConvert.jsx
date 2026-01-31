@@ -1,5 +1,5 @@
 import tone from "../style/color.jsx";
-const useTgAdjLdCol = ({ boo }) => {
+const useStableCol = ({ boo }) => {
   const getButtonColor = () => {
     if (boo.isSelected && !boo.isHd) return tone.AccentColor;
     if (boo.isSelected) return tone.hoveredSelectedMultiColor;
@@ -19,4 +19,4 @@ const useTgAdjLdCol = ({ boo }) => {
   return { buttonColor, borderColor };
 };
 
-export default useTgAdjLdCol;
+export default useStableCol;

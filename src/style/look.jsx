@@ -784,7 +784,7 @@ const look = {
     // backgroundColor: "blue", // デバッグ用（あとで消す）
     backgroundColor: col.borderColor,
   }),
-  acLd4: (col) => ({
+  capable4: (col) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -795,7 +795,7 @@ const look = {
     // backgroundColor: "blue", // デバッグ用（あとで消す）
     backgroundColor: col.borderColor,
   }),
-  acLd3: {
+  capable3: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -806,7 +806,7 @@ const look = {
     // backgroundColor: "blue", // デバッグ用（あとで消す）
     // backgroundColor: col.borderColor,
   },
-  acLd2: {
+  capable2: {
     flex: 1,
     display: "grid",
     // gap: `calc(${base} * 4)`,
@@ -839,7 +839,7 @@ const look = {
     width: `calc(${base} * 80)`,
     height: "100%",
   },
-  acLd5: {
+  capable5: {
     display: "flex",
     alignItems: "center", // 縦中央
     // paddingLeft: `calc(${base} * 3)`,
@@ -852,9 +852,9 @@ const look = {
     height: "100%",
     minWidth: 0,
   },
-  acLd8: (foo) => ({
+  capable8: (length, col) => ({
     // display: "flex",
-    flex: foo,
+    flex: length,
     minWidth: 0,
     position: "relative",
     // transform: "translate(-50%, -50%)",
@@ -862,10 +862,10 @@ const look = {
     // left: "50%",
     // width: `calc(100% - ${base} * 10)`,
     // height: `calc(100% - ${base} * 8)`,
-    // backgroundColor: "yellow",
+    backgroundColor: col.borderColor,
     //  KIRIWAKE
   }),
-  acLd7: {
+  capable7: (col) => ({
     // flex: 1,
     position: "relative",
     top: "50%",
@@ -873,9 +873,10 @@ const look = {
     transform: "translate(-50%, -50%)",
     width: `calc(100% - ${base} * 10)`,
     height: `calc(100% - ${base} * 8)`,
-    backgroundColor: "blue",
-  },
-  acLd12: {
+    backgroundColor: "darkgray",
+    // col.buttonColor,
+  }),
+  capable12: {
     // display: "flex",
     position: "relative",
     top: "50%",
@@ -885,11 +886,11 @@ const look = {
     height: `calc(100% - ${base} * 8)`,
     // backgroundColor: "red",
   },
-  acLd17: {
+  capable17: {
     // backgroundColor: "purple",
     fontSize: `calc(${base} * 30)`,
   },
-  acLd16: {
+  capable16: {
     alignItems: "center",
     justifyContent: "center",
     display: "flex",
@@ -901,14 +902,14 @@ const look = {
     // backgroundColor: "red",
     pointerEvents: "none", // ← これでマウスイベントを無視
   },
-  acLd15: {
+  capable15: {
     display: "flex",
     position: "relative",
     width: "100%",
     height: "100%",
     backgroundColor: "gray",
   },
-  acLd9: (col) => ({
+  capable9: (col) => ({
     display: "flex",
     position: "relative",
     height: "100%",
@@ -916,20 +917,20 @@ const look = {
     // KIRIWAKE
     width: "100%",
   }),
-  acLd10: {
+  capable10: {
     display: "flex",
     width: "100%",
     height: "100%",
     // backgroundColor: "purple",
     position: "relative",
   },
-  acLd6: {
+  capable6: {
     display: "flex",
     flex: 1,
     backgroundColor: "blue",
     minWidth: 0,
   },
-  acLd11: {
+  capable11: {
     display: "flex",
     position: "relative",
     top: "50%",
@@ -971,7 +972,7 @@ const look = {
     justifyContent: "center",
   }),
 
-  acLd1: {
+  capable1: {
     position: "relative",
     width: "100%",
     height: "100%",
@@ -1012,7 +1013,7 @@ const look = {
     width: "100%",
     height: "100%",
     flexDirection: "column",
-    // backgroundColor: "red",
+    // backgroundColor: "gray",
   },
 };
 

@@ -2,7 +2,7 @@ import convPosition from "../convert/convPosition.jsx";
 import nouLabelObj from "../obj/nouLabelObj.js";
 import ConvLabel from "../convert/ConvLabel.jsx";
 
-export const derivedArrow = (ctx) => {
+export const notUseArrow = (ctx) => {
   const hdAdjNouTgLabel = <ConvLabel adjNou={ctx.hdAdjNouTg} />;
 
   const [hdAdj, hdNou] = ctx.hdAdjNouTg?.split("*") ?? [];
@@ -53,4 +53,4 @@ export const derivedArrow = (ctx) => {
   };
 };
 
-export default derivedArrow;
+export default notUseArrow;

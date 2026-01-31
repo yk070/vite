@@ -1,8 +1,8 @@
-import tgAdjLdObj from "../obj/tgAdjLdObj.js";
+import stableObj from "../obj/stableObj.js";
 
 const oftenObjConvert = (adj, blockTitle, smallTitle) => {
   return (
-    tgAdjLdObj?.[adj]?.[blockTitle]?.mediumObj?.[smallTitle]?.miniObjs ?? []
+    stableObj?.[adj]?.[blockTitle]?.mediumObj?.[smallTitle]?.miniObjs ?? []
   );
 };
 

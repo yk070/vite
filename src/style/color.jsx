@@ -1,4 +1,7 @@
 const Colors = {
+  capableEasyColor: "#555555",
+  capableNormalColor: "#888888",
+  capableBlockHdColor: "#8E8B82",
   acSelectColor: "#FFE97A",
 
   violetTextColor: "#6B5FD2",

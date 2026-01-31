@@ -11,7 +11,7 @@ const Copy = () => {
         await navigator.clipboard.writeText(text);
         return;
       } catch (e) {
-        // console.warn("Clipboard API 失敗、フォールバック", e);
+        //
       }
     }
 

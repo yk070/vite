@@ -3,8 +3,8 @@ import look from "../style/look.jsx";
 import Ac from "./Ac.jsx";
 import Tg from "./Tg.jsx";
 import useCtx from "../context/useCtx.jsx";
-import tgAdjLdObj from "../obj/tgAdjLdObj.js";
-import TgAdjLdEle from "./TgAdjLdEle.jsx";
+import stableObj from "../obj/stableObj.js";
+import StableEle from "./StableEle.jsx";
 
 const AcTg = () => {
   const ctx = useCtx();
@@ -19,11 +19,11 @@ const AcTg = () => {
             <span style={look.multi2}>{"おすすめ一括設定"}</span>
           </div>
           <div style={look.ac5}>
-            {!ctx.isAcLdHd &&
-              Object.entries(tgAdjLdObj[ctx.currentAdjTg]).map(
+            {!ctx.isCapableAreaHd &&
+              Object.entries(stableObj[ctx.currentAdjTg]).map(
                 ([title, objs]) => {
                   const props = { title, objs };
-                  return <TgAdjLdEle key={title} props={props} />;
+                  return <StableEle key={title} props={props} />;
                 },
               )}
           </div>

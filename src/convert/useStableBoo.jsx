@@ -1,8 +1,8 @@
 import useCtx from "../context/useCtx.jsx";
-const useTgAdjLdBoo = ({ props }) => {
+const useStableBoo = ({ props }) => {
   const ctx = useCtx();
 
-  const isHd = props.title === ctx.hdTgAdjLdObj?.title;
+  const isHd = props.title === ctx.hdStableObj?.title;
   const isSelected = props.objs.every((obj) =>
     ctx.acTgSet.has(`${obj.ac}|${obj.tg}`),
   );
@@ -10,4 +10,4 @@ const useTgAdjLdBoo = ({ props }) => {
   return { isHd, isSelected };
 };
 
-export default useTgAdjLdBoo;
+export default useStableBoo;

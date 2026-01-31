@@ -13,7 +13,8 @@ const useTgLab = ({ posiId }) => {
   const originKeyLabel = nouLabelObj[roo.originNou];
   const originAdjNouLabel = <ConvLabel adjNou={roo.originAdjNou} />;
   const assignAdjNouLabel = <ConvLabel adjNou={roo.assignAdjNou} />;
-  const tgAdjLdHdAcAdjNouLabel = <ConvLabel adjNou={roo.tgAdjLdHdAcAdjNou} />;
+  const stableHdAcAdjNouLabel = <ConvLabel adjNou={roo.stableHdAcAdjNou} />;
+  const capableHdAcAdjNouLabel = <ConvLabel adjNou={roo.capableHdAcAdjNou} />;
 
   const emptyLabel = (
     <>
@@ -28,8 +29,8 @@ const useTgLab = ({ posiId }) => {
   );
 
   const getLabel = () => {
-    if (boo.isMultiPseudoHd) return tgAdjLdHdAcAdjNouLabel;
-
+    if (boo.isStablePseudoHd) return stableHdAcAdjNouLabel;
+    if (boo.isCapablePseudoHd) return capableHdAcAdjNouLabel;
     if (boo.isHd) {
       if (ctx.isWoAcSd) {
         if (boo.isAssigned) return assignAdjNouLabel;

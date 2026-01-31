@@ -42,13 +42,20 @@ const useTgBoo = ({ posiId }) => {
 
   const isCursorPointer = !isDisabled && ctx.isWoAcSd && !isAdjNouSame;
 
-  const isMultiPseudoHd = !!roo.tgAdjLdHdAcAdjNou;
-  const isAcLdHdPseudoHd = !!roo.acLdHdAcAdjNou;
-  // const isMultiCd = !!roo.multiCdAcAdjNou && !ctx.cdTgAdjLdObj.isPickedBlock;
+  const isStablePseudoHd = !!roo.stableHdAcAdjNou;
+  const isCapablePseudoHd = !!roo.capableHdAcAdjNou;
+  const isCapableHdPseudoHd = !!roo.capableHdAcAdjNou;
 
+  const isCapableBlockPseudoHd = ctx.hdCapableAdjNous?.includes(
+    roo.originAdjNou,
+  );
   const easeLevelObj = easeObj[ctx.currentAdjTg];
   function getLevel() {
-    if (!ctx.isWoAcSd || isSoVirtualHold || isDisabled || isAssigned) return "";
+    if (
+      (!ctx.isWoAcSd || isSoVirtualHold || isDisabled || isAssigned) &&
+      !isCapableBlockPseudoHd
+    )
+      return "";
     const entry = Object.entries(easeLevelObj)?.find(([_, nous]) =>
       nous?.includes(roo.originNou),
     );
@@ -68,7 +75,7 @@ const useTgBoo = ({ posiId }) => {
     isRemoteHovered,
     isEmptyLabel,
     isCursorPointer,
-    isMultiPseudoHd,
+    isStablePseudoHd,
     isUnusable,
     isVacant,
     level,
@@ -76,7 +83,9 @@ const useTgBoo = ({ posiId }) => {
     isSoSpaHold,
     isSoMuhHold,
     isHomeNoun,
-    isAcLdHdPseudoHd,
+    isCapableHdPseudoHd,
+    isCapablePseudoHd,
+    isCapableBlockPseudoHd,
   };
 };
 

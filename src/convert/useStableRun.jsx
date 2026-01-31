@@ -1,15 +1,15 @@
 import useCtx from "../context/useCtx.jsx";
-const useTgAdjLdRun = ({ props }) => {
+const useStableRun = ({ props }) => {
   const ctx = useCtx();
 
   const click = () => {
-    ctx.setCdTgAdjLdObj(props);
+    ctx.setCdStableObjs(props.objs);
   };
   const hover = () => {
-    ctx.setHdTgAdjLdObj(props);
+    ctx.setHdStableObj(props);
   };
   const leave = () => {
-    ctx.setHdTgAdjLdObj(null);
+    ctx.setHdStableObj(null);
   };
   return {
     click,
@@ -18,4 +18,4 @@ const useTgAdjLdRun = ({ props }) => {
   };
 };
 
-export default useTgAdjLdRun;
+export default useStableRun;

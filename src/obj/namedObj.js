@@ -5,6 +5,27 @@ const adjPosiIdObjObj = Object.fromEntries(
   allAdjs.map((index) => [index, structuredClone(posiIdObj)]),
 );
 
+const levelConfig = {
+  first: {
+    layers: 1,
+    stroke: 20,
+    topMultiplier: -1,
+    rightMultiplier: -11,
+  },
+  second: {
+    layers: 1,
+    stroke: 10,
+    topMultiplier: 2,
+    rightMultiplier: -29,
+  },
+  third: {
+    layers: 1,
+    stroke: 1,
+    topMultiplier: 4,
+    rightMultiplier: -36,
+  },
+};
+
 const acScriptAdjObj = {
   none: "",
   ctrl: "^",
@@ -53,8 +74,8 @@ const adjLineObj = {
   muhenkan: "muhenkan",
 };
 const acCapLabelObj = {
-  acLd1: "一括1",
-  acLd2: "一括2",
+  capable1: "一括1",
+  capable2: "一括2",
   basic1: "基本1",
   basic2: "基本2",
   none: "None",
@@ -82,4 +103,5 @@ export {
   adjScObj,
   adjAdjectiveNousObj,
   adjLineObj,
+  levelConfig,
 };

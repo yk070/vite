@@ -13,8 +13,8 @@ const useTgRun = ({ posiId }) => {
   };
 
   const click = () => {
-    if (boo.isSoSpaHold) ctx.toggleAcTg("spaceHold");
-    if (boo.isSoMuhHold) ctx.toggleAcTg("muhHold");
+    if (boo.isSoSpaHold) ctx.toggleVirtual("space");
+    if (boo.isSoMuhHold) ctx.toggleVirtual("muhenkan");
     if (boo.isDisabled || (boo.isVacant && !ctx.isWoAcSd)) return;
     if (ctx.sdAcAdjNou) {
       if (boo.isAssigned) remove();

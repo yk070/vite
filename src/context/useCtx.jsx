@@ -1,30 +1,30 @@
 import { createContext, useContext } from "react";
-import useStateMain from "./useStateMain.js";
-import derivedMain from "./derivedMain.js";
+import useMain from "./useMain.js";
+import notUseMain from "./notUseMain.js";
 import usePreferences from "./usePreferences.js";
-import useMultiClickObj from "./useMultiClickObj.js";
-import useStateHistory from "./useStateHistory.js";
-import derivedScript from "./derivedScript.js";
-import derivedArrow from "./derivedArrow.jsx";
-import useHdAcLd from "./useHdAcLd.js";
+import useCdStableObj from "./useCdStableObj.js";
+import useHistory from "./useHistory.js";
+import notUseScript from "./notUseScript.js";
+import notUseArrow from "./notUseArrow.jsx";
+import useCapable from "./useCapable.js";
+import notUseTgCaps from "./notUseTgCaps.js";
 
 const AppContext = createContext(null);
 export const CtxProvider = ({ children }) => {
   const ctx = {};
 
-  Object.assign(ctx, useStateMain());
-  Object.assign(ctx, useStateHistory());
+  Object.assign(ctx, useMain());
+  Object.assign(ctx, useHistory());
   // console.log(ctx.preferences);
-  // console.log(ctx.currentAdjTg);
-  // console.log(ctx.isAcLdHd);
 
-  Object.assign(ctx, derivedMain(ctx));
-  Object.assign(ctx, derivedScript(ctx));
-  Object.assign(ctx, derivedArrow(ctx));
+  Object.assign(ctx, notUseMain(ctx));
+  Object.assign(ctx, notUseTgCaps(ctx));
+  Object.assign(ctx, notUseScript(ctx));
+  Object.assign(ctx, notUseArrow(ctx));
 
   usePreferences(ctx);
-  useMultiClickObj(ctx);
-  useHdAcLd(ctx);
+  useCapable(ctx);
+  useCdStableObj(ctx);
 
   return <AppContext.Provider value={ctx}>{children}</AppContext.Provider>;
 };

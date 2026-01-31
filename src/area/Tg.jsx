@@ -7,7 +7,7 @@ import Arrow from "./Arrow.jsx";
 import TgLines from "./TgLines.jsx";
 import TgSpaceToggle from "./TgSpaceToggle.jsx";
 import TgCap from "./TgCap.jsx";
-import AcTg from "./AcTg.jsx";
+
 const Tg = () => {
   const ctx = useCtx();
   const containerRef = React.useRef(null);
