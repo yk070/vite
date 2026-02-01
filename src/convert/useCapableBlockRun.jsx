@@ -1,11 +1,11 @@
 import useCtx from "../context/useCtx.jsx";
 import useCapableBlockRoo from "../convert/useCapableBlockRoo.jsx";
-const useCapableBlockRun = ({ props }) => {
+const useCapableBlockRun = ({ pHalf }) => {
   const ctx = useCtx();
-  const roo = useCapableBlockRoo({ props });
+  const roo = useCapableBlockRoo({ pHalf });
 
   const hover = () => {
-    ctx.setHdCapableBlockObj(roo.props3);
+    ctx.setHdCapableBlockObj(roo.hdObj);
   };
 
   const leave = () => {

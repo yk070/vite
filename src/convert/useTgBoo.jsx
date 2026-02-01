@@ -43,8 +43,8 @@ const useTgBoo = ({ posiId }) => {
   const isCursorPointer = !isDisabled && ctx.isWoAcSd && !isAdjNouSame;
 
   const isStablePseudoHd = !!roo.stableHdAcAdjNou;
+
   const isCapablePseudoHd = !!roo.capableHdAcAdjNou;
-  const isCapableHdPseudoHd = !!roo.capableHdAcAdjNou;
 
   const isCapableBlockPseudoHd = ctx.hdCapableAdjNous?.includes(
     roo.originAdjNou,
@@ -63,6 +63,7 @@ const useTgBoo = ({ posiId }) => {
   }
   const level = getLevel();
   const isHomeNoun = ["f", "j"].includes(roo.originNou);
+
   return {
     isAssigned,
     isSoVirtualHold,
@@ -83,7 +84,6 @@ const useTgBoo = ({ posiId }) => {
     isSoSpaHold,
     isSoMuhHold,
     isHomeNoun,
-    isCapableHdPseudoHd,
     isCapablePseudoHd,
     isCapableBlockPseudoHd,
   };

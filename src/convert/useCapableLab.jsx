@@ -1,5 +1,5 @@
 import useCtx from "../context/useCtx.jsx";
-const useCapableBoo = ({ props2 }) => {
+const useCapableBoo = ({ pBlock }) => {
   const ctx = useCtx();
 
   return {};

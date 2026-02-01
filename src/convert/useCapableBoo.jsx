@@ -1,10 +1,14 @@
 import useCtx from "../context/useCtx.jsx";
-const useCapableBoo = ({ props2 }) => {
+const useCapableBoo = ({ pBlock }) => {
   const ctx = useCtx();
 
-  const isHd = ctx.hdCapableId === props2.id;
-  const isEasy = props2.adjObj.ease === 1;
-  return { isHd, isEasy };
+  const isHd = ctx.hdCapableId === pBlock.id;
+  const isSd = pBlock.adjObjs.every((obj) =>
+    ctx.acTgSet.has(`${obj.ac}|${obj.tg}`),
+  );
+
+  console.log(isSd);
+  return { isHd, isSd };
 };
 
 export default useCapableBoo;

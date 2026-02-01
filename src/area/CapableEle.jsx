@@ -6,13 +6,13 @@ import useCapableCol from "../convert/useCapableCol.jsx";
 import useCapableRun from "../convert/useCapableRun.jsx";
 import useCapableLab from "../convert/useCapableLab.jsx";
 
-const CapableEle = ({ props2 }) => {
+const CapableEle = ({ pBlock }) => {
   const ctx = useCtx();
-  // const roo = useCapableRoo({ props2 });
-  const boo = useCapableBoo({ props2 });
-  const col = useCapableCol({ props2 });
-  const run = useCapableRun({ props2 });
-  const lab = useCapableLab({ props2 });
+  // const roo = useCapableRoo({ pBlock });
+  const boo = useCapableBoo({ pBlock });
+  const col = useCapableCol({ pBlock });
+  const run = useCapableRun({ pBlock });
+  const lab = useCapableLab({ pBlock });
 
   return (
     <div

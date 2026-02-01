@@ -13,7 +13,7 @@ const useTgCol = ({ posiId }) => {
       if (ctx.isStableOnHd) return tone.multiOnColor;
       return tone.acSelectColor;
     }
-    if (boo.isCapableHdPseudoHd) {
+    if (boo.isCapablePseudoHd) {
       // if (ctx.isStableOnHd) return tone.multiOnColor;
       return tone.acSelectColor;
     }
@@ -35,8 +35,6 @@ const useTgCol = ({ posiId }) => {
   };
 
   const getBorderColor = () => {
-    if (boo.isCapablePseudoHd) return "blue";
-    if (boo.isCapableBlockPseudoHd) return "white";
     if (ctx.isWoAcSd && !boo.isDisabled && boo.isHd) return tone.acSelectColor;
 
     if (boo.isHd) {

@@ -7,6 +7,7 @@ const useMain = () => {
   const [isCapableAreaHd, setIsCapableAreaHd] = useState(false);
   const [hdCapableBlockObj, setHdCapableBlockObj] = useState(false);
   const [hdCapableObj, setHdCapableObj] = useState(null);
+  // console.log(hdCapableObj);
   const [cdCapableObj, setCdCapableObj] = useState(null);
 
   const [HoverLocktg, setHoverLocktg] = useState(null);

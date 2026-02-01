@@ -873,7 +873,7 @@ const look = {
     transform: "translate(-50%, -50%)",
     width: `calc(100% - ${base} * 10)`,
     height: `calc(100% - ${base} * 8)`,
-    backgroundColor: "darkgray",
+    backgroundColor: col.buttonColor,
     // col.buttonColor,
   }),
   capable12: {

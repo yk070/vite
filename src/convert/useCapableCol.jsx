@@ -1,12 +1,12 @@
 import useCtx from "../context/useCtx.jsx";
 import tone from "../style/color.jsx";
 import useCapableBoo from "../convert/useCapableBoo.jsx";
-const useCapableCol = ({ props2 }) => {
+const useCapableCol = ({ pBlock }) => {
   const ctx = useCtx();
-  const boo = useCapableBoo({ props2 });
+  const boo = useCapableBoo({ pBlock });
 
   const getButtonColor = () => {
-    if (boo.isEasy) return tone.capableEasyColor;
+    if (boo.isSd) return "red";
     return tone.capableNormalColor;
   };
   const getBorderColor = () => {

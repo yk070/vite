@@ -1,17 +1,17 @@
 import useCtx from "../context/useCtx.jsx";
-const useCapableBoo = ({ props2 }) => {
+const useCapableBoo = ({ pBlock }) => {
   const ctx = useCtx();
   const hover = () => {
     ctx.setHdCapableObj({
-      id: props2.id,
-      objs: props2.adjObj.objs,
+      id: pBlock.id,
+      objs: pBlock.adjObjs,
     });
   };
   const leave = () => {
     ctx.setHdCapableObj(null);
   };
   const click = () => {
-    ctx.setCdCapableObj({ adj: props2.adj, objs: props2.adjObj.objs });
+    ctx.setCdCapableObj({ adj: pBlock.adj, objs: pBlock.adjObjs });
   };
   return { hover, leave, click };
 };

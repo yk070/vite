@@ -18,12 +18,10 @@ const notUseMain = (ctx) => {
 
   const hdCapableBlockAdj = ctx.hdCapableBlockObj?.adj;
   const hdCapableBlockId = ctx.hdCapableBlockObj?.id;
-  const hdCapableBlockObjs = ctx.hdCapableBlockObj?.objs;
+  const hdCapableBlockObjss = ctx.hdCapableBlockObj?.adjObjss;
 
   const hdCapableAdjNous = [
-    ...new Set(
-      hdCapableBlockObjs?.flatMap((obj) => obj.objs.map((obj) => obj.tg)),
-    ),
+    ...new Set(hdCapableBlockObjss?.flat().map((obj) => obj.tg)),
   ];
   const hdCapableObjs = ctx.hdCapableObj?.objs;
   const hdCapableId = ctx.hdCapableObj?.id;
@@ -65,7 +63,7 @@ const notUseMain = (ctx) => {
     hdCapableBlockId,
     hdCapableObjs,
     hdCapableId,
-    hdCapableBlockObjs,
+    hdCapableBlockObjss,
     hdCapableAdjNous,
   };
 };

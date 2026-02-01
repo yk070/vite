@@ -1,10 +1,10 @@
 import useCtx from "../context/useCtx.jsx";
-const useCapableBlockRoo = ({ props }) => {
+const useCapableBlockRoo = ({ pHalf }) => {
   const ctx = useCtx();
 
-  const id = `${props.title}${props.adj}`;
-  const props3 = { adj: props.adj, objs: props.adjObjs, id };
-  return { id, props3 };
+  const id = `${pHalf.title}${pHalf.adj}`;
+  const hdObj = { adj: pHalf.adj, adjObjss: pHalf.adjObjss, id };
+  return { id, hdObj };
 };
 
 export default useCapableBlockRoo;
