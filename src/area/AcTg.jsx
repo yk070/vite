@@ -5,9 +5,16 @@ import Tg from "./Tg.jsx";
 import useCtx from "../context/useCtx.jsx";
 import stableObj from "../obj/stableObj.js";
 import StableEle from "./StableEle.jsx";
+import tone from "../style/color.jsx";
 
 const AcTg = () => {
   const ctx = useCtx();
+  const getBgColor = () => {
+    if (ctx.isWoTgNone) return "#7A7A7A";
+    if (ctx.isWoTgVirtual) return "#7C7A92";
+    return "#7B9884";
+  };
+  const bgColor = getBgColor();
   return (
     <>
       <div style={look.Body7}>
@@ -20,14 +27,14 @@ const AcTg = () => {
           </div>
           <div style={look.ac5}>
             {!ctx.isCapableAreaHd &&
-              Object.entries(stableObj[ctx.currAdjTg]).map(([title, objs]) => {
+              Object.entries(stableObj[ctx.currCapTg]).map(([title, objs]) => {
                 const props = { title, objs };
                 return <StableEle key={title} props={props} />;
               })}
           </div>
         </div>
       </div>
-      <div style={look.Body4}>
+      <div style={look.Body4(bgColor)}>
         <div style={look.Body5}>
           <Tg />
         </div>

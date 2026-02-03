@@ -1,18 +1,19 @@
 const Colors = {
+  pickUp: "#A7C0E2",
+  pseudoHd: "#7C99C6",
+  // pseudoHd: "#A7C0E2",
+  capableTitle: "#999999",
   black: "#000000",
-  pickUp: "#D8679B",
   notNoneAdj: "#2ECC71",
+  virtual: "#6B5FD2",
   none: "#444444",
 
   capableBlocksColor: "#999999",
   capableEasyColor: "#555555",
-  capableNormalColor: "#888888",
+  normalButton: "#888888",
   capableBlockHdColor: "#6B5FD2",
   acSelectColor: "#FFE97A",
 
-  virtual: "#6B5FD2",
-
-  multiOnColor: "#A7A0EB",
   hoveredSelectedMultiColor: "#A7A0EB",
 
   homePositionColor: "#888888",
@@ -41,7 +42,7 @@ const Colors = {
   AlertColor: "#FF0000",
   HoveredtgBorderColor: "#222222",
 
-  normalButtonColor: "#222222",
+  normalButton: "#222222",
   importantColor: "#111111",
   DisabledButtonColor: "#CCCCCC",
 

@@ -20,8 +20,8 @@ const CapableHalf = ({ props }) => {
                 onMouseEnter={hover}
                 onMouseLeave={leave}
               >
-                {Object.entries(titleObj).map(([adj, adjObjss]) => {
-                  const pHalf = { title, adj, adjObjss };
+                {Object.entries(titleObj).map(([adj, preferencess]) => {
+                  const pHalf = { title, adj, preferencess };
                   return <CapableBlock key={adj} pHalf={pHalf} />;
                 })}
               </div>

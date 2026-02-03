@@ -67,8 +67,8 @@ const adjLineObj = {
 const acCapLabelObj = {
   capable1: "一括1",
   capable2: "一括2",
-  basic1: "基本1",
-  basic2: "基本2",
+  usable1: "基本1",
+  usable2: "基本2",
   none: "None",
   ctrl: "Ctrl",
   shift: "Shift",

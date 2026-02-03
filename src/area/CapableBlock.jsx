@@ -4,7 +4,7 @@ import useCapableBlockBoo from "../convert/useCapableBlockBoo.jsx";
 import useCapableBlockCol from "../convert/useCapableBlockCol.jsx";
 import useCapableBlockRun from "../convert/useCapableBlockRun.jsx";
 import useCapableBlockRoo from "../convert/useCapableBlockRoo.jsx";
-// const pHalf = { title, adj, adjObjss };
+// const pHalf = { title, adj, preferencess };
 const CapableBlock = ({ pHalf }) => {
   const roo = useCapableBlockRoo({ pHalf });
   const boo = useCapableBlockBoo({ pHalf });
@@ -13,15 +13,15 @@ const CapableBlock = ({ pHalf }) => {
 
   return (
     <div
-      style={look.capable8(pHalf.adjObjss.length, col)}
+      style={look.capable8(pHalf.preferencess.length, col)}
       onMouseEnter={run.hover}
       onMouseLeave={run.leave}
     >
       <div style={look.capable12}>
         <div style={look.capable15}>
-          {pHalf.adjObjss.map((adjObjs, i) => {
+          {pHalf.preferencess.map((preferences, i) => {
             const id = `${pHalf.title}${pHalf.adj}${i}`;
-            const pBlock = { adj: pHalf.adj, id, adjObjs, i };
+            const pBlock = { adj: pHalf.adj, preferences, i, id };
             return <CapableEle key={id} pBlock={pBlock} />;
           })}
         </div>

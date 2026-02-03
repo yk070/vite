@@ -2,11 +2,9 @@ MButton:: {
     ; send("+!{;}")
 }
 XButton1:: {
-    send("+!{p}") ;エクスプローラーにフォーカス
-    sleep(10)
-    send("+!{f}") ;エクスプローラーを折り畳む
-    sleep(10)
-    send("+!{f}") ;エクスプローラーを折り畳む
-    sleep(10)
-    send("+!{3}") ;お気に入りを折り畳む
+    Click "Left", 2
+    Sleep(100)
+    send("+!{r}") ;フォルダ内検索
+    Sleep(100)
+    Send("{Enter}")
 }

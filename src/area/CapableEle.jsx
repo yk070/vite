@@ -1,11 +1,11 @@
 import look from "../style/look.jsx";
-import useCapableBoo from "../convert/useCapableBoo.jsx";
 import useCapableCol from "../convert/useCapableCol.jsx";
 import useCapableRun from "../convert/useCapableRun.jsx";
 import CapableCircle from "./CapableCircle.jsx";
-// const pBlock = { adj: pHalf.adj, id, adjObjs, i };
+// import useCapableCircle from "../convert/useCapableCircle.jsx";
+import easyObj from "../obj/easyObj.js";
+// const pBlock = { adj: pHalf.adj, id, preferences, i };
 const CapableEle = ({ pBlock }) => {
-  const boo = useCapableBoo({ pBlock });
   const col = useCapableCol({ pBlock });
   const run = useCapableRun({ pBlock });
 
@@ -17,9 +17,23 @@ const CapableEle = ({ pBlock }) => {
       onMouseLeave={run.leave}
     >
       <div style={look.capable7(col)}>
-        {pBlock.adjObjs.map((adjObj, i) => {
-          const pEle = { adj: pBlock.adj, adjObj, color: col.borderColor };
-          return <CapableCircle key={i} pEle={pEle} />;
+        {pBlock.preferences.map((adjObj, i) => {
+          const capableNou = adjObj.tg.split("*")[1];
+          const getCircle = () => {
+            const entry = Object.entries(easyObj[pBlock.adj])?.find(
+              ([_, nous]) => nous?.includes(capableNou),
+            );
+            const level = entry?.[0] ?? "third";
+            if (level === "first") return look.first;
+            if (level === "second") return look.second;
+            if (level === "third") return look.third;
+          };
+          const circle = getCircle();
+          return (
+            <div style={look.capable18}>
+              <div key={i} style={{ ...look.common2, ...circle }} />
+            </div>
+          );
         })}
       </div>
     </div>

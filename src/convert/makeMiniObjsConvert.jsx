@@ -1,7 +1,7 @@
 import stableObj from "../obj/stableObj.js";
-const makeMiniObjsConvert = (currAdjTg, blockTitle, smallTitle) => {
+const makeMiniObjsConvert = (currCapTg, blockTitle, smallTitle) => {
   return (
-    stableObj?.[currAdjTg]?.[blockTitle]?.mediumObj?.[smallTitle]?.miniObjs ??
+    stableObj?.[currCapTg]?.[blockTitle]?.mediumObj?.[smallTitle]?.miniObjs ??
     []
   );
 };

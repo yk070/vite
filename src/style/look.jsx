@@ -215,19 +215,24 @@ const look = {
     zIndex: 4,
   },
 
-  tgButton3: (col) => ({
+  tgButton3: (col, boo) => ({
     position: "relative", // ← 重ねの基準
     // display: "inline-flex",
     alignItems: "center",
     whiteSpace: "nowrap",
     // position: "relative",
     zIndex: 1,
-    display: "flex",
+    // display: "flex",
+    display: "inline-flex",
     // alignItems: "center",
-    paddingLeft: `calc(${base} * 8)`,
+    paddingLeft: `calc(${base} * 2)`,
     fontSize: `calc(${base} * 14)`,
-    color: col.textWhite,
+    color: col.textColor,
     pointerEvents: "none",
+    // textDecoration: boo.isCapablePseudoHd ? "underline" : "none", // ← 追加
+    // textDecorationColor: col.textWhite, // 必要なら色も指定
+    // textDecorationThickness: `calc(${base} * 9)`,
+    // textDecorationSkipInk: "none",
   }),
 
   tgButton12: {
@@ -240,17 +245,84 @@ const look = {
     transform: "translateX(-50%)",
     borderRadius: `calc(${base} * 20)`,
   },
+  third: {
+    width: `calc(${base} * 16)`,
+    height: `calc(${base} * 16)`,
+    border: `calc(${base} * 1) solid white`,
+    boxShadow: `
+      0 0 calc(${base} * 10) rgba(0,0,0,1),
+      inset 0 0 calc(${base} * 10) rgba(0,0,0,1)`,
+  },
+  second: {
+    width: `calc(${base} * 13)`,
+    height: `calc(${base} * 13)`,
+    border: `calc(${base} * 3) solid white`,
+    boxShadow: `
+    0 0 calc(${base} * 10) rgba(0,0,0,1),
+    inset 0 0 calc(${base} * 10) rgba(0,0,0,1)`,
+  },
+  first: {
+    width: `calc(${base} * 11)`,
+    height: `calc(${base} * 11)`,
+    // backgroundColor: "white",
+    border: `calc(${base} * 5) solid white`,
+    boxShadow: `
+    0 0 calc(${base} * 10) rgba(0,0,0,1)`,
+  },
+  capable18: {
+    flex: 1,
+    position: "relative",
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    // backgroundColor: "red",
+  },
+  common2: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "100%",
+    height: "100%",
+    // aspectRatio: "1 / 1",
+    borderRadius: "50%",
+    // flex: 1,
+    // backgroundColor: "green",
+  },
+  common: {
+    position: "absolute",
+    top: "0%",
+    right: "0%",
+    transform: "translate(50%, -50%)",
+    borderRadius: "50%",
+  },
   tgButton8: {
     position: "absolute",
-    top: 0,
-    right: `calc(${base} * 1)`,
-    // backgroundColor: "red",
-    height: `calc(${base} * 20)`,
-    aspectRatio: `calc(${base} * 20)`,
-    flex: 1,
-    display: "flex",
-    alignItems: "center", // 縦中央
-    justifyContent: "center", // 横中央
+    top: "0%",
+    right: "0%",
+    transform: "translate(50%, -50%)",
+    borderRadius: "50%",
+
+    // width: `calc(${base} * 16)`,
+    // height: `calc(${base} * 16)`,
+    // border: `calc(${base} * 1) solid white`,
+    // boxShadow: `
+    //   0 0 calc(${base} * 4) rgba(0,0,0,0.5),
+    //   inset 0 0 calc(${base} * 6) rgba(0,0,0,0.5)`,
+
+    // width: `calc(${base} * 10)`,
+    // height: `calc(${base} * 10)`,
+    // backgroundColor: "white",
+    // border: `calc(${base} * 4) solid white`,
+    // boxShadow: `
+    // 0 0 calc(${base} * 4) rgba(0,0,0,0.5)`,
+
+    // width: `calc(${base} * 10)`,
+    // height: `calc(${base} * 10)`,
+    // border: `calc(${base} * 4) solid white`,
+    // boxShadow: `
+    // 0 0 calc(${base} * 4) rgba(0,0,0,0.5),
+    // inset 0 0 calc(${base} * 6) rgba(0,0,0,0.5)`,
   },
 
   tgButton2: (buttonColor) => ({
@@ -264,14 +336,14 @@ const look = {
     backgroundColor: buttonColor,
   }),
 
-  tgButton1: (styleObj, roo, col, boo) => ({
+  tgButton1: (styleObj, isCursorPointer, borderColor, isHighZ) => ({
     position: "absolute",
     width: "100%",
     height: "100%",
-    cursor: roo.isCursorPointer ? "pointer" : "default",
-    backgroundColor: col.borderColor,
+    cursor: isCursorPointer ? "pointer" : "default",
+    backgroundColor: borderColor,
     ...styleObj,
-    zIndex: boo?.isHd ? zObj.hdTgEle : zObj.notHdTgEle,
+    zIndex: isHighZ ? zObj.hdTgEle : zObj.notHdTgEle,
   }),
   tg_Index1: {
     flex: 1,
@@ -454,11 +526,12 @@ const look = {
     display: "flex",
     flexDirection: "column",
   },
-  Body4: {
+  Body4: (bgColor) => ({
     flex: 1,
     display: "flex",
     flexDirection: "column",
-  },
+    backgroundColor: bgColor,
+  }),
   Body5: {
     position: "relative",
     top: "50%",
@@ -850,7 +923,7 @@ const look = {
     fontWeight: "bold",
     // fontSize: `calc(${base} * 20)`,
     // backgroundColor: tone.OftenIndexColor,
-    backgroundColor: "red",
+    backgroundColor: tone.capableTitle,
     flexDirection: "row",
     width: `calc(${base} * 90)`,
     height: "100%",
@@ -908,16 +981,6 @@ const look = {
     // backgroundColor: "red",
     pointerEvents: "none", // ← これでマウスイベントを無視
   },
-  capable18: {
-    flex: 1,
-    position: "relative",
-    width: "100%",
-    height: "100%",
-    display: "flex",
-    alignItems: "center", // 縦中央
-    justifyContent: "center", // 横中央
-    backgroundColor: "red",
-  },
   capable15: {
     display: "flex",
     position: "relative",
@@ -929,7 +992,7 @@ const look = {
     display: "flex",
     position: "relative",
     height: "100%",
-    // backgroundColor: col.borderColor,
+    backgroundColor: col.borderColor,
     // KIRIWAKE
     width: "100%",
   }),
@@ -959,7 +1022,7 @@ const look = {
     // justifyContent: "center",
     // alignItems: "stretch", // ← center をやめる
   },
-  basic2: {
+  usable2: {
     display: "flex",
     position: "relative",
     top: "50%",
@@ -996,7 +1059,7 @@ const look = {
     backgroundColor: tone.basicBgColor,
     // flex: row,
   },
-  basic1: (row) => ({
+  usable1: (row) => ({
     position: "relative",
     width: "100%",
     height: "100%",

@@ -7,6 +7,10 @@ const useTgCol = ({ posiId }) => {
   const ctx = useCtx();
 
   const getBorderColor = () => {
+    // if (boo.isCapablePseudoHd) {
+    //   if (ctx.isCapableOnHd) return "#6EC6FF";
+    //   return tone.acSelectColor;
+    // }
     if (ctx.isWoAcSd && !boo.isDisabled && boo.isHd) return tone.acSelectColor;
 
     if (boo.isHd) {
@@ -17,10 +21,11 @@ const useTgCol = ({ posiId }) => {
     return "transparent";
   };
 
-  const gettextWhite = () => {
-    if (ctx.isStableOnHd) return tone.textWhite;
-    // if (boo.isStablePseudoHd) return "black";
-    // if (boo.isCapablePseudoHd) return "black";
+  const getTextColor = () => {
+    if (ctx.isStableOnHd) return "black";
+    if (boo.isStablePseudoHd) return "black";
+    if (boo.isCapablePseudoHd) return "black";
+    if (boo.isAssigned) return "black";
     return tone.textWhite;
   };
 
@@ -31,10 +36,10 @@ const useTgCol = ({ posiId }) => {
 
   const circleColor = getCircleColor();
   const borderColor = getBorderColor();
-  const textWhite = gettextWhite();
+  const textColor = getTextColor();
   return {
     borderColor,
-    textWhite,
+    textColor,
     circleColor,
   };
 };

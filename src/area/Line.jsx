@@ -2,12 +2,19 @@ import useCtx from "../context/useCtx.jsx";
 import { header, sidebar } from "../style/length.jsx";
 import posiIdObj from "../obj/posiIdObj.js";
 import { adjLineObj } from "../obj/namedObj.js";
+import zObj from "../obj/zObj.js";
 
-const Line = ({ containerRef, headX, headY }) => {
+const Line = ({ props }) => {
   const ctx = useCtx();
+  const { key, containerRef, headX, headY } = props;
+
+  const isCapableHd = ctx.hdCapablePreferences?.some((preference) => {
+    const [, after] = preference.tg.split("*");
+    return after === key;
+  });
   if (ctx.isWoTgNone) return null;
 
-  const styleObj = posiIdObj[adjLineObj[ctx.currAdjTg]];
+  const styleObj = posiIdObj[adjLineObj[ctx.currCapTg]];
 
   const left = parseFloat(styleObj?.left ?? "0");
   const top = parseFloat(styleObj?.top ?? "0");
@@ -57,24 +64,10 @@ const Line = ({ containerRef, headX, headY }) => {
         transform: `rotate(${angle}deg)`,
         transformOrigin: "0 50%",
         pointerEvents: "none",
-        zIndex: 1,
+        zIndex: isCapableHd ? zObj.capableHdLine : zObj.normalLine,
         border: "white solid 0.1px",
       }}
-    >
-      {/* 矢印 */}
-      {/* <div
-        style={{
-          position: "absolute",
-          left: `${adjustedLength}px`, // 線の終点に三角形を合わせる
-          top: `${(lineHeight - 2 * arrowHeight) / 2}px`, // 線の中心に揃える
-          width: 0,
-          height: 0,
-          borderTop: `${arrowHeight}px solid transparent`,
-          borderBottom: `${arrowHeight}px solid transparent`,
-          borderLeft: `${arrowWidth}px solid ${tone.ArrowColor}`,
-        }}
-      /> */}
-    </div>
+    ></div>
   );
 };
 

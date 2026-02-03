@@ -13,33 +13,33 @@ const useTgButtonColor = ({ posiId }) => {
   if (boo.isDisabled) return tone.DisabledButtonColor;
   //stable
   if (boo.isStablePseudoHd) {
-    if (ctx.isStableOnHd) return tone.multiOnColor;
+    if (ctx.isStableOnHd) return tone.pseudoHd;
     return tone.acSelectColor;
   }
   //capable
   if (boo.isCapablePseudoHd) {
-    // if (ctx.isCapableOnHd) return tone.multiOnColor;
-    // return tone.acSelectColor;
+    if (ctx.isCapableOnHd) return tone.pseudoHd;
+    return tone.acSelectColor;
   }
   //isHd
   if (boo.isHd) {
     if (ctx.isWoAcSd && (boo.isAssigned || boo.isSoVirtualHold))
       return tone.virtual;
-    return tone.normalButtonColor;
+    return tone.normalButton;
   }
   //isWoAcSd
   if (ctx.isWoAcSd) {
     if (boo.isAssigned || boo.isSoVirtualHold) return tone.virtual;
-    if (!boo.isAssigned) return tone.normalButtonColor;
+    if (!boo.isAssigned) return tone.normalButton;
     if (boo.isAssigned) return tone.pickUp;
   }
 
   if (boo.isSoVirtualHold) return tone.virtual;
   if (boo.isRemoteHovered) return tone.RemoteHoveredColor;
   if (boo.isAssigned || boo.isSoVirtualHold) return tone.pickUp;
-  if (ctx.isWoAcSd) return tone.normalButtonColor;
+  if (ctx.isWoAcSd) return tone.normalButton;
 
-  return tone.normalButtonColor;
+  return tone.normalButton;
 };
 
 export default useTgButtonColor;

@@ -1,5 +1,5 @@
 const basicObj = {
-  basic1: {
+  usable1: {
     left: {
       基本: {
         row: 2,
@@ -40,7 +40,7 @@ const basicObj = {
       },
     },
   },
-  basic2: {
+  usable2: {
     left: {
       Esc: {
         row: 2,

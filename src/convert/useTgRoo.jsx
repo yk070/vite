@@ -3,7 +3,7 @@ import useCtx from "../context/useCtx.jsx";
 const useTgRoo = ({ posiId }) => {
   const ctx = useCtx();
   const originNou = EnterObj[posiId] ?? posiId;
-  const originAdjNou = ctx.currAdjTg + "*" + originNou;
+  const originAdjNou = ctx.currCapTg + "*" + originNou;
 
   const assignAdjNou = ctx.preferences.find(
     (obj) => obj.tg === originAdjNou,
@@ -12,7 +12,7 @@ const useTgRoo = ({ posiId }) => {
   const stableHdAcAdjNou = ctx.hdStableObj?.objs?.find(
     (obj) => obj.tg === originAdjNou,
   )?.ac;
-  const capableHdAcAdjNou = ctx.hdCapableObjs?.find(
+  const capableHdAcAdjNou = ctx.hdCapablePreferences?.find(
     (obj) => obj.tg === originAdjNou,
   )?.ac;
   const cdMultiList = Array.isArray(ctx.cdStableObjs?.objs)

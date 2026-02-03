@@ -19,9 +19,9 @@ const Ac = () => {
       </div>
       <div style={look.ac3}>
         <AlphaNumBlock derive="ac" />
-        {ctx.isWoAcBasic && <Basic />}
+        {ctx.isWoUsable && <Basic />}
         {ctx.isWoCapable && <Capable />}
-        {ctx.isWoAcDefault &&
+        {ctx.isWoFlexible &&
           Object.entries(adjPosiIdObjObj[ctx.currCapAc]).map(
             ([posiId, styleObj]) => (
               <AcEle key={posiId} posiId={posiId} styleObj={styleObj} />

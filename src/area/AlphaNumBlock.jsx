@@ -8,10 +8,9 @@ const AlphaNumBlock = ({ derive }) => {
   const ctx = useCtx();
   if (
     (derive === "tg" && (ctx.isWoTgNone || ctx.isWoTgShift)) ||
-    (derive === "ac" && ctx.isWoAcBasic) ||
-    ctx.isWoCapable
+    (derive === "ac" && (!ctx.isWoFlexible || ctx.isWoAcNone))
   )
-    return;
+    return null;
   return (
     <div style={{ opacity: 0.7, zIndex: 1 }}>
       <div style={look.tgBlock0} />

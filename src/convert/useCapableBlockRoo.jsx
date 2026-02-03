@@ -3,7 +3,7 @@ const useCapableBlockRoo = ({ pHalf }) => {
   const ctx = useCtx();
 
   const id = `${pHalf.title}${pHalf.adj}`;
-  const hdObj = { adj: pHalf.adj, adjObjss: pHalf.adjObjss, id };
+  const hdObj = { adj: pHalf.adj, preferencess: pHalf.preferencess, id };
   return { id, hdObj };
 };
 

@@ -13,6 +13,7 @@ const AcEle = ({ posiId, styleObj }) => {
   const col = useAcCol({ posiId });
   const run = useAcRun({ posiId });
   const lab = useAcLab({ posiId });
+  if (boo.isReturn) return null;
   return (
     <div
       style={look.acButton1(styleObj, col)}

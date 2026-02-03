@@ -6,18 +6,18 @@ const notUseMultiple = (ctx) => {
 
   const hdCapableBlockAdj = ctx.hdCapableBlockObj?.adj;
   const hdCapableBlockId = ctx.hdCapableBlockObj?.id;
-  const hdCapableBlockObjss = ctx.hdCapableBlockObj?.adjObjss;
+  const hdCapableBlockObjss = ctx.hdCapableBlockObj?.preferencess;
 
   const hdCapableAdjNous = [
     ...new Set(hdCapableBlockObjss?.flat().map((obj) => obj.tg)),
   ];
-  const hdCapableObjs = ctx.hdCapableObj?.objs;
+  const hdCapablePreferences = ctx.hdCapableObj?.preferences;
   const hdCapableId = ctx.hdCapableObj?.id;
 
   const cdCapableAdj = ctx.cdCapableObj?.adj;
-  const cdCapableObjs = ctx.cdCapableObj?.objs;
+  const cdCapableObjs = ctx.cdCapableObj?.preferences;
 
-  const isCapableOnHd = hdCapableObjs?.every((obj) =>
+  const isCapableOnHd = hdCapablePreferences?.every((obj) =>
     ctx.acTgSet.has(`${obj.ac}|${obj.tg}`),
   );
   return {
@@ -25,7 +25,7 @@ const notUseMultiple = (ctx) => {
     cdCapableObjs,
     hdCapableBlockAdj,
     hdCapableBlockId,
-    hdCapableObjs,
+    hdCapablePreferences,
     hdCapableId,
     hdCapableBlockObjss,
     hdCapableAdjNous,

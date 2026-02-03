@@ -17,7 +17,7 @@ export const notUseArrow = (ctx) => {
   const tgCapsLength = ctx.tgCaps.length;
   const onsiteNumber = ctx.tgCaps.indexOf(hdAdj);
   const remoteNumber = ctx.tgCaps.indexOf(remoteHdAdj);
-  const currTgCapsLength = ctx.tgCaps.indexOf(ctx.currAdjTg);
+  const currTgCapsLength = ctx.tgCaps.indexOf(ctx.currCapTg);
   const isRemoteSame = hdAdj === remoteHdAdj;
 
   const getHeadPos = () => {

@@ -8,7 +8,7 @@ const useBasicCol = ({ adjNou }) => {
 
   const getButtonColor = () => {
     if (boo.isActive) return tone.acSelectColor;
-    return tone.normalButtonColor;
+    return tone.normalButton;
   };
 
   const getBorderColor = () => {
@@ -17,14 +17,14 @@ const useBasicCol = ({ adjNou }) => {
     }
     return "transparent"; // デフォルト
   };
-  const gettextWhite = () => {
+  const getTextColor = () => {
     if (boo.isActive) return "black";
     return tone.textWhite;
   };
 
   const buttonColor = getButtonColor();
   const borderColor = getBorderColor();
-  const textWhite = gettextWhite();
+  const textWhite = getTextColor();
   return { buttonColor, borderColor, textWhite };
 };
 

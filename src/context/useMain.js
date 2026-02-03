@@ -13,8 +13,8 @@ const useMain = () => {
   const [HoverLocktg, setHoverLocktg] = useState(null);
 
   // current adj
-  const [currCapAc, setCurrCapAc] = useState("none");
-  const [currAdjTg, setCurrAdjTg] = useState("none");
+  const [currCapAc, setCurrCapAc] = useState("capable1");
+  const [currCapTg, setCurrAdjTg] = useState("none");
   // selected
   const [sdAcAdjNou, setSdAcAdjNou] = useState(null);
   const [sdTgAdjNou, setSdTgAdjNou] = useState(null);
@@ -27,7 +27,7 @@ const useMain = () => {
   return {
     currCapAc,
     setCurrCapAc,
-    currAdjTg,
+    currCapTg,
     setCurrAdjTg,
     sdAcAdjNou,
     setSdAcAdjNou,

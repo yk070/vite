@@ -1,13 +1,13 @@
 import useCtx from "../context/useCtx.jsx";
-import { virtualVerstiles } from "../array/namedArray.js";
+import { virtualVersatiles } from "../array/namedArray.js";
 
 const useTgBoo = ({ tgCap }) => {
   const ctx = useCtx();
 
-  const isSd = tgCap === ctx.currAdjTg;
+  const isSd = tgCap === ctx.currCapTg;
   const isRemoteHovered =
-    ctx.remoteHdAdj === tgCap && ctx.currAdjTg !== ctx.remoteHdAdj;
-  const isVirtual = virtualVerstiles.includes(tgCap);
+    ctx.remoteHdAdj === tgCap && ctx.currCapTg !== ctx.remoteHdAdj;
+  const isVirtual = virtualVersatiles.includes(tgCap);
   return { isSd, isRemoteHovered, isVirtual };
 };
 

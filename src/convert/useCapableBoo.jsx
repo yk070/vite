@@ -4,7 +4,7 @@ const useCapableBoo = ({ pBlock }) => {
   const ctx = useCtx();
 
   const isHd = ctx.hdCapableId === pBlock.id;
-  const isSd = pBlock.adjObjs.every((obj) =>
+  const isSd = pBlock.preferences.every((obj) =>
     ctx.acTgSet.has(`${obj.ac}|${obj.tg}`),
   );
 

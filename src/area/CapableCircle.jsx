@@ -14,7 +14,7 @@ const CapableCircle = ({ pEle }) => {
 
   return (
     <div style={look.capable18}>
-      <MultiCircle level={level} circleColor={pEle.color} />
+      <MultiCircle level={level} circleColor="white" />
     </div>
   );
 };

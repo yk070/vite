@@ -1,24 +1,25 @@
 import {
-  notAdjAcCaps,
+  usableCaps,
   defaultAdjs,
-  virtualVerstiles,
-  lds,
+  virtualVersatiles,
+  capableCaps,
 } from "../array/namedArray.js";
 import easyObj from "../obj/easyObj.js";
 
 const notUseMain = (ctx) => {
   const isWoSpaHold = ctx.preferences.includes("space");
   const isWoMuhHold = ctx.preferences.includes("muhenkan");
-  const isWoTgNone = ctx.currAdjTg === "none";
-  const isWoTgVirtual = virtualVerstiles.includes(ctx.currAdjTg);
-  const isWoTgShift = ctx.currAdjTg === "shift";
-  const isWoCapable = lds?.includes(ctx.currCapAc);
-  const isWoAcBasic = notAdjAcCaps?.includes(ctx.currCapAc);
-  const isWoAcDefault = defaultAdjs?.includes(ctx.currCapAc);
+  const isWoTgNone = ctx.currCapTg === "none";
+  const isWoAcNone = ctx.currCapAc === "none";
+  const isWoTgVirtual = virtualVersatiles.includes(ctx.currCapTg);
+  const isWoTgShift = ctx.currCapTg === "shift";
+  const isWoCapable = capableCaps?.includes(ctx.currCapAc);
+  const isWoUsable = usableCaps?.includes(ctx.currCapAc);
+  const isWoFlexible = defaultAdjs?.includes(ctx.currCapAc);
   const isWoAcSd = !!ctx.sdAcAdjNou;
   const acTgSet = new Set(ctx.preferences?.map((obj) => `${obj.ac}|${obj.tg}`));
 
-  const easyCurrAdjTgObj = easyObj[ctx.currAdjTg];
+  const easyCurrAdjTgObj = easyObj[ctx.currCapTg];
 
   const toggleVirtual = (x) => {
     ctx.setPreferences((prev) => {
@@ -31,16 +32,17 @@ const notUseMain = (ctx) => {
   };
 
   return {
+    isWoAcNone,
     isWoTgNone,
     isWoTgVirtual,
     isWoAcSd,
-    isWoAcBasic,
+    isWoUsable,
     isWoTgShift,
     isWoSpaHold,
     isWoMuhHold,
     toggleVirtual,
     isWoCapable,
-    isWoAcDefault,
+    isWoFlexible,
     acTgSet,
     easyCurrAdjTgObj,
   };

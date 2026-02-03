@@ -2,6 +2,7 @@ import useCtx from "../context/useCtx.jsx";
 import useAcRoo from "./useAcRoo.jsx";
 import { importantAdjNous } from "../array/namedAdjNous.js";
 import { disabledAdjNous } from "../array/namedAdjNous.js";
+import { alphabetNumberNous } from "../array/namedArray.js";
 const useAcBoo = ({ posiId }) => {
   const roo = useAcRoo({ posiId });
   const ctx = useCtx();
@@ -21,6 +22,9 @@ const useAcBoo = ({ posiId }) => {
 
   const isImportant = importantAdjNous.includes(roo.adjNou);
   const isDisabled = disabledAdjNous.includes(roo.adjNou);
+
+  const isAlphabetNumber = alphabetNumberNous.includes(roo.originNou);
+  const isReturn = isAlphabetNumber && ctx.isWoAcNone;
   return {
     isEnterBelow,
     isActive,
@@ -29,6 +33,7 @@ const useAcBoo = ({ posiId }) => {
     isHd,
     isImportant,
     isDisabled,
+    isReturn,
   };
 };
 

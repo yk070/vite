@@ -4,14 +4,14 @@ const useCapableBoo = ({ pBlock }) => {
   const hover = () => {
     ctx.setHdCapableObj({
       id: pBlock.id,
-      objs: pBlock.adjObjs,
+      preferences: pBlock.preferences,
     });
   };
   const leave = () => {
     ctx.setHdCapableObj(null);
   };
   const click = () => {
-    ctx.setCdCapableObj({ adj: pBlock.adj, objs: pBlock.adjObjs });
+    ctx.setCdCapableObj({ adj: pBlock.adj, preferences: pBlock.preferences });
   };
   return { hover, leave, click };
 };

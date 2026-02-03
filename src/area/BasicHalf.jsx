@@ -14,8 +14,8 @@ const BasicHalf = ({ basicProps }) => {
         const ArrayLength = adjNous?.length;
         const column = Math.ceil(ArrayLength / row);
         return (
-          <div key={title} style={look.basic1(row)}>
-            <div style={look.basic2}>
+          <div key={title} style={look.usable1(row)}>
+            <div style={look.usable2}>
               <div style={look.basic3}>{title}</div>
               <div style={look.basic4(column)}>
                 {adjNous?.map((adjNou) => (

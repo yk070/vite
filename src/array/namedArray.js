@@ -4,29 +4,27 @@ import {
   homeNous,
 } from "./namedLongNous.js";
 
-const virtualVerstiles = ["space", "muhenkan"];
-const allAdjectiveNous = [...defaultAdjectiveNous, ...virtualVerstiles];
+const virtualVersatiles = ["space", "muhenkan"];
+const allAdjectiveNous = [...defaultAdjectiveNous, ...virtualVersatiles];
 const defaultAdjs = ["none", "ctrl", "alt", "shift", "win"];
-const notAdjAcCaps = ["basic1", "basic2", "naviTen"];
-const lds = ["capable1", "capable2"];
-const acCaps = [
-  ...lds,
-  "basic1",
-  "basic2",
-  ...defaultAdjs,
+const usableCaps = [
+  "usable1",
+  "usable2",
   //  "naviTen"
 ];
-const allAdjs = [...defaultAdjs, ...virtualVerstiles];
+const capableCaps = ["capable1", "capable2"];
+const acCaps = [...capableCaps, ...usableCaps, ...defaultAdjs];
+const allAdjs = [...defaultAdjs, ...virtualVersatiles];
 
 export {
   defaultAdjectiveNous,
   alphabetNumberNous,
   allAdjectiveNous,
   defaultAdjs,
-  notAdjAcCaps,
+  usableCaps,
   acCaps,
   allAdjs,
-  virtualVerstiles,
+  virtualVersatiles,
   homeNous,
-  lds,
+  capableCaps,
 };

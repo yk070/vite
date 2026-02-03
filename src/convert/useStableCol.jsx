@@ -3,7 +3,7 @@ const useStableCol = ({ boo }) => {
   const getButtonColor = () => {
     if (boo.isSd && !boo.isHd) return tone.pickUp;
     if (boo.isSd) return tone.hoveredSelectedMultiColor;
-    return tone.normalButtonColor;
+    return tone.normalButton;
   };
 
   const getborderColor = () => {

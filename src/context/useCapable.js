@@ -6,7 +6,7 @@ const useCapable = (ctx) => {
 
   useEffect(() => {
     if (!isCapableHdRef.current && ctx.isCapableAreaHd) {
-      adjRef.current = ctx.currAdjTg;
+      adjRef.current = ctx.currCapTg;
     }
     if (isCapableHdRef.current && !ctx.isCapableAreaHd) {
       ctx.setCurrAdjTg(adjRef.current);
