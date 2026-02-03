@@ -9,6 +9,10 @@ Is_chatgpt() {
     return false
 }
 #HotIf Is_chatgpt()
+
+#Include .\alone\alone.ahk
+
 #Include .\alt\1.ahk
 #Include .\alt\2.ahk
+
 #HotIf

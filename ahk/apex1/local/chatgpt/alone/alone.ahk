@@ -1,3 +1,3 @@
-LWIN:: {
+LWin:: {
     send("^{Enter}")
 }
