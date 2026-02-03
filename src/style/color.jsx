@@ -1,4 +1,9 @@
 const Colors = {
+  ac6: "#000000",
+  ac7: "#A7C0E2",
+  acButtons: "#444444",
+  caps: "#555555",
+
   pickUp: "#A7C0E2",
   pseudoHd: "#7C99C6",
   // pseudoHd: "#A7C0E2",

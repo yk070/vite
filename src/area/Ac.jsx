@@ -7,6 +7,7 @@ import Basic from "./Basic.jsx";
 import { adjPosiIdObjObj } from "../obj/namedObj.js";
 import AcEle from "./AcEle.jsx";
 import Capable from "./Capable.jsx";
+import Capable2 from "./Capable2.jsx";
 
 const Ac = () => {
   const ctx = useCtx();
@@ -28,6 +29,7 @@ const Ac = () => {
             ),
           )}
       </div>
+      <Capable2 />
     </>
   );
 };
