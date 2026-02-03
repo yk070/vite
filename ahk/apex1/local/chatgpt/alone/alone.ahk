@@ -1,0 +1,3 @@
+LWIN:: {
+    send("^{Enter}")
+}

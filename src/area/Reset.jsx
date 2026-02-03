@@ -5,8 +5,8 @@ const Reset = () => {
   const ctx = useCtx();
   const click = () => {
     ctx.setPreferences([]);
-    ctx.setcurrentCapAc("none");
-    ctx.setCurrentAdjTg("none");
+    ctx.setCurrCapAc("none");
+    ctx.setCurrAdjTg("none");
     ctx.setSdAcAdjNou(null);
   };
   return (

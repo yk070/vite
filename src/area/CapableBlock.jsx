@@ -4,7 +4,7 @@ import useCapableBlockBoo from "../convert/useCapableBlockBoo.jsx";
 import useCapableBlockCol from "../convert/useCapableBlockCol.jsx";
 import useCapableBlockRun from "../convert/useCapableBlockRun.jsx";
 import useCapableBlockRoo from "../convert/useCapableBlockRoo.jsx";
-
+// const pHalf = { title, adj, adjObjss };
 const CapableBlock = ({ pHalf }) => {
   const roo = useCapableBlockRoo({ pHalf });
   const boo = useCapableBlockBoo({ pHalf });
@@ -26,7 +26,7 @@ const CapableBlock = ({ pHalf }) => {
           })}
         </div>
         <div style={look.capable16}>
-          <span style={look.capable17}>{pHalf.adj}</span>
+          {/* <span style={look.capable17}>{pHalf.adj}</span> */}
         </div>
       </div>
     </div>

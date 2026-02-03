@@ -13,8 +13,8 @@ const useMain = () => {
   const [HoverLocktg, setHoverLocktg] = useState(null);
 
   // current adj
-  const [currentCapAc, setcurrentCapAc] = useState("none");
-  const [currentAdjTg, setCurrentAdjTg] = useState("none");
+  const [currCapAc, setCurrCapAc] = useState("none");
+  const [currAdjTg, setCurrAdjTg] = useState("none");
   // selected
   const [sdAcAdjNou, setSdAcAdjNou] = useState(null);
   const [sdTgAdjNou, setSdTgAdjNou] = useState(null);
@@ -25,10 +25,10 @@ const useMain = () => {
   // enter
   const [isEnterSelected, setisEnterSelected] = useState(false);
   return {
-    currentCapAc,
-    setcurrentCapAc,
-    currentAdjTg,
-    setCurrentAdjTg,
+    currCapAc,
+    setCurrCapAc,
+    currAdjTg,
+    setCurrAdjTg,
     sdAcAdjNou,
     setSdAcAdjNou,
     sdTgAdjNou,

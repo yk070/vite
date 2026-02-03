@@ -1,6 +1,9 @@
 import { disabledAdjNous } from "../array/namedAdjNous.js";
-import { alphabetNumberNous, allAdjectiveNous } from "../array/namedArray.js";
-import easeObj from "../obj/easeObj.js";
+import {
+  alphabetNumberNous,
+  allAdjectiveNous,
+  virtualVerstiles,
+} from "../array/namedArray.js";
 import useCtx from "../context/useCtx.jsx";
 import useTgRoo from "./useTgRoo.jsx";
 import { adjAdjectiveNousObj } from "../obj/namedObj.js";
@@ -15,7 +18,7 @@ const useTgBoo = ({ posiId }) => {
   const isRemoteHovered = ctx.hdAdjNouTg === roo.assignAdjNou;
   const isAdjNouSame =
     allAdjectiveNous.includes(roo.originNou) &&
-    adjAdjectiveNousObj[ctx.currentAdjTg]?.includes(roo.originNou);
+    adjAdjectiveNousObj[ctx.currAdjTg]?.includes(roo.originNou);
 
   const isLocationUsed = ctx.preferences.some(
     (obj) => obj.tg === roo.originAdjNou,
@@ -49,14 +52,13 @@ const useTgBoo = ({ posiId }) => {
   const isCapableBlockPseudoHd = ctx.hdCapableAdjNous?.includes(
     roo.originAdjNou,
   );
-  const easeLevelObj = easeObj[ctx.currentAdjTg];
   function getLevel() {
     if (
       (!ctx.isWoAcSd || isSoVirtualHold || isDisabled || isAssigned) &&
       !isCapableBlockPseudoHd
     )
       return "";
-    const entry = Object.entries(easeLevelObj)?.find(([_, nous]) =>
+    const entry = Object.entries(ctx.easyCurrAdjTgObj)?.find(([_, nous]) =>
       nous?.includes(roo.originNou),
     );
     return entry?.[0] ?? "third";
@@ -64,7 +66,9 @@ const useTgBoo = ({ posiId }) => {
   const level = getLevel();
   const isHomeNoun = ["f", "j"].includes(roo.originNou);
 
+  const isVirtual = virtualVerstiles.includes(roo.originNou);
   return {
+    isVirtual,
     isAssigned,
     isSoVirtualHold,
     isDisabled,

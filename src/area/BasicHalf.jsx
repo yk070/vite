@@ -5,11 +5,11 @@ import BasicEle from "./BasicEle.jsx";
 
 const BasicHalf = ({ basicProps }) => {
   const ctx = useCtx();
-  const currentBasicObj = basicObj[ctx.currentCapAc][basicProps];
+  const currBasicObj = basicObj[ctx.currCapAc][basicProps];
 
   return (
     <div style={look.Often1}>
-      {Object.entries(currentBasicObj).map(([title, obj]) => {
+      {Object.entries(currBasicObj).map(([title, obj]) => {
         const { row, adjNous } = obj;
         const ArrayLength = adjNous?.length;
         const column = Math.ceil(ArrayLength / row);

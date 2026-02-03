@@ -9,8 +9,20 @@ const capableObj = {
           [{ ac: "none*enter", tg: "none*muhenkan" }],
         ],
         space: [
-          [{ ac: "none*enter", tg: "space*r" }],
-          [{ ac: "none*enter", tg: "space*e" }],
+          [{ ac: "none*enter", tg: "space*leftShift" }],
+          [{ ac: "none*enter", tg: "space*leftCtrl" }],
+        ],
+      },
+      space: {
+        none: [
+          [{ ac: "none*space", tg: "none*hankaku" }],
+          [{ ac: "none*space", tg: "none*tab" }],
+          [{ ac: "none*space", tg: "none*capslock" }],
+          [{ ac: "none*space", tg: "none*muhenkan" }],
+        ],
+        space: [
+          [{ ac: "none*space", tg: "space*leftShift" }],
+          [{ ac: "none*space", tg: "space*leftCtrl" }],
         ],
       },
       window切替: {

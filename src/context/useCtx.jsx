@@ -8,6 +8,7 @@ import notUseScript from "./notUseScript.js";
 import notUseArrow from "./notUseArrow.jsx";
 import useCapable from "./useCapable.js";
 import notUseTgCaps from "./notUseTgCaps.js";
+import notUseMultiple from "./notUseMultiple.js";
 
 const AppContext = createContext(null);
 
@@ -19,6 +20,7 @@ const CtxProvider = ({ children }) => {
   // console.log(ctx.preferences);
 
   Object.assign(ctx, notUseMain(ctx));
+  Object.assign(ctx, notUseMultiple(ctx));
   Object.assign(ctx, notUseTgCaps(ctx));
   Object.assign(ctx, notUseScript(ctx));
   Object.assign(ctx, notUseArrow(ctx));

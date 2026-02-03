@@ -7,22 +7,13 @@ const adjPosiIdObjObj = Object.fromEntries(
 
 const levelConfig = {
   first: {
-    layers: 1,
-    stroke: 20,
-    topMultiplier: -1,
-    rightMultiplier: -11,
+    stroke: 32,
   },
   second: {
-    layers: 1,
-    stroke: 10,
-    topMultiplier: 2,
-    rightMultiplier: -29,
+    stroke: 16,
   },
   third: {
-    layers: 1,
-    stroke: 1,
-    topMultiplier: 4,
-    rightMultiplier: -36,
+    stroke: 5,
   },
 };
 

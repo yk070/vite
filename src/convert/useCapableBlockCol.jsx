@@ -6,8 +6,9 @@ const useCapableBlockCol = ({ pHalf }) => {
   const boo = useCapableBlockBoo({ pHalf });
 
   const getborderColor = () => {
-    if (boo.isHd) return tone.capableBlockHdColor;
-    return "transparent";
+    if (boo.isNone) return tone.none;
+    if (boo.isVirtual) return tone.virtual;
+    return tone.notNoneAdj;
   };
 
   const borderColor = getborderColor();

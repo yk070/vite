@@ -1,14 +1,14 @@
 import useCtx from "../context/useCtx.jsx";
-import { defaultAdjs } from "../array/namedArray.js";
+import { virtualVerstiles } from "../array/namedArray.js";
 
 const useTgBoo = ({ tgCap }) => {
   const ctx = useCtx();
 
-  const isSelected = tgCap === ctx.currentAdjTg;
+  const isSd = tgCap === ctx.currAdjTg;
   const isRemoteHovered =
-    ctx.remoteHdAdj === tgCap && ctx.currentAdjTg !== ctx.remoteHdAdj;
-  const isVirtual = !defaultAdjs.includes(tgCap);
-  return { isSelected, isRemoteHovered, isVirtual };
+    ctx.remoteHdAdj === tgCap && ctx.currAdjTg !== ctx.remoteHdAdj;
+  const isVirtual = virtualVerstiles.includes(tgCap);
+  return { isSd, isRemoteHovered, isVirtual };
 };
 
 export default useTgBoo;

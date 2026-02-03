@@ -6,34 +6,6 @@ const useTgCol = ({ posiId }) => {
   const boo = useTgBoo({ posiId });
   const ctx = useCtx();
 
-  const getButtonColor = () => {
-    if (boo.isAdjNouSame) return tone.adjColor;
-    if (boo.isDisabled) return tone.DisabledButtonColor;
-    if (boo.isStablePseudoHd) {
-      if (ctx.isStableOnHd) return tone.multiOnColor;
-      return tone.acSelectColor;
-    }
-    if (boo.isCapablePseudoHd) {
-      // if (ctx.isStableOnHd) return tone.multiOnColor;
-      return tone.acSelectColor;
-    }
-    if (boo.isHd) {
-      if (ctx.isWoAcSd && (boo.isAssigned || boo.isSoVirtualHold))
-        return tone.violetTextColor;
-      return tone.normalButtonColor;
-    }
-    if (ctx.isWoAcSd) {
-      if (boo.isAssigned || boo.isSoVirtualHold) return tone.violetTextColor;
-      if (!boo.isAssigned) return tone.normalButtonColor;
-      if (boo.isAssigned) return tone.AccentColor;
-    }
-    if (boo.isSoVirtualHold) return tone.violetTextColor;
-    if (boo.isRemoteHovered) return tone.RemoteHoveredColor;
-    if (boo.isAssigned || boo.isSoVirtualHold) return tone.AccentColor;
-    if (ctx.isWoAcSd) return tone.normalButtonColor;
-    return tone.normalButtonColor;
-  };
-
   const getBorderColor = () => {
     if (ctx.isWoAcSd && !boo.isDisabled && boo.isHd) return tone.acSelectColor;
 
@@ -45,26 +17,24 @@ const useTgCol = ({ posiId }) => {
     return "transparent";
   };
 
-  const getTextColor = () => {
-    if (ctx.isStableOnHd) return tone.TextColor;
-    if (boo.isStablePseudoHd) return "black";
-    if (boo.isCapablePseudoHd) return "black";
-    return tone.TextColor;
+  const gettextWhite = () => {
+    if (ctx.isStableOnHd) return tone.textWhite;
+    // if (boo.isStablePseudoHd) return "black";
+    // if (boo.isCapablePseudoHd) return "black";
+    return tone.textWhite;
   };
 
   const getCircleColor = () => {
     if (boo.isCapablePseudoHd) return "black";
-    return tone.TextColor;
+    return tone.textWhite;
   };
 
   const circleColor = getCircleColor();
-  const buttonColor = getButtonColor();
   const borderColor = getBorderColor();
-  const textColor = getTextColor();
+  const textWhite = gettextWhite();
   return {
-    buttonColor,
     borderColor,
-    textColor,
+    textWhite,
     circleColor,
   };
 };

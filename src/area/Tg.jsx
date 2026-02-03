@@ -1,12 +1,13 @@
 import React from "react";
 import look from "../style/look.jsx";
-import TgEles from "./TgEles.jsx";
 import AlphaNumBlock from "./AlphaNumBlock.jsx";
 import useCtx from "../context/useCtx.jsx";
 import Arrow from "./Arrow.jsx";
 import TgLines from "./TgLines.jsx";
 import TgSpaceToggle from "./TgSpaceToggle.jsx";
 import TgCap from "./TgCap.jsx";
+import TgEle from "./TgEle.jsx";
+import { adjPosiIdObjObj } from "../obj/namedObj.js";
 
 const Tg = () => {
   const ctx = useCtx();
@@ -17,7 +18,11 @@ const Tg = () => {
         <TgSpaceToggle />
         <TgLines containerRef={containerRef} />
         <AlphaNumBlock derive="tg" />
-        <TgEles />
+        {Object.entries(adjPosiIdObjObj[ctx.currAdjTg]).map(
+          ([posiId, styleObj]) => (
+            <TgEle key={posiId} posiId={posiId} styleObj={styleObj} />
+          ),
+        )}
         <Arrow containerRef={containerRef} />
       </div>
       <div style={look.tg4}>

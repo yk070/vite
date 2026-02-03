@@ -6,20 +6,25 @@ const useTgCapCol = ({ tgCap }) => {
   const boo = useTgCapBoo({ tgCap });
 
   const getButtonColor = () => {
-    if (boo.isSelected && ctx.isWoTgNone) return "#444444";
-    if (boo.isSelected) return tone.adjColor;
+    if (boo.isSd) {
+      if (ctx.isWoTgNone) return tone.none;
+      if (boo.isVirtual) return tone.virtual;
+      return tone.notNoneAdj;
+    }
     return tone.TgCapColor;
   };
 
-  const getTextColor = () => {
-    if (boo.isVirtual) return tone.violetTextColor;
+  const gettextWhite = () => {
+    if (boo.isSd) {
+      if (boo.isVirtual) return tone.textWhite;
+    }
     return tone.textBlackColor;
   };
   const buttonColor = getButtonColor();
-  const textColor = getTextColor();
+  const textWhite = gettextWhite();
   return {
     buttonColor,
-    textColor,
+    textWhite,
   };
 };
 

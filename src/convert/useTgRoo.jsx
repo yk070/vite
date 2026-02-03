@@ -3,7 +3,7 @@ import useCtx from "../context/useCtx.jsx";
 const useTgRoo = ({ posiId }) => {
   const ctx = useCtx();
   const originNou = EnterObj[posiId] ?? posiId;
-  const originAdjNou = ctx.currentAdjTg + "*" + originNou;
+  const originAdjNou = ctx.currAdjTg + "*" + originNou;
 
   const assignAdjNou = ctx.preferences.find(
     (obj) => obj.tg === originAdjNou,

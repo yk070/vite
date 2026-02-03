@@ -20,12 +20,10 @@ const AcTg = () => {
           </div>
           <div style={look.ac5}>
             {!ctx.isCapableAreaHd &&
-              Object.entries(stableObj[ctx.currentAdjTg]).map(
-                ([title, objs]) => {
-                  const props = { title, objs };
-                  return <StableEle key={title} props={props} />;
-                },
-              )}
+              Object.entries(stableObj[ctx.currAdjTg]).map(([title, objs]) => {
+                const props = { title, objs };
+                return <StableEle key={title} props={props} />;
+              })}
           </div>
         </div>
       </div>

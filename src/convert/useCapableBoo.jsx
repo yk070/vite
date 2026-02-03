@@ -1,4 +1,5 @@
 import useCtx from "../context/useCtx.jsx";
+
 const useCapableBoo = ({ pBlock }) => {
   const ctx = useCtx();
 
@@ -7,7 +8,6 @@ const useCapableBoo = ({ pBlock }) => {
     ctx.acTgSet.has(`${obj.ac}|${obj.tg}`),
   );
 
-  console.log(isSd);
   return { isHd, isSd };
 };
 

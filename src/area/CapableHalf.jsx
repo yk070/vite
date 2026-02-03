@@ -4,11 +4,11 @@ import capableObj from "../obj/capableObj.js";
 import CapableBlock from "./CapableBlock.jsx";
 const CapableHalf = ({ props }) => {
   const ctx = useCtx();
-  const currentCapableObj = capableObj[ctx.currentCapAc][props];
+  const currCapableObj = capableObj[ctx.currCapAc][props];
 
   return (
     <div style={look.Often1}>
-      {Object.entries(currentCapableObj).map(([title, titleObj]) => {
+      {Object.entries(currCapableObj).map(([title, titleObj]) => {
         const hover = () => ctx.setIsCapableAreaHd(true);
         const leave = () => ctx.setIsCapableAreaHd(false);
         return (

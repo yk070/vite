@@ -7,7 +7,7 @@ const Line = ({ containerRef, headX, headY }) => {
   const ctx = useCtx();
   if (ctx.isWoTgNone) return null;
 
-  const styleObj = posiIdObj[adjLineObj[ctx.currentAdjTg]];
+  const styleObj = posiIdObj[adjLineObj[ctx.currAdjTg]];
 
   const left = parseFloat(styleObj?.left ?? "0");
   const top = parseFloat(styleObj?.top ?? "0");

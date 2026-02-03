@@ -11,7 +11,7 @@ const look = {
   download1: {
     position: "absolute",
     right: "10px",
-    backgroundColor: tone.AccentColor,
+    backgroundColor: tone.pickUp,
   },
   alertLabel1: {
     position: "relative",
@@ -28,7 +28,7 @@ const look = {
     width: `calc(${base} * 40)`,
     height: `calc(${base} * 20)`,
     borderRadius: `calc(${base} * 20)`,
-    backgroundColor: value ? tone.violetTextColor : "#3A3A3C",
+    backgroundColor: value ? tone.virtual : "#3A3A3C",
     position: "relative",
     cursor: "pointer",
     transition: "background-color 0.2s ease",
@@ -61,7 +61,7 @@ const look = {
     // justifyContent: "center",
     // backgroundColor: "#888888",
     // fontSize: `calc(${base} * 20)`,
-    // color: tone.TextColor,
+    // color: tone.textWhite,
     gap: 10,
     paddingTop: 10,
     paddingBottom: 10,
@@ -114,7 +114,7 @@ const look = {
     justifyContent: "center",
     // backgroundColor: "#888888",
     fontSize: `calc(${base} * 20)`,
-    color: tone.TextColor,
+    color: tone.textWhite,
     gap: `calc(${base} * 5)`,
   },
   Multi2: (col) => ({
@@ -169,7 +169,7 @@ const look = {
     // top: `calc(${base} * -4)`,
 
     // fontSize: `calc(${base} * 32)`,
-    // color: tone.TextColor,
+    // color: tone.textWhite,
     // zIndex: 2, // ★ ラベルの上に重ねる
     // pointerEvents: "none",
     // backgroundColor: "yellow",
@@ -226,7 +226,7 @@ const look = {
     // alignItems: "center",
     paddingLeft: `calc(${base} * 8)`,
     fontSize: `calc(${base} * 14)`,
-    color: col.textColor,
+    color: col.textWhite,
     pointerEvents: "none",
   }),
 
@@ -243,13 +243,17 @@ const look = {
   tgButton8: {
     position: "absolute",
     top: 0,
-    right: 0,
+    right: `calc(${base} * 1)`,
     // backgroundColor: "red",
-    height: "100%",
-    aspectRatio: "1 / 1", // 高さに合わせて幅も同じに
+    height: `calc(${base} * 20)`,
+    aspectRatio: `calc(${base} * 20)`,
+    flex: 1,
+    display: "flex",
+    alignItems: "center", // 縦中央
+    justifyContent: "center", // 横中央
   },
 
-  tgButton2: (col) => ({
+  tgButton2: (buttonColor) => ({
     // position: "absolute",
     position: "relative", // ★ 重ね基準
     top: "50%",
@@ -257,7 +261,7 @@ const look = {
     transform: "translate(-50%, -50%)",
     width: `calc(100% - ${base} * 10)`,
     height: `calc(100% - ${base} * 8)`,
-    backgroundColor: col.buttonColor,
+    backgroundColor: buttonColor,
   }),
 
   tgButton1: (styleObj, roo, col, boo) => ({
@@ -277,7 +281,7 @@ const look = {
     display: "flex",
     justifyContent: "center", // 横中央
     alignItems: "center", // 縦中央
-    color: tone.TextColor, // ← やさしい白
+    color: tone.textWhite, // ← やさしい白
   },
   BasicButtons3: {
     display: "flex",
@@ -323,7 +327,7 @@ const look = {
     // justifyContent: "center",
     // paddingLeft: `calc(${base} * 8)`,
     fontSize: `calc(${base} * 18)`,
-    color: tone.TextColor,
+    color: tone.textWhite,
     // gap: `calc(${base} * 2)`,
   },
   multi2: {
@@ -332,7 +336,7 @@ const look = {
     // justifyContent: "center",
     // paddingLeft: `calc(${base} * 8)`,
     fontSize: `calc(${base} * 15)`,
-    // color: tone.TextColor,
+    // color: tone.textWhite,
     // gap: `calc(${base} * 2)`,
   },
   BasicButtons1: (col) => ({
@@ -341,7 +345,7 @@ const look = {
     justifyContent: "flex-start",
     paddingLeft: `calc(${base} * 8)`,
     fontSize: `calc(${base} * 15)`,
-    color: col.textColor,
+    color: col.textWhite,
   }),
   acButton3: (boo) => ({
     display: "flex",
@@ -349,7 +353,7 @@ const look = {
     justifyContent: "flex-start",
     paddingLeft: `calc(${base} * 3)`,
     fontSize: `calc(${base} * 15)`,
-    color: tone.TextColor,
+    color: tone.textWhite,
     textDecorationLine: boo.isImportant ? "underline" : "none",
     textDecorationThickness: `calc(${base} * 7)`,
     textUnderlineOffset: `calc(${base} * 2)`,
@@ -384,7 +388,7 @@ const look = {
   TgCap4: {
     pointerEvents: "none",
     backgroundColor: tone.RemoteHoveredColor,
-    color: tone.TextColor,
+    color: tone.textWhite,
   },
   TgCap2: (col) => ({
     display: "flex",
@@ -395,7 +399,7 @@ const look = {
     minHeight: 0,
     fontSize: `calc(${base} * 18)`,
     gap: `calc(${base} * 2)`,
-    color: col.textColor,
+    color: col.textWhite,
   }),
   ac_Index_Button2: {
     display: "flex",
@@ -479,7 +483,7 @@ const look = {
     // marginTop: "0px",
     // borderRadius: "0px",
     fontFamily: "monospace",
-    userSelect: "TextColor",
+    userSelect: "textWhite",
   },
   ac1: {
     flex: 1,
@@ -595,7 +599,7 @@ const look = {
     alignItems: "center",
     justifyContent: "center",
     fontSize: `calc(${base} * 18)`,
-    color: tone.TextColor,
+    color: tone.textWhite,
     // backgroundColor: "red",
     height: "100%",
     width: "100%",
@@ -699,7 +703,7 @@ const look = {
     paddingLeft: `calc(${base} * 8)`,
     // backgroundColor: "#888888",
     fontSize: `calc(${base} * 20)`,
-    color: tone.TextColor,
+    color: tone.textWhite,
     gap: `calc(${base} * 5)`,
   },
   OftenButton2: (ButtonColor) => ({
@@ -768,7 +772,7 @@ const look = {
     // alignItems: "center",
     // justifyContent: "center",
     fontSize: `calc(${base} * 18)`,
-    color: tone.TextColor,
+    color: tone.textWhite,
     height: `calc(100% - ${base} * 8)`,
     width: `calc(100% - ${base} * 10)`,
     backgroundColor: col.buttonColor, // デバッグ用（あとで消す）
@@ -778,7 +782,7 @@ const look = {
     alignItems: "center",
     justifyContent: "center",
     fontSize: `calc(${base} * 18)`,
-    color: tone.TextColor,
+    color: tone.textWhite,
     // height: `calc(100% - ${base} * 8)`,
     // width: `calc(100% - ${base} * 10)`,
     // backgroundColor: "blue", // デバッグ用（あとで消す）
@@ -789,7 +793,7 @@ const look = {
     alignItems: "center",
     justifyContent: "center",
     fontSize: `calc(${base} * 18)`,
-    color: tone.TextColor,
+    color: tone.textWhite,
     // height: `calc(100% - ${base} * 8)`,
     // width: `calc(100% - ${base} * 10)`,
     // backgroundColor: "blue", // デバッグ用（あとで消す）
@@ -800,7 +804,7 @@ const look = {
     alignItems: "center",
     justifyContent: "center",
     fontSize: `calc(${base} * 18)`,
-    color: tone.TextColor,
+    color: tone.textWhite,
     // height: `calc(100% - ${base} * 8)`,
     // width: `calc(100% - ${base} * 10)`,
     // backgroundColor: "blue", // デバッグ用（あとで消す）
@@ -866,7 +870,8 @@ const look = {
     //  KIRIWAKE
   }),
   capable7: (col) => ({
-    // flex: 1,
+    display: "flex",
+    flexDirection: "column",
     position: "relative",
     top: "50%",
     left: "50%",
@@ -889,11 +894,12 @@ const look = {
   capable17: {
     // backgroundColor: "purple",
     fontSize: `calc(${base} * 30)`,
+    position: "absolute",
+    bottom: "0%",
+    left: "50%",
+    transform: "translateX(-50%)",
   },
   capable16: {
-    alignItems: "center",
-    justifyContent: "center",
-    display: "flex",
     position: "absolute",
     top: "0%",
     left: "0%",
@@ -901,6 +907,16 @@ const look = {
     height: "100%",
     // backgroundColor: "red",
     pointerEvents: "none", // ← これでマウスイベントを無視
+  },
+  capable18: {
+    flex: 1,
+    position: "relative",
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    alignItems: "center", // 縦中央
+    justifyContent: "center", // 横中央
+    backgroundColor: "red",
   },
   capable15: {
     display: "flex",
@@ -913,7 +929,7 @@ const look = {
     display: "flex",
     position: "relative",
     height: "100%",
-    backgroundColor: col.borderColor,
+    // backgroundColor: col.borderColor,
     // KIRIWAKE
     width: "100%",
   }),
@@ -921,7 +937,7 @@ const look = {
     display: "flex",
     width: "100%",
     height: "100%",
-    // backgroundColor: "purple",
+    backgroundColor: tone.capableBlocksColor,
     position: "relative",
   },
   capable6: {
@@ -942,7 +958,6 @@ const look = {
     // alignItems: "center",
     // justifyContent: "center",
     // alignItems: "stretch", // ← center をやめる
-    backgroundColor: "purple",
   },
   basic2: {
     display: "flex",

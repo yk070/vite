@@ -4,30 +4,21 @@ import {
   virtualVerstiles,
   lds,
 } from "../array/namedArray.js";
+import easyObj from "../obj/easyObj.js";
 
 const notUseMain = (ctx) => {
   const isWoSpaHold = ctx.preferences.includes("space");
   const isWoMuhHold = ctx.preferences.includes("muhenkan");
-  const isWoTgNone = ctx.currentAdjTg === "none";
-  const isWoTgVirtual = virtualVerstiles.includes(ctx.currentAdjTg);
-  const isWoTgShift = ctx.currentAdjTg === "shift";
-  const isWoCapable = lds?.includes(ctx.currentCapAc);
-  const isWoAcBasic = notAdjAcCaps?.includes(ctx.currentCapAc);
-  const isWoAcDefault = defaultAdjs?.includes(ctx.currentCapAc);
+  const isWoTgNone = ctx.currAdjTg === "none";
+  const isWoTgVirtual = virtualVerstiles.includes(ctx.currAdjTg);
+  const isWoTgShift = ctx.currAdjTg === "shift";
+  const isWoCapable = lds?.includes(ctx.currCapAc);
+  const isWoAcBasic = notAdjAcCaps?.includes(ctx.currCapAc);
+  const isWoAcDefault = defaultAdjs?.includes(ctx.currCapAc);
   const isWoAcSd = !!ctx.sdAcAdjNou;
+  const acTgSet = new Set(ctx.preferences?.map((obj) => `${obj.ac}|${obj.tg}`));
 
-  const hdCapableBlockAdj = ctx.hdCapableBlockObj?.adj;
-  const hdCapableBlockId = ctx.hdCapableBlockObj?.id;
-  const hdCapableBlockObjss = ctx.hdCapableBlockObj?.adjObjss;
-
-  const hdCapableAdjNous = [
-    ...new Set(hdCapableBlockObjss?.flat().map((obj) => obj.tg)),
-  ];
-  const hdCapableObjs = ctx.hdCapableObj?.objs;
-  const hdCapableId = ctx.hdCapableObj?.id;
-
-  const cdCapableAdj = ctx.cdCapableObj?.adj;
-  const cdCapableObjs = ctx.cdCapableObj?.objs;
+  const easyCurrAdjTgObj = easyObj[ctx.currAdjTg];
 
   const toggleVirtual = (x) => {
     ctx.setPreferences((prev) => {
@@ -39,32 +30,19 @@ const notUseMain = (ctx) => {
     });
   };
 
-  const acTgSet = new Set(ctx.preferences?.map((obj) => `${obj.ac}|${obj.tg}`));
-  const isStableOnHd = ctx.hdStableObj?.objs?.every((obj) =>
-    acTgSet.has(`${obj.ac}|${obj.tg}`),
-  );
-
   return {
     isWoTgNone,
     isWoTgVirtual,
     isWoAcSd,
-    isStableOnHd,
     isWoAcBasic,
-    acTgSet,
     isWoTgShift,
     isWoSpaHold,
     isWoMuhHold,
     toggleVirtual,
     isWoCapable,
     isWoAcDefault,
-    cdCapableAdj,
-    cdCapableObjs,
-    hdCapableBlockAdj,
-    hdCapableBlockId,
-    hdCapableObjs,
-    hdCapableId,
-    hdCapableBlockObjss,
-    hdCapableAdjNous,
+    acTgSet,
+    easyCurrAdjTgObj,
   };
 };
 export default notUseMain;

@@ -6,12 +6,12 @@ const useCapable = (ctx) => {
 
   useEffect(() => {
     if (!isCapableHdRef.current && ctx.isCapableAreaHd) {
-      adjRef.current = ctx.currentAdjTg;
+      adjRef.current = ctx.currAdjTg;
     }
     if (isCapableHdRef.current && !ctx.isCapableAreaHd) {
-      ctx.setCurrentAdjTg(adjRef.current);
+      ctx.setCurrAdjTg(adjRef.current);
     }
-    if (ctx.hdCapableBlockAdj) ctx.setCurrentAdjTg(ctx.hdCapableBlockAdj);
+    if (ctx.hdCapableBlockAdj) ctx.setCurrAdjTg(ctx.hdCapableBlockAdj);
 
     isCapableHdRef.current = ctx.isCapableAreaHd;
   }, [ctx.isCapableAreaHd, ctx.hdCapableBlockAdj]);
@@ -19,7 +19,7 @@ const useCapable = (ctx) => {
   useEffect(() => {
     if (!ctx.cdCapableObjs) return;
     ctx.setCdCapableObj(null);
-    ctx.setCurrentAdjTg(ctx.cdCapableAdj);
+    ctx.setCurrAdjTg(ctx.cdCapableAdj);
     adjRef.current = ctx.cdCapableAdj;
 
     ctx.setPreferences((prev) => {

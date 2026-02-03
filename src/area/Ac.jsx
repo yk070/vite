@@ -22,7 +22,7 @@ const Ac = () => {
         {ctx.isWoAcBasic && <Basic />}
         {ctx.isWoCapable && <Capable />}
         {ctx.isWoAcDefault &&
-          Object.entries(adjPosiIdObjObj[ctx.currentCapAc]).map(
+          Object.entries(adjPosiIdObjObj[ctx.currCapAc]).map(
             ([posiId, styleObj]) => (
               <AcEle key={posiId} posiId={posiId} styleObj={styleObj} />
             ),

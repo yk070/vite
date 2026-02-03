@@ -17,15 +17,15 @@ const useBasicCol = ({ adjNou }) => {
     }
     return "transparent"; // デフォルト
   };
-  const getTextColor = () => {
+  const gettextWhite = () => {
     if (boo.isActive) return "black";
-    return tone.TextColor;
+    return tone.textWhite;
   };
 
   const buttonColor = getButtonColor();
   const borderColor = getBorderColor();
-  const textColor = getTextColor();
-  return { buttonColor, borderColor, textColor };
+  const textWhite = gettextWhite();
+  return { buttonColor, borderColor, textWhite };
 };
 
 export default useBasicCol;

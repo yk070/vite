@@ -12,26 +12,15 @@ const MultiCircle = ({ level, circleColor }) => {
   const config = levelConfig[level];
   if (!config) return null;
 
-  const topValue = base * config.topMultiplier;
-  const rightValue = base * config.rightMultiplier;
-
   return (
-    <span
-      style={{
-        position: "absolute",
-        top: topValue,
-        right: rightValue,
-        height: "100%",
-        width: "100%",
-      }}
-    >
+    <div>
       <MultiCircleDiv
         {...config}
         base={base}
         size={60}
         circleColor={circleColor}
       />
-    </span>
+    </div>
   );
 };
 

@@ -3,7 +3,7 @@ import useCtx from "../context/useCtx.jsx";
 const useAcCapBoo = ({ acCap }) => {
   const ctx = useCtx();
 
-  const click = () => ctx.setcurrentCapAc(acCap);
+  const click = () => ctx.setCurrCapAc(acCap);
 
   return { click };
 };

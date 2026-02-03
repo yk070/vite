@@ -2,11 +2,11 @@
 import useMain from "./useMain.js";
 
 const useMainSelector = () => {
-  const { currentCapAc, currentAdjTg } = useMain();
+  const { currCapAc, currAdjTg } = useMain();
 
   return {
-    currentCapAc,
-    currentAdjTg,
+    currCapAc,
+    currAdjTg,
   };
 };
 
