@@ -4,10 +4,10 @@ export const notUseTgCaps = (ctx) => {
   const getTgCaps = (ctx) => {
     let caps = [...defaultAdjs];
 
-    if (ctx.preferences.includes("space") && !caps.includes("space")) {
+    if (ctx.exploitedAdjs.includes("space") && !caps.includes("space")) {
       caps = caps.concat("space");
     }
-    if (ctx.preferences.includes("muhenkan") && !caps.includes("muhenkan")) {
+    if (ctx.exploitedAdjs.includes("muhenkan") && !caps.includes("muhenkan")) {
       caps = caps.concat("muhenkan");
     }
 

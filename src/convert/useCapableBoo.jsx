@@ -1,13 +1,14 @@
 import useCtx from "../context/useCtx.jsx";
+import useCapableRoo from "../convert/useCapableRoo.jsx";
 
 const useCapableBoo = ({ pBlock }) => {
   const ctx = useCtx();
+  const roo = useCapableRoo({ pBlock });
 
-  const isHd = ctx.hdCapableId === pBlock.id;
-  const isSd = pBlock.preferences.every((obj) =>
-    ctx.acTgSet.has(`${obj.ac}|${obj.tg}`),
+  const isHd = ctx.hdCapableId === roo.id;
+  const isSd = pBlock.prfs.every((obj) =>
+    ctx.acTgsSet.has(`${obj.ac}|${obj.tg}`),
   );
-
   return { isHd, isSd };
 };
 

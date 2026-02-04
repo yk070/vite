@@ -13,24 +13,27 @@ const useMain = () => {
   const [HoverLocktg, setHoverLocktg] = useState(null);
 
   // current adj
-  const [currCapAc, setCurrCapAc] = useState("capable1");
+  const [currCapAc, setCurrCapAc] = useState("none");
   const [currCapTg, setCurrAdjTg] = useState("none");
   // selected
-  const [sdAcAdjNou, setSdAcAdjNou] = useState(null);
   const [sdTgAdjNou, setSdTgAdjNou] = useState(null);
-  // ac-Tg
+  // ac
+  const [cdAcAdjNou, setCdAcAdjNou] = useState(null);
+  const [hdCapableBlockAdj, setHdCapableBlockAdj] = useState(null);
   // hovered
   const [hdAdjNouTg, setHdAdjNouTg] = useState(null);
   const [hdAdjNouAc, setHdAdjNouAc] = useState(null);
   // enter
   const [isEnterSelected, setisEnterSelected] = useState(false);
   return {
+    hdCapableBlockAdj,
+    setHdCapableBlockAdj,
+    cdAcAdjNou,
+    setCdAcAdjNou,
     currCapAc,
     setCurrCapAc,
     currCapTg,
     setCurrAdjTg,
-    sdAcAdjNou,
-    setSdAcAdjNou,
     sdTgAdjNou,
     setSdTgAdjNou,
     hdAdjNouTg,

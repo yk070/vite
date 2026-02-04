@@ -1,13 +1,13 @@
 import { useRef, useState } from "react";
 
 const useHistory = () => {
-  const [preferences, _setPreferences] = useState([]);
+  const [allSettings, _setExploitedAdjPrfs] = useState([]);
   const [historyIndex, setHistoryIndex] = useState(0); // ←初期は0
   const historyRef = useRef([[]]); // ←初期状態も履歴に登録
   const skipHistoryRef = useRef(false);
 
-  const setPreferences = (next) => {
-    _setPreferences((prev) => {
+  const setAllSettings = (next) => {
+    _setExploitedAdjPrfs((prev) => {
       const value = typeof next === "function" ? next(prev) : next;
 
       if (!skipHistoryRef.current) {
@@ -30,15 +30,15 @@ const useHistory = () => {
     if (index >= 0 && index < historyRef.current.length) {
       skipHistoryRef.current = true;
 
-      _setPreferences(historyRef.current[index]);
+      _setExploitedAdjPrfs(historyRef.current[index]);
 
       setHistoryIndex(index);
     }
   };
 
   return {
-    preferences,
-    setPreferences,
+    allSettings,
+    setAllSettings,
     historyIndex,
     setHistoryIndex,
     restoreFromHistory,

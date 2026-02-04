@@ -8,14 +8,11 @@ const useAcBoo = ({ posiId }) => {
   const ctx = useCtx();
 
   const isEnterBelow = roo.posiId === "enter_below";
-  const isActive = ctx.sdAcAdjNou === roo.adjNou;
+  const isActive = ctx.cdAcAdjNou === roo.adjNou;
 
   const isFunctionUsed =
-    !isEnterBelow &&
-    ctx.preferences?.some((actgObj) => actgObj.ac === roo.adjNou);
-  const isLocationUsed = ctx.preferences?.some(
-    (actgObj) => actgObj.tg === roo.adjNou,
-  );
+    !isEnterBelow && ctx.prfs?.some((actgObj) => actgObj.ac === roo.adjNou);
+  const isLocationUsed = ctx.prfs?.some((actgObj) => actgObj.tg === roo.adjNou);
   const isAlert = isLocationUsed && !isFunctionUsed && !isEnterBelow;
 
   const isHd = ctx.hdAdjNouAc === roo.adjNou;

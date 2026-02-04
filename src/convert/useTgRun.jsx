@@ -7,7 +7,7 @@ const useTgRun = ({ posiId }) => {
   const boo = useTgBoo({ posiId });
 
   const remove = () => {
-    ctx.setPreferences((prev) =>
+    ctx.setAllSettings((prev) =>
       prev.filter((actgObj) => actgObj.tg !== roo.originAdjNou),
     );
   };
@@ -16,7 +16,7 @@ const useTgRun = ({ posiId }) => {
     if (boo.isSoSpaHold) ctx.toggleVirtual("space");
     if (boo.isSoMuhHold) ctx.toggleVirtual("muhenkan");
     if (boo.isDisabled || (boo.isVacant && !ctx.isWoAcSd)) return;
-    if (ctx.sdAcAdjNou) {
+    if (ctx.cdAcAdjNou) {
       if (boo.isAssigned) remove();
       ctx.setSdTgAdjNou(roo.originAdjNou);
     } else if (boo.isAssigned) remove();

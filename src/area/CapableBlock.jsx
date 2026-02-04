@@ -1,33 +1,22 @@
 import look from "../style/look.jsx";
 import CapableEle from "./CapableEle.jsx";
-import useCapableBlockBoo from "../convert/useCapableBlockBoo.jsx";
 import useCapableBlockCol from "../convert/useCapableBlockCol.jsx";
 import useCapableBlockRun from "../convert/useCapableBlockRun.jsx";
-import useCapableBlockRoo from "../convert/useCapableBlockRoo.jsx";
-// const pHalf = { title, adj, preferencess };
+// const pHalf = { title: ctx.cdAcAdjNou, adj, prfss };
 const CapableBlock = ({ pHalf }) => {
-  const roo = useCapableBlockRoo({ pHalf });
-  const boo = useCapableBlockBoo({ pHalf });
   const col = useCapableBlockCol({ pHalf });
   const run = useCapableBlockRun({ pHalf });
-
   return (
     <div
-      style={look.capable8(pHalf.preferencess.length, col)}
+      style={look.capable8(pHalf.prfss.length, col)}
       onMouseEnter={run.hover}
       onMouseLeave={run.leave}
     >
-      <div style={look.capable12}>
-        <div style={look.capable15}>
-          {pHalf.preferencess.map((preferences, i) => {
-            const id = `${pHalf.title}${pHalf.adj}${i}`;
-            const pBlock = { adj: pHalf.adj, preferences, i, id };
-            return <CapableEle key={id} pBlock={pBlock} />;
-          })}
-        </div>
-        <div style={look.capable16}>
-          {/* <span style={look.capable17}>{pHalf.adj}</span> */}
-        </div>
+      <div style={look.capable15}>
+        {pHalf.prfss.map((prfs, i) => {
+          const pBlock = { adj: pHalf.adj, prfs, i };
+          return <CapableEle key={i} pBlock={pBlock} />;
+        })}
       </div>
     </div>
   );

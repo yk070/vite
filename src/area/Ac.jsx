@@ -7,7 +7,6 @@ import Basic from "./Basic.jsx";
 import { adjPosiIdObjObj } from "../obj/namedObj.js";
 import AcEle from "./AcEle.jsx";
 import Capable from "./Capable.jsx";
-import Capable2 from "./Capable2.jsx";
 
 const Ac = () => {
   const ctx = useCtx();
@@ -21,7 +20,6 @@ const Ac = () => {
       <div style={look.ac3}>
         <AlphaNumBlock derive="ac" />
         {ctx.isWoUsable && <Basic />}
-        {ctx.isWoCapable && <Capable />}
         {ctx.isWoFlexible &&
           Object.entries(adjPosiIdObjObj[ctx.currCapAc]).map(
             ([posiId, styleObj]) => (
@@ -29,7 +27,7 @@ const Ac = () => {
             ),
           )}
       </div>
-      <Capable2 />
+      <Capable />
     </>
   );
 };

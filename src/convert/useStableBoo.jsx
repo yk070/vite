@@ -4,7 +4,7 @@ const useStableBoo = ({ props }) => {
 
   const isHd = props.title === ctx.hdStableObj?.title;
   const isSd = props.objs.every((obj) =>
-    ctx.acTgSet.has(`${obj.ac}|${obj.tg}`),
+    ctx.acTgsSet.has(`${obj.ac}|${obj.tg}`),
   );
 
   return { isHd, isSd };

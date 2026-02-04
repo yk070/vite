@@ -20,12 +20,8 @@ const useTgBoo = ({ posiId }) => {
     allAdjectiveNous.includes(roo.originNou) &&
     adjAdjectiveNousObj[ctx.currCapTg]?.includes(roo.originNou);
 
-  const isLocationUsed = ctx.preferences.some(
-    (obj) => obj.tg === roo.originAdjNou,
-  );
-  const isFunctionUsed = ctx.preferences.some(
-    (obj) => obj.ac === roo.originAdjNou,
-  );
+  const isLocationUsed = ctx.prfs.some((obj) => obj.tg === roo.originAdjNou);
+  const isFunctionUsed = ctx.prfs.some((obj) => obj.ac === roo.originAdjNou);
 
   const isSoSpaHold = ctx.isWoSpaHold && roo.originAdjNou === "none*space";
   const isSoMuhHold = ctx.isWoMuhHold && roo.originAdjNou === "none*muhenkan";

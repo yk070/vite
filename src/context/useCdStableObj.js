@@ -7,19 +7,19 @@ const useCdStableObj = (ctx) => {
     if (!Array.isArray(ctx.cdStableObjs)) return;
     if (!ctx.cdStableObjs) return;
 
-    ctx.setPreferences((prev) => {
-      const filteredPreferences = prev.filter(
-        (acTgObj) =>
+    ctx.setAllSettings((prev) => {
+      const filteredPrfs = prev.filter(
+        (prf) =>
           !ctx.cdStableObjs.some(
-            (targetMiniObj) => targetMiniObj.tg === acTgObj.tg,
+            (targetMiniObj) => targetMiniObj.tg === prf.tg,
           ),
       );
       const isAlreadySd = ctx.cdStableObjs?.every((targetMiniObj) =>
-        ctx.acTgSet.has(`${targetMiniObj.ac}|${targetMiniObj.tg}`),
+        ctx.acTgsSet.has(`${targetMiniObj.ac}|${targetMiniObj.tg}`),
       );
       return isAlreadySd
-        ? filteredPreferences
-        : [...filteredPreferences, ...ctx.cdStableObjs];
+        ? filteredPrfs
+        : [...filteredPrfs, ...ctx.cdStableObjs];
     });
   }, [ctx.cdStableObjs]);
 };

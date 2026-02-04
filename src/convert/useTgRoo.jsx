@@ -5,14 +5,12 @@ const useTgRoo = ({ posiId }) => {
   const originNou = EnterObj[posiId] ?? posiId;
   const originAdjNou = ctx.currCapTg + "*" + originNou;
 
-  const assignAdjNou = ctx.preferences.find(
-    (obj) => obj.tg === originAdjNou,
-  )?.ac;
+  const assignAdjNou = ctx.prfs.find((obj) => obj.tg === originAdjNou)?.ac;
 
   const stableHdAcAdjNou = ctx.hdStableObj?.objs?.find(
     (obj) => obj.tg === originAdjNou,
   )?.ac;
-  const capableHdAcAdjNou = ctx.hdCapablePreferences?.find(
+  const capableHdAcAdjNou = ctx.hdCapablePrfs?.find(
     (obj) => obj.tg === originAdjNou,
   )?.ac;
   const cdMultiList = Array.isArray(ctx.cdStableObjs?.objs)

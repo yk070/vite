@@ -4,9 +4,11 @@ const useBasicRun = ({ adjNou }) => {
 
   const click = () => {
     if (ctx.isWoAcSd) {
-      ctx.setSdAcAdjNou(null);
+      ctx.setCdAcAdjNou({});
     } else {
-      ctx.setSdAcAdjNou(adjNou);
+      ctx.setCdAcAdjNou({
+        adjNou: adjNou,
+      });
     }
   };
 

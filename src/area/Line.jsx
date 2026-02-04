@@ -8,8 +8,8 @@ const Line = ({ props }) => {
   const ctx = useCtx();
   const { key, containerRef, headX, headY } = props;
 
-  const isCapableHd = ctx.hdCapablePreferences?.some((preference) => {
-    const [, after] = preference.tg.split("*");
+  const isCapableHd = ctx.hdCapablePrfs?.some((prf) => {
+    const [, after] = prf.tg.split("*");
     return after === key;
   });
   if (ctx.isWoTgNone) return null;

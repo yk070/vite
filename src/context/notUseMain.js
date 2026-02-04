@@ -7,8 +7,13 @@ import {
 import easyObj from "../obj/easyObj.js";
 
 const notUseMain = (ctx) => {
-  const isWoSpaHold = ctx.preferences.includes("space");
-  const isWoMuhHold = ctx.preferences.includes("muhenkan");
+  const exploitedAdjs = ctx.allSettings.filter((v) => typeof v === "string");
+  const prfs = ctx.allSettings.filter(
+    (v) => typeof v === "object" && v !== null,
+  );
+
+  const isWoSpaHold = ctx.exploitedAdjs?.includes("space");
+  const isWoMuhHold = ctx.exploitedAdjs?.includes("muhenkan");
   const isWoTgNone = ctx.currCapTg === "none";
   const isWoAcNone = ctx.currCapAc === "none";
   const isWoTgVirtual = virtualVersatiles.includes(ctx.currCapTg);
@@ -16,13 +21,13 @@ const notUseMain = (ctx) => {
   const isWoCapable = capableCaps?.includes(ctx.currCapAc);
   const isWoUsable = usableCaps?.includes(ctx.currCapAc);
   const isWoFlexible = defaultAdjs?.includes(ctx.currCapAc);
-  const isWoAcSd = !!ctx.sdAcAdjNou;
-  const acTgSet = new Set(ctx.preferences?.map((obj) => `${obj.ac}|${obj.tg}`));
-
+  const isWoAcSd = !!ctx.cdAcAdjNou;
+  const acTgsSet = new Set(prfs?.map((obj) => `${obj?.ac}|${obj?.tg}`));
+  // console.log(acTgsSet);
   const easyCurrAdjTgObj = easyObj[ctx.currCapTg];
 
   const toggleVirtual = (x) => {
-    ctx.setPreferences((prev) => {
+    ctx.setAllSettings((prev) => {
       if (prev.includes(x)) {
         return prev.filter((item) => item !== x);
       } else {
@@ -32,6 +37,8 @@ const notUseMain = (ctx) => {
   };
 
   return {
+    exploitedAdjs,
+    prfs,
     isWoAcNone,
     isWoTgNone,
     isWoTgVirtual,
@@ -43,7 +50,7 @@ const notUseMain = (ctx) => {
     toggleVirtual,
     isWoCapable,
     isWoFlexible,
-    acTgSet,
+    acTgsSet,
     easyCurrAdjTgObj,
   };
 };

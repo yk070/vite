@@ -1,10 +1,8 @@
 import look from "../style/look.jsx";
 import useCapableCol from "../convert/useCapableCol.jsx";
 import useCapableRun from "../convert/useCapableRun.jsx";
-import CapableCircle from "./CapableCircle.jsx";
-// import useCapableCircle from "../convert/useCapableCircle.jsx";
 import easyObj from "../obj/easyObj.js";
-// const pBlock = { adj: pHalf.adj, id, preferences, i };
+// const pBlock = { adj: pHalf.adj, prfs, i };
 const CapableEle = ({ pBlock }) => {
   const col = useCapableCol({ pBlock });
   const run = useCapableRun({ pBlock });
@@ -16,8 +14,8 @@ const CapableEle = ({ pBlock }) => {
       onMouseEnter={run.hover}
       onMouseLeave={run.leave}
     >
-      <div style={look.capable7(col)}>
-        {pBlock.preferences.map((adjObj, i) => {
+      <div style={look.capable7(col.buttonColor)}>
+        {pBlock.prfs.map((adjObj, i) => {
           const capableNou = adjObj.tg.split("*")[1];
           const getCircle = () => {
             const entry = Object.entries(easyObj[pBlock.adj])?.find(
@@ -30,8 +28,8 @@ const CapableEle = ({ pBlock }) => {
           };
           const circle = getCircle();
           return (
-            <div style={look.capable18}>
-              <div key={i} style={{ ...look.common2, ...circle }} />
+            <div style={look.capable18} key={i}>
+              <div style={{ ...look.common2, ...circle }} />
             </div>
           );
         })}

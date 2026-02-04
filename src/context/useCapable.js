@@ -1,48 +1,66 @@
 import { useEffect, useRef } from "react";
+import { virtualVersatiles } from "../array/namedArray.js";
 
 const useCapable = (ctx) => {
-  const isCapableHdRef = useRef(ctx.isCapableAreaHd);
-  const adjRef = useRef(null);
-
+  //ctx.hdCapableBlockAdj
+  const prevAllSettingsRef = useRef(null);
+  const prevCapTgRef = useRef(null);
   useEffect(() => {
-    if (!isCapableHdRef.current && ctx.isCapableAreaHd) {
-      adjRef.current = ctx.currCapTg;
-    }
-    if (isCapableHdRef.current && !ctx.isCapableAreaHd) {
-      ctx.setCurrAdjTg(adjRef.current);
-    }
-    if (ctx.hdCapableBlockAdj) ctx.setCurrAdjTg(ctx.hdCapableBlockAdj);
+    const hdAdj = ctx.hdCapableBlockAdj;
+    const isHdAdjVirtual = virtualVersatiles.includes(hdAdj);
+    const isNotIncluded = !ctx.exploitedAdjs.includes(hdAdj);
 
-    isCapableHdRef.current = ctx.isCapableAreaHd;
-  }, [ctx.isCapableAreaHd, ctx.hdCapableBlockAdj]);
+    if (!prevAllSettingsRef.current) {
+      prevAllSettingsRef.current = ctx.allSettings;
+      prevCapTgRef.current = ctx.currCapTg;
+    }
 
+    if (isHdAdjVirtual) {
+      console.log("virtual");
+      if (isNotIncluded) {
+        console.log("isNotIncluded");
+        ctx.setAllSettings((prev) => [...prev, hdAdj]);
+      } else {
+        ctx.setAllSettings(prevAllSettingsRef.current);
+        prevAllSettingsRef.current = null;
+      }
+    } else {
+      console.log("isnotvirtual");
+      ctx.setAllSettings(prevAllSettingsRef.current);
+      prevAllSettingsRef.current = null;
+    }
+
+    if (hdAdj) {
+      ctx.setCurrAdjTg(hdAdj);
+    } else {
+      ctx.setCurrAdjTg(prevCapTgRef.current);
+    }
+  }, [ctx.hdCapableBlockAdj]);
+
+  //ctx.cdCapablePrfs
   useEffect(() => {
-    if (!ctx.cdCapableObjs) return;
+    if (!ctx.cdCapablePrfs) return;
+    ctx.setCdAcAdjNou(null);
+    ctx.setHdCapableObj(null);
     ctx.setCdCapableObj(null);
     ctx.setCurrAdjTg(ctx.cdCapableAdj);
-    adjRef.current = ctx.cdCapableAdj;
 
-    ctx.setPreferences((prev) => {
-      const filteredPreferences = prev.filter(
-        (acTgObj) =>
-          !ctx.cdCapableObjs.some(
-            (targetMiniObj) => targetMiniObj.tg === acTgObj.tg,
-          ),
+    ctx.setAllSettings((prev) => {
+      const filteredPrfs = prev.filter(
+        (prf) =>
+          !ctx.cdCapablePrfs.some((cdCapablePrf) => cdCapablePrf.tg === prf.tg),
       );
-      const isAlreadySd = ctx.cdCapableObjs?.every((targetMiniObj) =>
-        ctx.acTgSet.has(`${targetMiniObj.ac}|${targetMiniObj.tg}`),
+      const isAlreadySd = ctx.cdCapablePrfs?.every((cdCapablePrf) =>
+        ctx.acTgsSet.has(`${cdCapablePrf.ac}|${cdCapablePrf.tg}`),
       );
 
-      let nextPreferences = [...filteredPreferences];
+      let newPrfs = [...filteredPrfs];
       if (!isAlreadySd) {
-        nextPreferences = [...nextPreferences, ...ctx.cdCapableObjs];
+        newPrfs = [...newPrfs, ...ctx.cdCapablePrfs];
       }
-      if (!prev.includes(ctx.cdCapableAdj)) {
-        nextPreferences = [...nextPreferences, ctx.cdCapableAdj];
-      }
-      return nextPreferences;
+      return newPrfs;
     });
-  }, [ctx.cdCapableObjs]);
+  }, [ctx.cdCapablePrfs]);
 };
 
 export default useCapable;

@@ -1,9 +1,8 @@
 import useCtx from "../context/useCtx.jsx";
-const useCapableRoo = ({ props }) => {
+const useCapableRoo = ({ pBlock }) => {
   const ctx = useCtx();
-  const { id, title, adj, i } = props;
-
-  return {};
+  const id = `${pBlock.adj}${pBlock.i}`;
+  return { id };
 };
 
 export default useCapableRoo;
