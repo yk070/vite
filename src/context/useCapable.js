@@ -5,6 +5,7 @@ const useCapable = (ctx) => {
   //ctx.hdCapableBlockAdj
   const prevAllSettingsRef = useRef(null);
   const prevCapTgRef = useRef(null);
+  const isTrackingRef = useRef(false);
   useEffect(() => {
     const hdAdj = ctx.hdCapableBlockAdj;
     const isHdAdjVirtual = virtualVersatiles.includes(hdAdj);
@@ -12,28 +13,30 @@ const useCapable = (ctx) => {
 
     if (!prevAllSettingsRef.current) {
       prevAllSettingsRef.current = ctx.allSettings;
+    }
+    if (hdAdj !== null && !isTrackingRef.current) {
       prevCapTgRef.current = ctx.currCapTg;
+      isTrackingRef.current = true;
     }
 
     if (isHdAdjVirtual) {
-      console.log("virtual");
       if (isNotIncluded) {
-        console.log("isNotIncluded");
         ctx.setAllSettings((prev) => [...prev, hdAdj]);
       } else {
         ctx.setAllSettings(prevAllSettingsRef.current);
         prevAllSettingsRef.current = null;
       }
     } else {
-      console.log("isnotvirtual");
-      ctx.setAllSettings(prevAllSettingsRef.current);
       prevAllSettingsRef.current = null;
     }
 
     if (hdAdj) {
-      ctx.setCurrAdjTg(hdAdj);
-    } else {
-      ctx.setCurrAdjTg(prevCapTgRef.current);
+      ctx.setCurrCapTg(hdAdj);
+    }
+    if (hdAdj === null && isTrackingRef.current) {
+      ctx.setCurrCapTg(prevCapTgRef.current);
+      prevCapTgRef.current = null;
+      isTrackingRef.current = false;
     }
   }, [ctx.hdCapableBlockAdj]);
 
@@ -43,7 +46,7 @@ const useCapable = (ctx) => {
     ctx.setCdAcAdjNou(null);
     ctx.setHdCapableObj(null);
     ctx.setCdCapableObj(null);
-    ctx.setCurrAdjTg(ctx.cdCapableAdj);
+    ctx.setCurrCapTg(ctx.cdCapableAdj);
 
     ctx.setAllSettings((prev) => {
       const filteredPrfs = prev.filter(

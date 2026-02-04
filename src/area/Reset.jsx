@@ -6,7 +6,7 @@ const Reset = () => {
   const click = () => {
     ctx.setAllSettings([]);
     ctx.setCurrCapAc("none");
-    ctx.setCurrAdjTg("none");
+    ctx.setCurrCapTg("none");
     ctx.setCdAcAdjNou(null);
   };
   return (

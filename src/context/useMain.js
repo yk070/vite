@@ -14,7 +14,7 @@ const useMain = () => {
 
   // current adj
   const [currCapAc, setCurrCapAc] = useState("none");
-  const [currCapTg, setCurrAdjTg] = useState("none");
+  const [currCapTg, setCurrCapTg] = useState("none");
   // selected
   const [sdTgAdjNou, setSdTgAdjNou] = useState(null);
   // ac
@@ -33,7 +33,7 @@ const useMain = () => {
     currCapAc,
     setCurrCapAc,
     currCapTg,
-    setCurrAdjTg,
+    setCurrCapTg,
     sdTgAdjNou,
     setSdTgAdjNou,
     hdAdjNouTg,
