@@ -22,7 +22,7 @@ const CtxProvider = ({ children }) => {
 
   Object.assign(ctx, notUseMain(ctx));
   Object.assign(ctx, notUseMultiple(ctx));
-  Object.assign(ctx, notUseTgCaps(ctx));
+  ctx.tgCaps = notUseTgCaps(ctx);
   Object.assign(ctx, notUseScript(ctx));
   Object.assign(ctx, notUseArrow(ctx));
 

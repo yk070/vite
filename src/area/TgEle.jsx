@@ -6,25 +6,27 @@ import useTgRoo from "../convert/useTgRoo.jsx";
 import look from "../style/look.jsx";
 import useTgButtonColor from "../convert/useTgButtonColor.jsx";
 import useTgCircle from "../convert/useTgCircle.jsx";
+import useTgBooMerge from "../convert/useTgBooMerge.jsx";
 
 const TgEle = ({ posiId, styleObj }) => {
   const roo = useTgRoo({ posiId });
   const boo = useTgBoo({ posiId });
+  const merge = useTgBooMerge({ posiId });
   const col = useTgCol({ posiId });
   const buttonColor = useTgButtonColor({ posiId });
   const circle = useTgCircle({ posiId });
   const lab = useTgLab({ posiId });
   const run = useTgRun({ posiId });
 
-  if (boo.isReturn) return null;
+  if (merge.isReturn) return null;
 
   return (
     <div
       style={look.tgButton1(
         styleObj,
-        roo.isCursorPointer,
+        merge.isCursorPointer,
         col.borderColor,
-        boo.isHighZ,
+        merge.isHighZ,
       )}
       onClick={run.click}
       onMouseEnter={run.hover}

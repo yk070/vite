@@ -1,12 +1,13 @@
 import useCtx from "../context/useCtx.jsx";
-import tone from "../style/color.jsx";
 import useTgBoo from "./useTgBoo.jsx";
 import useTgRoo from "./useTgRoo.jsx";
 import look from "../style/look.jsx";
+import useTgBooMerge from "./useTgBooMerge.jsx";
 
 const useTgCircle = ({ posiId }) => {
   const boo = useTgBoo({ posiId });
   const roo = useTgRoo({ posiId });
+  const merge = useTgBooMerge({ posiId });
   const ctx = useCtx();
 
   const getLevel = () => {
@@ -14,13 +15,13 @@ const useTgCircle = ({ posiId }) => {
       nous?.includes(roo.originNou),
     );
 
-    if (boo.isCapableBlockPseudoHd) return entry?.[0] ?? "third";
+    if (boo.isCapablePsHd) return entry?.[0] ?? "third";
 
     if (
       !ctx.isWoAcSd ||
-      boo.isSoVirtualHold ||
+      merge.isSoVirtualHold ||
       boo.isDisabled ||
-      boo.isAssigned
+      merge.isAssigned
     )
       return "";
 

@@ -5,10 +5,10 @@ const useTgBoo = ({ tgCap }) => {
   const ctx = useCtx();
 
   const isSd = tgCap === ctx.currCapTg;
-  const isRemoteHovered =
+  const isFunctionPsHd =
     ctx.remoteHdAdj === tgCap && ctx.currCapTg !== ctx.remoteHdAdj;
   const isVirtual = virtualVersatiles.includes(tgCap);
-  return { isSd, isRemoteHovered, isVirtual };
+  return { isSd, isFunctionPsHd, isVirtual };
 };
 
 export default useTgBoo;

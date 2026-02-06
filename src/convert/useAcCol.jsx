@@ -8,12 +8,12 @@ const useAcCol = ({ posiId }) => {
 
   const getButtonColor = () => {
     if (boo.isDisabled) return tone.DisabledButtonColor;
-    if (boo.isActive) return tone.acSelectColor;
+    if (boo.isActive) return tone.acSd;
     return tone.normalButton;
   };
   const getBorderColor = () => {
     if (boo.isDisabled && boo.isHd) return "transparent";
-    if (!ctx.isWoAcSd && boo.isHd) return tone.acSelectColor;
+    if (!ctx.isWoAcSd && boo.isHd) return tone.acSd;
     return "transparent";
   };
 

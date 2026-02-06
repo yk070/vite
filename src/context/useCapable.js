@@ -2,50 +2,43 @@ import { useEffect, useRef } from "react";
 import { virtualVersatiles } from "../array/namedArray.js";
 
 const useCapable = (ctx) => {
-  //ctx.hdCapableBlockAdj
-  const prevAllSettingsRef = useRef(null);
-  const prevCapTgRef = useRef(null);
-  const isTrackingRef = useRef(false);
+  //ctx.hdBlockAdj
+  const refCapTg = useRef(null);
+  const isRefCap = useRef(false);
+
   useEffect(() => {
-    const hdAdj = ctx.hdCapableBlockAdj;
-    const isHdAdjVirtual = virtualVersatiles.includes(hdAdj);
-    const isNotIncluded = !ctx.exploitedAdjs.includes(hdAdj);
-
-    if (!prevAllSettingsRef.current) {
-      prevAllSettingsRef.current = ctx.allSettings;
+    const hdAdj = ctx.hdBlockAdj;
+    //setCurrCapTg
+    if (!isRefCap.current) {
+      refCapTg.current = ctx.currCapTg;
+      isRefCap.current = true;
     }
-    if (hdAdj !== null && !isTrackingRef.current) {
-      prevCapTgRef.current = ctx.currCapTg;
-      isTrackingRef.current = true;
-    }
-
-    if (isHdAdjVirtual) {
-      if (isNotIncluded) {
-        ctx.setAllSettings((prev) => [...prev, hdAdj]);
-      } else {
-        ctx.setAllSettings(prevAllSettingsRef.current);
-        prevAllSettingsRef.current = null;
-      }
-    } else {
-      prevAllSettingsRef.current = null;
-    }
-
     if (hdAdj) {
       ctx.setCurrCapTg(hdAdj);
+    } else if (isRefCap.current) {
+      ctx.setCurrCapTg(refCapTg.current);
+      refCapTg.current = null;
+      isRefCap.current = false;
     }
-    if (hdAdj === null && isTrackingRef.current) {
-      ctx.setCurrCapTg(prevCapTgRef.current);
-      prevCapTgRef.current = null;
-      isTrackingRef.current = false;
+
+    //setAllSettings
+    const isHdAdjVirtual = virtualVersatiles.includes(hdAdj);
+
+    const isNotIncluded = !ctx.exploitedAdjs.includes(hdAdj);
+    const isToRevise = isHdAdjVirtual && isNotIncluded;
+    if (isToRevise) {
+      ctx.setToReviseVirtualAdj(hdAdj);
+    } else {
+      ctx.setToReviseVirtualAdj(null);
     }
-  }, [ctx.hdCapableBlockAdj]);
+  }, [ctx.hdBlockAdj]);
 
   //ctx.cdCapablePrfs
   useEffect(() => {
     if (!ctx.cdCapablePrfs) return;
     ctx.setCdAcAdjNou(null);
     ctx.setHdCapableObj(null);
-    ctx.setCdCapableObj(null);
+    ctx.setHdBlockObj(null);
     ctx.setCurrCapTg(ctx.cdCapableAdj);
 
     ctx.setAllSettings((prev) => {

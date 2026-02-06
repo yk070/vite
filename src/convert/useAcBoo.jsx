@@ -7,21 +7,21 @@ const useAcBoo = ({ posiId }) => {
   const roo = useAcRoo({ posiId });
   const ctx = useCtx();
 
+  //individual
   const isEnterBelow = roo.posiId === "enter_below";
-  const isActive = ctx.cdAcAdjNou === roo.adjNou;
-
-  const isFunctionUsed =
-    !isEnterBelow && ctx.prfs?.some((actgObj) => actgObj.ac === roo.adjNou);
+  //some
+  const isFunctionUsed = ctx.prfs?.some((actgObj) => actgObj.ac === roo.adjNou);
   const isLocationUsed = ctx.prfs?.some((actgObj) => actgObj.tg === roo.adjNou);
   const isAlert = isLocationUsed && !isFunctionUsed && !isEnterBelow;
-
+  //hd
   const isHd = ctx.hdAdjNouAc === roo.adjNou;
-
+  //basic
+  const isActive = ctx.cdAcAdjNou === roo.adjNou;
+  //includes
   const isImportant = importantAdjNous.includes(roo.adjNou);
   const isDisabled = disabledAdjNous.includes(roo.adjNou);
-
   const isAlphabetNumber = alphabetNumberNous.includes(roo.originNou);
-  const isReturn = isAlphabetNumber && ctx.isWoAcNone;
+
   return {
     isEnterBelow,
     isActive,
@@ -30,7 +30,7 @@ const useAcBoo = ({ posiId }) => {
     isHd,
     isImportant,
     isDisabled,
-    isReturn,
+    isAlphabetNumber,
   };
 };
 

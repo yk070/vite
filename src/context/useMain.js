@@ -4,6 +4,8 @@ const useMain = () => {
   const [hdStableObj, setHdStableObj] = useState(null);
   const [cdStableObjs, setCdStableObjs] = useState({});
   // capable
+  const [toReviseVirtualAdj, setToReviseVirtualAdj] = useState(null);
+
   const [isCapableAreaHd, setIsCapableAreaHd] = useState(false);
   const [hdCapableBlockObj, setHdCapableBlockObj] = useState(false);
   const [hdCapableObj, setHdCapableObj] = useState(null);
@@ -19,15 +21,17 @@ const useMain = () => {
   const [sdTgAdjNou, setSdTgAdjNou] = useState(null);
   // ac
   const [cdAcAdjNou, setCdAcAdjNou] = useState(null);
-  const [hdCapableBlockAdj, setHdCapableBlockAdj] = useState(null);
+  const [hdBlockObj, setHdBlockObj] = useState(null);
   // hovered
   const [hdAdjNouTg, setHdAdjNouTg] = useState(null);
   const [hdAdjNouAc, setHdAdjNouAc] = useState(null);
   // enter
   const [isEnterSelected, setisEnterSelected] = useState(false);
   return {
-    hdCapableBlockAdj,
-    setHdCapableBlockAdj,
+    toReviseVirtualAdj,
+    setToReviseVirtualAdj,
+    hdBlockObj,
+    setHdBlockObj,
     cdAcAdjNou,
     setCdAcAdjNou,
     currCapAc,

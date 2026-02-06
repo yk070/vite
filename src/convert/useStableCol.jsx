@@ -7,7 +7,7 @@ const useStableCol = ({ boo }) => {
   };
 
   const getborderColor = () => {
-    if (boo.isHd) return tone.acSelectColor;
+    if (boo.isHd) return tone.acSd;
     return "transparent";
   };
 

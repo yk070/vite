@@ -1,3 +1,4 @@
+import { CgLayoutGrid } from "react-icons/cg";
 import {
   usableCaps,
   defaultAdjs,
@@ -12,8 +13,8 @@ const notUseMain = (ctx) => {
     (v) => typeof v === "object" && v !== null,
   );
 
-  const isWoSpaHold = ctx.exploitedAdjs?.includes("space");
-  const isWoMuhHold = ctx.exploitedAdjs?.includes("muhenkan");
+  const isWoSpaHold = exploitedAdjs?.includes("space");
+  const isWoMuhHold = exploitedAdjs?.includes("muhenkan");
   const isWoTgNone = ctx.currCapTg === "none";
   const isWoAcNone = ctx.currCapAc === "none";
   const isWoTgVirtual = virtualVersatiles.includes(ctx.currCapTg);

@@ -1,10 +1,13 @@
 import useCtx from "../context/useCtx.jsx";
 import useTgBoo from "./useTgBoo.jsx";
 import useTgRoo from "./useTgRoo.jsx";
+import useTgBooMerge from "./useTgBooMerge.jsx";
+
 const useTgRun = ({ posiId }) => {
   const ctx = useCtx();
   const roo = useTgRoo({ posiId });
   const boo = useTgBoo({ posiId });
+  const merge = useTgBooMerge({ posiId });
 
   const remove = () => {
     ctx.setAllSettings((prev) =>
@@ -15,11 +18,11 @@ const useTgRun = ({ posiId }) => {
   const click = () => {
     if (boo.isSoSpaHold) ctx.toggleVirtual("space");
     if (boo.isSoMuhHold) ctx.toggleVirtual("muhenkan");
-    if (boo.isDisabled || (boo.isVacant && !ctx.isWoAcSd)) return;
+    if (boo.isDisabled || (merge.isVacant && !ctx.isWoAcSd)) return;
     if (ctx.cdAcAdjNou) {
-      if (boo.isAssigned) remove();
+      if (merge.isAssigned) remove();
       ctx.setSdTgAdjNou(roo.originAdjNou);
-    } else if (boo.isAssigned) remove();
+    } else if (merge.isAssigned) remove();
     ctx.setHdAdjNouTg(null);
     ctx.setHoverLocktg(roo.originAdjNou);
   };

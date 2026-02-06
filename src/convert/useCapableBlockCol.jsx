@@ -11,8 +11,15 @@ const useCapableBlockCol = ({ pHalf }) => {
     return tone.notNoneAdj;
   };
 
+  const getFooColor = () => {
+    if (boo.isHd) return tone.capable2;
+    return tone.capable1;
+  };
+
   const borderColor = getborderColor();
-  return { borderColor };
+  const fooColor = getFooColor();
+
+  return { borderColor, fooColor };
 };
 
 export default useCapableBlockCol;

@@ -7,12 +7,12 @@ const useBasicCol = ({ adjNou }) => {
   const boo = useBasicBoo({ adjNou });
 
   const getButtonColor = () => {
-    if (boo.isActive) return tone.acSelectColor;
+    if (boo.isActive) return tone.acSd;
     return tone.normalButton;
   };
 
   const getBorderColor = () => {
-    if (!ctx.isWoAcSd && boo.isHd) return tone.acSelectColor;
+    if (!ctx.isWoAcSd && boo.isHd) return tone.acSd;
     if (ctx.isWoAcSd) {
     }
     return "transparent"; // デフォルト

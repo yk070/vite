@@ -6,14 +6,16 @@ import useAcLab from "../convert/useAcLab.jsx";
 import look from "../style/look.jsx";
 import { FaCheck } from "react-icons/fa6";
 import { LuTriangleAlert } from "react-icons/lu";
+import useAcBooMerge from "../convert/useAcBooMerge.jsx";
 
 const AcEle = ({ posiId, styleObj }) => {
   const roo = useAcRoo({ posiId });
   const boo = useAcBoo({ posiId });
+  const merge = useAcBooMerge({ posiId });
   const col = useAcCol({ posiId });
   const run = useAcRun({ posiId });
   const lab = useAcLab({ posiId });
-  if (boo.isReturn) return null;
+  if (merge.isReturn) return null;
   return (
     <div
       style={look.acButton1(styleObj, col)}

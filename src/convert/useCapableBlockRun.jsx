@@ -3,11 +3,11 @@ const useCapableBlockRun = ({ pHalf }) => {
   const ctx = useCtx();
 
   const hover = () => {
-    ctx.setHdCapableBlockAdj(pHalf.adj);
+    ctx.setHdBlockObj({ adj: pHalf.adj, prfss: pHalf.prfss });
   };
 
   const leave = () => {
-    ctx.setHdCapableBlockAdj(null);
+    ctx.setHdBlockObj(null);
   };
   return { hover, leave };
 };

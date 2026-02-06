@@ -5,9 +5,12 @@ import useTgBoo from "./useTgBoo.jsx";
 import useTgRoo from "./useTgRoo.jsx";
 import useCtx from "../context/useCtx.jsx";
 import { LuTriangleAlert } from "react-icons/lu";
+import useTgBooMerge from "./useTgBooMerge.jsx";
+
 const useTgLab = ({ posiId }) => {
   const boo = useTgBoo({ posiId });
   const roo = useTgRoo({ posiId });
+  const merge = useTgBooMerge({ posiId });
   const ctx = useCtx();
 
   const originKeyLabel = nouLabelObj[roo.originNou];
@@ -29,32 +32,31 @@ const useTgLab = ({ posiId }) => {
   );
 
   const getLabel = () => {
-    if (boo.isStablePseudoHd) return stableHdAcAdjNouLabel;
-    if (boo.isCapablePseudoHd) return capableHdAcAdjNouLabel;
+    if (boo.isCapablePsHd) return capableHdAcAdjNouLabel;
     if (boo.isHd) {
       if (ctx.isWoAcSd) {
-        if (boo.isAssigned) return assignAdjNouLabel;
-        if (boo.isSoVirtualHold) {
+        if (merge.isAssigned) return assignAdjNouLabel;
+        if (merge.isSoVirtualHold) {
           return "修飾キー";
         }
-        if (boo.isEmptyLabel) return "";
+        if (merge.isEmptyLabel) return "";
         return originKeyLabel;
       }
 
-      if (boo.isSoVirtualHold) {
+      if (merge.isSoVirtualHold) {
         if (boo.isFunctionUsed) return "";
         return alertLabel;
       }
 
       if (ctx.isWoTgVirtual) return originAdjNouLabel;
-      if (boo.isUnusable) return alertLabel;
+      if (merge.isUnusable) return alertLabel;
       if (boo.isFunctionUsed && boo.isLocationUsed) return emptyLabel;
       if (boo.isFunctionUsed) return "";
     }
 
-    if (boo.isSoVirtualHold) return "修飾キー";
-    if (boo.isAssigned) return assignAdjNouLabel;
-    if (boo.isEmptyLabel || ctx.isWoTgVirtual) return "";
+    if (merge.isSoVirtualHold) return "修飾キー";
+    if (merge.isAssigned) return assignAdjNouLabel;
+    if (merge.isEmptyLabel || ctx.isWoTgVirtual) return "";
 
     return originKeyLabel;
   };

@@ -1,4 +1,6 @@
 const Colors = {
+  capable2: "#FFFFFF",
+  capable1: "#555555",
   ac6: "#000000",
   ac7: "#A7C0E2",
   acButtons: "#444444",
@@ -6,7 +8,6 @@ const Colors = {
 
   pickUp: "#A7C0E2",
   pseudoHd: "#7C99C6",
-  // pseudoHd: "#A7C0E2",
   capableTitle: "#999999",
   black: "#000000",
   notNoneAdj: "#2ECC71",
@@ -17,7 +18,7 @@ const Colors = {
   capableEasyColor: "#555555",
   normalButton: "#888888",
   capableBlockHdColor: "#6B5FD2",
-  acSelectColor: "#FFE97A",
+  acSd: "#FFE97A",
 
   hoveredSelectedMultiColor: "#A7A0EB",
 

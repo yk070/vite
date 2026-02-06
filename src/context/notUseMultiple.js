@@ -1,16 +1,10 @@
 const notUseMultiple = (ctx) => {
+  //stable
   const hdStableObjs = ctx.hdStableObj?.objs;
   const isStableOnHd = hdStableObjs?.every((obj) =>
     ctx.acTgsSet.has(`${obj.ac}|${obj.tg}`),
   );
-
-  // const hdCapableBlockAdj = ctx.hdCapableBlockObj?.adj;
-  // const hdCapableBlockId = ctx.hdCapableBlockObj?.id;
-  // const hdCapableBlockObjss = ctx.hdCapableBlockObj?.prfss;
-
-  // const hdCapableAdjNous = [
-  //   ...new Set(hdCapableBlockObjss?.flat().map((obj) => obj.tg)),
-  // ];
+  //capable
   const hdCapablePrfs = ctx.hdCapableObj?.prfs;
   const hdCapableId = ctx.hdCapableObj?.id;
 
@@ -20,7 +14,14 @@ const notUseMultiple = (ctx) => {
   const isCapableOnHd = hdCapablePrfs?.every((obj) =>
     ctx.acTgsSet.has(`${obj.ac}|${obj.tg}`),
   );
+
+  const hdBlockPrfss = ctx.hdBlockObj?.prfss;
+  const hdBlockAdj = ctx.hdBlockObj?.adj;
+
   return {
+    hdStableObjs,
+    hdBlockPrfss,
+    hdBlockAdj,
     cdCapableAdj,
     cdCapablePrfs,
     hdCapablePrfs,

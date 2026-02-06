@@ -10,7 +10,7 @@ const useStableCol = ({ boo }) => {
   const getborderColor = () => {
     // if (boo.isSd && !boo.isHd) return tone.pickUp;
     // if (boo.isSd) return tone.hoveredSelectedMultiColor;
-    if (boo.isHd) return tone.acSelectColor;
+    if (boo.isHd) return tone.acSd;
     return "transparent";
   };
 

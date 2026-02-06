@@ -8,11 +8,11 @@ const CapableBlock = ({ pHalf }) => {
   const run = useCapableBlockRun({ pHalf });
   return (
     <div
-      style={look.capable8(pHalf.prfss.length, col)}
+      style={look.capable8(pHalf.prfss.length, col.borderColor)}
       onMouseEnter={run.hover}
       onMouseLeave={run.leave}
     >
-      <div style={look.capable15}>
+      <div style={look.capable15(col.fooColor)}>
         {pHalf.prfss.map((prfs, i) => {
           const pBlock = { adj: pHalf.adj, prfs, i };
           return <CapableEle key={i} pBlock={pBlock} />;

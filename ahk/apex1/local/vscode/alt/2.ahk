@@ -1,6 +1,6 @@
 !sc0F:: {
     send("^+{h}") ;フォルダ内置換
-    ; Sleep(100)
+    Sleep(100)
     ; Send("{Enter}")
     ; Sleep(100)
     ; Send("{tab}")

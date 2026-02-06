@@ -221,6 +221,8 @@ const look = {
     alignItems: "center",
     whiteSpace: "nowrap",
     // position: "relative",
+    height: "100%",
+    width: "100%",
     zIndex: 1,
     // display: "flex",
     display: "inline-flex",
@@ -228,8 +230,9 @@ const look = {
     paddingLeft: `calc(${base} * 2)`,
     fontSize: `calc(${base} * 14)`,
     color: col.textColor,
+    // backgroundColor: "green",
     pointerEvents: "none",
-    // textDecoration: boo.isCapablePseudoHd ? "underline" : "none", // ← 追加
+    // textDecoration: boo.isCapablePsHd ? "underline" : "none", // ← 追加
     // textDecorationColor: col.textWhite, // 必要なら色も指定
     // textDecorationThickness: `calc(${base} * 9)`,
     // textDecorationSkipInk: "none",
@@ -393,6 +396,7 @@ const look = {
     alignItems: "center",
     fontSize: `calc(${base} * 13 )`,
     color: "yellow",
+    // backgroundColor: "red",
   },
   multi1: {
     // display: "flex",
@@ -965,7 +969,7 @@ const look = {
     height: "100%",
     minWidth: 0,
   },
-  capable8: (length, col) => ({
+  capable8: (length, borderColor) => ({
     display: "flex",
     flexDirection: "column",
     // flex: 1,
@@ -977,7 +981,7 @@ const look = {
     // transform: "translate(-50%, -50%)",
     // width: `calc(100% - ${base} * 10)`,
     height: "100%",
-    backgroundColor: col.borderColor,
+    backgroundColor: borderColor,
     // backgroundColor: "blue",
     //  KIRIWAKE
   }),
@@ -1031,16 +1035,16 @@ const look = {
     // backgroundColor: "red",
     pointerEvents: "none",
   },
-  capable15: {
+  capable15: (fooColor) => ({
     display: "flex",
     position: "relative",
-    backgroundColor: "gray",
+    backgroundColor: fooColor,
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: `calc(100% - ${base} * 10)`,
     height: `calc(100% - ${base} * 8)`,
-  },
+  }),
   capable9: (col) => ({
     display: "flex",
     position: "relative",

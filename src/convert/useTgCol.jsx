@@ -1,36 +1,34 @@
 import useCtx from "../context/useCtx.jsx";
 import tone from "../style/color.jsx";
 import useTgBoo from "./useTgBoo.jsx";
+import useTgBooMerge from "./useTgBooMerge.jsx";
 
 const useTgCol = ({ posiId }) => {
   const boo = useTgBoo({ posiId });
+  const merge = useTgBooMerge({ posiId });
   const ctx = useCtx();
 
   const getBorderColor = () => {
-    // if (boo.isCapablePseudoHd) {
-    //   if (ctx.isCapableOnHd) return "#6EC6FF";
-    //   return tone.acSelectColor;
-    // }
-    if (ctx.isWoAcSd && !boo.isDisabled && boo.isHd) return tone.acSelectColor;
-
+    if (boo.isDisabled) return "";
+    if (boo.isBlockPsHd) return tone.capable2;
     if (boo.isHd) {
-      if (boo.isAssigned && !boo.isVacant) return tone.acSelectColor;
-      if (boo.isSoVirtualHold) return tone.acSelectColor;
+      if (ctx.isWoAcSd) return tone.acSd;
+      if (merge.isVacant) return "";
+      if (merge.isAssigned) return tone.acSd;
+      if (merge.isSoVirtualHold) return tone.acSd;
     }
-
     return "transparent";
   };
 
   const getTextColor = () => {
-    if (ctx.isStableOnHd) return "black";
-    if (boo.isStablePseudoHd) return "black";
-    if (boo.isCapablePseudoHd) return "black";
-    if (boo.isAssigned) return "black";
+    if (boo.isHd) return tone.textWhite;
+    if (boo.isCapablePsHd) return "black";
+    if (merge.isAssigned) return "black";
     return tone.textWhite;
   };
 
   const getCircleColor = () => {
-    if (boo.isCapablePseudoHd) return "black";
+    if (boo.isCapablePsHd) return "black";
     return tone.textWhite;
   };
 

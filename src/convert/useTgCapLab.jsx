@@ -23,7 +23,7 @@ const useTgCapLab = ({ tgCap }) => {
     <></>;
   }
   const getLabel = () => {
-    if (boo.isRemoteHovered) return RemoteHoveredLabel;
+    if (boo.isFunctionPsHd) return RemoteHoveredLabel;
     return planeLabel;
   };
 
