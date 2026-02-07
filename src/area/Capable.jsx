@@ -31,7 +31,6 @@ const Capable = () => {
               </div>
               <div style={look.capable20}>
                 {adjs.map((adj) => {
-                  // console.log(prfss);
                   const filteredAdjNous = adjNous.filter(
                     (tg) => tg.split("*")[0] === adj,
                   );
@@ -39,7 +38,9 @@ const Capable = () => {
                     ac: ctx.cdAcAdjNou,
                     tg,
                   }));
-                  const pHead = { adj, prfss };
+                  const pHead = { adj, prfs };
+
+                  console.log(prfs);
                   return <CapableBlock key={adj} pHead={pHead} />;
                 })}
               </div>

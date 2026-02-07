@@ -1,27 +1,13 @@
-backspace enter 
-cTab csTab
-aTab asTab
-
-https://www.youtube.com/playlist?list=PLPuEbC5xJcL_5oIHNPZHFHGNnGEUw5JEE
-
-py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list=PLPuEbC5xJcL9TPVjGt_ZQSAhRUW2NbGUj"
-py -m yt_dlp --js-runtimes node --yes-playlist -f "bv*[height<=1080]+ba/b" "URL"
-
-PLgSyAiFyPgFYL-zGmY7n1YRhwApEe_2VH
-
-
-py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list=PLgSyAiFyPgFYL-zGmY7n1YRhwApEe_2VH"
-
-
-PLgSyAiFyPgFaflAXMT5oWHJw6IDtSMDQ8
-
-py -m pip install -U yt-dlp
-
+cd "C:\Users\ykx07\Documents\george"
 py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list="
+
+py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list=PLgSyAiFyPgFY6SNnEyUiyWhhwox53Pwir"
+py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list=PLgSyAiFyPgFalln3l7IvKHXcMS6XNs-PF"
+
+
+py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list=PLgSyAiFyPgFY8DMBMhtbBQCUpPROVBY2m"
 py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list=PLqPjXrRnaOd7qGcl-Ll6JRj7imJL1WNzl"
 py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list=PLgSyAiFyPgFZytb7jWEswPIUKxr3voaIu"
+ 
 
-PLgSyAiFyPgFaflAXMT5oWHJw6IDtSMDQ8
-
-cd "C:\Users\ykx07\Documents\george"
 

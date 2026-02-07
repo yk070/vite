@@ -6,10 +6,13 @@ const useCapableBoo = ({ pBlock }) => {
   const roo = useCapableRoo({ pBlock });
 
   const isHd = ctx.hdCapableId === roo.id;
-  const isSd = pBlock.prfs.every((obj) =>
-    ctx.acTgsSet.has(`${obj.ac}|${obj.tg}`),
-  );
-  return { isHd, isSd };
+  // const isSd = pBlock.prfs.every((obj) =>
+  //   ctx.acTgsSet.has(`${obj.ac}|${obj.tg}`),
+  // );
+  return {
+    isHd,
+    // isSd
+  };
 };
 
 export default useCapableBoo;
