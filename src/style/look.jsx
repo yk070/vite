@@ -1011,7 +1011,7 @@ const look = {
     width: "100%",
     height: "100%",
     // backgroundColor: borderColor,
-    // backgroundColor: "purple",
+    backgroundColor: "purple",
     //  KIRIWAKE
   }),
   capable7: (buttonColor) => ({

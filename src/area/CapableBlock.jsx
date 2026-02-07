@@ -8,6 +8,7 @@ const CapableBlock = ({ pHead }) => {
   const roo = useCapableBlockRoo({ pHead });
   const col = useCapableBlockCol({ pHead });
   const run = useCapableBlockRun({ pHead });
+
   return (
     <div
       style={look.capable8(pHead.prfss.length)}

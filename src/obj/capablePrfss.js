@@ -1,5 +1,18 @@
-const capableObj2 = {
-  Ctrl左手: [
+const capablePrfss = [
+  [
+    { ac: "none*enter", tg: "space*leftCtrl" },
+    { ac: "none*esc", tg: "space*leftShift" },
+  ],
+  [
+    { ac: "none*enter", tg: "space*leftCtrl" },
+    { ac: "none*esc", tg: "space*capslock" },
+  ],
+  [
+    { ac: "none*enter", tg: "none*muhenkan" },
+    { ac: "none*backspace", tg: "none*tab" },
+    { ac: "none*space", tg: "none*capslock" },
+  ],
+  [
     { ac: "ctrl*z", tg: "space*z" },
     { ac: "ctrl*x", tg: "space*x" },
     { ac: "ctrl*c", tg: "space*c" },
@@ -16,13 +29,14 @@ const capableObj2 = {
     { ac: "ctrl*r", tg: "space*r" },
     { ac: "ctrl*t", tg: "space*t" },
   ],
-  CtrlAll: [
+  [
     { ac: "ctrl*a", tg: "space*a" },
     { ac: "ctrl*u", tg: "space*u" },
   ],
-};
+  [{ ac: "win*one", tg: "space*one" }],
+];
 
-export default capableObj2;
+export default capablePrfss;
 
 // BackS: {
 //   none: [

@@ -1,15 +1,20 @@
 import look from "../style/look.jsx";
 import useCtx from "../context/useCtx.jsx";
-import capableObj from "../obj/capableObj.js";
+import singleObj from "../obj/singleObj.js";
 import CapableBlock from "./CapableBlock.jsx";
+import capablePrfss from "../obj/capablePrfss.js";
+
 const Capable = () => {
   const ctx = useCtx();
-  const prfsss = capableObj[ctx.cdAcAdjNou];
+  if (!ctx.isWoAcSd) return null;
+
+  const adjNous = singleObj[ctx.cdAcAdjNou];
+  const adjs = [...new Set(adjNous.map((tg) => tg.split("*")[0]))];
 
   const click = () => {
     ctx.setCdAcAdjNou(null);
   };
-  if (!ctx.isWoAcSd) return null;
+
   return (
     <div style={look.ac6}>
       <div style={look.ac8} onClick={click}></div>
@@ -25,8 +30,15 @@ const Capable = () => {
                 <span style={look.capable28}>{"単体"}</span>
               </div>
               <div style={look.capable20}>
-                {prfsss.map((prfss) => {
-                  const adj = prfss?.[0]?.[0]?.tg?.split("*")[0];
+                {adjs.map((adj) => {
+                  // console.log(prfss);
+                  const filteredAdjNous = adjNous.filter(
+                    (tg) => tg.split("*")[0] === adj,
+                  );
+                  const prfs = filteredAdjNous.map((tg) => ({
+                    ac: ctx.cdAcAdjNou,
+                    tg,
+                  }));
                   const pHead = { adj, prfss };
                   return <CapableBlock key={adj} pHead={pHead} />;
                 })}
@@ -40,7 +52,7 @@ const Capable = () => {
                 <span style={look.capable28}>{"複数"}</span>
               </div>
               <div style={look.capable20}>
-                {/* {prfsss.map((prfss) => {
+                {/* {adjNous.map((prfss) => {
                   const adj = prfss?.[0]?.[0]?.tg?.split("*")[0];
                   const pHead = { adj, prfss };
                   return <CapableBlock key={adj} pHead={pHead} />;

@@ -8,9 +8,9 @@ const useMain = () => {
 
   const [isCapableAreaHd, setIsCapableAreaHd] = useState(false);
   const [hdCapableBlockObj, setHdCapableBlockObj] = useState(false);
-  const [hdCapableObj, setHdCapableObj] = useState(null);
-  // console.log(hdCapableObj);
-  const [cdCapableObj, setCdCapableObj] = useState(null);
+  const [hdsingleObj, setHdsingleObj] = useState(null);
+  // console.log(hdsingleObj);
+  const [cdsingleObj, setCdsingleObj] = useState(null);
 
   const [HoverLocktg, setHoverLocktg] = useState(null);
 
@@ -53,10 +53,10 @@ const useMain = () => {
     setHoverLocktg,
     cdStableObjs,
     setCdStableObjs,
-    cdCapableObj,
-    setCdCapableObj,
-    hdCapableObj,
-    setHdCapableObj,
+    cdsingleObj,
+    setCdsingleObj,
+    hdsingleObj,
+    setHdsingleObj,
     isCapableAreaHd,
     setIsCapableAreaHd,
     hdCapableBlockObj,

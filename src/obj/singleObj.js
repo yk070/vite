@@ -1,31 +1,26 @@
-const capableObj = {
+const singleObj = {
   "none*enter": [
-    [
-      [{ ac: "none*enter", tg: "none*tab" }],
-      [{ ac: "none*enter", tg: "none*capslock" }],
-      [{ ac: "none*enter", tg: "none*muhenkan" }],
-    ],
-    [[{ ac: "none*enter", tg: "space*leftCtrl" }]],
+    "none*tab",
+    "none*capslock",
+    "none*muhenkan",
+    "space*leftCtrl",
   ],
-  "ctrl*a": [
-    [[{ ac: "ctrl*a", tg: "muhenkan*a" }]],
-    [[{ ac: "ctrl*a", tg: "space*a" }]],
-  ],
-
-  // "none*space": {
-  //   none: [
-  //     [{ ac: "none*space", tg: "none*tab" }],
-  //     [{ ac: "none*space", tg: "none*capslock" }],
-  //     [{ ac: "none*space", tg: "none*muhenkan" }],
-  //   ],
-  //   space: [[{ ac: "none*space", tg: "space*leftCtrl" }]],
-  // },
-
-  // "ctrl*a": {
-  // },
+  "ctrl*a": ["muhenkan*a", "space*a"],
 };
 
-export default capableObj;
+// "none*space": {
+//   none: [
+//     [{ ac: "none*space", tg: "none*tab" }],
+//     [{ ac: "none*space", tg: "none*capslock" }],
+//     [{ ac: "none*space", tg: "none*muhenkan" }],
+//   ],
+//   space: [[{ ac: "none*space", tg: "space*leftCtrl" }]],
+// },
+
+// "ctrl*a": {
+// },
+
+export default singleObj;
 
 // BackS: {
 //   none: [
