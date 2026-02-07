@@ -16,8 +16,7 @@ const useTgRun = ({ posiId }) => {
   };
 
   const click = () => {
-    if (boo.isSoSpaHold) ctx.toggleVirtual("space");
-    if (boo.isSoMuhHold) ctx.toggleVirtual("muhenkan");
+    if (merge.isSoVirtualHold) ctx.toggleVirtual(roo.originNou);
     if (boo.isDisabled || (merge.isVacant && !ctx.isWoAcSd)) return;
     if (ctx.cdAcAdjNou) {
       if (merge.isAssigned) remove();

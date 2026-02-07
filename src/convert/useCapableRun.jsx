@@ -4,10 +4,6 @@ const useCapableBoo = ({ pBlock }) => {
   const ctx = useCtx();
   const roo = useCapableRoo({ pBlock });
 
-  const click = () => {
-    ctx.setCdCapableObj({ adj: pBlock.adj, prfs: pBlock.prfs });
-  };
-
   const hover = () => {
     ctx.setHdCapableObj({
       id: roo.id,
@@ -16,6 +12,10 @@ const useCapableBoo = ({ pBlock }) => {
   };
   const leave = () => {
     ctx.setHdCapableObj(null);
+  };
+
+  const click = () => {
+    ctx.setCdCapableObj({ adj: pBlock.adj, prfs: pBlock.prfs });
   };
 
   return { hover, leave, click };

@@ -1,5 +1,5 @@
 import { disabledAdjNous } from "../array/namedAdjNous.js";
-import { alphabetNumberNous, virtualVersatiles } from "../array/namedArray.js";
+import { alphabetNumberNous, virtualAdjNous } from "../array/namedArray.js";
 import useCtx from "../context/useCtx.jsx";
 import useTgRoo from "./useTgRoo.jsx";
 import { useIsAdjNouSame, useBlockPsHd } from "./namedConv.jsx";
@@ -10,8 +10,6 @@ const useTgBoo = ({ posiId }) => {
 
   //individual
   const isEnterBelow = posiId === "enter_below";
-  const isSoSpaHold = ctx.isWoSpaHold && roo.originAdjNou === "none*space";
-  const isSoMuhHold = ctx.isWoMuhHold && roo.originAdjNou === "none*muhenkan";
   //hd
   const isCapablePsHd = !!roo.capableHdAcAdjNou;
   const isBlockPsHd = useBlockPsHd(roo.originAdjNou);
@@ -26,12 +24,14 @@ const useTgBoo = ({ posiId }) => {
   const isDisabled = disabledAdjNous.includes(roo.originAdjNou);
   const isAlphabetNumber = alphabetNumberNous.includes(roo.originNou);
   const isHomeNoun = ["f", "j"].includes(roo.originNou);
-  const isVirtual = virtualVersatiles.includes(roo.originNou);
+  const isAdjNouVirtual = virtualAdjNous.includes(roo.originAdjNou);
+  const isNouExploited = ctx.exploitedAdjs?.includes(roo.originNou);
 
   return {
+    isAdjNouVirtual,
+    isNouExploited,
     isCapablePsHd,
     isBlockPsHd,
-    isVirtual,
     isDisabled,
     isHd,
     isAdjNouSame,
@@ -39,8 +39,6 @@ const useTgBoo = ({ posiId }) => {
     isFunctionUsed,
     isFunctionPsHd,
     isEnterBelow,
-    isSoSpaHold,
-    isSoMuhHold,
     isHomeNoun,
     isAlphabetNumber,
   };

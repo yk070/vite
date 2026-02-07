@@ -25,7 +25,7 @@ const AcEle = ({ posiId, styleObj }) => {
     >
       <div style={look.acButton2(col)}>
         <span style={look.acButton3(boo)}>{lab.label}</span>
-        {boo.isAlert && <LuTriangleAlert style={look.acButton4} />}
+        {merge.isAlert && <LuTriangleAlert style={look.acButton4} />}
         {boo.isFunctionUsed && <FaCheck style={look.acButton5} />}
       </div>
     </div>

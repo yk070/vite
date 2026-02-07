@@ -5,6 +5,7 @@ import {
 } from "./namedLongNous.js";
 
 const virtualVersatiles = ["space", "muhenkan"];
+const virtualAdjNous = virtualVersatiles.map((nou) => `none*${nou}`);
 const allAdjectiveNous = [...defaultAdjectiveNous, ...virtualVersatiles];
 const defaultAdjs = ["none", "ctrl", "alt", "shift", "win"];
 const usableCaps = [
@@ -17,6 +18,7 @@ const acCaps = [...capableCaps, ...usableCaps, ...defaultAdjs];
 const allAdjs = [...defaultAdjs, ...virtualVersatiles];
 
 export {
+  virtualAdjNous,
   defaultAdjectiveNous,
   alphabetNumberNous,
   allAdjectiveNous,

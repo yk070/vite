@@ -17,8 +17,11 @@ PLgSyAiFyPgFaflAXMT5oWHJw6IDtSMDQ8
 
 py -m pip install -U yt-dlp
 
-py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list=PLne0EIgkCnFDDC-IadMTMbHTfcUwRsjdu"
+py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list="
+py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list=PLqPjXrRnaOd7qGcl-Ll6JRj7imJL1WNzl"
+py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list=PLgSyAiFyPgFZytb7jWEswPIUKxr3voaIu"
 
 PLgSyAiFyPgFaflAXMT5oWHJw6IDtSMDQ8
 
+cd "C:\Users\ykx07\Documents\george"
 

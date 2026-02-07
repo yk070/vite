@@ -2,11 +2,15 @@ import { useEffect, useRef } from "react";
 import { virtualVersatiles } from "../array/namedArray.js";
 
 const useCapable = (ctx) => {
-  //ctx.hdBlockAdj
   const refCapTg = useRef(null);
   const isRefCap = useRef(false);
+  const isFromCdCapableRef = useRef(false);
 
   useEffect(() => {
+    if (isFromCdCapableRef.current) {
+      isFromCdCapableRef.current = false;
+      return;
+    }
     const hdAdj = ctx.hdBlockAdj;
     //setCurrCapTg
     if (!isRefCap.current) {
@@ -33,9 +37,10 @@ const useCapable = (ctx) => {
     }
   }, [ctx.hdBlockAdj]);
 
-  //ctx.cdCapablePrfs
   useEffect(() => {
     if (!ctx.cdCapablePrfs) return;
+    isFromCdCapableRef.current = true;
+    ctx.setCdCapableObj(null);
     ctx.setCdAcAdjNou(null);
     ctx.setHdCapableObj(null);
     ctx.setHdBlockObj(null);
@@ -51,6 +56,7 @@ const useCapable = (ctx) => {
       );
 
       let newPrfs = [...filteredPrfs];
+
       if (!isAlreadySd) {
         newPrfs = [...newPrfs, ...ctx.cdCapablePrfs];
       }

@@ -2,7 +2,7 @@ import look from "../style/look.jsx";
 import useCapableCol from "../convert/useCapableCol.jsx";
 import useCapableRun from "../convert/useCapableRun.jsx";
 import easyObj from "../obj/easyObj.js";
-// const pBlock = { adj: pHalf.adj, prfs, i };
+// const pBlock = { adj: pHead.adj, prfs, i };
 const CapableEle = ({ pBlock }) => {
   const col = useCapableCol({ pBlock });
   const run = useCapableRun({ pBlock });

@@ -7,7 +7,7 @@ const useTgBooMerge = ({ posiId }) => {
   const boo = useTgBoo({ posiId });
   const ctx = useCtx();
 
-  const isSoVirtualHold = boo.isSoSpaHold || boo.isSoMuhHold;
+  const isSoVirtualHold = boo.isAdjNouVirtual && boo.isNouExploited;
 
   const isVacant =
     (boo.isFunctionUsed && !boo.isLocationUsed) ||
@@ -33,6 +33,7 @@ const useTgBooMerge = ({ posiId }) => {
     isEmptyLabel,
     isCursorPointer,
     isHighZ,
+    isSoVirtualHold,
   };
 };
 

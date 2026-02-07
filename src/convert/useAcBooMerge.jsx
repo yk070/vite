@@ -7,8 +7,13 @@ const useAcBooMerge = ({ posiId }) => {
 
   const isReturn = boo.isAlphabetNumber && ctx.isWoAcNone;
 
+  const isSoVirtualHold = boo.isAdjNouVirtual && boo.isNouExploited;
+  const isPreAlert = boo.isLocationUsed || isSoVirtualHold;
+  const isAlert = isPreAlert && !boo.isFunctionUsed && !boo.isEnterBelow;
+
   return {
     isReturn,
+    isAlert,
   };
 };
 

@@ -17,6 +17,7 @@ const useMain = () => {
   // current adj
   const [currCapAc, setCurrCapAc] = useState("none");
   const [currCapTg, setCurrCapTg] = useState("none");
+
   // selected
   const [sdTgAdjNou, setSdTgAdjNou] = useState(null);
   // ac

@@ -8,10 +8,7 @@ const useTgButtonColor = ({ posiId }) => {
   const merge = useTgBooMerge({ posiId });
   const ctx = useCtx();
   //special
-  if (boo.isAdjNouSame) {
-    if (boo.isVirtual) return tone.virtual;
-    return tone.notNoneAdj;
-  }
+  if (boo.isAdjNouSame) return tone.adj;
   if (boo.isDisabled) return tone.DisabledButtonColor;
   //capable
   if (boo.isCapablePsHd) {
@@ -21,12 +18,12 @@ const useTgButtonColor = ({ posiId }) => {
   //isHd
   if (boo.isHd) {
     if (ctx.isWoAcSd && (merge.isAssigned || merge.isSoVirtualHold))
-      return tone.virtual;
+      return tone.adj;
     return tone.normalButton;
   }
   //isWoAcSd
   if (ctx.isWoAcSd) {
-    if (merge.isAssigned || merge.isSoVirtualHold) return tone.virtual;
+    if (merge.isAssigned || merge.isSoVirtualHold) return tone.pickUp;
     if (!merge.isAssigned) return tone.normalButton;
     if (merge.isAssigned) return tone.pickUp;
   }

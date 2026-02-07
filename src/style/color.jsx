@@ -10,8 +10,7 @@ const Colors = {
   pseudoHd: "#7C99C6",
   capableTitle: "#999999",
   black: "#000000",
-  notNoneAdj: "#2ECC71",
-  virtual: "#6B5FD2",
+  adj: "#6B5FD2",
   none: "#444444",
 
   capableBlocksColor: "#999999",

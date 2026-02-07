@@ -1,25 +1,24 @@
 import useCtx from "../context/useCtx.jsx";
 import tone from "../style/color.jsx";
 import useCapableBlockBoo from "../convert/useCapableBlockBoo.jsx";
-const useCapableBlockCol = ({ pHalf }) => {
+const useCapableBlockCol = ({ pHead }) => {
   const ctx = useCtx();
-  const boo = useCapableBlockBoo({ pHalf });
+  const boo = useCapableBlockBoo({ pHead });
 
-  const getborderColor = () => {
+  const getAdj = () => {
     if (boo.isNone) return tone.none;
-    if (boo.isVirtual) return tone.virtual;
-    return tone.notNoneAdj;
+    return tone.adj;
   };
 
-  const getFooColor = () => {
+  const getHdBlockColor = () => {
     if (boo.isHd) return tone.capable2;
     return tone.capable1;
   };
 
-  const borderColor = getborderColor();
-  const fooColor = getFooColor();
+  const adj = getAdj();
+  const hdBlock = getHdBlockColor();
 
-  return { borderColor, fooColor };
+  return { adj, hdBlock };
 };
 
 export default useCapableBlockCol;

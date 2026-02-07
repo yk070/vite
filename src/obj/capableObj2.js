@@ -1,21 +1,25 @@
 const capableObj2 = {
-  "none*enter": {
-    none: [
-      [{ ac: "none*enter", tg: "none*tab" }],
-      [{ ac: "none*enter", tg: "none*capslock" }],
-      [{ ac: "none*enter", tg: "none*muhenkan" }],
-    ],
-    space: [[{ ac: "none*enter", tg: "space*leftCtrl" }]],
-  },
-
-  "none*space": {
-    none: [
-      [{ ac: "none*space", tg: "none*tab" }],
-      [{ ac: "none*space", tg: "none*capslock" }],
-      [{ ac: "none*space", tg: "none*muhenkan" }],
-    ],
-    space: [[{ ac: "none*space", tg: "space*leftCtrl" }]],
-  },
+  Ctrl左手: [
+    { ac: "ctrl*z", tg: "space*z" },
+    { ac: "ctrl*x", tg: "space*x" },
+    { ac: "ctrl*c", tg: "space*c" },
+    { ac: "ctrl*v", tg: "space*v" },
+    { ac: "ctrl*b", tg: "space*b" },
+    { ac: "ctrl*a", tg: "space*a" },
+    { ac: "ctrl*s", tg: "space*s" },
+    { ac: "ctrl*d", tg: "space*d" },
+    { ac: "ctrl*f", tg: "space*f" },
+    { ac: "ctrl*g", tg: "space*g" },
+    { ac: "ctrl*q", tg: "space*q" },
+    { ac: "ctrl*w", tg: "space*w" },
+    { ac: "ctrl*e", tg: "space*e" },
+    { ac: "ctrl*r", tg: "space*r" },
+    { ac: "ctrl*t", tg: "space*t" },
+  ],
+  CtrlAll: [
+    { ac: "ctrl*a", tg: "space*a" },
+    { ac: "ctrl*u", tg: "space*u" },
+  ],
 };
 
 export default capableObj2;

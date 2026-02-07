@@ -2,12 +2,12 @@ import useCtx from "../context/useCtx.jsx";
 import useCapableBlockRoo from "../convert/useCapableBlockRoo.jsx";
 import { virtualVersatiles } from "../array/namedArray.js";
 
-const useCapableBlockBoo = ({ pHalf }) => {
+const useCapableBlockBoo = ({ pHead }) => {
   const ctx = useCtx();
-  const roo = useCapableBlockRoo({ pHalf });
-  const isHd = ctx.hdBlockAdj === pHalf.adj;
-  const isNone = pHalf.adj === "none";
-  const isVirtual = virtualVersatiles.includes(pHalf.adj);
+  const roo = useCapableBlockRoo({ pHead });
+  const isHd = ctx.hdBlockAdj === pHead.adj;
+  const isNone = pHead.adj === "none";
+  const isVirtual = virtualVersatiles.includes(pHead.adj);
 
   return { isNone, isVirtual, isHd };
 };

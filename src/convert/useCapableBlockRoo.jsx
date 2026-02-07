@@ -1,9 +1,8 @@
 import useCtx from "../context/useCtx.jsx";
-const useCapableBlockRoo = ({ pHalf }) => {
+const useCapableBlockRoo = ({ pHead }) => {
   const ctx = useCtx();
 
-  const hdObj = { adj: pHalf.adj, prfss: pHalf.prfss };
-  return { hdObj };
+  return {};
 };
 
 export default useCapableBlockRoo;
