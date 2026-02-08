@@ -1049,6 +1049,25 @@ const look = {
     width: "100%",
     height: "100%",
   },
+  capable31: (length) => ({
+    display: "flex",
+    flexDirection: "column",
+    // flex: 1,
+    flex: length,
+    // minWidth: 0,
+    // position: "relative",
+    // alignItems: "center",
+    // justifyContent: "center",
+    // top: "50%",
+    // left: "50%",
+    // transform: "translate(-50%, -50%)",
+    // width: "100%",
+    height: "100%",
+    // height: 60,
+    // backgroundColor: borderColor,
+    backgroundColor: "purple",
+    //  KIRIWAKE
+  }),
   capable20: {
     flex: 4,
     display: "flex",
@@ -1166,6 +1185,7 @@ const look = {
     transform: "translate(-50%, -50%)",
     width: `calc(100% - ${base} * 10)`,
     height: `calc(100% - ${base} * 8)`,
+    backgroundColor: "pink",
   },
   capable9: (col) => ({
     // display: "flex",
@@ -1179,7 +1199,7 @@ const look = {
     display: "flex",
     width: "100%",
     height: "100%",
-    backgroundColor: tone.capableBlocksColor,
+    backgroundColor: tone.CaSingleBlocksColor,
     position: "relative",
   },
   capable6: {

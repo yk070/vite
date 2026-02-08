@@ -5,17 +5,17 @@ const useCapableBoo = ({ pBlock }) => {
   const roo = useCapableRoo({ pBlock });
 
   const hover = () => {
-    ctx.setHdsingleObj({
+    ctx.setHdadjNouAdjNousObj({
       id: roo.id,
-      prfs: pBlock.prfs,
+      prf: pBlock.prf,
     });
   };
   const leave = () => {
-    ctx.setHdsingleObj(null);
+    ctx.setHdadjNouAdjNousObj(null);
   };
 
   const click = () => {
-    ctx.setCdsingleObj({ adj: pBlock.adj, prfs: pBlock.prfs });
+    ctx.setCdadjNouAdjNousObj({ adj: pBlock.adj, prf: pBlock.prf });
   };
 
   return { hover, leave, click };

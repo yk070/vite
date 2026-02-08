@@ -1,24 +1,24 @@
 const notUseCapable = (ctx) => {
   //capable
-  const hdCapablePrfs = ctx.hdsingleObj?.prfs;
-  const hdCapableId = ctx.hdsingleObj?.id;
+  const hdCapablePrf = ctx.hdadjNouAdjNousObj?.prf;
+  const hdCapableId = ctx.hdadjNouAdjNousObj?.id;
 
-  const cdCapableAdj = ctx.cdsingleObj?.adj;
-  const cdCapablePrfs = ctx.cdsingleObj?.prfs;
+  const cdCapableAdj = ctx.cdadjNouAdjNousObj?.adj;
+  const cdCapablePrfs = ctx.cdadjNouAdjNousObj?.prfs;
 
-  const isCapableOnHd = hdCapablePrfs?.every((obj) =>
-    ctx.acTgsSet.has(`${obj.ac}|${obj.tg}`),
+  const isCapableOnHd = ctx.acTgsSet.has(
+    `${hdCapablePrf?.ac}|${hdCapablePrf?.tg}`,
   );
 
-  const hdBlockPrfss = ctx.hdBlockObj?.prfss;
+  const hdBlockPrfs = ctx.hdBlockObj?.prfs;
   const hdBlockAdj = ctx.hdBlockObj?.adj;
 
   return {
-    hdBlockPrfss,
+    hdBlockPrfs,
     hdBlockAdj,
     cdCapableAdj,
     cdCapablePrfs,
-    hdCapablePrfs,
+    hdCapablePrf,
     hdCapableId,
     isCapableOnHd,
   };

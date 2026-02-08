@@ -11,9 +11,7 @@ const useIsAdjNouSame = (nou) => {
 };
 const useBlockPsHd = (adjNou) => {
   const ctx = useCtx();
-  return ctx.hdBlockPrfss?.some((innerArr) =>
-    innerArr.some((obj) => obj.tg === adjNou),
-  );
+  return ctx.hdBlockPrfs?.some((prf) => prf.tg === adjNou);
 };
 
 export { useIsAdjNouSame, useBlockPsHd };

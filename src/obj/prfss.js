@@ -1,4 +1,4 @@
-const capablePrfss = [
+const prfss = [
   [
     { ac: "none*enter", tg: "space*leftCtrl" },
     { ac: "none*esc", tg: "space*leftShift" },
@@ -36,7 +36,7 @@ const capablePrfss = [
   [{ ac: "win*one", tg: "space*one" }],
 ];
 
-export default capablePrfss;
+export default prfss;
 
 // BackS: {
 //   none: [

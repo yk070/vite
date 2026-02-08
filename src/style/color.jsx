@@ -13,10 +13,10 @@ const Colors = {
   adj: "#6B5FD2",
   none: "#444444",
 
-  capableBlocksColor: "#999999",
+  CaSingleBlocksColor: "#999999",
   capableEasyColor: "#555555",
   normalButton: "#888888",
-  capableBlockHdColor: "#6B5FD2",
+  CaSingleBlockHdColor: "#6B5FD2",
   acSd: "#FFE97A",
 
   hoveredSelectedMultiColor: "#A7A0EB",

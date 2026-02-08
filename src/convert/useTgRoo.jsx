@@ -10,9 +10,9 @@ const useTgRoo = ({ posiId }) => {
   const stableHdAcAdjNou = ctx.hdStableObj?.objs?.find(
     (obj) => obj.tg === originAdjNou,
   )?.ac;
-  const capableHdAcAdjNou = ctx.hdCapablePrfs?.find(
-    (obj) => obj.tg === originAdjNou,
-  )?.ac;
+  const capableHdAcAdjNou =
+    ctx.hdCapablePrf?.tg === originAdjNou ? ctx.hdCapablePrf.ac : undefined;
+
   const cdMultiList = Array.isArray(ctx.cdStableObjs?.objs)
     ? ctx.cdStableObjs?.objs
     : [];

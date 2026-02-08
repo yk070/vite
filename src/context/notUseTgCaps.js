@@ -10,7 +10,7 @@ export const notUseTgCaps = (ctx) => {
     caps = caps.concat("muhenkan");
   }
 
-  const extraAdj = ctx.hdCapableBlockObj?.adj;
+  const extraAdj = ctx.hdCaSingleBlockObj?.adj;
   if (
     (extraAdj === "space" || extraAdj === "muhenkan") &&
     !caps.includes(extraAdj)

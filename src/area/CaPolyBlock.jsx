@@ -5,8 +5,8 @@ import useCapableBlockRun from "../convert/useCapableBlockRun.jsx";
 import useCapableBlockRoo from "../convert/useCapableBlockRoo.jsx";
 import useCapableBlockBoo from "../convert/useCapableBlockBoo.jsx";
 
-// const pHead = { adj, prfss };
-const CapableBlock = ({ pHead }) => {
+// const pHead = { adj, prfs };
+const CaPolyBlock = ({ pHead }) => {
   const roo = useCapableBlockRoo({ pHead });
   const boo = useCapableBlockBoo({ pHead });
   const col = useCapableBlockCol({ pHead });
@@ -33,4 +33,4 @@ const CapableBlock = ({ pHead }) => {
   );
 };
 
-export default CapableBlock;
+export default CaPolyBlock;

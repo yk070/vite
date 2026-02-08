@@ -5,7 +5,7 @@ const useCapableBlockRun = ({ pHead }) => {
   const roo = useCapableBlockRoo({ pHead });
 
   const hover = () => {
-    ctx.setHdBlockObj({ adj: pHead.adj, prfss: pHead.prfs });
+    ctx.setHdBlockObj({ adj: pHead.adj, prfs: pHead.prfs });
   };
 
   const leave = () => {

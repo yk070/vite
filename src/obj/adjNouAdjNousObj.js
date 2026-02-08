@@ -1,4 +1,4 @@
-const singleObj = {
+const adjNouAdjNousObj = {
   "none*enter": [
     "none*tab",
     "none*capslock",
@@ -20,7 +20,7 @@ const singleObj = {
 // "ctrl*a": {
 // },
 
-export default singleObj;
+export default adjNouAdjNousObj;
 
 // BackS: {
 //   none: [

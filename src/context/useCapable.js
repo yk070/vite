@@ -40,9 +40,9 @@ const useCapable = (ctx) => {
   useEffect(() => {
     if (!ctx.cdCapablePrfs) return;
     isFromCdCapableRef.current = true;
-    ctx.setCdsingleObj(null);
+    ctx.setCdadjNouAdjNousObj(null);
     ctx.setCdAcAdjNou(null);
-    ctx.setHdsingleObj(null);
+    ctx.setHdadjNouAdjNousObj(null);
     ctx.setHdBlockObj(null);
     ctx.setCurrCapTg(ctx.cdCapableAdj);
 

@@ -7,10 +7,10 @@ const useMain = () => {
   const [toReviseVirtualAdj, setToReviseVirtualAdj] = useState(null);
 
   const [isCapableAreaHd, setIsCapableAreaHd] = useState(false);
-  const [hdCapableBlockObj, setHdCapableBlockObj] = useState(false);
-  const [hdsingleObj, setHdsingleObj] = useState(null);
-  // console.log(hdsingleObj);
-  const [cdsingleObj, setCdsingleObj] = useState(null);
+  const [hdCaSingleBlockObj, setHdCaSingleBlockObj] = useState(false);
+  const [hdadjNouAdjNousObj, setHdadjNouAdjNousObj] = useState(null);
+  // console.log(hdadjNouAdjNousObj);
+  const [cdadjNouAdjNousObj, setCdadjNouAdjNousObj] = useState(null);
 
   const [HoverLocktg, setHoverLocktg] = useState(null);
 
@@ -53,14 +53,14 @@ const useMain = () => {
     setHoverLocktg,
     cdStableObjs,
     setCdStableObjs,
-    cdsingleObj,
-    setCdsingleObj,
-    hdsingleObj,
-    setHdsingleObj,
+    cdadjNouAdjNousObj,
+    setCdadjNouAdjNousObj,
+    hdadjNouAdjNousObj,
+    setHdadjNouAdjNousObj,
     isCapableAreaHd,
     setIsCapableAreaHd,
-    hdCapableBlockObj,
-    setHdCapableBlockObj,
+    hdCaSingleBlockObj,
+    setHdCaSingleBlockObj,
   };
 };
 export default useMain;
