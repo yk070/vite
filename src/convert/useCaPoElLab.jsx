@@ -1,8 +1,8 @@
 import useCtx from "../context/useCtx.jsx";
-const useCapableBoo = ({ pBlock }) => {
+const useCaPoElLab = ({ pBl }) => {
   const ctx = useCtx();
 
   return {};
 };
 
-export default useCapableBoo;
+export default useCaPoElLab;

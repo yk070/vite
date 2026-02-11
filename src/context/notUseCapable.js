@@ -1,25 +1,31 @@
 const notUseCapable = (ctx) => {
   //capable
-  const hdCapablePrf = ctx.hdadjNouAdjNousObj?.prf;
-  const hdCapableId = ctx.hdadjNouAdjNousObj?.id;
+  const hdMoPrf = ctx.hdMoObj?.prf;
+  const hdMoId = ctx.hdMoObj?.id;
+  const cdMoAdj = ctx.cdMoObj?.adj;
+  const cdMoPrf = ctx.cdMoObj?.prf;
 
-  const cdCapableAdj = ctx.cdadjNouAdjNousObj?.adj;
-  const cdCapablePrfs = ctx.cdadjNouAdjNousObj?.prfs;
+  const hdPoPrfs = ctx.hdPoObj?.prfs;
+  const hdPoId = ctx.hdPoObj?.id;
 
-  const isCapableOnHd = ctx.acTgsSet.has(
-    `${hdCapablePrf?.ac}|${hdCapablePrf?.tg}`,
-  );
+  const isCapableOnHd = ctx.acTgsSet.has(`${hdMoPrf?.ac}|${hdMoPrf?.tg}`);
 
-  const hdBlockPrfs = ctx.hdBlockObj?.prfs;
-  const hdBlockAdj = ctx.hdBlockObj?.adj;
+  const hdMoBlPrfs = ctx.hdMoBlObj?.prfs;
+  const hdMoBlAdj = ctx.hdMoBlObj?.adj;
+
+  // const hdMoBlPrfs = ctx.hdMoBlObj?.prfs;
+  const hdPoBlAdj = ctx.hdPoBlObj?.adj;
 
   return {
-    hdBlockPrfs,
-    hdBlockAdj,
-    cdCapableAdj,
-    cdCapablePrfs,
-    hdCapablePrf,
-    hdCapableId,
+    hdPoPrfs,
+    hdPoId,
+    hdPoBlAdj,
+    hdMoBlPrfs,
+    hdMoBlAdj,
+    cdMoAdj,
+    cdMoPrf,
+    hdMoPrf,
+    hdMoId,
     isCapableOnHd,
   };
 };

@@ -1,14 +1,14 @@
 import look from "../style/look.jsx";
 import useCtx from "../context/useCtx.jsx";
-import CaMonoHead from "./CaMonoHead.jsx";
-import CaPolyHead from "./CaPolyHead.jsx";
+import CaContent from "./CaContent.jsx";
+import CaPoAaa from "./CaPoAaa.jsx";
 
-const CaHead = () => {
+const CaAa = () => {
   const ctx = useCtx();
   if (!ctx.isWoAcSd) return null;
 
   const click = () => {
-    ctx.setCdAcAdjNou(null);
+    ctx.setCdAcObj(null);
   };
 
   return (
@@ -19,15 +19,14 @@ const CaHead = () => {
           <span style={look.capable27}> {ctx.cdAcAdjNou}</span>
         </div>
         <div style={look.capable12}>
-          <CaMonoHead />
-          <CaPolyHead />
+          <CaContent />
         </div>
       </div>
     </div>
   );
 };
 
-export default CaHead;
+export default CaAa;
 
 // const groupedPrfsss = Object.values(
 //   matchedPrfss.reduce((acc, prfs) => {

@@ -22,13 +22,14 @@ const useTgCol = ({ posiId }) => {
 
   const getTextColor = () => {
     if (boo.isHd) return tone.textWhite;
-    if (boo.isCapablePsHd) return "black";
+    if (boo.isMoPsHd) return "black";
+    if (boo.isPoPsHd) return "black";
     if (merge.isAssigned) return "black";
     return tone.textWhite;
   };
 
   const getCircleColor = () => {
-    if (boo.isCapablePsHd) return "black";
+    if (boo.isMoPsHd) return "black";
     return tone.textWhite;
   };
 

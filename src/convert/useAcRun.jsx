@@ -9,11 +9,10 @@ const useAcRun = ({ posiId }) => {
   const click = () => {
     if (boo.isDisabled) return;
     if (ctx.isWoAcSd) {
-      ctx.setCdAcAdjNou();
+      ctx.setCdAcObj(null);
       return;
     }
-
-    ctx.setCdAcAdjNou(roo.adjNou);
+    ctx.setCdAcObj({ adjNou: roo.adjNou, capPseudoRef: ctx.currCapTg });
   };
 
   const hover = () => {

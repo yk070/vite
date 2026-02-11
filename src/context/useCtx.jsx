@@ -1,35 +1,38 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useRef } from "react";
 import useMain from "./useMain.js";
 import notUseMain from "./notUseMain.js";
 import useAcTgAdjNou from "./useAcTgAdjNou.js";
-import useCdStableObj from "./useCdStableObj.js";
 import useHistory from "./useHistory.js";
 import notUseScript from "./notUseScript.js";
 import notUseArrow from "./notUseArrow.jsx";
-import useCapable from "./useCapable.js";
+import useHdMo from "./useHdMo.js";
 import notUseTgCaps from "./notUseTgCaps.js";
 import notUseCapable from "./notUseCapable.js";
-import useAllSettings from "./useAllSettings.js";
+import useUsedItms from "./useUsedItms.js";
+import useCdMo from "./useCdMo.js";
+import useHdPo from "./useHdPo.js";
 
 const AppContext = createContext(null);
 
 const CtxProvider = ({ children }) => {
   const ctx = {};
+  ctx.isCdMoRef = useRef(false);
 
   Object.assign(ctx, useMain());
   Object.assign(ctx, useHistory());
-  // console.log(ctx.allSettings);
+  // console.log(ctx.usedItms);
 
-  Object.assign(ctx, notUseMain(ctx));
+  Object.assign(ctx, notUseMain(ctx)); //1
+  ctx.tgCaps = notUseTgCaps(ctx); //2
   Object.assign(ctx, notUseCapable(ctx));
-  ctx.tgCaps = notUseTgCaps(ctx);
   Object.assign(ctx, notUseScript(ctx));
-  Object.assign(ctx, notUseArrow(ctx));
+  Object.assign(ctx, notUseArrow(ctx)); //3
 
   useAcTgAdjNou(ctx);
-  useCapable(ctx);
-  useCdStableObj(ctx);
-  useAllSettings(ctx);
+  useHdMo(ctx);
+  useHdPo(ctx);
+  useCdMo(ctx);
+  useUsedItms(ctx);
 
   return <AppContext.Provider value={ctx}>{children}</AppContext.Provider>;
 };

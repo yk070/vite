@@ -10,8 +10,12 @@ const useAcBoo = ({ posiId }) => {
   //individual
   const isEnterBelow = roo.posiId === "enter_below";
   //some
-  const isFunctionUsed = ctx.prfs?.some((actgObj) => actgObj.ac === roo.adjNou);
-  const isLocationUsed = ctx.prfs?.some((actgObj) => actgObj.tg === roo.adjNou);
+  const isFunctionUsed = ctx.usedPrfs?.some(
+    (actgObj) => actgObj.ac === roo.adjNou,
+  );
+  const isLocationUsed = ctx.usedPrfs?.some(
+    (actgObj) => actgObj.tg === roo.adjNou,
+  );
   //hd
   const isHd = ctx.hdAdjNouAc === roo.adjNou;
   //basic
@@ -21,7 +25,7 @@ const useAcBoo = ({ posiId }) => {
   const isDisabled = disabledAdjNous.includes(roo.adjNou);
   const isAlphabetNumber = alphabetNumberNous.includes(roo.originNou);
   const isAdjNouVirtual = virtualAdjNous.includes(roo.adjNou);
-  const isNouExploited = ctx.exploitedAdjs?.includes(roo.originNou);
+  const isNouExploited = ctx.usedAdjs?.includes(roo.originNou);
 
   return {
     isAdjNouVirtual,

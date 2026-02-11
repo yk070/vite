@@ -1,9 +1,9 @@
 import useCtx from "../context/useCtx.jsx";
 import tone from "../style/color.jsx";
-import useCapableBlockBoo from "../convert/useCapableBlockBoo.jsx";
-const useCapableBlockCol = ({ pHead }) => {
+import useCaPoBlBoo from "./useCaPoBlBoo.jsx";
+const useCaPoBlCol = ({ pAaa }) => {
   const ctx = useCtx();
-  const boo = useCapableBlockBoo({ pHead });
+  const boo = useCaPoBlBoo({ pAaa });
 
   const getAdj = () => {
     if (boo.isNone) return tone.none;
@@ -16,9 +16,12 @@ const useCapableBlockCol = ({ pHead }) => {
   };
 
   const adj = getAdj();
-  const hdBlock = getHdBlockColor();
+  const hdBl = getHdBlockColor();
 
-  return { adj, hdBlock };
+  return {
+    adj,
+    hdBl,
+  };
 };
 
-export default useCapableBlockCol;
+export default useCaPoBlCol;

@@ -1,7 +1,7 @@
 import tone from "../style/color.jsx";
-import useCapableBoo from "../convert/useCapableBoo.jsx";
-const useCapableCol = ({ pBlock }) => {
-  const boo = useCapableBoo({ pBlock });
+import useCaPoElBoo from "./useCaPoElBoo.jsx";
+const useCaPoElCol = ({ pBl }) => {
+  const boo = useCaPoElBoo({ pBl });
 
   const getBorderColor = () => {
     // if (boo.isHd) return tone.acSd;
@@ -20,4 +20,4 @@ const useCapableCol = ({ pBlock }) => {
   return { borderColor, buttonColor };
 };
 
-export default useCapableCol;
+export default useCaPoElCol;

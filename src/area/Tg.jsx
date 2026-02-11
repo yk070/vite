@@ -23,7 +23,7 @@ const Tg = () => {
           const props = { key, containerRef, headX, headY };
           return <Line key={key} props={props} />;
         })}
-        <AlphaNumBlock derive="tg" />
+        <AlphaNumBlock source="tg" />
         {Object.entries(adjPosiIdObjObj[ctx.currCapTg]).map(
           ([posiId, styleObj]) => (
             <TgEle key={posiId} posiId={posiId} styleObj={styleObj} />

@@ -3,10 +3,10 @@ import { defaultAdjs } from "../array/namedArray.js";
 export const notUseTgCaps = (ctx) => {
   let caps = [...defaultAdjs];
 
-  if (ctx.exploitedAdjs.includes("space") && !caps.includes("space")) {
+  if (ctx.usedAdjs.includes("space") && !caps.includes("space")) {
     caps = caps.concat("space");
   }
-  if (ctx.exploitedAdjs.includes("muhenkan") && !caps.includes("muhenkan")) {
+  if (ctx.usedAdjs.includes("muhenkan") && !caps.includes("muhenkan")) {
     caps = caps.concat("muhenkan");
   }
 
@@ -18,8 +18,8 @@ export const notUseTgCaps = (ctx) => {
     caps = caps.concat(extraAdj);
   }
 
-  if (ctx.toReviseVirtualAdj && !caps.includes(ctx.toReviseVirtualAdj))
-    caps = caps.concat(ctx.toReviseVirtualAdj);
+  if (ctx.toReviseAdj && !caps.includes(ctx.toReviseAdj))
+    caps = caps.concat(ctx.toReviseAdj);
   return caps;
 };
 

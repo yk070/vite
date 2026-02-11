@@ -11,26 +11,32 @@ const useTgBoo = ({ posiId }) => {
   //individual
   const isEnterBelow = posiId === "enter_below";
   //hd
-  const isCapablePsHd = !!roo.capableHdAcAdjNou;
+  const isMoPsHd = !!roo.moHdAdjNou;
+  const isPoPsHd = !!roo.poHdAdjNou;
   const isBlockPsHd = useBlockPsHd(roo.originAdjNou);
   const isHd = ctx.hdAdjNouTg === roo.originAdjNou;
   const isFunctionPsHd = ctx.hdAdjNouTg === roo.assignAdjNou;
   //use
   const isAdjNouSame = useIsAdjNouSame(roo.originNou);
   //some
-  const isLocationUsed = ctx.prfs.some((obj) => obj.tg === roo.originAdjNou);
-  const isFunctionUsed = ctx.prfs.some((obj) => obj.ac === roo.originAdjNou);
+  const isLocationUsed = ctx.usedPrfs.some(
+    (obj) => obj.tg === roo.originAdjNou,
+  );
+  const isFunctionUsed = ctx.usedPrfs.some(
+    (obj) => obj.ac === roo.originAdjNou,
+  );
   //includes
   const isDisabled = disabledAdjNous.includes(roo.originAdjNou);
   const isAlphabetNumber = alphabetNumberNous.includes(roo.originNou);
   const isHomeNoun = ["f", "j"].includes(roo.originNou);
   const isAdjNouVirtual = virtualAdjNous.includes(roo.originAdjNou);
-  const isNouExploited = ctx.exploitedAdjs?.includes(roo.originNou);
+  const isNouExploited = ctx.usedAdjs?.includes(roo.originNou);
 
   return {
+    isPoPsHd,
     isAdjNouVirtual,
     isNouExploited,
-    isCapablePsHd,
+    isMoPsHd,
     isBlockPsHd,
     isDisabled,
     isHd,

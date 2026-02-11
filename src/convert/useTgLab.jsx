@@ -16,7 +16,8 @@ const useTgLab = ({ posiId }) => {
   const originKeyLabel = nouLabelObj[roo.originNou];
   const originAdjNouLabel = <ConvLabel adjNou={roo.originAdjNou} />;
   const assignAdjNouLabel = <ConvLabel adjNou={roo.assignAdjNou} />;
-  const capableHdAcAdjNouLabel = <ConvLabel adjNou={roo.capableHdAcAdjNou} />;
+  const moHdAdjNouLabel = <ConvLabel adjNou={roo.moHdAdjNou} />;
+  const poHdAdjNouLabel = <ConvLabel adjNou={roo.poHdAdjNou} />;
 
   const emptyLabel = (
     <>
@@ -31,7 +32,8 @@ const useTgLab = ({ posiId }) => {
   );
 
   const getLabel = () => {
-    if (boo.isCapablePsHd) return capableHdAcAdjNouLabel;
+    if (boo.isMoPsHd) return moHdAdjNouLabel;
+    if (boo.isPoPsHd) return poHdAdjNouLabel;
     if (boo.isHd) {
       if (ctx.isWoAcSd) {
         if (merge.isAssigned) return assignAdjNouLabel;

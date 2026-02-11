@@ -28,18 +28,3 @@ const AcTg = () => {
 };
 
 export default AcTg;
-
-{
-  /* <div style={look.Body8}>
-          <div style={look.ac4}>
-            <span style={look.multi2}>{"おすすめ一括設定"}</span>
-          </div>
-          <div style={look.ac5}>
-            {!ctx.isCapableAreaHd &&
-              Object.entries(stableObj[ctx.currCapTg]).map(([title, objs]) => {
-                const props = { title, objs };
-                return <StableEle key={title} props={props} />;
-              })}
-          </div>
-        </div> */
-}

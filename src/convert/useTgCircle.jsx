@@ -15,7 +15,7 @@ const useTgCircle = ({ posiId }) => {
       nous?.includes(roo.originNou),
     );
 
-    if (boo.isCapablePsHd) return entry?.[0] ?? "third";
+    if (boo.isMoPsHd) return entry?.[0] ?? "third";
 
     if (
       !ctx.isWoAcSd ||

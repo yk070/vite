@@ -8,13 +8,13 @@ import {
 import easyObj from "../obj/easyObj.js";
 
 const notUseMain = (ctx) => {
-  const exploitedAdjs = ctx.allSettings.filter((v) => typeof v === "string");
-  const prfs = ctx.allSettings.filter(
+  const usedAdjs = ctx.usedItms.filter((v) => typeof v === "string");
+  const usedPrfs = ctx.usedItms.filter(
     (v) => typeof v === "object" && v !== null,
   );
 
-  const isWoSpaHold = exploitedAdjs?.includes("space");
-  const isWoMuhHold = exploitedAdjs?.includes("muhenkan");
+  const isWoSpaHold = usedAdjs?.includes("space");
+  const isWoMuhHold = usedAdjs?.includes("muhenkan");
   const isWoTgNone = ctx.currCapTg === "none";
   const isWoAcNone = ctx.currCapAc === "none";
   const isWoTgVirtual = virtualVersatiles.includes(ctx.currCapTg);
@@ -22,13 +22,17 @@ const notUseMain = (ctx) => {
   const isWoCapable = capableCaps?.includes(ctx.currCapAc);
   const isWoUsable = usableCaps?.includes(ctx.currCapAc);
   const isWoFlexible = defaultAdjs?.includes(ctx.currCapAc);
-  const isWoAcSd = !!ctx.cdAcAdjNou;
-  const acTgsSet = new Set(prfs?.map((obj) => `${obj?.ac}|${obj?.tg}`));
+
+  const cdAcAdjNou = ctx.cdAcObj?.adjNou;
+  const capPseudoRef = ctx.cdAcObj?.capPseudoRef;
+  const isWoAcSd = !!cdAcAdjNou;
+
+  const acTgsSet = new Set(usedPrfs?.map((obj) => `${obj?.ac}|${obj?.tg}`));
   // console.log(acTgsSet);
   const easyCurrAdjTgObj = easyObj[ctx.currCapTg];
 
   const toggleVirtual = (x) => {
-    ctx.setAllSettings((prev) => {
+    ctx.setUsedItms((prev) => {
       if (prev.includes(x)) {
         return prev.filter((item) => item !== x);
       } else {
@@ -38,8 +42,10 @@ const notUseMain = (ctx) => {
   };
 
   return {
-    exploitedAdjs,
-    prfs,
+    capPseudoRef,
+    cdAcAdjNou,
+    usedAdjs,
+    usedPrfs,
     isWoAcNone,
     isWoTgNone,
     isWoTgVirtual,

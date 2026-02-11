@@ -4,7 +4,7 @@ const useAcTgAdjNou = (ctx) => {
   useEffect(() => {
     if (!ctx.cdAcAdjNou || !ctx.sdTgAdjNou) return;
 
-    ctx.setAllSettings((prev) => [
+    ctx.setUsedItms((prev) => [
       ...prev.filter((obj) => obj.tg !== ctx.sdTgAdjNou),
       {
         ac: ctx.cdAcAdjNou,
@@ -12,7 +12,7 @@ const useAcTgAdjNou = (ctx) => {
       },
     ]);
 
-    ctx.setCdAcAdjNou(null);
+    ctx.setCdAcObj(null);
     ctx.setSdTgAdjNou(null);
   }, [ctx.cdAcAdjNou, ctx.sdTgAdjNou]);
 };

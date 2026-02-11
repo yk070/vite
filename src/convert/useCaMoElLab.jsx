@@ -1,8 +1,8 @@
 import useCtx from "../context/useCtx.jsx";
-const useCapableBlockRoo = ({ pHead }) => {
+const useCaMoElLab = ({ pBl }) => {
   const ctx = useCtx();
 
   return {};
 };
 
-export default useCapableBlockRoo;
+export default useCaMoElLab;

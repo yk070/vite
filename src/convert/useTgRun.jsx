@@ -10,7 +10,7 @@ const useTgRun = ({ posiId }) => {
   const merge = useTgBooMerge({ posiId });
 
   const remove = () => {
-    ctx.setAllSettings((prev) =>
+    ctx.setUsedItms((prev) =>
       prev.filter((actgObj) => actgObj.tg !== roo.originAdjNou),
     );
   };

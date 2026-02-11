@@ -4,11 +4,11 @@ import useCtx from "../context/useCtx.jsx";
 import Tg from "./Tg.jsx";
 import Ac from "./Ac.jsx";
 
-const AlphaNumBlock = ({ derive }) => {
+const AlphaNumBlock = ({ source }) => {
   const ctx = useCtx();
   if (
-    (derive === "tg" && (ctx.isWoTgNone || ctx.isWoTgShift)) ||
-    (derive === "ac" && (!ctx.isWoFlexible || ctx.isWoAcNone))
+    (source === "tg" && (ctx.isWoTgNone || ctx.isWoTgShift)) ||
+    (source === "ac" && (!ctx.isWoFlexible || ctx.isWoAcNone))
   )
     return null;
   return (

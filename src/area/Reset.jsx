@@ -4,10 +4,10 @@ import look from "../style/look.jsx";
 const Reset = () => {
   const ctx = useCtx();
   const click = () => {
-    ctx.setAllSettings([]);
+    ctx.setUsedItms([]);
     ctx.setCurrCapAc("none");
     ctx.setCurrCapTg("none");
-    ctx.setCdAcAdjNou(null);
+    ctx.setCdAcObj(null);
   };
   return (
     <div onClick={click} style={look.reset1}>

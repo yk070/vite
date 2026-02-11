@@ -5,8 +5,8 @@ const useBasicBoo = ({ adjNou }) => {
   const isActive = ctx.cdAcAdjNou === adjNou;
   const isHd = ctx.hdAdjNouAc === adjNou;
 
-  const isFunctionUsed = ctx.prfs?.some((actgObj) => actgObj.ac === adjNou);
-  const isLocationUsed = ctx.prfs?.some((actgObj) => actgObj.tg === adjNou);
+  const isFunctionUsed = ctx.usedPrfs?.some((actgObj) => actgObj.ac === adjNou);
+  const isLocationUsed = ctx.usedPrfs?.some((actgObj) => actgObj.tg === adjNou);
   const isAlert = isLocationUsed && !isFunctionUsed;
 
   return { isActive, isHd, isAlert, isFunctionUsed };

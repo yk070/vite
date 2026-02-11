@@ -23,7 +23,7 @@ const useTgBooMerge = ({ posiId }) => {
 
   const isCursorPointer = !boo.isDisabled && ctx.isWoAcSd && !boo.isAdjNouSame;
 
-  const isHighZ = boo.isHd || boo.isCapablePsHd || boo.isAdjNouSame;
+  const isHighZ = boo.isHd || boo.isMoPsHd || boo.isAdjNouSame;
 
   return {
     isVacant,

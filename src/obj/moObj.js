@@ -1,4 +1,4 @@
-const adjNouAdjNousObj = {
+const moObj = {
   "none*enter": [
     "none*tab",
     "none*capslock",
@@ -7,7 +7,6 @@ const adjNouAdjNousObj = {
   ],
   "ctrl*a": ["muhenkan*a", "space*a"],
 };
-
 // "none*space": {
 //   none: [
 //     [{ ac: "none*space", tg: "none*tab" }],
@@ -20,7 +19,9 @@ const adjNouAdjNousObj = {
 // "ctrl*a": {
 // },
 
-export default adjNouAdjNousObj;
+export default moObj;
+
+// moObj
 
 // BackS: {
 //   none: [

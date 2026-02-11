@@ -8,7 +8,7 @@ const Line = ({ props }) => {
   const ctx = useCtx();
   const { key, containerRef, headX, headY } = props;
 
-  const isCapableHd = ctx.hdCapablePrf?.tg.split("*")[1] === key;
+  const isCapableHd = ctx.hdMoPrf?.tg.split("*")[1] === key;
   if (ctx.isWoTgNone) return null;
 
   const styleObj = posiIdObj[adjLineObj[ctx.currCapTg]];

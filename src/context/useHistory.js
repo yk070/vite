@@ -1,12 +1,12 @@
 import { useRef, useState } from "react";
 
 const useHistory = () => {
-  const [allSettings, _setExploitedAdjPrfs] = useState([]);
+  const [usedItms, _setExploitedAdjPrfs] = useState([]);
   const [historyIndex, setHistoryIndex] = useState(0); // ←初期は0
   const historyRef = useRef([[]]); // ←初期状態も履歴に登録
   const skipHistoryRef = useRef(false);
 
-  const setAllSettings = (next) => {
+  const setUsedItms = (next) => {
     _setExploitedAdjPrfs((prev) => {
       const value = typeof next === "function" ? next(prev) : next;
 
@@ -37,8 +37,8 @@ const useHistory = () => {
   };
 
   return {
-    allSettings,
-    setAllSettings,
+    usedItms,
+    setUsedItms,
     historyIndex,
     setHistoryIndex,
     restoreFromHistory,

@@ -1,4 +1,4 @@
-const prfss = [
+const poPrfss = [
   [
     { ac: "none*enter", tg: "space*leftCtrl" },
     { ac: "none*esc", tg: "space*leftShift" },
@@ -11,6 +11,14 @@ const prfss = [
     { ac: "none*enter", tg: "none*muhenkan" },
     { ac: "none*backspace", tg: "none*tab" },
     { ac: "none*space", tg: "none*capslock" },
+  ],
+  [
+    { ac: "none*enter", tg: "none*muhenkan" },
+    { ac: "none*backspace", tg: "none*tab" },
+  ],
+  [
+    { ac: "ctrl*a", tg: "none*tab" },
+    { ac: "ctrl*u", tg: "none*space" },
   ],
   [
     { ac: "ctrl*z", tg: "space*z" },
@@ -29,14 +37,10 @@ const prfss = [
     { ac: "ctrl*r", tg: "space*r" },
     { ac: "ctrl*t", tg: "space*t" },
   ],
-  [
-    { ac: "ctrl*a", tg: "space*a" },
-    { ac: "ctrl*u", tg: "space*u" },
-  ],
   [{ ac: "win*one", tg: "space*one" }],
 ];
 
-export default prfss;
+export default poPrfss;
 
 // BackS: {
 //   none: [

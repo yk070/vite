@@ -7,7 +7,7 @@ export const notUseArrow = (ctx) => {
 
   const [hdAdj, hdNou] = ctx.hdAdjNouTg?.split("*") ?? [];
   const { x: tailX, y: tailY } = convPosition(hdNou);
-  const remoteHdAdjNou = ctx.prfs?.find((o) => o.ac === ctx.hdAdjNouTg)?.tg;
+  const remoteHdAdjNou = ctx.usedPrfs?.find((o) => o.ac === ctx.hdAdjNouTg)?.tg;
   const isRemoteExist = !!remoteHdAdjNou;
   const [remoteHdAdj, remoteHdNou] = remoteHdAdjNou?.split("*") ?? [];
   const remoteHdNouLabel = nouLabelObj[remoteHdNou];

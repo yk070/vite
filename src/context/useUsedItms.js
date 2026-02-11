@@ -1,19 +1,19 @@
 import { useEffect } from "react";
 import { defaultAdjs } from "../array/namedArray.js";
 
-const useAllSettings = (ctx) => {
+const useUsedItms = (ctx) => {
   useEffect(() => {
-    const sdAdjs = ctx.prfs.map((obj) => obj.tg?.split("*")[0]);
+    const sdAdjs = ctx.usedPrfs.map((obj) => obj.tg?.split("*")[0]);
     const addedVirtualAdjs = sdAdjs.filter((adj) => !defaultAdjs.includes(adj));
     const notIncludedAdjs = addedVirtualAdjs.filter(
-      (adj) => !ctx.exploitedAdjs.includes(adj),
+      (adj) => !ctx.usedAdjs.includes(adj),
     );
     // console.log(notIncludedAdjs);
     if (notIncludedAdjs.length)
-      ctx.setAllSettings((prev) => {
+      ctx.setUsedItms((prev) => {
         return [...prev, ...notIncludedAdjs];
       });
-  }, [ctx.allSettings]);
+  }, [ctx.usedItms]);
 };
 
-export default useAllSettings;
+export default useUsedItms;
