@@ -14,12 +14,12 @@ const CaMdPoLeader = ({ pEl }) => {
 
   return (
     <div
-      style={look.caMoEle1(col.borderColor)}
+      style={look.caMoEle1}
       onMouseEnter={run.hover}
       onMouseLeave={run.leave}
     >
-      <div style={look.caMoEle3}>
-        {pEl.prfs.map((prf, i) => {
+      <div style={look.caMoEle3(col.buttonColor)}>
+        {roo.filteredPrfs.map((prf, i) => {
           const pPoCo = { caAdj: pEl.caAdj, moPrf: pEl.moPrf, prf };
           return <CaMdPoCircle key={i} pPoCo={pPoCo} />;
         })}

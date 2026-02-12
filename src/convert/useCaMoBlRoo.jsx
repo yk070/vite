@@ -19,7 +19,7 @@ const useCaMoBlRoo = ({ pCo }) => {
   );
   const po3Prfsss = moPrfs.map((prf) => {
     const po3Prfss = po2Prfss.filter((group) =>
-      group.some((item) => item.ac === prf.ac && item.tg === prf.tg),
+      group.some((item) => JSON.stringify(item) === JSON.stringify(prf)),
     );
     return po3Prfss;
   });
@@ -28,12 +28,7 @@ const useCaMoBlRoo = ({ pCo }) => {
     return sum + (count === 0 ? 1 : count);
   }, 0);
 
-  const pBl = {
-    caAdj: pCo.caAdj,
-    moPrfs,
-    po3Prfsss,
-  };
-  return { moPrfs, po3Prfsss, length, pBl };
+  return { moPrfs, po3Prfsss, length };
 };
 
 export default useCaMoBlRoo;

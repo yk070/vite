@@ -1,17 +1,25 @@
 import useCtx from "../context/useCtx.jsx";
 import useCaPoBlBoo from "./useCaPoBlBoo.jsx";
+import tone from "../style/color.jsx";
 
 const useCaPoBlCol = ({ pEl }) => {
   const ctx = useCtx();
   const boo = useCaPoBlBoo({ pEl });
 
-  const getButtonColor = () => {
-    if (boo.isHd) return "red";
-    return "";
-  };
-  const borderColor = getButtonColor();
+  // const getBorderColor = () => {
+  //   if (boo.isHd) return "";
+  //   return "";
+  // };
 
-  return { borderColor };
+  const getButtonColor = () => {
+    if (boo.isHd) return tone.acSd;
+    return tone.normalButton;
+  };
+
+  // const borderColor = getBorderColor();
+  const buttonColor = getButtonColor();
+
+  return { buttonColor };
 };
 
 export default useCaPoBlCol;

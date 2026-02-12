@@ -3,7 +3,12 @@ const useCaPoBlRoo = ({ pEl }) => {
   const ctx = useCtx();
 
   const id = `${pEl.caAdj}${pEl.iHa}${pEl.iEl}`;
-  return { id };
+
+  const filteredPrfs = pEl.prfs.filter(
+    (prf) => JSON.stringify(prf) !== JSON.stringify(pEl.moPrf),
+  );
+
+  return { id, filteredPrfs };
 };
 
 export default useCaPoBlRoo;

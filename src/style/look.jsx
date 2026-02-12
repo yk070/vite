@@ -1053,10 +1053,10 @@ const look = {
     transform: "translate(-50%, -50%)",
     width: `calc(100% - ${base} * 10)`,
     height: `calc(100% - ${base} * 8)`,
-    backgroundColor: tone.capable3,
+    // backgroundColor: "red",
     // col.buttonColor,
   },
-  caEl2: (borderColor) => ({
+  caEl2: {
     display: "flex",
     flex: 1,
     position: "relative",
@@ -1065,9 +1065,9 @@ const look = {
     // transform: "translate(-50%, -50%)",
     // width: `calc(100% - ${base} * 10)`,
     // height: `calc(100% - ${base} * 8)`,
-    backgroundColor: borderColor,
+    backgroundColor: tone.capable3,
     // col.buttonColor,
-  }),
+  },
   caEl3: {
     display: "flex",
     flex: 1,
@@ -1077,7 +1077,7 @@ const look = {
     // transform: "translate(-50%, -50%)",
     // width: `calc(100% - ${base} * 10)`,
     // height: `calc(100% - ${base} * 8)`,
-    backgroundColor: "green",
+    // backgroundColor: "green",
     // col.buttonColor,
   },
   capable12: {
@@ -1090,7 +1090,7 @@ const look = {
     // width: "100%",
     // backgroundColor: "darkgray",
   },
-  caMoEle3: {
+  caMoEle3: (buttonColor) => ({
     display: "flex",
     // flexDirection: "column",
     position: "relative",
@@ -1105,8 +1105,8 @@ const look = {
     // flexDirection: "row",
     // width: "100%",
     // height: "100%",
-    backgroundColor: "purple",
-  },
+    backgroundColor: buttonColor,
+  }),
   caMoEle4: {
     flex: 1,
     display: "flex",
@@ -1122,23 +1122,12 @@ const look = {
     // height: "100%",
     // backgroundColor: "purple",
   },
-  caMoEle1: (borderColor) => ({
+  caMoEle1: {
     display: "flex",
-    // flexDirection: "column",
-    // position: "relative",
-    // top: "50%",
-    // left: "50%",
-    // transform: "translate(-50%, -50%)",
-    // width: `calc(100% - ${base} * 10)`,
-    // height: `calc(100% - ${base} * 8)`,
-    // backgroundColor: "darkgray",
-    // display: "flex",
-    // position: "relative",
-    // flexDirection: "row",
     width: "100%",
     height: "100%",
-    backgroundColor: borderColor,
-  }),
+    // backgroundColor: borderColor,
+  },
   caMoEle2: {
     display: "flex",
     // position: "relative",

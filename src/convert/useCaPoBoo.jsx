@@ -7,20 +7,20 @@ const useCaPoBoo = ({ pPoCo }) => {
   const ctx = useCtx();
   const roo = useCaPoRoo({ pPoCo });
 
-  const isTarget = JSON.stringify(pPoCo.moPrf) === JSON.stringify(pPoCo.prf);
-  const color = isTarget ? "white" : "gray";
+  // const isTarget = JSON.stringify(pPoCo.moPrf) === JSON.stringify(pPoCo.prf);
+  // const color = isTarget ? "white" : "gray";
   const getCircle = () => {
     const entry = Object.entries(easyObj[pPoCo.caAdj])?.find(([_, nous]) =>
       nous?.includes(roo.caNou),
     );
     const level = entry?.[0] ?? "third";
-    if (level === "first") return look.first(color);
-    if (level === "second") return look.second(color);
-    if (level === "third") return look.third(color);
+    if (level === "first") return look.first("white");
+    if (level === "second") return look.second("white");
+    if (level === "third") return look.third("white");
   };
   const circle = getCircle();
 
-  return { circle, isTarget };
+  return { circle };
 };
 
 export default useCaPoBoo;

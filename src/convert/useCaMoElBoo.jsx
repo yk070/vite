@@ -7,6 +7,8 @@ const useCaMoElBoo = ({ pHa }) => {
   const ctx = useCtx();
   const roo = useCaMoElRoo({ pHa });
 
+  const isPoPresent = roo.po3Prfss.length !== 0;
+
   const isHd = ctx.hdMoId === roo.id;
   const isSd = ctx.acTgsSet?.has(`${pHa.moPrf?.ac}|${pHa.moPrf?.tg}`);
 
@@ -30,6 +32,7 @@ const useCaMoElBoo = ({ pHa }) => {
   const circle = getCircle();
 
   return {
+    isPoPresent,
     isZero,
     length,
     isHd,

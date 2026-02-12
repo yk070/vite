@@ -5,12 +5,13 @@ import useCaMoElBoo from "../convert/useCaMoElBoo.jsx";
 import useCaMoElRoo from "../convert/useCaMoElRoo.jsx";
 import CaMdPoLeader from "./CaMdPoLeader.jsx";
 
-// const pHa = { caAdj, po3Prfsss, isMo, moPrf, iHa };
+// const pHa = { caAdj, po3Prfsss, moPrf, iHa };
 const CaMdLeader = ({ pHa }) => {
   const roo = useCaMoElRoo({ pHa });
   const boo = useCaMoElBoo({ pHa });
   const col = useCaMoElCol({ pHa });
   const run = useCaMoElRun({ pHa });
+  // console.log(pHa.po3Prfsss[pHa.iHa]);
 
   return (
     <div
@@ -20,26 +21,28 @@ const CaMdLeader = ({ pHa }) => {
       onMouseLeave={run.leave}
     >
       <div style={look.caEl1}>
-        <div style={look.caEl2(col.borderColor)}>
+        <div style={look.caEl2}>
           <div style={look.capable7(col.buttonColor)}>
             <div style={{ ...look.common2, ...boo.circle }} />
           </div>
         </div>
-        <div style={look.caEl3}>
-          <div style={look.caMoEle2}>
-            {pHa.po3Prfsss[pHa.iHa].map((prfs, iEl) => {
-              const pEl = {
-                caAdj: pHa.caAdj,
-                moPrf: pHa.moPrf,
-                iHa: pHa.iHa,
-                prfs,
-                iEl,
-              };
+        {boo.isPoPresent && (
+          <div style={look.caEl3}>
+            <div style={look.caMoEle2}>
+              {roo.po3Prfss.map((prfs, iEl) => {
+                const pEl = {
+                  caAdj: pHa.caAdj,
+                  moPrf: pHa.moPrf,
+                  iHa: pHa.iHa,
+                  prfs,
+                  iEl,
+                };
 
-              return <CaMdPoLeader key={iEl} pEl={pEl} />;
-            })}
+                return <CaMdPoLeader key={iEl} pEl={pEl} />;
+              })}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

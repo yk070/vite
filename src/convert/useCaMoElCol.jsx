@@ -3,10 +3,9 @@ import useCaMoElBoo from "./useCaMoElBoo.jsx";
 const useCaMoElCol = ({ pHa }) => {
   const boo = useCaMoElBoo({ pHa });
 
-  const getBorderColor = () => {
-    if (boo.isHd) return tone.capable3;
-    return "";
-  };
+  // const getBorderColor = () => {
+  //   return "";
+  // };
 
   const getButtonColor = () => {
     if (boo.isSd && !boo.isHd) return tone.pickUp;
@@ -16,8 +15,8 @@ const useCaMoElCol = ({ pHa }) => {
   };
 
   const buttonColor = getButtonColor();
-  const borderColor = getBorderColor();
-  return { borderColor, buttonColor };
+  // const borderColor = getBorderColor();
+  return { buttonColor };
 };
 
 export default useCaMoElCol;

@@ -1,4 +1,5 @@
 const Colors = {
+  normalButton: "#222222",
   capable4: "#333333",
   capable3: "#ffffff",
   capable2: "#888888",
@@ -17,7 +18,6 @@ const Colors = {
 
   CaSingleBlocksColor: "#999999",
   capableEasyColor: "#555555",
-  normalButton: "#888888",
   CaSingleBlockHdColor: "#6B5FD2",
   acSd: "#FFE97A",
 
@@ -49,7 +49,6 @@ const Colors = {
   AlertColor: "#FF0000",
   HoveredtgBorderColor: "#222222",
 
-  normalButton: "#222222",
   importantColor: "#111111",
   DisabledButtonColor: "#CCCCCC",
 
