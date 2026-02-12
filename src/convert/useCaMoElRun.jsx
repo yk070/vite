@@ -5,7 +5,6 @@ const useCaMoElRun = ({ pHa }) => {
   const roo = useCaMoElRoo({ pHa });
 
   const hover = () => {
-    if (!pHa.isMo) return;
     ctx.setHdMoObj({
       id: roo.id,
       prf: pHa.moPrf,

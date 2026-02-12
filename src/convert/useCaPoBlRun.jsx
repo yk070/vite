@@ -1,13 +1,16 @@
 import useCtx from "../context/useCtx.jsx";
-import useCaMoBlRoo from "./useCaMoBlRoo.jsx";
-const useCaPoBlRun = ({ pAaa }) => {
+import useCaPoBlRoo from "./useCaPoBlRoo.jsx";
+
+const useCaPoBlRun = ({ pEl }) => {
   const ctx = useCtx();
-  const roo = useCaMoBlRoo({ pAaa });
+  const roo = useCaPoBlRoo({ pEl });
 
   const hover = () => {
-    ctx.setHdPoBlObj({ adj: pAaa.adj });
+    ctx.setHdPoBlObj({
+      id: roo.id,
+      prfs: pEl.prfs,
+    });
   };
-
   const leave = () => {
     ctx.setHdPoBlObj(null);
   };

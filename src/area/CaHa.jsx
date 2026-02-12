@@ -1,18 +1,18 @@
-import CaEl from "./CaEl.jsx";
+import CaMdLeader from "./CaMdLeader.jsx";
 
-// const pBl = { caAdj, isMo, po2Prfss};
+// const pBl = { caAdj, moPrfs, po3Prfsss };
 const CaHa = ({ pBl, isMo }) => {
   return (
     <>
-      {pBl.moPrfs.map((moPrf, i) => {
+      {pBl.moPrfs.map((moPrf, iHa) => {
         const pHa = {
           caAdj: pBl.caAdj,
           po3Prfsss: pBl.po3Prfsss,
-          moPrf,
-          i,
           isMo,
+          moPrf,
+          iHa,
         };
-        return <CaEl key={i} pHa={pHa} />;
+        return <CaMdLeader key={iHa} pHa={pHa} />;
       })}
     </>
   );

@@ -10,8 +10,8 @@ const useCaMoElBoo = ({ pHa }) => {
   const isHd = ctx.hdMoId === roo.id;
   const isSd = ctx.acTgsSet?.has(`${pHa.moPrf?.ac}|${pHa.moPrf?.tg}`);
 
-  const isZero = pHa.po3Prfsss[pHa.i].length === 0;
-  const length = isZero ? 1 : pHa.po3Prfsss[pHa.i].length;
+  const isZero = pHa.po3Prfsss[pHa.iHa].length === 0;
+  const length = isZero ? 1 : pHa.po3Prfsss[pHa.iHa].length;
 
   // const isSd = pHa.prfs.every((obj) =>
   //   ctx.acTgsSet.has(`${obj.ac}|${obj.tg}`),
@@ -23,9 +23,9 @@ const useCaMoElBoo = ({ pHa }) => {
       nous?.includes(capableNou),
     );
     const level = entry?.[0] ?? "third";
-    if (level === "first") return look.first;
-    if (level === "second") return look.second;
-    if (level === "third") return look.third;
+    if (level === "first") return look.first("white");
+    if (level === "second") return look.second("white");
+    if (level === "third") return look.third("white");
   };
   const circle = getCircle();
 

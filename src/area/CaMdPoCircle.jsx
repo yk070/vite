@@ -2,10 +2,10 @@ import look from "../style/look.jsx";
 import useCaPoBoo from "../convert/useCaPoBoo.jsx";
 import useCaPoRoo from "../convert/useCaPoRoo.jsx";
 
-// const pEl = {  prf, caAdj, moPrf };
-const CaPo = ({ pEl }) => {
-  const roo = useCaPoRoo({ pEl });
-  const boo = useCaPoBoo({ pEl });
+// const pPoCo = {  caAdj, moPrf, prf };
+const CaMdPoCircle = ({ pPoCo }) => {
+  const roo = useCaPoRoo({ pPoCo });
+  const boo = useCaPoBoo({ pPoCo });
 
   return (
     <div style={look.caMoEle4}>
@@ -14,4 +14,4 @@ const CaPo = ({ pEl }) => {
   );
 };
 
-export default CaPo;
+export default CaMdPoCircle;

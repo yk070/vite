@@ -1,9 +1,9 @@
 import useCtx from "../context/useCtx.jsx";
 import tone from "../style/color.jsx";
 import useCaMoBlBoo from "./useCaMoBlBoo.jsx";
-const useCaMoBlCol = ({ pAaa }) => {
+const useCaMoBlCol = ({ pCo }) => {
   const ctx = useCtx();
-  const boo = useCaMoBlBoo({ pAaa });
+  const boo = useCaMoBlBoo({ pCo });
 
   const getAdj = () => {
     if (boo.isNone) return tone.none;

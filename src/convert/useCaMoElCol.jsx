@@ -4,12 +4,11 @@ const useCaMoElCol = ({ pHa }) => {
   const boo = useCaMoElBoo({ pHa });
 
   const getBorderColor = () => {
-    // if (boo.isHd) return tone.acSd;
-    return "transparent";
+    if (boo.isHd) return tone.capable3;
+    return "";
   };
 
   const getButtonColor = () => {
-    if (!pHa.isMo) return "transparent";
     if (boo.isSd && !boo.isHd) return tone.pickUp;
     if (boo.isSd) return tone.hoveredSelectedMultiColor;
     if (boo.isHd) return tone.acSd;

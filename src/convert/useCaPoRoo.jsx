@@ -1,8 +1,8 @@
 import useCtx from "../context/useCtx.jsx";
-const useCaPoRoo = ({ pEl }) => {
+const useCaPoRoo = ({ pPoCo }) => {
   const ctx = useCtx();
 
-  const caNou = pEl.prf.tg.split("*")[1];
+  const caNou = pPoCo.prf.tg.split("*")[1];
   return { caNou };
 };
 

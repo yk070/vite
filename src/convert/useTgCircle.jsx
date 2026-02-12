@@ -29,9 +29,9 @@ const useTgCircle = ({ posiId }) => {
   };
   const level = getLevel();
 
-  if (level === "first") return look.first;
-  if (level === "second") return look.second;
-  if (level === "third") return look.third;
+  if (level === "first") return look.first("white");
+  if (level === "second") return look.second("white");
+  if (level === "third") return look.third("white");
   return null;
 };
 

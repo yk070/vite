@@ -30,7 +30,7 @@ const CtxProvider = ({ children }) => {
 
   useAcTgAdjNou(ctx);
   useHdMo(ctx);
-  useHdPo(ctx);
+  // useHdPo(ctx);
   useCdMo(ctx);
   useUsedItms(ctx);
 

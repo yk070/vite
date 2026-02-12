@@ -10,7 +10,7 @@ const useTgCol = ({ posiId }) => {
 
   const getBorderColor = () => {
     if (boo.isDisabled) return "";
-    if (boo.isBlockPsHd) return tone.capable2;
+    if (boo.isBlockPsHd) return tone.capable3;
     if (boo.isHd) {
       if (ctx.isWoAcSd) return tone.acSd;
       if (merge.isVacant) return "";

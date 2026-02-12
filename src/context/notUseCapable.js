@@ -13,13 +13,14 @@ const notUseCapable = (ctx) => {
   const hdMoBlPrfs = ctx.hdMoBlObj?.prfs;
   const hdMoBlAdj = ctx.hdMoBlObj?.adj;
 
-  // const hdMoBlPrfs = ctx.hdMoBlObj?.prfs;
-  const hdPoBlAdj = ctx.hdPoBlObj?.adj;
+  const hdPoBlId = ctx.hdPoBlObj?.id;
+  const hdPoBlPrfs = ctx.hdPoBlObj?.prfs;
 
   return {
+    hdPoBlPrfs,
     hdPoPrfs,
     hdPoId,
-    hdPoBlAdj,
+    hdPoBlId,
     hdMoBlPrfs,
     hdMoBlAdj,
     cdMoAdj,

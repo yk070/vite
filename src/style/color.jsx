@@ -1,6 +1,8 @@
 const Colors = {
-  capable2: "#FFFFFF",
-  capable1: "#555555",
+  capable4: "#333333",
+  capable3: "#ffffff",
+  capable2: "#888888",
+  capable1: "#444444",
   ac6: "#000000",
   ac7: "#A7C0E2",
   acButtons: "#444444",

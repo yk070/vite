@@ -14,6 +14,7 @@ const useTgBoo = ({ posiId }) => {
   const isMoPsHd = !!roo.moHdAdjNou;
   const isPoPsHd = !!roo.poHdAdjNou;
   const isBlockPsHd = useBlockPsHd(roo.originAdjNou);
+
   const isHd = ctx.hdAdjNouTg === roo.originAdjNou;
   const isFunctionPsHd = ctx.hdAdjNouTg === roo.assignAdjNou;
   //use

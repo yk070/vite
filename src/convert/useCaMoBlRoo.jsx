@@ -1,24 +1,39 @@
 import useCtx from "../context/useCtx.jsx";
-const useCaMoBlRoo = ({ pAaa }) => {
+import poPrfss from "../obj/poPrfss.js";
+
+const useCaMoBlRoo = ({ pCo }) => {
   const ctx = useCtx();
 
-  const po3Prfsss = pAaa.moPrfs.map((prf) => {
-    const po3Prfss = pAaa.po2Prfss.filter((group) =>
+  const moPrfs = pCo.moAdjNous
+    .filter((tg) => tg.split("*")[0] === pCo.caAdj)
+    .map((tg) => ({
+      ac: ctx.cdAcAdjNou,
+      tg,
+    }));
+
+  const po1Pfrss = poPrfss.filter((prfs) =>
+    prfs.some((obj) => obj.ac === ctx.cdAcAdjNou),
+  );
+  const po2Prfss = po1Pfrss.filter((prfs) =>
+    prfs.some((obj) => obj.tg.split("*")[0] === pCo.caAdj),
+  );
+  const po3Prfsss = moPrfs.map((prf) => {
+    const po3Prfss = po2Prfss.filter((group) =>
       group.some((item) => item.ac === prf.ac && item.tg === prf.tg),
     );
     return po3Prfss;
   });
-  const total = po3Prfsss.reduce((sum, groups) => {
+  const length = po3Prfsss.reduce((sum, groups) => {
     const count = groups.length;
     return sum + (count === 0 ? 1 : count);
   }, 0);
 
   const pBl = {
-    caAdj: pAaa.caAdj,
-    moPrfs: pAaa.moPrfs,
-    po3Prfsss: po3Prfsss,
+    caAdj: pCo.caAdj,
+    moPrfs,
+    po3Prfsss,
   };
-  return { po3Prfsss, total, pBl };
+  return { moPrfs, po3Prfsss, length, pBl };
 };
 
 export default useCaMoBlRoo;

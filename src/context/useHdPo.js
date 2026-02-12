@@ -28,30 +28,3 @@ const useHdPo = (ctx) => {
 };
 
 export default useHdPo;
-
-// useEffect(() => {
-//   if (!ctx.cdPoPrf) return;
-//   ctx.isCdPoRef.current = true;
-//   ctx.setCdPoObj(null);
-//   ctx.setCdAcObj(null);
-//   ctx.setHdPoObj(null);
-//   ctx.setHdPoBlObj(null);
-//   ctx.setCurrCapTg(ctx.cdPoAdj);
-
-//   ctx.setUsedItms((prev) => {
-//     const filteredPrfs = prev.filter(
-//       (prf) =>
-//         !ctx.cdPoPrf.some((cdCapablePrf) => cdCapablePrf.tg === prf.tg),
-//     );
-//     const isAlreadySd = ctx.cdPoPrf?.every((cdCapablePrf) =>
-//       ctx.acTgsSet.has(`${cdCapablePrf.ac}|${cdCapablePrf.tg}`),
-//     );
-
-//     let newPrfs = [...filteredPrfs];
-
-//     if (!isAlreadySd) {
-//       newPrfs = [...newPrfs, ...ctx.cdPoPrf];
-//     }
-//     return newPrfs;
-//   });
-// }, [ctx.cdPoPrf]);

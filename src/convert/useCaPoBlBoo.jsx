@@ -1,17 +1,13 @@
 import useCtx from "../context/useCtx.jsx";
-import { virtualVersatiles } from "../array/namedArray.js";
+import useCaPoBlRoo from "./useCaPoBlRoo.jsx";
 
-const useCaPoBlBoo = ({ pAaa }) => {
+const useCaPoBlBoo = ({ pEl }) => {
   const ctx = useCtx();
+  const roo = useCaPoBlRoo({ pEl });
 
-  const isHd = ctx.hdPoBlAdj === pAaa.adj;
-  const isNone = pAaa?.adj === "none";
-
-  const isVirtual = virtualVersatiles.includes(pAaa?.adj);
+  const isHd = ctx.hdPoBlId === roo.id;
 
   return {
-    isNone,
-    isVirtual,
     isHd,
   };
 };

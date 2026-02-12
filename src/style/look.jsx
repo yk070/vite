@@ -248,31 +248,31 @@ const look = {
     transform: "translateX(-50%)",
     borderRadius: `calc(${base} * 20)`,
   },
-  third: {
+  third: (a) => ({
     width: `calc(${base} * 16)`,
     height: `calc(${base} * 16)`,
-    border: `calc(${base} * 1) solid white`,
+    border: `calc(${base} * 1) solid ${a}`,
     boxShadow: `
       0 0 calc(${base} * 10) rgba(0,0,0,1),
       inset 0 0 calc(${base} * 10) rgba(0,0,0,1)`,
-  },
-  second: {
+  }),
+  second: (a) => ({
     width: `calc(${base} * 13)`,
     height: `calc(${base} * 13)`,
-    border: `calc(${base} * 3) solid white`,
+    border: `calc(${base} * 3) solid ${a}`,
     boxShadow: `
     0 0 calc(${base} * 10) rgba(0,0,0,1),
     inset 0 0 calc(${base} * 10) rgba(0,0,0,1)`,
-  },
-  first: {
+  }),
+  first: (a) => ({
     width: `calc(${base} * 11)`,
     height: `calc(${base} * 11)`,
     // backgroundColor: "white",
-    border: `calc(${base} * 5) solid white`,
+    border: `calc(${base} * 5) solid  ${a}`,
     boxShadow: `
     0 0 calc(${base} * 10) rgba(0,0,0,1),
     inset 0 0 calc(${base} * 4) rgba(0,0,0,1)`,
-  },
+  }),
   poEle1: {
     flex: 1,
     position: "relative",
@@ -1044,6 +1044,42 @@ const look = {
     // backgroundColor: "red",
     // col.buttonColor,
   }),
+  caEl1: {
+    display: "flex",
+    flexDirection: "column",
+    position: "relative",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: `calc(100% - ${base} * 10)`,
+    height: `calc(100% - ${base} * 8)`,
+    backgroundColor: tone.capable3,
+    // col.buttonColor,
+  },
+  caEl2: (borderColor) => ({
+    display: "flex",
+    flex: 1,
+    position: "relative",
+    // top: "0%",
+    // left: "50%",
+    // transform: "translate(-50%, -50%)",
+    // width: `calc(100% - ${base} * 10)`,
+    // height: `calc(100% - ${base} * 8)`,
+    backgroundColor: borderColor,
+    // col.buttonColor,
+  }),
+  caEl3: {
+    display: "flex",
+    flex: 1,
+    position: "relative",
+    // top: "0%",
+    // left: "50%",
+    // transform: "translate(-50%, -50%)",
+    // width: `calc(100% - ${base} * 10)`,
+    // height: `calc(100% - ${base} * 8)`,
+    backgroundColor: "green",
+    // col.buttonColor,
+  },
   capable12: {
     flex: 4,
     display: "flex",
@@ -1086,7 +1122,7 @@ const look = {
     // height: "100%",
     // backgroundColor: "purple",
   },
-  caMoEle1: {
+  caMoEle1: (borderColor) => ({
     display: "flex",
     // flexDirection: "column",
     // position: "relative",
@@ -1101,8 +1137,8 @@ const look = {
     // flexDirection: "row",
     width: "100%",
     height: "100%",
-    // backgroundColor: "purple",
-  },
+    backgroundColor: borderColor,
+  }),
   caMoEle2: {
     display: "flex",
     // position: "relative",
@@ -1227,19 +1263,15 @@ const look = {
     backgroundColor: "gray",
   },
   caMoBl1: {
-    display: "flex",
-    flexDirection: "column",
     flex: 4,
-    position: "relative",
-    // backgroundColor: "hdBlock",
-    // top: "50%",
-    // left: "50%",
-    // transform: "translate(-50%, -50%)",
-    width: "100%",
+    // position: "relative",
+    // width: "100%",
   },
   capable21: (hdBlock) => ({
+    flex: 4,
     display: "flex",
-    flex: 1,
+    width: "100%",
+    height: "100%",
     backgroundColor: hdBlock,
   }),
   capable15: {
@@ -1253,15 +1285,15 @@ const look = {
     height: `calc(100% - ${base} * 8)`,
     // backgroundColor: "pink",
   },
-  capable9: (borderColor, length) => ({
+  capable9: (length) => ({
     // flex: 1,
     display: "flex",
     flex: length,
     position: "relative",
     flexDirection: "column",
     height: "100%",
-    backgroundColor: borderColor,
-    // backgroundColor: "red",
+    // backgroundColor: borderColor,
+    // backgroundColor: "blue",
     // KIRIWAKE
     width: "100%",
   }),
