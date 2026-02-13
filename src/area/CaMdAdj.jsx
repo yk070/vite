@@ -1,16 +1,16 @@
 import look from "../style/look.jsx";
-import useCaMoBlCol from "../convert/useCaMoBlCol.jsx";
-import useCaMoBlRun from "../convert/useCaMoBlRun.jsx";
-import useCaMoBlRoo from "../convert/useCaMoBlRoo.jsx";
-import useCaMoBlBoo from "../convert/useCaMoBlBoo.jsx";
-import CaMdLeader from "./CaMdLeader.jsx";
+import useAdjCol from "../convert/useAdjCol.jsx";
+import useAdjRun from "../convert/useAdjRun.jsx";
+import useAdjRoo from "../convert/useAdjRoo.jsx";
+import useAdjBoo from "../convert/useAdjBoo.jsx";
+import CaMdAdjEl from "./CaMdAdjEl.jsx";
 
-// const pCo = { moAdjNous, caAdj};
-const CaMdAdj = ({ pCo }) => {
-  const roo = useCaMoBlRoo({ pCo });
-  const boo = useCaMoBlBoo({ pCo });
-  const col = useCaMoBlCol({ pCo });
-  const run = useCaMoBlRun({ pCo });
+// const pContent = { moAdjNous, caAdj};
+const CaMdAdj = ({ pContent }) => {
+  const roo = useAdjRoo({ pContent });
+  const boo = useAdjBoo({ pContent });
+  const col = useAdjCol({ pContent });
+  const run = useAdjRun({ pContent });
 
   return (
     <div
@@ -20,17 +20,18 @@ const CaMdAdj = ({ pCo }) => {
     >
       <div style={look.capable15}>
         <div style={look.capable19(col.adj)}>
-          <span style={look.capable29}>{pCo.caAdj}</span>
+          <span style={look.capable29}>{pContent.caAdj}</span>
         </div>
         <div style={look.capable21(col.hdBlock)}>
-          {roo.moPrfs.map((moPrf, iHa) => {
-            const pHa = {
-              caAdj: pCo.caAdj,
+          {roo.moPrfs.map((moPrf, iAdj) => {
+            const pAdj = {
+              caAdj: pContent.caAdj,
               po3Prfsss: roo.po3Prfsss,
               moPrf,
-              iHa,
+              iAdj,
+              isHd: boo.isHd,
             };
-            return <CaMdLeader key={iHa} pHa={pHa} />;
+            return <CaMdAdjEl key={iAdj} pAdj={pAdj} />;
           })}
         </div>
       </div>

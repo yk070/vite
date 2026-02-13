@@ -28,7 +28,6 @@ const notUseMain = (ctx) => {
   const isWoAcSd = !!cdAcAdjNou;
 
   const acTgsSet = new Set(usedPrfs?.map((obj) => `${obj?.ac}|${obj?.tg}`));
-  // console.log(acTgsSet);
   const easyCurrAdjTgObj = easyObj[ctx.currCapTg];
 
   const toggleVirtual = (x) => {

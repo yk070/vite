@@ -1,6 +1,6 @@
 import look from "../style/look.jsx";
 import useCtx from "../context/useCtx.jsx";
-import CaCo from "./CaCo.jsx";
+import CaContent from "./CaContent.jsx";
 
 const CaAa = () => {
   const ctx = useCtx();
@@ -18,7 +18,7 @@ const CaAa = () => {
           <span style={look.capable27}> {ctx.cdAcAdjNou}</span>
         </div>
         <div style={look.capable12}>
-          <CaCo />
+          <CaContent />
         </div>
       </div>
     </div>

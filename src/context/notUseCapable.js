@@ -1,32 +1,34 @@
 const notUseCapable = (ctx) => {
-  //capable
-  const hdMoPrf = ctx.hdMoObj?.prf;
-  const hdMoId = ctx.hdMoObj?.id;
-  const cdMoAdj = ctx.cdMoObj?.adj;
-  const cdMoPrf = ctx.cdMoObj?.prf;
-
-  const hdPoPrfs = ctx.hdPoObj?.prfs;
-  const hdPoId = ctx.hdPoObj?.id;
+  // AdjEl
+  const hdAdjElId = ctx.hdAdjElObj?.id;
+  const hdMoPrf = ctx.hdAdjElObj?.prf;
+  const cdMoAdj = ctx.cdAdjElObj?.adj;
+  const cdMoPrf = ctx.cdAdjElObj?.prf;
 
   const isCapableOnHd = ctx.acTgsSet.has(`${hdMoPrf?.ac}|${hdMoPrf?.tg}`);
 
-  const hdMoBlPrfs = ctx.hdMoBlObj?.prfs;
-  const hdMoBlAdj = ctx.hdMoBlObj?.adj;
+  const hdAdjPrfs = ctx.hdAdjObj?.prfs;
+  const hdAdjAdj = ctx.hdAdjObj?.adj;
 
-  const hdPoBlId = ctx.hdPoBlObj?.id;
-  const hdPoBlPrfs = ctx.hdPoBlObj?.prfs;
+  const hdPoAaId = ctx.hdPoAaObj?.id;
+  const hdPoAaPrfs = ctx.hdPoAaObj?.prfs;
+  const hdPoAaPrf = ctx.hdPoAaObj?.Prf;
+
+  const cdPoAaPrfs = ctx.cdPoAaObj?.prfs;
+  const cdPoAaAdj = ctx.cdPoAaObj?.adj;
 
   return {
-    hdPoBlPrfs,
-    hdPoPrfs,
-    hdPoId,
-    hdPoBlId,
-    hdMoBlPrfs,
-    hdMoBlAdj,
+    cdPoAaPrfs,
+    cdPoAaAdj,
+    hdPoAaPrf,
+    hdPoAaPrfs,
+    hdPoAaId,
+    hdAdjPrfs,
+    hdAdjAdj,
     cdMoAdj,
     cdMoPrf,
     hdMoPrf,
-    hdMoId,
+    hdAdjElId,
     isCapableOnHd,
   };
 };

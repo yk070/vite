@@ -20,7 +20,7 @@ const useTgRun = ({ posiId }) => {
     if (boo.isDisabled || (merge.isVacant && !ctx.isWoAcSd)) return;
     if (ctx.cdAcAdjNou) {
       if (merge.isAssigned) remove();
-      ctx.setSdTgAdjNou(roo.originAdjNou);
+      ctx.setCdTgAdjNou(roo.originAdjNou);
     } else if (merge.isAssigned) remove();
     ctx.setHdAdjNouTg(null);
     ctx.setHoverLocktg(roo.originAdjNou);

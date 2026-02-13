@@ -5,8 +5,13 @@ import useTgRoo from "./useTgRoo.jsx";
 import { useIsAdjNouSame, useBlockPsHd } from "./namedConv.jsx";
 
 const useTgBoo = ({ posiId }) => {
-  const roo = useTgRoo({ posiId });
   const ctx = useCtx();
+  const roo = useTgRoo({ posiId });
+
+  const isTarget =
+    roo.mattchedPrf != null &&
+    ctx.hdPoAaPrf != null &&
+    JSON.stringify(roo.mattchedPrf) === JSON.stringify(ctx.hdPoAaPrf);
 
   //individual
   const isEnterBelow = posiId === "enter_below";
@@ -34,6 +39,7 @@ const useTgBoo = ({ posiId }) => {
   const isNouExploited = ctx.usedAdjs?.includes(roo.originNou);
 
   return {
+    isTarget,
     isPoPsHd,
     isAdjNouVirtual,
     isNouExploited,

@@ -1056,7 +1056,7 @@ const look = {
     // backgroundColor: "red",
     // col.buttonColor,
   },
-  caEl2: {
+  caEl2: (borderColor) => ({
     display: "flex",
     flex: 1,
     position: "relative",
@@ -1065,9 +1065,8 @@ const look = {
     // transform: "translate(-50%, -50%)",
     // width: `calc(100% - ${base} * 10)`,
     // height: `calc(100% - ${base} * 8)`,
-    backgroundColor: tone.capable3,
-    // col.buttonColor,
-  },
+    backgroundColor: borderColor,
+  }),
   caEl3: {
     display: "flex",
     flex: 1,

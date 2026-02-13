@@ -1,11 +1,11 @@
 import useCtx from "../context/useCtx.jsx";
 import poPrfss from "../obj/poPrfss.js";
 
-const useCaMoBlRoo = ({ pCo }) => {
+const useAdjRoo = ({ pContent }) => {
   const ctx = useCtx();
 
-  const moPrfs = pCo.moAdjNous
-    .filter((tg) => tg.split("*")[0] === pCo.caAdj)
+  const moPrfs = pContent.moAdjNous
+    .filter((tg) => tg.split("*")[0] === pContent.caAdj)
     .map((tg) => ({
       ac: ctx.cdAcAdjNou,
       tg,
@@ -15,7 +15,7 @@ const useCaMoBlRoo = ({ pCo }) => {
     prfs.some((obj) => obj.ac === ctx.cdAcAdjNou),
   );
   const po2Prfss = po1Pfrss.filter((prfs) =>
-    prfs.some((obj) => obj.tg.split("*")[0] === pCo.caAdj),
+    prfs.some((obj) => obj.tg.split("*")[0] === pContent.caAdj),
   );
   const po3Prfsss = moPrfs.map((prf) => {
     const po3Prfss = po2Prfss.filter((group) =>
@@ -31,4 +31,4 @@ const useCaMoBlRoo = ({ pCo }) => {
   return { moPrfs, po3Prfsss, length };
 };
 
-export default useCaMoBlRoo;
+export default useAdjRoo;

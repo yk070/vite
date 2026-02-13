@@ -1,6 +1,8 @@
 cd "C:\Users\ykx07\Documents\george"
 py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list="
 
+
+https://www.youtube.com/playlist?list=WL
 py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list=PLgSyAiFyPgFY6SNnEyUiyWhhwox53Pwir"
 py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list=PLgSyAiFyPgFalln3l7IvKHXcMS6XNs-PF"
 
@@ -8,7 +10,11 @@ py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-qua
 py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list=PLgSyAiFyPgFY8DMBMhtbBQCUpPROVBY2m"
 py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list=PLqPjXrRnaOd7qGcl-Ll6JRj7imJL1WNzl"
 py -m yt_dlp --js-runtimes node --yes-playlist -x --audio-format mp3 --audio-quality 6 "https://www.youtube.com/playlist?list=PLgSyAiFyPgFZytb7jWEswPIUKxr3voaIu"
+
+
  
+
+
 
 
 

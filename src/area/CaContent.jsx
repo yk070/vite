@@ -2,7 +2,7 @@ import look from "../style/look.jsx";
 import useCtx from "../context/useCtx.jsx";
 import moObj from "../obj/moObj.js";
 import CaMdAdj from "./CaMdAdj.jsx";
-const CaCo = () => {
+const CaContent = () => {
   const ctx = useCtx();
 
   const moAdjNous = moObj[ctx.cdAcAdjNou];
@@ -13,11 +13,11 @@ const CaCo = () => {
       <div style={look.capable26}>
         <div style={look.capable20}>
           {caAdjs.map((caAdj) => {
-            const pCo = {
+            const pContent = {
               moAdjNous,
               caAdj,
             };
-            return <CaMdAdj key={caAdj} pCo={pCo} />;
+            return <CaMdAdj key={caAdj} pContent={pContent} />;
           })}
         </div>
       </div>
@@ -25,4 +25,4 @@ const CaCo = () => {
   );
 };
 
-export default CaCo;
+export default CaContent;

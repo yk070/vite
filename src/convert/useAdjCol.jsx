@@ -1,9 +1,9 @@
 import useCtx from "../context/useCtx.jsx";
 import tone from "../style/color.jsx";
-import useCaMoBlBoo from "./useCaMoBlBoo.jsx";
-const useCaMoBlCol = ({ pCo }) => {
+import useAdjBoo from "./useAdjBoo.jsx";
+const useAdjCol = ({ pContent }) => {
   const ctx = useCtx();
-  const boo = useCaMoBlBoo({ pCo });
+  const boo = useAdjBoo({ pContent });
 
   const getAdj = () => {
     if (boo.isNone) return tone.none;
@@ -21,4 +21,4 @@ const useCaMoBlCol = ({ pCo }) => {
   return { adj, hdBlock };
 };
 
-export default useCaMoBlCol;
+export default useAdjCol;

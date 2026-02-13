@@ -8,7 +8,6 @@ const useUsedItms = (ctx) => {
     const notIncludedAdjs = addedVirtualAdjs.filter(
       (adj) => !ctx.usedAdjs.includes(adj),
     );
-    // console.log(notIncludedAdjs);
     if (notIncludedAdjs.length)
       ctx.setUsedItms((prev) => {
         return [...prev, ...notIncludedAdjs];

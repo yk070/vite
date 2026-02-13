@@ -1,10 +1,10 @@
 import useCtx from "../context/useCtx.jsx";
-import useCaPoBlBoo from "./useCaPoBlBoo.jsx";
+import usePoAaBoo from "./usePoAaBoo.jsx";
 import tone from "../style/color.jsx";
 
-const useCaPoBlCol = ({ pEl }) => {
+const usePoAaCol = ({ pAdjEl }) => {
   const ctx = useCtx();
-  const boo = useCaPoBlBoo({ pEl });
+  const boo = usePoAaBoo({ pAdjEl });
 
   // const getBorderColor = () => {
   //   if (boo.isHd) return "";
@@ -22,4 +22,4 @@ const useCaPoBlCol = ({ pEl }) => {
   return { buttonColor };
 };
 
-export default useCaPoBlCol;
+export default usePoAaCol;

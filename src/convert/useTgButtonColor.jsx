@@ -11,11 +11,11 @@ const useTgButtonColor = ({ posiId }) => {
   if (boo.isAdjNouSame) return tone.adj;
   if (boo.isDisabled) return tone.DisabledButtonColor;
   //capable
-  if (boo.isMoPsHd) {
-    if (ctx.isCapableOnHd) return tone.pseudoHd;
+  if (boo.isPoPsHd) {
+    if (boo.isTarget) return tone.acSd;
     return tone.acSd;
   }
-  if (boo.isPoPsHd) {
+  if (boo.isMoPsHd) {
     if (ctx.isCapableOnHd) return tone.pseudoHd;
     return tone.acSd;
   }

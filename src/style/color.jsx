@@ -1,4 +1,7 @@
 const Colors = {
+  moActive: "#ffffff",
+  moNotActive: "#dddddd",
+  po: "#FFC700",
   normalButton: "#222222",
   capable4: "#333333",
   capable3: "#ffffff",

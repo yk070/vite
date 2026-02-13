@@ -3,7 +3,7 @@ import useCaPoBoo from "../convert/useCaPoBoo.jsx";
 import useCaPoRoo from "../convert/useCaPoRoo.jsx";
 
 // const pPoCo = {  caAdj, moPrf, prf };
-const CaMdPoCircle = ({ pPoCo }) => {
+const CaMdPoEl = ({ pPoCo }) => {
   const roo = useCaPoRoo({ pPoCo });
   const boo = useCaPoBoo({ pPoCo });
 
@@ -14,4 +14,4 @@ const CaMdPoCircle = ({ pPoCo }) => {
   );
 };
 
-export default CaMdPoCircle;
+export default CaMdPoEl;
