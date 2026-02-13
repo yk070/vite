@@ -1,9 +1,9 @@
 import useCtx from "../context/useCtx.jsx";
 
 const useAcCapBoo = ({ acCap }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
 
-  const isActive = acCap === ctx.currCapAc;
+  const isActive = acCap === cx.currCapAc;
 
   return { isActive };
 };

@@ -1,6 +1,6 @@
 import useCtx from "../context/useCtx.jsx";
 const usePoAaRoo = ({ pAdjEl }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
 
   const id = `${pAdjEl.caAdj}${pAdjEl.iAdj}${pAdjEl.iEl}`;
 

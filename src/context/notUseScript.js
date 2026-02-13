@@ -1,8 +1,8 @@
 import convAcScript from "../../ahk/commentOut/convAcScript.jsx";
 import convTgScript from "../convert/convTgScript.jsx";
 
-export const notUseScript = (ctx) => {
-  const scriptLines = ctx.usedPrfs?.map((item) => {
+export const notUseScript = (cx) => {
+  const scriptLines = cx.usedPrfs?.map((item) => {
     const { ac, tg } = item;
 
     const script_tg = convTgScript(tg);
@@ -12,7 +12,7 @@ export const notUseScript = (ctx) => {
 
   const preScript = scriptLines?.join("");
   const hasCtrl =
-    ctx.usedPrfs?.some((item) => item.tg.includes("ctrl")) ?? false;
+    cx.usedPrfs?.some((item) => item.tg.includes("ctrl")) ?? false;
 
   const script = hasCtrl ? "sc1D::return\n" + preScript : preScript;
 

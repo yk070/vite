@@ -1,9 +1,9 @@
 import useCtx from "../context/useCtx.jsx";
 
 const Back = () => {
-  const ctx = useCtx();
+  const cx = useCtx();
   const click = () => {
-    if (ctx.historyIndex > 0) ctx.restoreFromHistory(ctx.historyIndex - 1);
+    if (cx.historyIndex > 0) cx.restoreFromHistory(cx.historyIndex - 1);
   };
   return (
     <div

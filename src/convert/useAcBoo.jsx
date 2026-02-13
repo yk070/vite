@@ -1,34 +1,34 @@
 import useCtx from "../context/useCtx.jsx";
 import useAcRoo from "./useAcRoo.jsx";
-import { importantAdjNous } from "../array/namedAdjNous.js";
-import { disabledAdjNous } from "../array/namedAdjNous.js";
-import { alphabetNumberNous, virtualAdjNous } from "../array/namedArray.js";
+import { importantAns } from "../array/namedAns.js";
+import { disabledAns } from "../array/namedAns.js";
+import { alphabetNumberNous, virtualAns } from "../array/namedArray.js";
 const useAcBoo = ({ posiId }) => {
   const roo = useAcRoo({ posiId });
-  const ctx = useCtx();
+  const cx = useCtx();
 
   //individual
   const isEnterBelow = roo.posiId === "enter_below";
   //some
-  const isFunctionUsed = ctx.usedPrfs?.some(
+  const isFunctionUsed = cx.usedPrfs?.some(
     (actgObj) => actgObj.ac === roo.adjNou,
   );
-  const isLocationUsed = ctx.usedPrfs?.some(
+  const isLocationUsed = cx.usedPrfs?.some(
     (actgObj) => actgObj.tg === roo.adjNou,
   );
   //hd
-  const isHd = ctx.hdAdjNouAc === roo.adjNou;
+  const isHd = cx.hdAnAc === roo.adjNou;
   //basic
-  const isActive = ctx.cdAcAdjNou === roo.adjNou;
+  const isActive = cx.cdAcAn === roo.adjNou;
   //includes
-  const isImportant = importantAdjNous.includes(roo.adjNou);
-  const isDisabled = disabledAdjNous.includes(roo.adjNou);
-  const isAlphabetNumber = alphabetNumberNous.includes(roo.originNou);
-  const isAdjNouVirtual = virtualAdjNous.includes(roo.adjNou);
-  const isNouExploited = ctx.usedAdjs?.includes(roo.originNou);
+  const isImportant = importantAns.includes(roo.adjNou);
+  const isDisabled = disabledAns.includes(roo.adjNou);
+  const isAlphabetNumber = alphabetNumberNous.includes(roo.rawNou);
+  const isAnVirtual = virtualAns.includes(roo.adjNou);
+  const isNouExploited = cx.usedAdjs?.includes(roo.rawNou);
 
   return {
-    isAdjNouVirtual,
+    isAnVirtual,
     isNouExploited,
     isLocationUsed,
     isEnterBelow,

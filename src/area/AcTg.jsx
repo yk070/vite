@@ -4,10 +4,10 @@ import Tg from "./Tg.jsx";
 import useCtx from "../context/useCtx.jsx";
 
 const AcTg = () => {
-  const ctx = useCtx();
+  const cx = useCtx();
   const getBgColor = () => {
-    if (ctx.isWoTgNone) return "#7A7A7A";
-    if (ctx.isWoTgVirtual) return "#7C7A92";
+    if (cx.isWoTgNone) return "#7A7A7A";
+    if (cx.isWoTgVirtual) return "#7C7A92";
     return "#7B9884";
   };
   const bgColor = getBgColor();

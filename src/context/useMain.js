@@ -1,16 +1,17 @@
 import { useState } from "react";
 const useMain = () => {
-  // ca
+  ////////// ca
+  // Adj
   const [hdAdjObj, setHdAdjObj] = useState(null);
-
+  // AdjEl
   const [hdAdjElObj, setHdAdjElObj] = useState(null);
-  const [cdAdjElObj, setCdAdjEleObj] = useState(null);
-
-  const [hdPoAaObj, setHdPoAaObj] = useState(null);
-  const [cdPoAaObj, setCdPoAaObj] = useState(null);
-
+  const [cdAdjElObj, setCdAdjElObj] = useState(null);
+  // Po
+  const [hdPoObj, setHdPoObj] = useState(null);
+  const [cdPoObj, setCdPoObj] = useState(null);
+  //
   const [toReviseAdj, setToReviseAdj] = useState(null);
-
+  //////////
   //tg
   const [HoverLocktg, setHoverLocktg] = useState(null);
 
@@ -19,22 +20,22 @@ const useMain = () => {
   const [currCapTg, setCurrCapTg] = useState("none");
 
   // selected
-  const [cdTgAdjNou, setCdTgAdjNou] = useState(null);
+  const [cdTgAn, setCdTgAn] = useState(null);
   // ac
   const [cdAcObj, setCdAcObj] = useState(null);
 
   // hovered
-  const [hdAdjNouTg, setHdAdjNouTg] = useState(null);
-  const [hdAdjNouAc, setHdAdjNouAc] = useState(null);
+  const [hdAnTg, setHdAnTg] = useState(null);
+  const [hdAnAc, setHdAnAc] = useState(null);
   // enter
   const [isEnterSelected, setisEnterSelected] = useState(false);
   return {
-    cdPoAaObj,
-    setCdPoAaObj,
+    cdPoObj,
+    setCdPoObj,
     cdAcObj,
     setCdAcObj,
-    hdPoAaObj,
-    setHdPoAaObj,
+    hdPoObj,
+    setHdPoObj,
     toReviseAdj,
     setToReviseAdj,
     hdAdjObj,
@@ -43,18 +44,18 @@ const useMain = () => {
     setCurrCapAc,
     currCapTg,
     setCurrCapTg,
-    cdTgAdjNou,
-    setCdTgAdjNou,
-    hdAdjNouTg,
-    setHdAdjNouTg,
-    hdAdjNouAc,
-    setHdAdjNouAc,
+    cdTgAn,
+    setCdTgAn,
+    hdAnTg,
+    setHdAnTg,
+    hdAnAc,
+    setHdAnAc,
     isEnterSelected,
     setisEnterSelected,
     HoverLocktg,
     setHoverLocktg,
     cdAdjElObj,
-    setCdAdjEleObj,
+    setCdAdjElObj,
     hdAdjElObj,
     setHdAdjElObj,
   };

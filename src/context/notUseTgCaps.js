@@ -1,16 +1,16 @@
 import { defaultAdjs } from "../array/namedArray.js";
 
-export const notUseTgCaps = (ctx) => {
+export const notUseTgCaps = (cx) => {
   let caps = [...defaultAdjs];
 
-  if (ctx.usedAdjs.includes("space") && !caps.includes("space")) {
+  if (cx.usedAdjs.includes("space") && !caps.includes("space")) {
     caps = caps.concat("space");
   }
-  if (ctx.usedAdjs.includes("muhenkan") && !caps.includes("muhenkan")) {
+  if (cx.usedAdjs.includes("muhenkan") && !caps.includes("muhenkan")) {
     caps = caps.concat("muhenkan");
   }
 
-  const extraAdj = ctx.hdCaSingleBlockObj?.adj;
+  const extraAdj = cx.hdCaSingleBlockObj?.adj;
   if (
     (extraAdj === "space" || extraAdj === "muhenkan") &&
     !caps.includes(extraAdj)
@@ -18,8 +18,8 @@ export const notUseTgCaps = (ctx) => {
     caps = caps.concat(extraAdj);
   }
 
-  if (ctx.toReviseAdj && !caps.includes(ctx.toReviseAdj))
-    caps = caps.concat(ctx.toReviseAdj);
+  if (cx.toReviseAdj && !caps.includes(cx.toReviseAdj))
+    caps = caps.concat(cx.toReviseAdj);
   return caps;
 };
 

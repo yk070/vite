@@ -3,12 +3,12 @@ import useAdjEleBoo from "./useAdjEleBoo.jsx";
 import useCtx from "../context/useCtx.jsx";
 
 const useAdjEleCol = ({ pAdj }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
   const boo = useAdjEleBoo({ pAdj });
 
   const getBorderColor = () => {
     if (boo.isTarget2) return tone.moActive;
-    if (ctx.hdPoAaId) return "";
+    if (cx.hdPoAaId) return "";
     if (boo.isHd) return tone.moActive;
     if (pAdj.isHd) return tone.moActive;
     return "";

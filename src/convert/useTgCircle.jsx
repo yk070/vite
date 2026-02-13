@@ -5,20 +5,20 @@ import look from "../style/look.jsx";
 import useTgBooMerge from "./useTgBooMerge.jsx";
 
 const useTgCircle = ({ posiId }) => {
+  const cx = useCtx();
   const boo = useTgBoo({ posiId });
   const roo = useTgRoo({ posiId });
   const merge = useTgBooMerge({ posiId });
-  const ctx = useCtx();
 
   const getLevel = () => {
-    const entry = Object.entries(ctx.easyCurrAdjTgObj)?.find(([_, nous]) =>
-      nous?.includes(roo.originNou),
+    const entry = Object.entries(cx.easyCurrAdjTgObj)?.find(([_, nous]) =>
+      nous?.includes(roo.rawNou),
     );
 
     if (boo.isMoPsHd) return entry?.[0] ?? "third";
 
     if (
-      !ctx.isWoAcSd ||
+      !cx.isWoAcSd ||
       merge.isSoVirtualHold ||
       boo.isDisabled ||
       merge.isAssigned

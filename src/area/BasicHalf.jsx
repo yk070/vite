@@ -4,8 +4,8 @@ import basicObj from "../obj/basicObj.js";
 import BasicEle from "./BasicEle.jsx";
 
 const BasicHalf = ({ basicProps }) => {
-  const ctx = useCtx();
-  const currBasicObj = basicObj[ctx.currCapAc][basicProps];
+  const cx = useCtx();
+  const currBasicObj = basicObj[cx.currCapAc][basicProps];
 
   return (
     <div style={look.Often1}>

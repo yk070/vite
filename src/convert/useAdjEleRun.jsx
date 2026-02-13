@@ -1,21 +1,21 @@
 import useCtx from "../context/useCtx.jsx";
 import useAdjEleRoo from "./useAdjEleRoo.jsx";
 const useAdjEleRun = ({ pAdj }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
   const roo = useAdjEleRoo({ pAdj });
 
   const hover = () => {
-    ctx.setHdAdjElObj({
+    cx.setHdAdjElObj({
       id: roo.id,
       prf: pAdj.moPrf,
     });
   };
   const leave = () => {
-    ctx.setHdAdjElObj(null);
+    cx.setHdAdjElObj(null);
   };
 
   const click = () => {
-    ctx.setCdAdjEleObj({ adj: pAdj.caAdj, prf: pAdj.moPrf });
+    cx.setCdAdjElObj({ adj: pAdj.caAdj, prf: pAdj.moPrf });
   };
 
   return { hover, leave, click };

@@ -4,22 +4,21 @@ import useAdjEleRoo from "./useAdjEleRoo.jsx";
 import look from "../style/look.jsx";
 
 const useAdjEleBoo = ({ pAdj }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
   const roo = useAdjEleRoo({ pAdj });
 
-  const isTarget2 =
-    JSON.stringify(ctx.hdPoAaPrf) === JSON.stringify(pAdj.moPrf);
+  const isTarget2 = JSON.stringify(cx.hdPoAaPrf) === JSON.stringify(pAdj.moPrf);
 
   const isPoPresent = roo.po3Prfss.length !== 0;
 
-  const isHd = ctx.hdAdjElId === roo.id;
-  const isSd = ctx.acTgsSet?.has(`${pAdj.moPrf?.ac}|${pAdj.moPrf?.tg}`);
+  const isHd = cx.hdAdjElId === roo.id;
+  const isSd = cx.acTgsSet?.has(`${pAdj.moPrf?.ac}|${pAdj.moPrf?.tg}`);
 
   const isZero = pAdj.po3Prfsss[pAdj.iAdj].length === 0;
   const length = isZero ? 1 : pAdj.po3Prfsss[pAdj.iAdj].length;
 
   // const isSd = pAdj.prfs.every((obj) =>
-  //   ctx.acTgsSet.has(`${obj.ac}|${obj.tg}`),
+  //   cx.acTgsSet.has(`${obj.ac}|${obj.tg}`),
   // );
 
   const capableNou = pAdj.moPrf.tg.split("*")[1];

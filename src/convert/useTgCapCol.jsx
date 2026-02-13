@@ -2,13 +2,13 @@ import useCtx from "../context/useCtx.jsx";
 import tone from "../style/color.jsx";
 import useTgCapBoo from "./useTgCapBoo.jsx";
 const useTgCapCol = ({ tgCap }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
   const boo = useTgCapBoo({ tgCap });
 
   const getButtonColor = () => {
     if (boo.isSd) {
-      if (ctx.isWoTgNone) return tone.none;
-      if (ctx.isWoTgVirtual) return tone.adj;
+      if (cx.isWoTgNone) return tone.none;
+      if (cx.isWoTgVirtual) return tone.adj;
       return tone.adj;
       // return tone.adj;
     }

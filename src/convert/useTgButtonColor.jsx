@@ -6,9 +6,9 @@ import useTgBooMerge from "./useTgBooMerge.jsx";
 const useTgButtonColor = ({ posiId }) => {
   const boo = useTgBoo({ posiId });
   const merge = useTgBooMerge({ posiId });
-  const ctx = useCtx();
+  const cx = useCtx();
   //special
-  if (boo.isAdjNouSame) return tone.adj;
+  if (boo.isAnSame) return tone.adj;
   if (boo.isDisabled) return tone.DisabledButtonColor;
   //capable
   if (boo.isPoPsHd) {
@@ -16,17 +16,17 @@ const useTgButtonColor = ({ posiId }) => {
     return tone.acSd;
   }
   if (boo.isMoPsHd) {
-    if (ctx.isCapableOnHd) return tone.pseudoHd;
+    if (cx.isCapableOnHd) return tone.pseudoHd;
     return tone.acSd;
   }
   //isHd
   if (boo.isHd) {
-    if (ctx.isWoAcSd && (merge.isAssigned || merge.isSoVirtualHold))
+    if (cx.isWoAcSd && (merge.isAssigned || merge.isSoVirtualHold))
       return tone.adj;
     return tone.normalButton;
   }
   //isWoAcSd
-  if (ctx.isWoAcSd) {
+  if (cx.isWoAcSd) {
     if (merge.isAssigned || merge.isSoVirtualHold) return tone.pickUp;
     if (!merge.isAssigned) return tone.normalButton;
     if (merge.isAssigned) return tone.pickUp;
@@ -34,7 +34,7 @@ const useTgButtonColor = ({ posiId }) => {
 
   if (boo.isFunctionPsHd) return tone.RemoteHoveredColor;
   if (merge.isAssigned || merge.isSoVirtualHold) return tone.pickUp;
-  if (ctx.isWoAcSd) return tone.normalButton;
+  if (cx.isWoAcSd) return tone.normalButton;
 
   return tone.normalButton;
 };

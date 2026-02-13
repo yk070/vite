@@ -4,10 +4,10 @@ import styles from "../style/scroll.module.css";
 import look from "../style/look.jsx";
 
 const Script = () => {
-  const ctx = useCtx();
+  const cx = useCtx();
   return (
     <div className={styles.scriptScroll} style={look.script1}>
-      <div style={{ paddingBottom: 10 }}>{ctx.script}</div>
+      <div style={{ paddingBottom: 10 }}>{cx.script}</div>
     </div>
   );
 };

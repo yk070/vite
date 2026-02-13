@@ -2,11 +2,11 @@ import { EnterObj } from "../obj/namedObj.js";
 import useCtx from "../context/useCtx.jsx";
 
 const useAcRoo = ({ posiId }) => {
-  const ctx = useCtx();
-  const originNou = EnterObj[posiId] ?? posiId;
-  const adjNou = ctx.currCapAc + "*" + originNou;
+  const cx = useCtx();
+  const rawNou = EnterObj[posiId] ?? posiId;
+  const adjNou = cx.currCapAc + "*" + rawNou;
   return {
-    originNou,
+    rawNou,
     adjNou,
   };
 };

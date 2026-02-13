@@ -2,10 +2,10 @@ import useCtx from "../context/useCtx.jsx";
 import usePoAaRoo from "./usePoAaRoo.jsx";
 
 const usePoAaBoo = ({ pAdjEl }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
   const roo = usePoAaRoo({ pAdjEl });
 
-  const isHd = ctx.hdPoAaId === roo.id;
+  const isHd = cx.hdPoAaId === roo.id;
 
   return {
     isHd,

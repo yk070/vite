@@ -1,10 +1,10 @@
 import useCtx from "../context/useCtx.jsx";
 
 const Forward = () => {
-  const ctx = useCtx();
+  const cx = useCtx();
   const click = () => {
-    if (ctx.historyIndex < ctx.historyRef.current.length - 1)
-      ctx.restoreFromHistory(ctx.historyIndex + 1);
+    if (cx.historyIndex < cx.historyRef.current.length - 1)
+      cx.restoreFromHistory(cx.historyIndex + 1);
   };
   return (
     <div

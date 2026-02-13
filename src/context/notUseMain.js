@@ -7,31 +7,31 @@ import {
 } from "../array/namedArray.js";
 import easyObj from "../obj/easyObj.js";
 
-const notUseMain = (ctx) => {
-  const usedAdjs = ctx.usedItms.filter((v) => typeof v === "string");
-  const usedPrfs = ctx.usedItms.filter(
+const notUseMain = (cx) => {
+  const usedAdjs = cx.usedItms.filter((v) => typeof v === "string");
+  const usedPrfs = cx.usedItms.filter(
     (v) => typeof v === "object" && v !== null,
   );
 
   const isWoSpaHold = usedAdjs?.includes("space");
   const isWoMuhHold = usedAdjs?.includes("muhenkan");
-  const isWoTgNone = ctx.currCapTg === "none";
-  const isWoAcNone = ctx.currCapAc === "none";
-  const isWoTgVirtual = virtualVersatiles.includes(ctx.currCapTg);
-  const isWoTgShift = ctx.currCapTg === "shift";
-  const isWoCapable = capableCaps?.includes(ctx.currCapAc);
-  const isWoUsable = usableCaps?.includes(ctx.currCapAc);
-  const isWoFlexible = defaultAdjs?.includes(ctx.currCapAc);
+  const isWoTgNone = cx.currCapTg === "none";
+  const isWoAcNone = cx.currCapAc === "none";
+  const isWoTgVirtual = virtualVersatiles.includes(cx.currCapTg);
+  const isWoTgShift = cx.currCapTg === "shift";
+  const isWoCapable = capableCaps?.includes(cx.currCapAc);
+  const isWoUsable = usableCaps?.includes(cx.currCapAc);
+  const isWoFlexible = defaultAdjs?.includes(cx.currCapAc);
 
-  const cdAcAdjNou = ctx.cdAcObj?.adjNou;
-  const capPseudoRef = ctx.cdAcObj?.capPseudoRef;
-  const isWoAcSd = !!cdAcAdjNou;
+  const cdAcAn = cx.cdAcObj?.adjNou;
+  const capPseudoRef = cx.cdAcObj?.capPseudoRef;
+  const isWoAcSd = !!cdAcAn;
 
   const acTgsSet = new Set(usedPrfs?.map((obj) => `${obj?.ac}|${obj?.tg}`));
-  const easyCurrAdjTgObj = easyObj[ctx.currCapTg];
+  const easyCurrAdjTgObj = easyObj[cx.currCapTg];
 
   const toggleVirtual = (x) => {
-    ctx.setUsedItms((prev) => {
+    cx.setUsedItms((prev) => {
       if (prev.includes(x)) {
         return prev.filter((item) => item !== x);
       } else {
@@ -42,7 +42,7 @@ const notUseMain = (ctx) => {
 
   return {
     capPseudoRef,
-    cdAcAdjNou,
+    cdAcAn,
     usedAdjs,
     usedPrfs,
     isWoAcNone,

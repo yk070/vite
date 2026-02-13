@@ -4,7 +4,7 @@ import useTgCapBoo from "./useTgCapBoo.jsx";
 import look from "../style/look.jsx";
 
 const useTgCapLab = ({ tgCap }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
   const boo = useTgCapBoo({ tgCap });
   const planeLabel = (
     <>
@@ -14,9 +14,9 @@ const useTgCapLab = ({ tgCap }) => {
   const RemoteHoveredLabel = (
     <>
       {planeLabel}
-      <span>{ctx.remoteHdNouLabel}</span>
+      <span>{cx.remoteHdNouLabel}</span>
       {"="}
-      <span style={look.TgCap4}>{ctx.hdAdjNouTgLabel}</span>
+      <span style={look.TgCap4}>{cx.hdAnTgLabel}</span>
     </>
   );
   {

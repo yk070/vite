@@ -4,37 +4,37 @@ import useTgRoo from "./useTgRoo.jsx";
 import useTgBooMerge from "./useTgBooMerge.jsx";
 
 const useTgRun = ({ posiId }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
   const roo = useTgRoo({ posiId });
   const boo = useTgBoo({ posiId });
   const merge = useTgBooMerge({ posiId });
 
   const remove = () => {
-    ctx.setUsedItms((prev) =>
-      prev.filter((actgObj) => actgObj.tg !== roo.originAdjNou),
+    cx.setUsedItms((prev) =>
+      prev.filter((actgObj) => actgObj.tg !== roo.rawAn),
     );
   };
 
   const click = () => {
-    if (merge.isSoVirtualHold) ctx.toggleVirtual(roo.originNou);
-    if (boo.isDisabled || (merge.isVacant && !ctx.isWoAcSd)) return;
-    if (ctx.cdAcAdjNou) {
+    if (merge.isSoVirtualHold) cx.toggleVirtual(roo.rawNou);
+    if (boo.isDisabled || (merge.isVacant && !cx.isWoAcSd)) return;
+    if (cx.cdAcAn) {
       if (merge.isAssigned) remove();
-      ctx.setCdTgAdjNou(roo.originAdjNou);
+      cx.setCdTgAn(roo.rawAn);
     } else if (merge.isAssigned) remove();
-    ctx.setHdAdjNouTg(null);
-    ctx.setHoverLocktg(roo.originAdjNou);
+    cx.setHdAnTg(null);
+    cx.setHoverLocktg(roo.rawAn);
   };
 
   const hover = () => {
-    if (ctx.HoverLocktg === roo.originAdjNou) return;
-    ctx.setHdAdjNouTg(roo.originAdjNou);
+    if (cx.HoverLocktg === roo.rawAn) return;
+    cx.setHdAnTg(roo.rawAn);
   };
 
   const leave = () => {
-    ctx.setHdAdjNouTg(null);
-    if (ctx.HoverLocktg === roo.originAdjNou) {
-      ctx.setHoverLocktg(null);
+    cx.setHdAnTg(null);
+    if (cx.HoverLocktg === roo.rawAn) {
+      cx.setHoverLocktg(null);
     }
   };
   return { click, hover, leave };

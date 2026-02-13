@@ -1,9 +1,9 @@
 import useCtx from "../context/useCtx.jsx";
 
 const useTgCapRun = ({ tgCap }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
 
-  const click = () => ctx.setCurrCapTg(tgCap);
+  const click = () => cx.setCurrCapTg(tgCap);
 
   return { click };
 };

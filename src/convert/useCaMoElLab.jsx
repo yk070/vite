@@ -1,6 +1,6 @@
 import useCtx from "../context/useCtx.jsx";
 const useCaMoElLab = ({ pBl }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
 
   return {};
 };

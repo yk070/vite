@@ -2,20 +2,20 @@ import convPosition from "../convert/convPosition.jsx";
 import nouLabelObj from "../obj/nouLabelObj.js";
 import ConvLabel from "../convert/ConvLabel.jsx";
 
-export const notUseArrow = (ctx) => {
-  const hdAdjNouTgLabel = <ConvLabel adjNou={ctx.hdAdjNouTg} />;
+export const notUseArrow = (cx) => {
+  const hdAnTgLabel = <ConvLabel adjNou={cx.hdAnTg} />;
 
-  const [hdAdj, hdNou] = ctx.hdAdjNouTg?.split("*") ?? [];
+  const [hdAdj, hdNou] = cx.hdAnTg?.split("*") ?? [];
   const { x: tailX, y: tailY } = convPosition(hdNou);
-  const remoteHdAdjNou = ctx.usedPrfs?.find((o) => o.ac === ctx.hdAdjNouTg)?.tg;
-  const isRemoteExist = !!remoteHdAdjNou;
-  const [remoteHdAdj, remoteHdNou] = remoteHdAdjNou?.split("*") ?? [];
+  const remoteHdAn = cx.usedPrfs?.find((o) => o.ac === cx.hdAnTg)?.tg;
+  const isRemoteExist = !!remoteHdAn;
+  const [remoteHdAdj, remoteHdNou] = remoteHdAn?.split("*") ?? [];
   const remoteHdNouLabel = nouLabelObj[remoteHdNou];
 
-  const tgCapsLength = ctx.tgCaps.length;
-  const onsiteNumber = ctx.tgCaps.indexOf(hdAdj);
-  const remoteNumber = ctx.tgCaps.indexOf(remoteHdAdj);
-  const currTgCapsLength = ctx.tgCaps.indexOf(ctx.currCapTg);
+  const tgCapsLength = cx.tgCaps.length;
+  const onsiteNumber = cx.tgCaps.indexOf(hdAdj);
+  const remoteNumber = cx.tgCaps.indexOf(remoteHdAdj);
+  const currTgCapsLength = cx.tgCaps.indexOf(cx.currCapTg);
   const isRemoteSame = hdAdj === remoteHdAdj;
 
   const getHeadPos = () => {
@@ -42,10 +42,10 @@ export const notUseArrow = (ctx) => {
     remoteHdAdj,
     remoteHdNou,
     remoteHdNouLabel,
-    remoteHdAdjNou,
+    remoteHdAn,
     hdAdj,
     hdNou,
-    hdAdjNouTgLabel,
+    hdAnTgLabel,
     tailX,
     tailY,
   };

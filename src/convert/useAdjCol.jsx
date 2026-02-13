@@ -2,7 +2,7 @@ import useCtx from "../context/useCtx.jsx";
 import tone from "../style/color.jsx";
 import useAdjBoo from "./useAdjBoo.jsx";
 const useAdjCol = ({ pContent }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
   const boo = useAdjBoo({ pContent });
 
   const getAdj = () => {

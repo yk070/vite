@@ -4,12 +4,12 @@ import tone from "../style/color.jsx";
 import zObj from "../obj/zObj.js";
 
 const Arrow = ({ containerRef }) => {
-  const ctx = useCtx();
-  if (!ctx.isRemoteExist || ctx.isWoAcSd) return null;
-  const tailX = ctx.tailX;
-  const tailY = ctx.tailY;
-  const headX = ctx.headX;
-  const headY = ctx.headY;
+  const cx = useCtx();
+  if (!cx.isRemoteExist || cx.isWoAcSd) return null;
+  const tailX = cx.tailX;
+  const tailY = cx.tailY;
+  const headX = cx.headX;
+  const headY = cx.headY;
   const rect = containerRef.current?.getBoundingClientRect();
   if (!rect) return null;
 

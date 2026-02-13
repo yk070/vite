@@ -2,22 +2,22 @@ import useCtx from "../context/useCtx.jsx";
 import usePoAaRoo from "./usePoAaRoo.jsx";
 
 const usePoAaRun = ({ pAdjEl }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
   const roo = usePoAaRoo({ pAdjEl });
 
   const hover = () => {
-    ctx.setHdPoAaObj({
+    cx.setHdPoObj({
       id: roo.id,
       prfs: pAdjEl.prfs,
       Prf: pAdjEl.moPrf,
     });
   };
   const leave = () => {
-    ctx.setHdPoAaObj(null);
+    cx.setHdPoObj(null);
   };
   const click = (e) => {
     e.stopPropagation();
-    ctx.setCdPoAaObj({
+    cx.setCdPoObj({
       prfs: pAdjEl.prfs,
       adj: pAdjEl.caAdj,
     });

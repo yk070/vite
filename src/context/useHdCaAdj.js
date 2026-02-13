@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { virtualVersatiles } from "../array/namedArray.js";
 
-const useHdPo = (cx) => {
+const useHdCaAdj = (cx) => {
   useEffect(() => {
     //setCurrCapTg
-    // if (cx.isCdPoRef.current) {
-    //   cx.isCdPoRef.current = false;
-    //   return;
-    // }
-    const hdAdj = cx.hdPoBlAdj;
+    if (cx.isAdjFixRef.current) {
+      cx.isAdjFixRef.current = false;
+      return;
+    }
+    const hdAdj = cx.hdCaAdj;
     if (hdAdj) {
       cx.setCurrCapTg(hdAdj);
     } else if (cx.capPseudoRef) {
@@ -24,7 +24,7 @@ const useHdPo = (cx) => {
     } else {
       cx.setToReviseAdj(null);
     }
-  }, [cx.hdPoBlAdj]);
+  }, [cx.hdCaAdj]);
 };
 
-export default useHdPo;
+export default useHdCaAdj;

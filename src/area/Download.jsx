@@ -2,9 +2,9 @@ import useCtx from "../context/useCtx.jsx";
 import look from "../style/look.jsx";
 
 const Download = () => {
-  const ctx = useCtx();
+  const cx = useCtx();
   const handleDownload = () => {
-    const ahkContent = ctx.script;
+    const ahkContent = cx.script;
     const blob = new Blob([ahkContent], {
       type: "text/plain;charset=utf-8",
     });

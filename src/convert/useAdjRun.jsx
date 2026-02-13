@@ -1,15 +1,15 @@
 import useCtx from "../context/useCtx.jsx";
 import useAdjRoo from "./useAdjRoo.jsx";
 const useAdjRun = ({ pContent }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
   const roo = useAdjRoo({ pContent });
 
   const hover = () => {
-    ctx.setHdAdjObj({ adj: pContent.caAdj, prfs: roo.moPrfs });
+    cx.setHdAdjObj({ adj: pContent.caAdj, prfs: roo.moPrfs });
   };
 
   const leave = () => {
-    ctx.setHdAdjObj(null);
+    cx.setHdAdjObj(null);
   };
   return { hover, leave };
 };

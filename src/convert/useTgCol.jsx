@@ -6,7 +6,7 @@ import useTgBooMerge from "./useTgBooMerge.jsx";
 const useTgCol = ({ posiId }) => {
   const boo = useTgBoo({ posiId });
   const merge = useTgBooMerge({ posiId });
-  const ctx = useCtx();
+  const cx = useCtx();
 
   const getBorderColor = () => {
     if (boo.isDisabled) return "";
@@ -15,11 +15,11 @@ const useTgCol = ({ posiId }) => {
       if (boo.isPoPsHd) {
         if (boo.isTarget) return tone.moActive;
       }
-      if (ctx.hdPoAaId) return "";
+      if (cx.hdPoAaId) return "";
       return tone.moActive;
     }
     if (boo.isHd) {
-      if (ctx.isWoAcSd) return tone.acSd;
+      if (cx.isWoAcSd) return tone.acSd;
       if (merge.isVacant) return "";
       if (merge.isAssigned) return tone.acSd;
       if (merge.isSoVirtualHold) return tone.acSd;

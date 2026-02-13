@@ -3,7 +3,7 @@ import tone from "../style/color.jsx";
 import useBasicBoo from "./useBasicBoo.jsx";
 
 const useBasicCol = ({ adjNou }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
   const boo = useBasicBoo({ adjNou });
 
   const getButtonColor = () => {
@@ -12,8 +12,8 @@ const useBasicCol = ({ adjNou }) => {
   };
 
   const getBorderColor = () => {
-    if (!ctx.isWoAcSd && boo.isHd) return tone.acSd;
-    if (ctx.isWoAcSd) {
+    if (!cx.isWoAcSd && boo.isHd) return tone.acSd;
+    if (cx.isWoAcSd) {
     }
     return "transparent"; // デフォルト
   };

@@ -4,7 +4,7 @@ import useCaPoRoo from "./useCaPoRoo.jsx";
 import easyObj from "../obj/easyObj.js";
 
 const useCaPoBoo = ({ pPoCo }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
   const roo = useCaPoRoo({ pPoCo });
 
   // const isTarget = JSON.stringify(pPoCo.moPrf) === JSON.stringify(pPoCo.prf);

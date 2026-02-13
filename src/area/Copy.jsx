@@ -2,10 +2,10 @@ import useCtx from "../context/useCtx.jsx";
 import look from "../style/look.jsx";
 
 const Copy = () => {
-  const ctx = useCtx();
+  const cx = useCtx();
 
   const handleCopy = async () => {
-    const text = ctx.script;
+    const text = cx.script;
     if (navigator.clipboard && navigator.clipboard.writeText) {
       try {
         await navigator.clipboard.writeText(text);

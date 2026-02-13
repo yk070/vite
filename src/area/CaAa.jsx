@@ -3,11 +3,11 @@ import useCtx from "../context/useCtx.jsx";
 import CaContent from "./CaContent.jsx";
 
 const CaAa = () => {
-  const ctx = useCtx();
-  if (!ctx.isWoAcSd) return null;
+  const cx = useCtx();
+  if (!cx.isWoAcSd) return null;
 
   const click = () => {
-    ctx.setCdAcObj(null);
+    cx.setCdAcObj(null);
   };
 
   return (
@@ -15,7 +15,7 @@ const CaAa = () => {
       <div style={look.ac8} onClick={click}></div>
       <div style={look.ac7}>
         <div style={look.capable13}>
-          <span style={look.capable27}> {ctx.cdAcAdjNou}</span>
+          <span style={look.capable27}> {cx.cdAcAn}</span>
         </div>
         <div style={look.capable12}>
           <CaContent />

@@ -1,40 +1,42 @@
 import { createContext, useContext, useRef } from "react";
 import useMain from "./useMain.js";
 import notUseMain from "./notUseMain.js";
-import useCdTgAdjNou from "./useCdTgAdjNou.js";
+import useCdTgAn from "./useCdTgAn.js";
 import useHistory from "./useHistory.js";
 import notUseScript from "./notUseScript.js";
 import notUseArrow from "./notUseArrow.jsx";
-import useHdAdjAdj from "./useHdAdjAdj.js";
+import useHdCaAdj from "./useHdCaAdj.js";
 import notUseTgCaps from "./notUseTgCaps.js";
 import notUseCapable from "./notUseCapable.js";
 import useUsedItms from "./useUsedItms.js";
-import useCdAdjElePrf from "./useCdAdjElePrf.js";
+import useCdMoPrf from "./useCdMoPrf.js";
+import useCdPoPrfs from "./useCdPoPrfs.js";
 
 const AppContext = createContext(null);
 
 const CtxProvider = ({ children }) => {
-  const ctx = {};
-  ctx.isCdMoRef = useRef(false);
+  const cx = {};
+  cx.isAdjFixRef = useRef(false);
 
-  Object.assign(ctx, useMain());
-  Object.assign(ctx, useHistory());
-  // console.log(ctx.usedItms);
+  Object.assign(cx, useMain());
+  Object.assign(cx, useHistory());
+  // console.log(cx.usedItms);
 
-  Object.assign(ctx, notUseMain(ctx)); //1
-  ctx.tgCaps = notUseTgCaps(ctx); //2
-  Object.assign(ctx, notUseCapable(ctx));
-  Object.assign(ctx, notUseScript(ctx));
-  Object.assign(ctx, notUseArrow(ctx)); //3
+  Object.assign(cx, notUseMain(cx)); //1
+  cx.tgCaps = notUseTgCaps(cx); //2
+  Object.assign(cx, notUseCapable(cx));
+  Object.assign(cx, notUseScript(cx));
+  Object.assign(cx, notUseArrow(cx)); //3
 
-  useCdTgAdjNou(ctx);
+  useCdTgAn(cx);
 
-  useUsedItms(ctx);
+  useUsedItms(cx);
 
-  useHdAdjAdj(ctx);
-  useCdAdjElePrf(ctx);
+  useHdCaAdj(cx);
+  useCdMoPrf(cx);
+  useCdPoPrfs(cx);
 
-  return <AppContext.Provider value={ctx}>{children}</AppContext.Provider>;
+  return <AppContext.Provider value={cx}>{children}</AppContext.Provider>;
 };
 
 const useCtx = () => useContext(AppContext);

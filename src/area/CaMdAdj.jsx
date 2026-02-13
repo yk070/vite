@@ -5,7 +5,7 @@ import useAdjRoo from "../convert/useAdjRoo.jsx";
 import useAdjBoo from "../convert/useAdjBoo.jsx";
 import CaMdAdjEl from "./CaMdAdjEl.jsx";
 
-// const pContent = { moAdjNous, caAdj};
+// const pContent = { moAns, caAdj};
 const CaMdAdj = ({ pContent }) => {
   const roo = useAdjRoo({ pContent });
   const boo = useAdjBoo({ pContent });

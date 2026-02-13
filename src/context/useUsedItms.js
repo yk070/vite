@@ -1,18 +1,18 @@
 import { useEffect } from "react";
 import { defaultAdjs } from "../array/namedArray.js";
 
-const useUsedItms = (ctx) => {
+const useUsedItms = (cx) => {
   useEffect(() => {
-    const sdAdjs = ctx.usedPrfs.map((obj) => obj.tg?.split("*")[0]);
+    const sdAdjs = cx.usedPrfs.map((obj) => obj.tg?.split("*")[0]);
     const addedVirtualAdjs = sdAdjs.filter((adj) => !defaultAdjs.includes(adj));
     const notIncludedAdjs = addedVirtualAdjs.filter(
-      (adj) => !ctx.usedAdjs.includes(adj),
+      (adj) => !cx.usedAdjs.includes(adj),
     );
     if (notIncludedAdjs.length)
-      ctx.setUsedItms((prev) => {
+      cx.setUsedItms((prev) => {
         return [...prev, ...notIncludedAdjs];
       });
-  }, [ctx.usedItms]);
+  }, [cx.usedItms]);
 };
 
 export default useUsedItms;

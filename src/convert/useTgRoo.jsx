@@ -1,27 +1,24 @@
 import { EnterObj } from "../obj/namedObj.js";
 import useCtx from "../context/useCtx.jsx";
+
 const useTgRoo = ({ posiId }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
 
-  const originNou = EnterObj[posiId] ?? posiId;
-  const originAdjNou = ctx.currCapTg + "*" + originNou;
+  const rawNou = EnterObj[posiId] ?? posiId;
+  const rawAn = cx.currCapTg + "*" + rawNou;
 
-  const assignAdjNou = ctx.usedPrfs.find((obj) => obj.tg === originAdjNou)?.ac;
+  const fakeAn = cx.usedPrfs.find((obj) => obj.tg === rawAn)?.ac;
 
-  const moHdAdjNou =
-    ctx.hdMoPrf?.tg === originAdjNou ? ctx.hdMoPrf.ac : undefined;
+  const mattchedPrf = cx.hdPoAaPrfs?.find((prf) => prf.tg === rawAn);
 
-  const mattchedPrf = ctx.hdPoAaPrfs?.find((prf) => prf.tg === originAdjNou);
-
-  const poHdAdjNou = mattchedPrf?.ac;
+  const poHdAn = mattchedPrf?.ac;
 
   return {
     mattchedPrf,
-    poHdAdjNou,
-    originNou,
-    originAdjNou,
-    assignAdjNou,
-    moHdAdjNou,
+    poHdAn,
+    rawNou,
+    rawAn,
+    fakeAn,
   };
 };
 

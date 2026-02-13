@@ -3,7 +3,7 @@ import usePoAaBoo from "./usePoAaBoo.jsx";
 import tone from "../style/color.jsx";
 
 const usePoAaCol = ({ pAdjEl }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
   const boo = usePoAaBoo({ pAdjEl });
 
   // const getBorderColor = () => {

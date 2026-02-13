@@ -5,13 +5,13 @@ import { adjLineObj } from "../obj/namedObj.js";
 import zObj from "../obj/zObj.js";
 
 const Line = ({ props }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
   const { key, containerRef, headX, headY } = props;
 
-  const isCapableHd = ctx.hdMoPrf?.tg.split("*")[1] === key;
-  if (ctx.isWoTgNone) return null;
+  const isCapableHd = cx.hdMoPrf?.tg.split("*")[1] === key;
+  if (cx.isWoTgNone) return null;
 
-  const styleObj = posiIdObj[adjLineObj[ctx.currCapTg]];
+  const styleObj = posiIdObj[adjLineObj[cx.currCapTg]];
 
   const left = parseFloat(styleObj?.left ?? "0");
   const top = parseFloat(styleObj?.top ?? "0");

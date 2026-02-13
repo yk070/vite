@@ -1,4 +1,4 @@
-const notAdjNouObj = {
+const notAnObj = {
   reload: `
 Reload()
 `,
@@ -66,4 +66,4 @@ sleep(50)
     sleep(10)
 `,
 };
-export default notAdjNouObj;
+export default notAnObj;

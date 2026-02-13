@@ -2,11 +2,11 @@ import useCtx from "../context/useCtx.jsx";
 import { virtualVersatiles } from "../array/namedArray.js";
 
 const useTgBoo = ({ tgCap }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
 
-  const isSd = tgCap === ctx.currCapTg;
+  const isSd = tgCap === cx.currCapTg;
   const isFunctionPsHd =
-    ctx.remoteHdAdj === tgCap && ctx.currCapTg !== ctx.remoteHdAdj;
+    cx.remoteHdAdj === tgCap && cx.currCapTg !== cx.remoteHdAdj;
   const isVirtual = virtualVersatiles.includes(tgCap);
   return { isSd, isFunctionPsHd, isVirtual };
 };

@@ -2,16 +2,16 @@ import { allAdjectiveNous } from "../array/namedArray.js";
 import { adjAdjectiveNousObj } from "../obj/namedObj.js";
 import useCtx from "../context/useCtx.jsx";
 
-const useIsAdjNouSame = (nou) => {
-  const ctx = useCtx();
+const useIsAnSame = (nou) => {
+  const cx = useCtx();
   return (
     allAdjectiveNous.includes(nou) &&
-    adjAdjectiveNousObj[ctx.currCapTg]?.includes(nou)
+    adjAdjectiveNousObj[cx.currCapTg]?.includes(nou)
   );
 };
 const useBlockPsHd = (adjNou) => {
-  const ctx = useCtx();
-  return ctx.hdAdjPrfs?.some((prf) => prf.tg === adjNou);
+  const cx = useCtx();
+  return cx.hdAdjPrfs?.some((prf) => prf.tg === adjNou);
 };
 
-export { useIsAdjNouSame, useBlockPsHd };
+export { useIsAnSame, useBlockPsHd };

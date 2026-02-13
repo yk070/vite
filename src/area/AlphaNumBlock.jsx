@@ -5,10 +5,10 @@ import Tg from "./Tg.jsx";
 import Ac from "./Ac.jsx";
 
 const AlphaNumBlock = ({ source }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
   if (
-    (source === "tg" && (ctx.isWoTgNone || ctx.isWoTgShift)) ||
-    (source === "ac" && (!ctx.isWoFlexible || ctx.isWoAcNone))
+    (source === "tg" && (cx.isWoTgNone || cx.isWoTgShift)) ||
+    (source === "ac" && (!cx.isWoFlexible || cx.isWoAcNone))
   )
     return null;
   return (

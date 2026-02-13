@@ -2,17 +2,17 @@ import useCtx from "../context/useCtx.jsx";
 import poPrfss from "../obj/poPrfss.js";
 
 const useAdjRoo = ({ pContent }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
 
-  const moPrfs = pContent.moAdjNous
+  const moPrfs = pContent.moAns
     .filter((tg) => tg.split("*")[0] === pContent.caAdj)
     .map((tg) => ({
-      ac: ctx.cdAcAdjNou,
+      ac: cx.cdAcAn,
       tg,
     }));
 
   const po1Pfrss = poPrfss.filter((prfs) =>
-    prfs.some((obj) => obj.ac === ctx.cdAcAdjNou),
+    prfs.some((obj) => obj.ac === cx.cdAcAn),
   );
   const po2Prfss = po1Pfrss.filter((prfs) =>
     prfs.some((obj) => obj.tg.split("*")[0] === pContent.caAdj),

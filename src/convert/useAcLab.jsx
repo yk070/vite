@@ -5,7 +5,7 @@ import useAcBoo from "./useAcBoo.jsx";
 const useAcLab = ({ posiId }) => {
   const roo = useAcRoo({ posiId });
   const boo = useAcBoo({ posiId });
-  const ctx = useCtx();
+  const cx = useCtx();
 
   const getLabel = () => {
     if (boo.isEnterBelow) return "";

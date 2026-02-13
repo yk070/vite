@@ -4,22 +4,22 @@ import useCtx from "../context/useCtx.jsx";
 const useAcRun = ({ posiId }) => {
   const roo = useAcRoo({ posiId });
   const boo = useAcBoo({ posiId });
-  const ctx = useCtx();
+  const cx = useCtx();
 
   const click = () => {
     if (boo.isDisabled) return;
-    if (ctx.isWoAcSd) {
-      ctx.setCdAcObj(null);
+    if (cx.isWoAcSd) {
+      cx.setCdAcObj(null);
       return;
     }
-    ctx.setCdAcObj({ adjNou: roo.adjNou, capPseudoRef: ctx.currCapTg });
+    cx.setCdAcObj({ adjNou: roo.adjNou, capPseudoRef: cx.currCapTg });
   };
 
   const hover = () => {
-    ctx.setHdAdjNouAc(roo.adjNou);
+    cx.setHdAnAc(roo.adjNou);
   };
   const leave = () => {
-    ctx.setHdAdjNouAc(null);
+    cx.setHdAnAc(null);
   };
   return { click, hover, leave };
 };

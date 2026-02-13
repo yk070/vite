@@ -4,7 +4,7 @@ import useCtx from "../context/useCtx.jsx";
 
 const useAcCol = ({ posiId }) => {
   const boo = useAcBoo({ posiId });
-  const ctx = useCtx();
+  const cx = useCtx();
 
   const getButtonColor = () => {
     if (boo.isDisabled) return tone.DisabledButtonColor;
@@ -13,7 +13,7 @@ const useAcCol = ({ posiId }) => {
   };
   const getBorderColor = () => {
     if (boo.isDisabled && boo.isHd) return "transparent";
-    if (!ctx.isWoAcSd && boo.isHd) return tone.acSd;
+    if (!cx.isWoAcSd && boo.isHd) return tone.acSd;
     return "transparent";
   };
 

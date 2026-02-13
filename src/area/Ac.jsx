@@ -9,7 +9,7 @@ import AcEle from "./AcEle.jsx";
 import CaAa from "./CaAa.jsx";
 
 const Ac = () => {
-  const ctx = useCtx();
+  const cx = useCtx();
   return (
     <>
       <div style={look.ac2}>
@@ -19,9 +19,9 @@ const Ac = () => {
       </div>
       <div style={look.ac3}>
         <AlphaNumBlock source="ac" />
-        {ctx.isWoUsable && <Basic />}
-        {ctx.isWoFlexible &&
-          Object.entries(adjPosiIdObjObj[ctx.currCapAc]).map(
+        {cx.isWoUsable && <Basic />}
+        {cx.isWoFlexible &&
+          Object.entries(adjPosiIdObjObj[cx.currCapAc]).map(
             ([posiId, styleObj]) => (
               <AcEle key={posiId} posiId={posiId} styleObj={styleObj} />
             ),

@@ -1,9 +1,9 @@
 import useCtx from "../context/useCtx.jsx";
 
 const useAcCapBoo = ({ acCap }) => {
-  const ctx = useCtx();
+  const cx = useCtx();
 
-  const click = () => ctx.setCurrCapAc(acCap);
+  const click = () => cx.setCurrCapAc(acCap);
 
   return { click };
 };
